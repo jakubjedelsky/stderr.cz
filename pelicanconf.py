@@ -24,7 +24,7 @@ SUMMARY_MAX_LENGTH = 80
 ARTICLE_URL = '{slug}.html'
 ARTICLE_SAVE_AS = '{slug}.html'
 
-ARTICLE_LANG_URL = '{lang}/{slug}'
+ARTICLE_LANG_URL = '{lang}/{slug}.html'
 ARTICLE_LANG_SAVE_AS = '{lang}/{slug}.html'
 
 PAGE_URL = 'pages/{slug}.html'
