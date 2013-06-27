@@ -38,4 +38,4 @@ FILES_TO_COPY = (
 # Theme
 THEME = 'theme'
 SITESUBTITLE = u'poznámky'
-AUTHOR_INFO = u"Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat."
+AUTHOR_BIO = u"Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat."
