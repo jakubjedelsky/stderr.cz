@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'Jakub Jedelsky'
-SITENAME = u'/dev/stderr'
+SITENAME = u'stderr'
 SITEURL = ''
 
 TIMEZONE = 'Europe/Prague'
@@ -35,3 +35,7 @@ FILES_TO_COPY = (
         ('extra/CNAME', 'CNAME'),
     )   
 
+# Theme
+THEME = 'theme'
+SITESUBTITLE = u'poznámky'
+AUTHOR_INFO = u"Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat."
