@@ -2,7 +2,7 @@
 {% block title %}{{ page.title }} @ {{ super() }}{% endblock %}
 
 {% block content %}
-<h2>{{ page.title }}{% if not HIDE_DATE %} <time datetime={{ page.date.isoformat() }}>/ {{ page.locale_date }} /</time>{% endif %}</h2>
+<h2>{{ page.title }}</h2>
 
 <div class="article">
 {{ page.content }}
