@@ -2,7 +2,7 @@
 {% block title %}{{ article.title }} @ {{ super() }}{% endblock %}
 
 {% block content %}
-<h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>{% if not HIDE_DATE %} <time datetime={{ article.date.isoformat() }}>/ {{article.locale_date }} /</time>{% endif %}</h2>
+<h2>{{ article.title }}{% if not HIDE_DATE %} <time datetime={{ article.date.isoformat() }}>/ {{article.locale_date }} /</time>{% endif %}</h2>
 
 <div class="article">
 {{ article.content }}
