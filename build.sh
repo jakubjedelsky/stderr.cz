@@ -11,7 +11,7 @@ CONFFILE=$BASEDIR/pelicanconf.py
 PUBLISHDIR=~/.stderr.cz
 
 GITHUBSSH="git@github.com:jakubjedelsky/stderr.cz"
-COMMITCOMMENT="Publish new site(s)"
+COMMITCOMMENT="Publishing."
 
 function print_help {
     cat << EOF
