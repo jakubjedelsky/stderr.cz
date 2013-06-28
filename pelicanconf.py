@@ -39,3 +39,5 @@ FILES_TO_COPY = (
 THEME = 'theme'
 SITESUBTITLE = u'poznámky'
 AUTHOR_BIO = u"Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat."
+
+HIDE_PAGES = True

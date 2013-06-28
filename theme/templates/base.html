@@ -34,9 +34,11 @@
         <div class="row">
             <div class="span8 offset3">
                 <ul class="breadcrumb menu">
+                    {% if not HIDE_PAGES %}
                     {% for page in PAGES %}
                     <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>{% if not loop.last %} <span class="divider">/</span>{% endif %}</li>
                     {% endfor %}
+                    {% endif %}
                 </ul>
             </div>
         </div>
