@@ -1,1 +1,73 @@
-Empty GitHub page
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>O autorovi @ stderr</title>
+
+        <meta charset="UTF-8">
+
+        <link href="/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="/theme/css/mystyle.css" rel="stylesheet" media="screen">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+                    </head>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="span8 offset3">
+                <ul class="breadcrumb menu">
+                                    </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3 text-right">
+                <div class="hero-unit">
+                    <h1><a href="">stderr</a></h1>
+                                        <p>poznámky</p>
+                                    </div>
+                                <div class="metadata">
+                    <h5>Autor</h5>
+                    <h6 class="font-style: italic;">Jakub Jedelský</h6>
+                                        <p>Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat.</p>
+                                    </div>
+                            </div>
+            <div class="span8">
+                <h2>O autorovi</h2>
+
+<div class="article">
+<p>Jmenuji se <strong>Jakub Jedelský</strong>, těší mě.</p>
+<p>Už pár let pracuji v brněnském <a href="http://www.master.cz">datacentru</a> jako administrátor (převážně) <em>linuxových</em> serverů - nejraději se starám o RHEL/CentOS (můžu se pochlubit certifikací RHCE), ale fušuju i do jiných distribucí. Konfiguruji, zabezpečuji a připravuji vše od jednoduchých webserverů po komplexní HA řešení. <em>Bash</em> je mým každodenním chlebem, <em>python</em> zábavou.</p>
+<p>Webový medailonek najede na: <a href="http://www.jakubjedelsky.cz">jakubjedelsky.cz</a></p>
+<p><em>Tato stránka bude (jednou) náhrada za mé dosavadní blogy <a href="http://dev.stderr.cz">dev.stderr.cz</a> a <a href="http://sys.stderr.cz">sys.stderr.cz</a>, zatím zde nic není. Máte-li k tomuto webu nějaké výhrady, můžete mi jej pomoci upravit. Zdrojové kódy jsou na <a href="https://github.com/jakubjedelsky/stderr.cz">Githubu</a>.</em></p>
+<h3>Co je to ten stderr?</h3>
+<p>Manuálová stránka napoví. Možná.</p>
+<div class="highlight"><pre><span class="n">NAME</span>
+    <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">-</span> <span class="n">standard</span> <span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">streams</span>
+<span class="n">SYNOPSIS</span>
+     <span class="err">#</span><span class="n">include</span>
+     <span class="k">extern</span> <span class="kt">FILE</span> <span class="o">*</span><span class="n">stderr</span><span class="p">;</span>
+
+<span class="n">DESCRIPTION</span>
+     <span class="n">Under</span> <span class="n">normal</span> <span class="n">circumstances</span> <span class="n">every</span> <span class="n">Unix</span> <span class="n">program</span> <span class="n">has</span> <span class="n">three</span>
+     <span class="n">streams</span> <span class="n">opened</span> <span class="n">fot</span> <span class="n">it</span> <span class="n">when</span> <span class="n">it</span> <span class="n">starts</span> <span class="n">up</span><span class="p">,</span> <span class="n">one</span> <span class="k">for</span> <span class="n">input</span><span class="p">,</span>
+     <span class="n">one</span> <span class="k">for</span> <span class="n">output</span><span class="p">,</span> <span class="n">and</span> <span class="n">one</span> <span class="k">for</span> <span class="n">printing</span> <span class="n">diagnostic</span> <span class="n">or</span> <span class="n">error</span>
+     <span class="n">mesages</span><span class="p">.</span>
+
+     <span class="n">The</span> <span class="n">input</span> <span class="n">stream</span> <span class="n">is</span> <span class="n">referred</span> <span class="n">to</span> <span class="n">as</span> <span class="err">‘‘</span><span class="n">standard</span> <span class="n">input</span><span class="err">’’</span><span class="p">;</span> <span class="n">the</span>
+     <span class="n">output</span> <span class="n">stream</span> <span class="n">is</span> <span class="n">referred</span> <span class="n">to</span> <span class="n">as</span> <span class="err">‘‘</span><span class="n">standard</span> <span class="n">output</span><span class="err">’’</span><span class="p">;</span> <span class="n">and</span>
+     <span class="n">the</span> <span class="n">error</span> <span class="n">stream</span> <span class="n">is</span> <span class="n">referred</span> <span class="n">to</span> <span class="n">as</span> <span class="err">‘‘</span><span class="n">standard</span> <span class="n">error</span><span class="err">’’</span><span class="p">.</span>
+     <span class="n">These</span> <span class="n">terms</span> <span class="n">are</span> <span class="n">abbreviated</span> <span class="n">to</span> <span class="n">form</span> <span class="n">the</span> <span class="n">symbols</span> <span class="n">used</span> <span class="n">to</span>
+     <span class="n">refer</span> <span class="n">to</span> <span class="n">these</span> <span class="n">files</span><span class="p">,</span> <span class="n">namely</span> <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">and</span> <span class="n">stderr</span><span class="p">.</span>
+<span class="p">(...)</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+                <p class="text-center" style="color: #666;">2009 ~ 2013</p>
+    </div>
+    </body>
+</html>
