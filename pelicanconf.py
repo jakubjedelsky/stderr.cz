@@ -40,7 +40,7 @@ THEME = 'theme'
 SITESUBTITLE = u'poznámky'
 AUTHOR_BIO = u"Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat."
 
-HIDE_PAGES = True
+DISPLAY_PAGES_ON_MENU = False
 
 SOCIAL = {
     'twitter': 'https://twitter.com/kubiis',
