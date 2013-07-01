@@ -9,3 +9,4 @@ In pelicanconf.py you can use these non-standard variables:
 
 * `AUTHOR_BIO`: One paragraph author's bio
 * `SOCIAL`: A dictionary {'title': 'url'} to appear in the "social" section.
+* `FLATTR_ID`:  Flattr ID (should be a username)

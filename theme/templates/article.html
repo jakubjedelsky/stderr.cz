@@ -3,7 +3,11 @@
 
 {% block content %}
 <h2>{{ article.title }}{% if not HIDE_DATE %} <time datetime={{ article.date.isoformat() }}>/ {{article.locale_date }} /</time>{% endif %}</h2>
-
+{% if FLATTR_ID %}
+<div class="flattr">
+    <script id='flattrbtn'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid={{ FLATTR_ID }}&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('flattrbtn');</script>
+</div>
+{% endif %}
 <div class="article">
 {{ article.content }}
 </div>

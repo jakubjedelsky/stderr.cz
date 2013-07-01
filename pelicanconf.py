@@ -47,3 +47,5 @@ SOCIAL = {
     'linkedin': 'http://www.linkedin.com/in/jedelsky',
     'github': 'https://github.com/jakubjedelsky',
 }
+
+FLATTR_ID = 'stderr'
