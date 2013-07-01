@@ -67,3 +67,23 @@ time {
 .article {
     margin-bottom: 50px;
 }
+ul.social, ul.social li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+ul.social li img {
+    background-size:32px 32px;
+    height: 32px;
+    width: 32px;
+/*    background: #000; */
+}
+.si-twitter {
+    background: #00ACED;
+}
+.si-github {
+    background: #4183C4;
+}
+.si-linkedin {
+    background: #007FB1;
+}
