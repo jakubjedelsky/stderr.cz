@@ -4,7 +4,7 @@ save_as: index.html
 
 Jmenuji se **Jakub Jedelský**, těší mě.
 
-Už pár let pracuji v brněnském [datacentru](http://www.master.cz) jako administrátor (převážně) *linuxových* serverů - nejraději se starám o RHEL/CentOS (můžu se pochlubit certifikací RHCE), ale fušuju i do jiných distribucí. Konfiguruji, zabezpečuji a připravuji vše od jednoduchých webserverů po komplexní HA řešení. *Bash* je mým každodenním chlebem, *python* zábavou.
+Už pár let pracuji v brněnském [datacentru](http://www.master.cz) jako administrátor (převážně) *linuxových* serverů - nejraději se starám o RHEL/CentOS (můžu se pochlubit certifikací [RHCE](https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&isSearch=False&verify=Verify)), ale orientuji se i v jiných distribucích. Konfiguruji, zabezpečuji a připravuji vše od jednoduchých webserverů po komplexní HA řešení. *Bash* je mým každodenním chlebem, *python* zábavou.
 
 Webový medailonek najede na: [jakubjedelsky.cz](http://www.jakubjedelsky.cz)
 
