@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
-SITEURL = ''
+SITEURL = 'http://g.stderr.cz'
 
 TIMEZONE = 'Europe/Prague'
 LOCALE = 'cs_CZ.UTF-8'
@@ -41,3 +41,9 @@ SITESUBTITLE = u'poznámky'
 AUTHOR_BIO = u"Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat."
 
 HIDE_PAGES = True
+
+SOCIAL = {
+    'twitter': 'https://twitter.com/kubiis',
+    'linkedin': 'http://www.linkedin.com/in/jedelsky',
+    'github': 'https://github.com/jakubjedelsky',
+}

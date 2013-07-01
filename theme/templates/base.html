@@ -57,8 +57,16 @@
                     {% if AUTHOR_BIO %}
                     <p>{{ AUTHOR_BIO }}</p>
                     {% endif %}
-                </div>
                 {% endif %}
+                {% if SOCIAL %}
+                    <h5>Social</h5>
+                    <ul class="social">
+                    {% for social, link in SOCIAL.iteritems() %}
+                            <li><a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/social/{{ social|lower }}-32.png" title="{{ social|capitalize }}" class="si-{{ social|lower }}" /></a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                </div>
             </div>
             <div class="span8">
                 {% block content %}{% endblock %}
