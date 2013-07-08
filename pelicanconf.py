@@ -21,14 +21,14 @@ TRANSLATION_FEED_ATOM = None
 DEFAULT_PAGINATION = 5 
 SUMMARY_MAX_LENGTH = 80
 
-ARTICLE_URL = '{slug}.html'
+ARTICLE_URL = '{slug}'
 ARTICLE_SAVE_AS = '{slug}.html'
 
-ARTICLE_LANG_URL = '{lang}/{slug}.html'
+ARTICLE_LANG_URL = '{lang}/{slug}'
 ARTICLE_LANG_SAVE_AS = '{lang}/{slug}.html'
 
-PAGE_URL = 'pages/{slug}.html'
-PAGE_SAVE_AS = 'pages/{slug}.html'
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}.html'
 
 FILES_TO_COPY = ( 
         ('extra/robots.txt', 'robots.txt'),
