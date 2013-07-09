@@ -49,24 +49,24 @@
 <p><em>Tato stránka bude (jednou) náhrada za mé dosavadní blogy <a href="http://dev.stderr.cz">dev.stderr.cz</a> a <a href="http://sys.stderr.cz">sys.stderr.cz</a>, zatím zde nic není. Máte-li k tomuto webu nějaké výhrady, můžete mi jej pomoci upravit. Zdrojové kódy jsou na <a href="https://github.com/jakubjedelsky/stderr.cz">Githubu</a>.</em></p>
 <h3>Co je to ten stderr?</h3>
 <p>Manuálová stránka napoví. Možná.</p>
-<div class="highlight"><pre><span class="n">NAME</span>
-    <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">-</span> <span class="n">standard</span> <span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">streams</span>
-<span class="n">SYNOPSIS</span>
-     <span class="err">#</span><span class="n">include</span>
-     <span class="k">extern</span> <span class="kt">FILE</span> <span class="o">*</span><span class="n">stderr</span><span class="p">;</span>
+<div class="highlight"><pre>NAME
+    stdin, stdout, stderr - standard I/O streams
+SYNOPSIS
+     #include
+     extern FILE *stderr;
 
-<span class="n">DESCRIPTION</span>
-     <span class="n">Under</span> <span class="n">normal</span> <span class="n">circumstances</span> <span class="n">every</span> <span class="n">Unix</span> <span class="n">program</span> <span class="n">has</span> <span class="n">three</span>
-     <span class="n">streams</span> <span class="n">opened</span> <span class="n">fot</span> <span class="n">it</span> <span class="n">when</span> <span class="n">it</span> <span class="n">starts</span> <span class="n">up</span><span class="p">,</span> <span class="n">one</span> <span class="k">for</span> <span class="n">input</span><span class="p">,</span>
-     <span class="n">one</span> <span class="k">for</span> <span class="n">output</span><span class="p">,</span> <span class="n">and</span> <span class="n">one</span> <span class="k">for</span> <span class="n">printing</span> <span class="n">diagnostic</span> <span class="n">or</span> <span class="n">error</span>
-     <span class="n">mesages</span><span class="p">.</span>
+DESCRIPTION
+     Under normal circumstances every Unix program has three
+     streams opened fot it when it starts up, one for input,
+     one for output, and one for printing diagnostic or error
+     mesages.
 
-     <span class="n">The</span> <span class="n">input</span> <span class="n">stream</span> <span class="n">is</span> <span class="n">referred</span> <span class="n">to</span> <span class="n">as</span> <span class="err">‘‘</span><span class="n">standard</span> <span class="n">input</span><span class="err">’’</span><span class="p">;</span> <span class="n">the</span>
-     <span class="n">output</span> <span class="n">stream</span> <span class="n">is</span> <span class="n">referred</span> <span class="n">to</span> <span class="n">as</span> <span class="err">‘‘</span><span class="n">standard</span> <span class="n">output</span><span class="err">’’</span><span class="p">;</span> <span class="n">and</span>
-     <span class="n">the</span> <span class="n">error</span> <span class="n">stream</span> <span class="n">is</span> <span class="n">referred</span> <span class="n">to</span> <span class="n">as</span> <span class="err">‘‘</span><span class="n">standard</span> <span class="n">error</span><span class="err">’’</span><span class="p">.</span>
-     <span class="n">These</span> <span class="n">terms</span> <span class="n">are</span> <span class="n">abbreviated</span> <span class="n">to</span> <span class="n">form</span> <span class="n">the</span> <span class="n">symbols</span> <span class="n">used</span> <span class="n">to</span>
-     <span class="n">refer</span> <span class="n">to</span> <span class="n">these</span> <span class="n">files</span><span class="p">,</span> <span class="n">namely</span> <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">and</span> <span class="n">stderr</span><span class="p">.</span>
-<span class="p">(...)</span>
+     The input stream is referred to as ‘‘standard input’’; the
+     output stream is referred to as ‘‘standard output’’; and
+     the error stream is referred to as ‘‘standard error’’.
+     These terms are abbreviated to form the symbols used to
+     refer to these files, namely stdin, stdout, and stderr.
+(...)
 </pre></div>
 </div>
             </div>
