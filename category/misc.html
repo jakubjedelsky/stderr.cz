@@ -39,10 +39,34 @@
                                 </div>
             </div>
             <div class="span8">
-                <ul>
-    <li><a href="http://g.stderr.cz/category/blog.html">blog</a></li>
-    <li><a href="http://g.stderr.cz/category/misc.html">misc</a></li>
-</ul>
+                
+<h2><a href="http://g.stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
+<div class="article">
+<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
+pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
+implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
+klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
+převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
+možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
+mé nejoblíbenější.  </p>
+<h3>Generujeme …</h3>
+<p>… samotný privátní klíč (RSA):</p>
+<div class="highlight"><pre><span class="n">openssl</span> <span class="n">genrsa</span> <span class="o">-</span><span class="n">out</span> <span class="n">klic</span><span class="p">.</span><span class="n">key</span> <span class="mi">2048</span>
+</pre></div>
+
+
+<p>… CSR s ...</p>
+<hr />
+</div>
+
+<!-- 5 -->
+<div class="pagination pagination-large">
+    <ul>
+            <li class="disabled"><span>« předchozí</span></li>
+    
+            <li class="disabled"><span>další »</span></li>
+        </ul>
+</div>
             </div>
         </div>
     </div>
