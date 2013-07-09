@@ -12,7 +12,7 @@ Webový medailonek najede na: [jakubjedelsky.cz](http://www.jakubjedelsky.cz)
 
 ### Co je to ten stderr?
 Manuálová stránka napoví. Možná.
-```
+```text
 NAME
     stdin, stdout, stderr - standard I/O streams
 SYNOPSIS
