@@ -5,9 +5,10 @@
 
         <meta charset="UTF-8">
 
-        <link href="http://g.stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="http://g.stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-        <link href="http://g.stderr.cz/theme/css/mystyle.css" rel="stylesheet" media="screen">
+        <link href="/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="/theme/css/mystyle.css" rel="stylesheet" media="screen">
+        <link href="/theme/css/pygment.css" rel="stylesheet" media="screen">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
                     </head>
@@ -23,7 +24,7 @@
         <div class="row">
             <div class="span3 text-right">
                 <div class="hero-unit">
-                    <h1><a href="http://g.stderr.cz">stderr</a></h1>
+                    <h1><a href="">stderr</a></h1>
                                         <p>poznámky</p>
                                     </div>
                                 <div class="metadata">
@@ -32,15 +33,15 @@
                                         <p>Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat.</p>
                                                                         <h5>Social</h5>
                     <ul class="social">
-                                                <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://g.stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
-                                                <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
-                                                <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                                                <li><a href="https://twitter.com/kubiis" target="_blank"><img src="/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                                                <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                                                <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
                                         </ul>
                                 </div>
             </div>
             <div class="span8">
                 
-<h2><a href="http://g.stderr.cz/wysinwyc-what-you-see-is-not-what-you-copy-exploit">WYSINWYC (What you see is not what you copy) exploit</a> <time datetime=2013-04-08T21:58:00>/ 08. 04. 2013 /</time></h2>
+<h2><a href="/wysinwyc-what-you-see-is-not-what-you-copy-exploit">WYSINWYC (What you see is not what you copy) exploit</a> <time datetime=2013-04-08T21:58:00>/ 08. 04. 2013 /</time></h2>
 <div class="article">
 <p>Je to docela známá fičura, která se objevuje (hlavně) na zpravodajských
 serverech - při zkopírování části textu se do clipboardu přidá daší
@@ -52,7 +53,7 @@ pravděpodobnost, že půjdou rovnou do terminálu?</strong>  </p>
 si třeba tento jednoduchý příkaz ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
+<h2><a href="/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
 <div class="article">
 <p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
 pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
@@ -63,7 +64,7 @@ možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jse
 mé nejoblíbenější.  </p>
 <h3>Generujeme …</h3>
 <p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre><span class="n">openssl</span> <span class="n">genrsa</span> <span class="o">-</span><span class="n">out</span> <span class="n">klic</span><span class="p">.</span><span class="n">key</span> <span class="mi">2048</span>
+<div class="highlight"><pre>openssl genrsa -out klic.key 2048
 </pre></div>
 
 
