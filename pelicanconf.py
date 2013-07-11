@@ -49,3 +49,5 @@ SOCIAL = {
 }
 
 FLATTR_ID = 'stderr'
+
+STATIC_PATHS = ['images']
