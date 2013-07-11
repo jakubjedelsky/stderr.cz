@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>Zábava s traceroute @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -40,51 +40,22 @@
                                 </div>
             </div>
             <div class="span8">
-                
-<h2><a href="http://g.stderr.cz/wysinwyc-what-you-see-is-not-what-you-copy-exploit">WYSINWYC (What you see is not what you copy) exploit</a> <time datetime=2013-04-08T21:58:00>/ 08. 04. 2013 /</time></h2>
-<div class="article">
-<p>Je to docela známá fičura, která se objevuje (hlavně) na zpravodajských
-serverech - při zkopírování části textu se do clipboardu přidá daší
-text, o který nikdo tak úplně nestojí. Když už se ale do Wordu vloží,
-tak jej lehce umažeme (a <a href="http://www.ceskatelevize.cz/ct24/regiony/jihomoravsky-kraj/119385-onderkova-zaverecna-prace-na-vs-nevyhovuje-kriteriim/" title="O bakalářské práci nejlepšího primátora největšího města ČR">kašleme na nějaké citace</a>). Co když se ale
-zrovna nekopíruje část článku, ale <strong>unixové příkazy, u kterých je velká
-pravděpodobnost, že půjdou rovnou do terminálu?</strong>  </p>
-<p>Kolega mě upozornil na <a href="http://thejh.net/misc/website-terminal-copy-paste">pěknou ukázku</a>, jak tohoto zneužít. Vezměte
-si třeba tento jednoduchý příkaz ...</p>
-<hr />
+                <h2>Zábava s traceroute <time datetime=2013-03-15T07:42:00>/ 15. 03. 2013 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Zábava s traceroute';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
 </div>
-<h2><a href="http://g.stderr.cz/ftp-ftps-a-sftp">FTP, FTPS a SFTP</a> <time datetime=2013-04-08T00:00:00>/ 08. 04. 2013 /</time></h2>
-<div class="article">
-<p>Jen pár slov o každém z těchto tří protokolů, abychom si v tom konečně
-udělali pořádek a nemuseli se handrkovat, co kdo vlastně myslel. Ve
-všech třech případech jde o protokoly používané pro přenos souborů, to je cajk.</p>
-<ul>
-<li><strong>FTP</strong> (<em>File Transfer Protocol</em>) je z našich tří nejstarší.
-    Protokol byl pro TCP/IP definovaný už v roce 1985 a ke svému
-    fungování využívá portů 20 a 21. Jde o jednoduchý protokol,
-    využívající pouze <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol#List_of_FTP_commands" title="Seznam příkazů FTP, Wikipedie">pár příkazů</a>.</li>
-<li><strong>FTPS:</strong> Jde o ten <em>stejný</em> jednoduchý ...</li></ul>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
-<div class="article">
-<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
-pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
-implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
-klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
-převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
-možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
-mé nejoblíbenější.  </p>
-<h3>Generujeme …</h3>
-<p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre>openssl genrsa -out klic.key 2048
-</pre></div>
-
-
-<p>… CSR s ...</p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/zabava-s-traceroute">Zábava s traceroute</a> <time datetime=2013-03-15T07:42:00>/ 15. 03. 2013 /</time></h2>
 <div class="article">
 <p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
 dotaz prochází, u každého vrátí čas odezvy a ... skončí. Vlastně docela
@@ -100,17 +71,93 @@ nuda. Pak jsem ale narazil na tento twít:</p>
 
 <p>Výsledem bude opět výpis uzlů, ale počkat.. Jak by řekl anonymní
 komentující: <em>"Go home traceroute, you're drunk!"</em> Po přeskákání
-nejblžších uzlů se ...</p>
-<hr />
-</div>
+nejblžších uzlů se můžete začíst do úvodu Star Wars: Episode IV. Boží!
+Na svědomí si to vzal <a href="http://beaglenetworks.net/post/42707829171/star-wars-traceroute" title="Star Wars Traceroute">Ryan Weber</a>. <em>Vycucnutý výsledek je pod
+článkem.</em></p>
+<h3>Hvězdné války v ASCII</h3>
+<p>Pokud vás ten úvod navnadil a rádi byste díl viděli celý, zkuste se přes
+telnet připojit na towel.blinkenlights.nl.</p>
+<div class="highlight"><pre>telnet towel.blinkenlights.nl
+</pre></div>
 
-<!-- 5 -->
-<div class="pagination pagination-large">
-    <ul>
-            <li class="disabled"><span>« předchozí</span></li>
-    
-            <li class="disabled"><span>další »</span></li>
-        </ul>
+
+<h3>Nyan Cat!</h3>
+<p>Podobná hříčka je <a href="http://www.youtube.com/watch?v=QH2-TGUlwu4" title="Nyan Cat">nyan cat</a> přes telnet (ňaňání bez zvuku vydržíte
+dloho):</p>
+<div class="highlight"><pre>telnet miku.acm.uiuc.edu
+</pre></div>
+
+
+<h3>MUD</h3>
+<p>Fantazii se meze nekladou. Textových Multi User Dungeonů přes telnet
+ještě pár běží (i když nejlepší už asi mají za sebou). Namátkou:</p>
+<div class="highlight"><pre>telnet aardmud.org
+telnet zombiemud.org
+</pre></div>
+
+
+<h3>a další ...</h3>
+<p>Telehack vám řekne vtip, vypočítá příklad nebo spustí traceroute:</p>
+<div class="highlight"><pre>telnet telehack.com
+</pre></div>
+
+
+<p>Výmluvy, proč se spojení ukončilo, nabízí autoři hvězdných válek v ascii
+(viz výše):</p>
+<div class="highlight"><pre>telnet towel.blinkenlights.nl 666
+</pre></div>
+
+
+<p>A konečně ten osekaný výpis z traceroute:</p>
+<div class="highlight"><pre>    Episode.IV
+    A.NEW.HOPE
+    It.is.a.period.of.civil.war
+    Rebel.spaceships
+    striking.from.a.hidden.base
+    have.won.their.first.victory
+    against.the.evil.Galactic.Empire
+    During.the.battle
+    Rebel.spies.managed
+    to.steal.secret.plans
+    to.the.Empires.ultimate.weapon
+    the.DEATH.STAR
+    an.armored.space.station
+    with.enough.power.to
+    destroy.an.entire.planet
+    Pursued.by.the.Empires
+    sinister.agents
+    Princess.Leia.races.home
+    aboard.her.starship
+    custodian.of.the.stolen.plans
+    that.can.save.her
+    people.and.restore
+    freedom.to.the.galaxy
+    0-----I-------I-----0
+    0------------------0
+    0-----------------0
+    0----------------0
+    0---------------0
+    0--------------0
+    0-------------0
+    0------------0
+    0-----------0
+    0----------0
+    0---------0
+    0--------0
+    0-------0
+    0------0
+    0-----0
+    0----0
+    0---0
+    0--0
+    0-0
+    00
+    I
+    By.Ryan.Werber
+    Blizzards.Breed.CCIE.Creativity
+    Please.Try.Again.Tracerote.to.obiwan.scrye.net
+    read.more.at.beaglenetworks.net
+</pre></div>
 </div>
             </div>
         </div>

@@ -84,6 +84,25 @@ pravděpodobnost, že půjdou rovnou do terminálu?</strong>  </p>
 si třeba tento jednoduchý příkaz ...</p>
 <hr />
 </div>
+<h2><a href="http://g.stderr.cz/zabava-s-traceroute">Zábava s traceroute</a> <time datetime=2013-03-15T07:42:00>/ 15. 03. 2013 /</time></h2>
+<div class="article">
+<p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
+dotaz prochází, u každého vrátí čas odezvy a ... skončí. Vlastně docela
+nuda. Pak jsem ale narazil na tento twít:</p>
+<blockquote class="twitter-tweet"><p>Dejte si traceroute na 216.81.59.173 a chvíli si počkejte :)</p>&mdash; Adéla (@adela_cz) <a href="https://twitter.com/adela_cz/statuses/312287606052380672">March 14, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Zkuste to:</p>
+<div class="highlight"><pre>traceroute -m 120 -q1 216.81.59.173
+</pre></div>
+
+
+<p>Výsledem bude opět výpis uzlů, ale počkat.. Jak by řekl anonymní
+komentující: <em>"Go home traceroute, you're drunk!"</em> Po přeskákání
+nejblžších uzlů se ...</p>
+<hr />
+</div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">
