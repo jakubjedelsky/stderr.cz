@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>FTP, FTPS a SFTP @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -40,20 +40,22 @@
                                 </div>
             </div>
             <div class="span8">
-                
-<h2><a href="http://g.stderr.cz/wysinwyc-what-you-see-is-not-what-you-copy-exploit">WYSINWYC (What you see is not what you copy) exploit</a> <time datetime=2013-04-08T21:58:00>/ 08. 04. 2013 /</time></h2>
-<div class="article">
-<p>Je to docela známá fičura, která se objevuje (hlavně) na zpravodajských
-serverech - při zkopírování části textu se do clipboardu přidá daší
-text, o který nikdo tak úplně nestojí. Když už se ale do Wordu vloží,
-tak jej lehce umažeme (a <a href="http://www.ceskatelevize.cz/ct24/regiony/jihomoravsky-kraj/119385-onderkova-zaverecna-prace-na-vs-nevyhovuje-kriteriim/" title="O bakalářské práci nejlepšího primátora největšího města ČR">kašleme na nějaké citace</a>). Co když se ale
-zrovna nekopíruje část článku, ale <strong>unixové příkazy, u kterých je velká
-pravděpodobnost, že půjdou rovnou do terminálu?</strong>  </p>
-<p>Kolega mě upozornil na <a href="http://thejh.net/misc/website-terminal-copy-paste">pěknou ukázku</a>, jak tohoto zneužít. Vezměte
-si třeba tento jednoduchý příkaz ...</p>
-<hr />
+                <h2>FTP, FTPS a SFTP <time datetime=2013-04-08T00:00:00>/ 08. 04. 2013 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=FTP, FTPS a SFTP';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
 </div>
-<h2><a href="http://g.stderr.cz/ftp-ftps-a-sftp">FTP, FTPS a SFTP</a> <time datetime=2013-04-08T00:00:00>/ 08. 04. 2013 /</time></h2>
 <div class="article">
 <p>Jen pár slov o každém z těchto tří protokolů, abychom si v tom konečně
 udělali pořádek a nemuseli se handrkovat, co kdo vlastně myslel. Ve
@@ -63,35 +65,27 @@ všech třech případech jde o protokoly používané pro přenos souborů, to 
     Protokol byl pro TCP/IP definovaný už v roce 1985 a ke svému
     fungování využívá portů 20 a 21. Jde o jednoduchý protokol,
     využívající pouze <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol#List_of_FTP_commands" title="Seznam příkazů FTP, Wikipedie">pár příkazů</a>.</li>
-<li><strong>FTPS:</strong> Jde o ten <em>stejný</em> jednoduchý ...</li></ul>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
-<div class="article">
-<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
-pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
-implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
-klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
-převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
-možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
-mé nejoblíbenější.  </p>
-<h3>Generujeme …</h3>
-<p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre>openssl genrsa -out klic.key 2048
-</pre></div>
-
-
-<p>… CSR s ...</p>
-<hr />
-</div>
-
-<!-- 5 -->
-<div class="pagination pagination-large">
-    <ul>
-            <li class="disabled"><span>« předchozí</span></li>
-    
-            <li class="disabled"><span>další »</span></li>
-        </ul>
+<li><strong>FTPS:</strong> Jde o ten <em>stejný</em> jednoduchý protokol FTP, jen je obalený
+    vrstvou SSL/TLS (proto "S" na konci, stejně jako u HTTPS). Na straně
+    serveru (kde jej většinou obsluhuje stejný daemon jako FTP) musí být
+    dostupný a nakonfigurovaný certifikát, klient se pak proti serveru
+    autorizuje příkazem <code>AUTH TLS</code> (nebo <code>AUTH SSL</code>).</li>
+<li><strong>SFTP:</strong> Přehozené písmenko a už to dělá zmatky; opět jde o přenos
+    souborů, ale se samotným protokolem FTP to nemá (skoro) nic
+    společného. Zkratka SFTP znamená <em>SSH File Transfer Protocol</em> nebo
+    <em>Secure FTP</em>. Protokol byl navržený jako rozšíření SSH pro přenos
+    souborů, dokáže ale pracovat i nad protokolem jiným, který se kromě
+    šifrování musí postarat i o autorizaci.</li>
+</ul>
+<p>Takže až budete po svém adminovi chtít připravit SFTP, nezlobte se, že
+se se svým oblíbeným FTP programem k serveru nepřipojíte. A vůbec, v
+dnešní době už můžete použít <a href="http://cs.wikipedia.org/wiki/Git">něco rozumnějšího</a>.</p>
+<h3>Více čtení:</h3>
+<ul>
+<li>FTP: <a href="http://cs.wikipedia.org/wiki/File_Transfer_Protocol">na české Wikipedii</a>, <a href="http://tools.ietf.org/html/rfc959">RFC</a>  </li>
+<li>FTPS: <a href="http://cs.wikipedia.org/wiki/FTPS">na české Wikipedii</a>, <a href="http://tools.ietf.org/html/rfc4217">RFC</a>  </li>
+<li>SFTP: <a href="http://cs.wikipedia.org/wiki/SSH_file_transfer_protocol">na české Wikipedii</a></li>
+</ul>
 </div>
             </div>
         </div>
