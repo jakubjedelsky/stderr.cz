@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>stderr - Articles by Jakub Jedelsky</title>
 
         <meta charset="UTF-8">
 
@@ -43,49 +43,6 @@
             </div>
             <div class="span8">
                 
-<h2><a href="http://g.stderr.cz/wysinwyc-what-you-see-is-not-what-you-copy-exploit">WYSINWYC (What you see is not what you copy) exploit</a> <time datetime=2013-04-08T21:58:00>/ 08. 04. 2013 /</time></h2>
-<div class="article">
-<p>Je to docela známá fičura, která se objevuje (hlavně) na zpravodajských
-serverech - při zkopírování části textu se do clipboardu přidá daší
-text, o který nikdo tak úplně nestojí. Když už se ale do Wordu vloží,
-tak jej lehce umažeme (a <a href="http://www.ceskatelevize.cz/ct24/regiony/jihomoravsky-kraj/119385-onderkova-zaverecna-prace-na-vs-nevyhovuje-kriteriim/" title="O bakalářské práci nejlepšího primátora největšího města ČR">kašleme na nějaké citace</a>). Co když se ale
-zrovna nekopíruje část článku, ale <strong>unixové příkazy, u kterých je velká
-pravděpodobnost, že půjdou rovnou do terminálu?</strong>  </p>
-<p>Kolega mě upozornil na <a href="http://thejh.net/misc/website-terminal-copy-paste">pěknou ukázku</a>, jak tohoto zneužít. Vezměte
-si třeba tento jednoduchý příkaz ...</p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/ftp-ftps-a-sftp">FTP, FTPS a SFTP</a> <time datetime=2013-04-08T00:00:00>/ 08. 04. 2013 /</time></h2>
-<div class="article">
-<p>Jen pár slov o každém z těchto tří protokolů, abychom si v tom konečně
-udělali pořádek a nemuseli se handrkovat, co kdo vlastně myslel. Ve
-všech třech případech jde o protokoly používané pro přenos souborů, to je cajk.</p>
-<ul>
-<li><strong>FTP</strong> (<em>File Transfer Protocol</em>) je z našich tří nejstarší.
-    Protokol byl pro TCP/IP definovaný už v roce 1985 a ke svému
-    fungování využívá portů 20 a 21. Jde o jednoduchý protokol,
-    využívající pouze <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol#List_of_FTP_commands" title="Seznam příkazů FTP, Wikipedie">pár příkazů</a>.</li>
-<li><strong>FTPS:</strong> Jde o ten <em>stejný</em> jednoduchý ...</li></ul>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
-<div class="article">
-<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
-pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
-implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
-klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
-převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
-možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
-mé nejoblíbenější.  </p>
-<h3>Generujeme …</h3>
-<p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre>openssl genrsa -out klic.key 2048
-</pre></div>
-
-
-<p>… CSR s ...</p>
-<hr />
-</div>
 <h2><a href="http://g.stderr.cz/zabava-s-traceroute">Zábava s traceroute</a> <time datetime=2013-03-15T07:42:00>/ 15. 03. 2013 /</time></h2>
 <div class="article">
 <p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
@@ -105,25 +62,13 @@ komentující: <em>"Go home traceroute, you're drunk!"</em> Po přeskákání
 nejblžších uzlů se ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/cve-2012-2122-chyba-mysql-ktera-by-vas-mela-zajimat">CVE-2012-2122: Chyba MySQL, která by vás měla zajímat</a> <time datetime=2012-06-11T15:37:00>/ 11. 06. 2012 /</time></h2>
-<div class="article">
-<p>Zásadní chybu (včetně opravy) týkající se MySQL a MariaDB serverů v
-sobotu na <a href="http://seclists.org/oss-sec/2012/q2/493">oss-sec</a> maillistu ohlásil Sergei Golubchik. Zpozornět by
-tedy měli všichni, kdo mají nějaký takový server pod svojí správou.  </p>
-<p>Pokud se uživatel chce k MariaDB/MySQL serveru připojit a ověřuje se
-heslem, vytvoří se právě z hesla a nějakých náhodných dat SHA otisk a
-porovnává se s uloženými údaji. Díky chybě v tomto porovnávání, vzniká
-šance 1:256, že vás systém vpustí i se špatným heslem. <em>Yay!</em></p>
-<h3>Týká ...</h3>
-<hr />
-</div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">
     <ul>
-            <li class="disabled"><span>« předchozí</span></li>
-    
-            <li><span><a href="http://g.stderr.cz/index2.html">další »</a></span></li>
+                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky.html">« předchozí</a></span></li>
+            
+            <li class="disabled"><span>další »</span></li>
         </ul>
 </div>
             </div>
