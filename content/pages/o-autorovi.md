@@ -1,6 +1,5 @@
 Title: O autorovi
 Slug: o-autorovi
-save_as: index.html
 
 Jmenuji se **Jakub Jedelský**, těší mě.
 
