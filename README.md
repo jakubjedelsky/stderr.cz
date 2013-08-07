@@ -9,4 +9,5 @@ license
 Author: Jakub Jedelsky
 
 This code and all texts are shared under a [**CC BY-NC-SA**](http://creativecommons.org/licenses/by-nc-sa/3.0/) 3.0.
+
 ![CC BY-NC-SA](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
