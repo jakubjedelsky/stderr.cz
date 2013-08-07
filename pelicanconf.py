@@ -51,3 +51,5 @@ SOCIAL = {
 FLATTR_ID = 'stderr'
 
 STATIC_PATHS = ['images']
+
+DISQUS_SITENAME = 'stderr-cz-blog'
