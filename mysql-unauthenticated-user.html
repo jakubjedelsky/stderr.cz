@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>MySQL: unauthenticated user @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -42,44 +42,22 @@
                                 </div>
             </div>
             <div class="span8">
-                
-<h2><a href="http://g.stderr.cz/utoci-na-me-z">Útočí na mě z...</a> <time datetime=2011-12-19T16:00:00>/ 19. 12. 2011 /</time></h2>
-<div class="article">
-<p>Čas Vánoční je čas pohody, klidu a míru. To platí jen do určité chvíle.
-Třeba dokud na váš server nezačnou útočit z ... Číny.</p>
-<p>Jedná se o celkem aktuální aférku, o které se (pěkně blbě, takže to ani
-nečtěte) rozepsala <a href="http://www.lupa.cz/clanky/tisice-tuzemskych-e-shopu-melo-vypadky-muze-za-to-masivni-ddos-utok/">Lupa.cz</a>, nějaké detaily o probíhajících útocích
-jsou na <a href="http://www.rcnoviny.cz/2011/12/ddos-tok-na-strnky-s-rc-modely/">rcnoviny.cz</a>.  </p>
-<p>Ochrana proti takovému DDOS útoku není žádná sranda a jako admin
-serveru máte jen omezené pole působnosti. Dokud útočníci nezahltí linku
-(pak to řešte se svým ISP) a data k ...</p>
-<hr />
+                <h2>MySQL: unauthenticated user <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=MySQL: unauthenticated user';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
 </div>
-<h2><a href="http://g.stderr.cz/red-hat-certified-engineer">Red Hat Certified Engineer</a> <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
-<div class="article">
-<p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
-po tom co jsem <a href="http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/" title="RHCSA">dosáhl na RHCSA</a>, jsem se rozhodl pokračovat. Napoprvé
-mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
-se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990" title="Red Har Verification">111-122-990</a>
-najdete jako RHCE.  </p>
-<p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/centos-a-vydavani-aktualizaci">CentOS a vydávání aktualizací</a> <time datetime=2011-12-05T16:44:00>/ 05. 12. 2011 /</time></h2>
-<div class="article">
-<p>Dnes jen krátce, ale za to se zajímavým odkazem.</p>
-<p>Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že
-vydávání aktualizací minor verzí se oproti RHELu pořád zpožďuje.
-Vývojáři se snaží alespoň hotfixy a security aktualizace distribuovat
-přes <a href="http://wiki.centos.org/AdditionalResources/Repositories/CR" title="CR Repository">Continuous Release repozitář</a>. Proč se vývoj táhne <a href="http://lists.centos.org/pipermail/centos/2011-October/119027.html" title="CentOS maillist">vysvětluje v
-maillistu</a> Johnny Hughes. Ve zkratce: hledejte za tím rozdělení RHELu
-do několika skupin (Server, Workstation, ...), kde ve stejných skupinách
-jsou různé balíčky, a zpřísnění politiky pro sdílení některých
-souborů/balíčků.</p>
-<p>A tak se ...</p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a> <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
 <div class="article">
 <p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
 vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
@@ -91,18 +69,41 @@ user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
 </pre></div>
 
 
-<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
-<hr />
+<p>Po chvilce pátrání jsem zjistil, že nejde o útok - ani nevíte jaká je to
+po pár zkušenostech úleva. Chyba byla ve špatné komunikaci s DNS
+servery, které dostatečně rychle neodpovídaly.</p>
+<p>MySQL se DNS serverů dotazuje téměř při každém uživatelském loginu
+(používá sice nějakou vnitřní cache, ale asi to není žádná bomba).
+Využívají se k tomu funkce <code>gethostbyaddr()</code>, pomocí které se zeptá,
+jaký záznam na této IP vězí. Potom nasadí <code>gethostbyname()</code> a porovná
+vrácenou IP adresu s původní (více rozepsané je to v <a href="http://dev.mysql.com/doc/refman/5.0/en/dns.html" title="MySQL dokumentace">dokumentaci</a>).
+Jednoduché a účinné do okamžku, kdy se zhorší komunikace právě s DNS
+servery. Nabízejí se dvě možnosti, jak to vyřešit:</p>
+<ul>
+<li><strong>Použijte přepínač <a href="http://dev.mysql.com/doc/refman/5.0/en/dns.html" title="MySQL dokumentace">--skip-name-resolve</a>.</strong> Hodí se
+    hlavně v případě, že dopředu nevíte, odkud se k serveru klienti
+    připojují. S použitím ale musíte upravit všechny záznamy pro
+    povolené uživatele, tak aby ve sloupci Host byly jen IP adresy nebo
+    'localhost'.</li>
+<li><strong>Zapište záznamy s klienty do <code>/etc/hosts</code> souboru.</strong> Funkce
+    <code>gethostbyaddr()</code> i <code>gethostbyname()</code> se nejdříve podívají právě do
+    tohoto souboru než aby se dotazovaly jiných serverů. Tato možnost se
+    hodí, pokud máte pár jen statických klientů.</li>
+</ul>
+<p>Třeba to někomu pomůže..</p>
 </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'MySQL: unauthenticated user';
 
-<!-- 5 -->
-<div class="pagination pagination-large">
-    <ul>
-                        <li><span><a href="http://g.stderr.cz/index.html">« předchozí</a></span></li>
-            
-            <li class="disabled"><span>další »</span></li>
-        </ul>
-</div>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
             </div>
         </div>
     </div>

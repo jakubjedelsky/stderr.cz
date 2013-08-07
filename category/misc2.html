@@ -55,6 +55,35 @@ serveru máte jen omezené pole působnosti. Dokud útočníci nezahltí linku
 (pak to řešte se svým ISP) a data k ...</p>
 <hr />
 </div>
+<h2><a href="http://g.stderr.cz/centos-a-vydavani-aktualizaci">CentOS a vydávání aktualizací</a> <time datetime=2011-12-05T16:44:00>/ 05. 12. 2011 /</time></h2>
+<div class="article">
+<p>Dnes jen krátce, ale za to se zajímavým odkazem.</p>
+<p>Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že
+vydávání aktualizací minor verzí se oproti RHELu pořád zpožďuje.
+Vývojáři se snaží alespoň hotfixy a security aktualizace distribuovat
+přes <a href="http://wiki.centos.org/AdditionalResources/Repositories/CR" title="CR Repository">Continuous Release repozitář</a>. Proč se vývoj táhne <a href="http://lists.centos.org/pipermail/centos/2011-October/119027.html" title="CentOS maillist">vysvětluje v
+maillistu</a> Johnny Hughes. Ve zkratce: hledejte za tím rozdělení RHELu
+do několika skupin (Server, Workstation, ...), kde ve stejných skupinách
+jsou různé balíčky, a zpřísnění politiky pro sdílení některých
+souborů/balíčků.</p>
+<p>A tak se ...</p>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a> <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
+<div class="article">
+<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
+vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
+počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
+programátorem zjistili, že jednou za čas se tam objeví spousta připojení
+ze vzdáleného (legitimního) serveru označená jako "unauthenticated
+user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
+<div class="highlight"><pre>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
+</pre></div>
+
+
+<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
+<hr />
+</div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>CentOS a vydávání aktualizací @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -42,30 +42,22 @@
                                 </div>
             </div>
             <div class="span8">
-                
-<h2><a href="http://g.stderr.cz/utoci-na-me-z">Útočí na mě z...</a> <time datetime=2011-12-19T16:00:00>/ 19. 12. 2011 /</time></h2>
-<div class="article">
-<p>Čas Vánoční je čas pohody, klidu a míru. To platí jen do určité chvíle.
-Třeba dokud na váš server nezačnou útočit z ... Číny.</p>
-<p>Jedná se o celkem aktuální aférku, o které se (pěkně blbě, takže to ani
-nečtěte) rozepsala <a href="http://www.lupa.cz/clanky/tisice-tuzemskych-e-shopu-melo-vypadky-muze-za-to-masivni-ddos-utok/">Lupa.cz</a>, nějaké detaily o probíhajících útocích
-jsou na <a href="http://www.rcnoviny.cz/2011/12/ddos-tok-na-strnky-s-rc-modely/">rcnoviny.cz</a>.  </p>
-<p>Ochrana proti takovému DDOS útoku není žádná sranda a jako admin
-serveru máte jen omezené pole působnosti. Dokud útočníci nezahltí linku
-(pak to řešte se svým ISP) a data k ...</p>
-<hr />
+                <h2>CentOS a vydávání aktualizací <time datetime=2011-12-05T16:44:00>/ 05. 12. 2011 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=CentOS a vydávání aktualizací';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
 </div>
-<h2><a href="http://g.stderr.cz/red-hat-certified-engineer">Red Hat Certified Engineer</a> <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
-<div class="article">
-<p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
-po tom co jsem <a href="http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/" title="RHCSA">dosáhl na RHCSA</a>, jsem se rozhodl pokračovat. Napoprvé
-mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
-se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990" title="Red Har Verification">111-122-990</a>
-najdete jako RHCE.  </p>
-<p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/centos-a-vydavani-aktualizaci">CentOS a vydávání aktualizací</a> <time datetime=2011-12-05T16:44:00>/ 05. 12. 2011 /</time></h2>
 <div class="article">
 <p>Dnes jen krátce, ale za to se zajímavým odkazem.</p>
 <p>Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že
@@ -76,33 +68,20 @@ maillistu</a> Johnny Hughes. Ve zkratce: hledejte za tím rozdělení RHELu
 do několika skupin (Server, Workstation, ...), kde ve stejných skupinách
 jsou různé balíčky, a zpřísnění politiky pro sdílení některých
 souborů/balíčků.</p>
-<p>A tak se ...</p>
-<hr />
+<p>A tak se z CentOS "přebalovačů" stávají opravdoví vývojáři..</p>
 </div>
-<h2><a href="http://g.stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a> <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
-<div class="article">
-<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
-vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
-počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
-programátorem zjistili, že jednou za čas se tam objeví spousta připojení
-ze vzdáleného (legitimního) serveru označená jako "unauthenticated
-user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
-<div class="highlight"><pre>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
-</pre></div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'CentOS a vydávání aktualizací';
 
-
-<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
-<hr />
-</div>
-
-<!-- 5 -->
-<div class="pagination pagination-large">
-    <ul>
-                        <li><span><a href="http://g.stderr.cz/index.html">« předchozí</a></span></li>
-            
-            <li class="disabled"><span>další »</span></li>
-        </ul>
-</div>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
             </div>
         </div>
     </div>
