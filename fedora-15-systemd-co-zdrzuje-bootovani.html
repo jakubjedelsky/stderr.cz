@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>Fedora 15 & systemd: co zdržuje bootování @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -42,30 +42,22 @@
                                 </div>
             </div>
             <div class="span8">
-                
-<h2><a href="http://g.stderr.cz/red-hat-certified-engineer">Red Hat Certified Engineer</a> <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
-<div class="article">
-<p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
-po tom co jsem <a href="http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/" title="RHCSA">dosáhl na RHCSA</a>, jsem se rozhodl pokračovat. Napoprvé
-mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
-se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify" title="Red Har Verification">111-122-990</a>
-najdete jako RHCE.  </p>
-<p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
-<hr />
+                <h2>Fedora 15 & systemd: co zdržuje bootování <time datetime=2011-06-05T22:05:00>/ 05. 06. 2011 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Fedora 15 & systemd: co zdržuje bootování';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
 </div>
-<h2><a href="http://g.stderr.cz/red-hat-certified-system-administrator">Red Hat Certified System Administrator</a> <time datetime=2011-07-23T23:53:00>/ 23. 07. 2011 /</time></h2>
-<div class="article">
-<p>Dobrá věc se podařila a už jsem RHCSA. Najdete mě pod čílem
-<a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify">111-122-990</a>.</p>
-<p><center><img alt="Red Hat Certified System Administrator logo" src="static/images//RH_SystemsAdministrator_logo_rgb_200x350.png" title="Red Hat Certified System Administrator logo" /></center></p>
-<p>Napadlo mě, že bych mohl, v případě, že si najdu čas (a byl by zájem),
-zde na blogu publikovat "jak na to" k jednotlivým okruhům (a spojit to
-třeba s kategorií "Základy administrátora"). Ještě si to nechám projít
-hlavou; nějaké poznámky můžete zatím najít na <a href="http://dev.stderr.cz/rhcsa/">samotné speciální
-stránce</a></p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/fedora-15-systemd-co-zdrzuje-bootovani">Fedora 15 & systemd: co zdržuje bootování</a> <time datetime=2011-06-05T22:05:00>/ 05. 06. 2011 /</time></h2>
 <div class="article">
 <p>Chcete-li si zkontrolovat, co nejdéle trvá při startu vašeho systému a
 podle toho si bootování odladit, použijte utilitku <code>systemd-analyze</code>.
@@ -78,18 +70,47 @@ uspávání nebolí. Michal Schmidt na <a href="http://dev.stderr.cz/2011/05/fed
 že po úpravách zkrouhnul boot na cca 3 sekundy.</p>
 </blockquote>
 <h3>Čas:</h3>
-<div class="highlight"><pre>$ systemd-analyze time ...</pre></div>
-<hr />
-</div>
+<div class="highlight"><pre>$ systemd-analyze time
+Startup finished in 1433ms (kernel) + 15086ms (initrd) + 21817ms (userspace) = 38337ms
+</pre></div>
 
-<!-- 5 -->
-<div class="pagination pagination-large">
-    <ul>
-            <li class="disabled"><span>« předchozí</span></li>
-    
-            <li class="disabled"><span>další »</span></li>
-        </ul>
+
+<h3>Textový výpis:</h3>
+<div class="highlight"><pre>$ systemd-analyze blame
+  6452ms udev-settle.service
+  6153ms systemd-vconsole-setup.service
+  4699ms fedora-readonly.service
+  4416ms fedora-sysinit-hack.service
+  3752ms media.mount
+  3644ms remount-rootfs.service
+  3585ms systemd-remount-api-vfs.service
+  3112ms hwclock-load.service
+  2922ms systemd-sysctl.service
+ (...)
+</pre></div>
+
+
+<h3>Grafický výstup:</h3>
+<p>Vygeneruje grafický svg výstup, který není nepodobný výstupu z výše
+zmíněného bootchart.</p>
+<div class="highlight"><pre>$ systemd-analyze plot &gt; ~/plot.svg
+</pre></div>
+
+
+<p><img alt="systemd-analyze plot" src="static/images/systemd-plot.png" /></p>
 </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'Fedora 15 & systemd: co zdržuje bootování';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
             </div>
         </div>
     </div>

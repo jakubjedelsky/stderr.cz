@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Red Hat Certified Engineer @ stderr</title>
+        <title>LVM v RAID poli s kickstart @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -42,13 +42,13 @@
                                 </div>
             </div>
             <div class="span8">
-                <h2>Red Hat Certified Engineer <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
+                <h2>LVM v RAID poli s kickstart <time datetime=2011-08-10T00:00:00>/ 10. 08. 2011 /</time></h2>
 <div class="flattr">
     <script id='flattrbtn'>
     (function(i) {
         var f,s=document.getElementById(i);
         f=document.createElement('iframe');
-        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Red Hat Certified Engineer';
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=LVM v RAID poli s kickstart';
         f.title='Flattr';
         f.height=20;
         f.width=110;
@@ -59,17 +59,50 @@
     </script>
 </div>
 <div class="article">
-<p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
-po tom co jsem <a href="http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/" title="RHCSA">dosáhl na RHCSA</a>, jsem se rozhodl pokračovat. Napoprvé
-mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
-se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify" title="Red Har Verification">111-122-990</a>
-najdete jako RHCE.  </p>
-<p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
+<p><a href="http://fedoraproject.org/wiki/Anaconda">Anaconda</a> při instalaci CentOS 6 pomocí kickstart souboru trpí
+zvláštním nešvarem: při rozdělení disků pro použití LVM může zahlásit
+chybu <em>new lv is too large to fit in free space</em> (<a href="http://pastebin.com/BsrRipue">celý výpis chyby</a>);
+i když to není pravda. Kde je problém?</p>
+<p>Začnu tím, jak chci mít disky rozděleny:<br />
+Mějme dva identické disky, které budou v softwarovém RAIDu 1
+(mirroring), rozděleny budou na \~250MB /boot a zbytek pro LVM, ve
+kterém bude swap a /. Podle <a href="http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html#s2-kickstart2-options-part-examples" title="32.4.1. Advanced Partitioning Example">dokumentace</a> jsem začal s tímto:</p>
+<div class="highlight"><pre><span class="c"># initialize and partitioning</span>
+clearpart --all --initlabel
+part raid.11    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sda
+part raid.12    --size<span class="o">=</span>1 --grow              --ondrive<span class="o">=</span>sda
+part raid.21    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sdb
+part raid.22    --size<span class="o">=</span>1 --grow              --ondrive<span class="o">=</span>sdb
+
+<span class="c"># RAID</span>
+raid /boot      --fstype ext4   --device md0    --level<span class="o">=</span>RAID1 raid.11 raid.21
+raid pv.01      --fstype ext4   --device md1    --level<span class="o">=</span>RAID1 raid.12 raid.22
+
+<span class="c"># LVM</span>
+volgroup sysvol pv.01
+logvol swap     --vgname<span class="o">=</span>sysvol --fstype<span class="o">=</span>swap   --size<span class="o">=</span>8192        --name<span class="o">=</span>swap
+logvol /        --vgname<span class="o">=</span>sysvol --fstype<span class="o">=</span>ext4   --size<span class="o">=</span>1 --grow    --name<span class="o">=</span>root
+</pre></div>
+
+
+<p>Což skončilo chybou výše zmíněnou, která je už samozřejmě nahlášená v
+<a href="https://bugzilla.redhat.com/show_bug.cgi?id=677915" title="Bug 677915">Bugzille</a>. Po chvilce pročítání problému jsem zjistil, že Anaconda
+ignoruje parametr --grow a nedokáže si velikost disku vypočítat. Bere
+tak velikost oddílu pro LVM jako 1MB; a tam se 8GB, které tam cpeme pro
+swap nevejde. <strong>Heuréka</strong>.</p>
+<p>Dočasné řešení (dokud nevyjde CentOS s aktualizovanou instalačkou) je
+tedy používat velikost raid oddílu větší než je součet logických svazků
+<em>(např.: 9000 > 8192 + 1)</em>:</p>
+<div class="highlight"><pre>part raid.11    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sda
+part raid.12    --size<span class="o">=</span>9000 --grow           --ondrive<span class="o">=</span>sda
+part raid.21    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sdb
+part raid.22    --size<span class="o">=</span>9000 --grow           --ondrive<span class="o">=</span>sdb
+</pre></div>
 </div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'stderr-cz-blog';
-    var disqus_title = 'Red Hat Certified Engineer';
+    var disqus_title = 'LVM v RAID poli s kickstart';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

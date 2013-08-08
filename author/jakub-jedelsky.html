@@ -69,42 +69,41 @@ porovnává se s uloženými údaji. Díky chybě v tomto porovnávání, vznik�
 <h3>Týká ...</h3>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/ftp-ftps-a-sftp">FTP, FTPS a SFTP</a> <time datetime=2013-04-08T00:00:00>/ 08. 04. 2013 /</time></h2>
+<h2><a href="http://g.stderr.cz/dnes-je-den-ipv6">Dnes je den IPv6</a> <time datetime=2011-06-08T13:51:00>/ 08. 06. 2011 /</time></h2>
 <div class="article">
-<p>Jen pár slov o každém z těchto tří protokolů, abychom si v tom konečně
-udělali pořádek a nemuseli se handrkovat, co kdo vlastně myslel. Ve
-všech třech případech jde o protokoly používané pro přenos souborů, to je cajk.</p>
-<ul>
-<li><strong>FTP</strong> (<em>File Transfer Protocol</em>) je z našich tří nejstarší.
-    Protokol byl pro TCP/IP definovaný už v roce 1985 a ke svému
-    fungování využívá portů 20 a 21. Jde o jednoduchý protokol,
-    využívající pouze <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol#List_of_FTP_commands" title="Seznam příkazů FTP, Wikipedie">pár příkazů</a>.</li>
-<li><strong>FTPS:</strong> Jde o ten <em>stejný</em> jednoduchý ...</li></ul>
+<p>Protože staré IP verze 4 docházejí (ISP a regionální registry ještě
+nějaké zásoby mají, ale <a href="http://blog.nic.cz/2011/02/03/iana-prazdna-leden-rekordni/">IANA je už od února prázdná</a>), je nutné stále
+více propagovat nové, delší, větší, krásnější a celkově lepší IPv6. A to
+se děje dnes: je <a href="http://www.worldipv6day.org/">Světový den IPv6</a>.</p>
+<p>Smyslem dnešního dne, kdy se na jeden den zpřístupní některé velké weby
+přes IPv6 (<a href="http://www.worldipv6day.org/participants/index.html">seznam účastníků</a>), je motivovat ISP, uživatele, správce
+sítí a vlastně vše co je k internetu připojeno k tomu, aby začali
+využívat právě nových ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a> <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
+<h2><a href="http://g.stderr.cz/dnes-je-to-20-let">Dnes je to 20 let...</a> <time datetime=2011-08-26T11:03:00>/ 26. 08. 2011 /</time></h2>
 <div class="article">
-<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
-vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
-počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
-programátorem zjistili, že jednou za čas se tam objeví spousta připojení
-ze vzdáleného (legitimního) serveru označená jako "unauthenticated
-user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
-<div class="highlight"><pre>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
-</pre></div>
-
-
-<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
+<p>Už o tom píše kde kdo, tak se taky přidám. Dnes je to 20 let, co <a href="http://www.thelinuxdaily.com/wp-content/uploads/2010/04/linus1991.jpg">mladý
+finský student</a> <a href="http://cs.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> oznámil světu, že "jen tak pro
+zábavu" vytvořil operační systém.</p>
+<div class="highlight"><pre>Hello everybody out there using minix -
+I&#39;m doing a (free) operating system (just a hobby, won&#39;t be big and
+professional like gnu) for 386(486) AT clones.  This has been brewing
+since april, and is starting to get ready.  I&#39;d like any feedback on
+things people ...</pre></div>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/red-hat-certified-engineer">Red Hat Certified Engineer</a> <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
+<h2><a href="http://g.stderr.cz/editace-sifrovanych-gpg-souboru-s-vim">Editace šifrovaných GPG souborů s vim</a> <time datetime=2011-09-08T00:00:00>/ 08. 09. 2011 /</time></h2>
 <div class="article">
-<p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
-po tom co jsem <a href="http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/" title="RHCSA">dosáhl na RHCSA</a>, jsem se rozhodl pokračovat. Napoprvé
-mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
-se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990" title="Red Har Verification">111-122-990</a>
-najdete jako RHCE.  </p>
-<p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
+<h3>Motivace</h3>
+<p><em>Začnu zlehka motivací, kterou v klidu můžete přeskočit.</em><br />
+Už nějakou chvíli přemýšlím, jak bezpečně uchovávat hesla. Měl jsem na
+to jen pár (= dva) požadavků: <strong>bezpečnost</strong> a <strong>dostupnost</strong>.
+Bezpečnost je jasná - kromě hesel na "srandastránky" potřebuji uložit
+údaje k poměrně citlivým službám. A protože se k heslům potřebuji dostat
+nepravidelně jak z kanceláře, tak z domu, tak z nějaké kavárny,
+potřebuju nějaké centrální úložiště. Klikátka jsou passé kvůli druhému
+požadavku, ukládání do databáze v plaintext na nějakém mém serveru se ...</p>
 <hr />
 </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>stderr - Articles by Jakub Jedelsky</title>
 
         <meta charset="UTF-8">
 
@@ -43,6 +43,47 @@
             </div>
             <div class="span8">
                 
+<h2><a href="http://g.stderr.cz/lvm-v-raid-poli-s-kickstart">LVM v RAID poli s kickstart</a> <time datetime=2011-08-10T00:00:00>/ 10. 08. 2011 /</time></h2>
+<div class="article">
+<p><a href="http://fedoraproject.org/wiki/Anaconda">Anaconda</a> při instalaci CentOS 6 pomocí kickstart souboru trpí
+zvláštním nešvarem: při rozdělení disků pro použití LVM může zahlásit
+chybu <em>new lv is too large to fit in free space</em> (<a href="http://pastebin.com/BsrRipue">celý výpis chyby</a>);
+i když to není pravda. Kde je problém?</p>
+<p>Začnu tím, jak chci mít disky rozděleny:<br />
+Mějme dva identické disky, které budou v softwarovém RAIDu 1
+(mirroring), rozděleny budou na \~250MB /boot a zbytek pro LVM, ve
+kterém bude swap a /. Podle <a href="http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html#s2-kickstart2-options-part-examples" title="32.4.1. Advanced Partitioning Example">dokumentace</a> jsem začal s tímto:</p>
+<div class="highlight"><pre><span class="c"># initialize ...</span></pre></div>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a> <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
+<div class="article">
+<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
+vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
+počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
+programátorem zjistili, že jednou za čas se tam objeví spousta připojení
+ze vzdáleného (legitimního) serveru označená jako "unauthenticated
+user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
+<div class="highlight"><pre>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
+</pre></div>
+
+
+<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/novinky-cz-a-ti-ostatni">Novinky.cz a ti ostatní</a> <time datetime=2011-04-14T15:11:00>/ 14. 04. 2011 /</time></h2>
+<div class="article">
+<p>Často se stává, že se nějaké nápady opakují, ale toto se serveru
+<a href="http://www.novinky.cz">novinky.cz</a> nepovedlo: během krátké doby se zde objevily dvě
+"opičárny". Nejdříve jsem na twitteru zachytil <a href="https://twitter.com/#!/kuratkoo/status/58444202987618304">informaci</a>
+upozorňující na více než podobnost mezi faviconkou <a href="http://www.linkedin.com">LinkedIn.com</a> a
+právě serverem Novinky.cz, ostatně porovnejte sami:</p>
+<p><img alt="Novinky.cz a LinkedIn.com" src="static/images//novinkylinkedin.png" title="Novinky.cz a LinkedIn.com" /></p>
+<p>Už o této podobnosti jsem tu chtěl napsat pár řádků, ale pak jsem si
+řekl, že nemá cenu ztrácet čas a <em>však on už to rozebere někdo jinej</em>.
+Co mě ale nakonec nakoplo, byla ...</p>
+<hr />
+</div>
 <h2><a href="http://g.stderr.cz/red-hat-certified-engineer">Red Hat Certified Engineer</a> <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
 <div class="article">
 <p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
@@ -65,29 +106,13 @@ hlavou; nějaké poznámky můžete zatím najít na <a href="http://dev.stderr.
 stránce</a></p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/fedora-15-systemd-co-zdrzuje-bootovani">Fedora 15 & systemd: co zdržuje bootování</a> <time datetime=2011-06-05T22:05:00>/ 05. 06. 2011 /</time></h2>
-<div class="article">
-<p>Chcete-li si zkontrolovat, co nejdéle trvá při startu vašeho systému a
-podle toho si bootování odladit, použijte utilitku <code>systemd-analyze</code>.
-Jedná se (nejen) o náhradu <a href="http://www.bootchart.org/">Bootchart</a>, který jste mohli znát z
-klasického startu pomocí <code>init</code>. A co <code>systemd-analyze</code> umí?</p>
-<blockquote>
-<p>Používám nijak neodladěný systém na notebooku, proto nabíhání chvilku
-chvilku trvá (cca 31 sekund), což mě ale díky bezvadně funkčnímu
-uspávání nebolí. Michal Schmidt na <a href="http://dev.stderr.cz/2011/05/fedora-15-release-party-v-brne/">Fedora 15 Release Party</a> ukázal,
-že po úpravách zkrouhnul boot na cca 3 sekundy.</p>
-</blockquote>
-<h3>Čas:</h3>
-<div class="highlight"><pre>$ systemd-analyze time ...</pre></div>
-<hr />
-</div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">
     <ul>
-            <li class="disabled"><span>« předchozí</span></li>
-    
-            <li class="disabled"><span>další »</span></li>
+                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky2.html">« předchozí</a></span></li>
+            
+            <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky4.html">další »</a></span></li>
         </ul>
 </div>
             </div>

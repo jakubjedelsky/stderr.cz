@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>stderr - Articles by Jakub Jedelsky</title>
 
         <meta charset="UTF-8">
 
@@ -43,6 +43,24 @@
             </div>
             <div class="span8">
                 
+<h2><a href="http://g.stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
+<div class="article">
+<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
+pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
+implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
+klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
+převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
+možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
+mé nejoblíbenější.  </p>
+<h3>Generujeme …</h3>
+<p>… samotný privátní klíč (RSA):</p>
+<div class="highlight"><pre>openssl genrsa -out klic.key 2048
+</pre></div>
+
+
+<p>… CSR s ...</p>
+<hr />
+</div>
 <h2><a href="http://g.stderr.cz/utoci-na-me-z">Útočí na mě z...</a> <time datetime=2011-12-19T16:00:00>/ 19. 12. 2011 /</time></h2>
 <div class="article">
 <p>Čas Vánoční je čas pohody, klidu a míru. To platí jen do určité chvíle.
@@ -55,67 +73,44 @@ serveru máte jen omezené pole působnosti. Dokud útočníci nezahltí linku
 (pak to řešte se svým ISP) a data k ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/centos-a-vydavani-aktualizaci">CentOS a vydávání aktualizací</a> <time datetime=2011-12-05T16:44:00>/ 05. 12. 2011 /</time></h2>
+<h2><a href="http://g.stderr.cz/wysinwyc-what-you-see-is-not-what-you-copy-exploit">WYSINWYC (What you see is not what you copy) exploit</a> <time datetime=2013-04-08T21:58:00>/ 08. 04. 2013 /</time></h2>
 <div class="article">
-<p>Dnes jen krátce, ale za to se zajímavým odkazem.</p>
-<p>Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že
-vydávání aktualizací minor verzí se oproti RHELu pořád zpožďuje.
-Vývojáři se snaží alespoň hotfixy a security aktualizace distribuovat
-přes <a href="http://wiki.centos.org/AdditionalResources/Repositories/CR" title="CR Repository">Continuous Release repozitář</a>. Proč se vývoj táhne <a href="http://lists.centos.org/pipermail/centos/2011-October/119027.html" title="CentOS maillist">vysvětluje v
-maillistu</a> Johnny Hughes. Ve zkratce: hledejte za tím rozdělení RHELu
-do několika skupin (Server, Workstation, ...), kde ve stejných skupinách
-jsou různé balíčky, a zpřísnění politiky pro sdílení některých
-souborů/balíčků.</p>
-<p>A tak se ...</p>
+<p>Je to docela známá fičura, která se objevuje (hlavně) na zpravodajských
+serverech - při zkopírování části textu se do clipboardu přidá daší
+text, o který nikdo tak úplně nestojí. Když už se ale do Wordu vloží,
+tak jej lehce umažeme (a <a href="http://www.ceskatelevize.cz/ct24/regiony/jihomoravsky-kraj/119385-onderkova-zaverecna-prace-na-vs-nevyhovuje-kriteriim/" title="O bakalářské práci nejlepšího primátora největšího města ČR">kašleme na nějaké citace</a>). Co když se ale
+zrovna nekopíruje část článku, ale <strong>unixové příkazy, u kterých je velká
+pravděpodobnost, že půjdou rovnou do terminálu?</strong>  </p>
+<p>Kolega mě upozornil na <a href="http://thejh.net/misc/website-terminal-copy-paste">pěknou ukázku</a>, jak tohoto zneužít. Vezměte
+si třeba tento jednoduchý příkaz ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a> <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
+<h2><a href="http://g.stderr.cz/zabava-s-traceroute">Zábava s traceroute</a> <time datetime=2013-03-15T07:42:00>/ 15. 03. 2013 /</time></h2>
 <div class="article">
-<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
-vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
-počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
-programátorem zjistili, že jednou za čas se tam objeví spousta připojení
-ze vzdáleného (legitimního) serveru označená jako "unauthenticated
-user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
-<div class="highlight"><pre>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
+<p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
+dotaz prochází, u každého vrátí čas odezvy a ... skončí. Vlastně docela
+nuda. Pak jsem ale narazil na tento twít:</p>
+<blockquote class="twitter-tweet"><p>Dejte si traceroute na 216.81.59.173 a chvíli si počkejte :)</p>&mdash; Adéla (@adela_cz) <a href="https://twitter.com/adela_cz/statuses/312287606052380672">March 14, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Zkuste to:</p>
+<div class="highlight"><pre>traceroute -m 120 -q1 216.81.59.173
 </pre></div>
 
 
-<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/editace-sifrovanych-gpg-souboru-s-vim">Editace šifrovaných GPG souborů s vim</a> <time datetime=2011-09-08T00:00:00>/ 08. 09. 2011 /</time></h2>
-<div class="article">
-<h3>Motivace</h3>
-<p><em>Začnu zlehka motivací, kterou v klidu můžete přeskočit.</em><br />
-Už nějakou chvíli přemýšlím, jak bezpečně uchovávat hesla. Měl jsem na
-to jen pár (= dva) požadavků: <strong>bezpečnost</strong> a <strong>dostupnost</strong>.
-Bezpečnost je jasná - kromě hesel na "srandastránky" potřebuji uložit
-údaje k poměrně citlivým službám. A protože se k heslům potřebuji dostat
-nepravidelně jak z kanceláře, tak z domu, tak z nějaké kavárny,
-potřebuju nějaké centrální úložiště. Klikátka jsou passé kvůli druhému
-požadavku, ukládání do databáze v plaintext na nějakém mém serveru se ...</p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/dnes-je-to-20-let">Dnes je to 20 let...</a> <time datetime=2011-08-26T11:03:00>/ 26. 08. 2011 /</time></h2>
-<div class="article">
-<p>Už o tom píše kde kdo, tak se taky přidám. Dnes je to 20 let, co <a href="http://www.thelinuxdaily.com/wp-content/uploads/2010/04/linus1991.jpg">mladý
-finský student</a> <a href="http://cs.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> oznámil světu, že "jen tak pro
-zábavu" vytvořil operační systém.</p>
-<div class="highlight"><pre>Hello everybody out there using minix -
-I&#39;m doing a (free) operating system (just a hobby, won&#39;t be big and
-professional like gnu) for 386(486) AT clones.  This has been brewing
-since april, and is starting to get ready.  I&#39;d like any feedback on
-things people ...</pre></div>
+<p>Výsledem bude opět výpis uzlů, ale počkat.. Jak by řekl anonymní
+komentující: <em>"Go home traceroute, you're drunk!"</em> Po přeskákání
+nejblžších uzlů se ...</p>
 <hr />
 </div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">
     <ul>
-                        <li><span><a href="http://g.stderr.cz/category/misc.html">« předchozí</a></span></li>
+                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky3.html">« předchozí</a></span></li>
             
-            <li><span><a href="http://g.stderr.cz/category/misc3.html">další »</a></span></li>
+            <li class="disabled"><span>další »</span></li>
         </ul>
 </div>
             </div>
