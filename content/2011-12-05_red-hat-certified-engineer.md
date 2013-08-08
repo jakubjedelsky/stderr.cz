@@ -17,5 +17,5 @@ najdete jako RHCE.
     "Twitter"
   [dosáhl na RHCSA]: http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/
     "RHCSA"
-  [111-122-990]: https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990
+  [111-122-990]: https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&isSearch=False&verify=Verify
     "Red Har Verification"
