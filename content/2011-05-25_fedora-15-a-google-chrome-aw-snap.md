@@ -1,6 +1,5 @@
 Title: Fedora 15 a Google Chrome: "Aw, Snap!"
 Date: 2011-05-25 18:30
-Author: Jakub Jedelsky
 Slug: fedora-15-a-google-chrome-aw-snap
 
 Po aktualizaci notebooku na Fedoru 15 se mi v prohlížeči Google Chrome,

@@ -1,6 +1,5 @@
 Title: MySQL: unauthenticated user
 Date: 2011-12-02 16:00
-Author: Jakub Jedelsky
 Slug: mysql-unauthenticated-user
 
 Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš

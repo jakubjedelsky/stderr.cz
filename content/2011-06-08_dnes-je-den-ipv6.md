@@ -1,6 +1,5 @@
 Title: Dnes je den IPv6
 Date: 2011-06-08 13:51
-Author: Jakub Jedelsky
 Slug: dnes-je-den-ipv6
 
 Protože staré IP verze 4 docházejí (ISP a regionální registry ještě

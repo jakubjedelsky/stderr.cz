@@ -1,8 +1,5 @@
 Title: Red Hat Certified System Administrator
 Date: 2011-07-23 23:53
-Author: Jakub Jedelsky
-Category: blog
-Tags: linux, Red Hat, RHCSA
 Slug: red-hat-certified-system-administrator
 
 Dobrá věc se podařila a už jsem RHCSA. Najdete mě pod čílem

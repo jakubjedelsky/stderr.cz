@@ -1,6 +1,5 @@
 Title: LVM v RAID poli s kickstart
 Date: 2011-08-10
-Author: Jakub Jedelsky
 Slug: lvm-v-raid-poli-s-kickstart
 
 [Anaconda][] při instalaci CentOS 6 pomocí kickstart souboru trpí

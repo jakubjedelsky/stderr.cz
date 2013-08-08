@@ -1,6 +1,5 @@
 Title: Editace šifrovaných GPG souborů s vim
 Date: 2011-09-08
-Author: Jakub Jedelsky
 Slug: editace-sifrovanych-gpg-souboru-s-vim
 
 ### Motivace

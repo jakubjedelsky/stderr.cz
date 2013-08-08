@@ -1,6 +1,5 @@
 Title: Dnes je to 20 let...
 Date: 2011-08-26 11:03
-Author: Jakub Jedelsky
 Slug: dnes-je-to-20-let
 
 Už o tom píše kde kdo, tak se taky přidám. Dnes je to 20 let, co [mladý

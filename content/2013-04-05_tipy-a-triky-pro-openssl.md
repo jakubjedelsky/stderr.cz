@@ -1,6 +1,5 @@
 Title: Tipy a triky pro OpenSSL
 Date: 2013-04-05 10:00
-Author: Jakub Jedelsky
 Slug: tipy-a-triky-pro-openssl
 
 Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR

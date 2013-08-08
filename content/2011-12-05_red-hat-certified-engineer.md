@@ -1,8 +1,5 @@
 Title: Red Hat Certified Engineer
 Date: 2011-12-05 17:00
-Author: Jakub Jedelsky
-Category: blog
-Tags: linux, Red Hat, RHCE, RHCSA
 Slug: red-hat-certified-engineer
 
 Úplně jsem se tu, narozdíl od [Twitteru][], zapomněl pochlubit. Chvíli

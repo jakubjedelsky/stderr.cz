@@ -1,6 +1,5 @@
 Title: FTP, FTPS a SFTP
 Date: 2013-04-08 00:00
-Author: Jakub Jedelsky
 Slug: ftp-ftps-a-sftp
 
 Jen pár slov o každém z těchto tří protokolů, abychom si v tom konečně

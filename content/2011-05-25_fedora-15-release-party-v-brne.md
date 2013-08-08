@@ -1,6 +1,5 @@
 Title: Fedora 15 Release Party v Brně
 Date: 2011-05-25 16:48
-Author: Jakub Jedelsky
 Slug: fedora-15-release-party-v-brne
 
 Včera podle plánu vyšla finální podoba [Fedory 15][] a při té

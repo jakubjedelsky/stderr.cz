@@ -1,6 +1,5 @@
 Title: Útočí na mě z...
 Date: 2011-12-19 16:00
-Author: Jakub Jedelsky
 Slug: utoci-na-me-z
 
 Čas Vánoční je čas pohody, klidu a míru. To platí jen do určité chvíle.

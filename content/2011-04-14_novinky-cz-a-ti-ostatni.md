@@ -1,6 +1,5 @@
 Title: Novinky.cz a ti ostatní
 Date: 2011-04-14 15:11
-Author: Jakub Jedelsky
 Slug: novinky-cz-a-ti-ostatni
 
 Často se stává, že se nějaké nápady opakují, ale toto se serveru

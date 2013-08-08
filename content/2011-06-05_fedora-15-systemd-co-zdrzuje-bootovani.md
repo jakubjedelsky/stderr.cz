@@ -1,8 +1,5 @@
 Title: Fedora 15 & systemd: co zdržuje bootování
 Date: 2011-06-05 22:05
-Author: Jakub Jedelsky
-Category: blog
-Tags: boot, fedora, linux, plot, svg, systemd, time
 Slug: fedora-15-systemd-co-zdrzuje-bootovani
 
 Chcete-li si zkontrolovat, co nejdéle trvá při startu vašeho systému a

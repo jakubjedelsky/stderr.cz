@@ -1,6 +1,5 @@
 Title: CentOS a vydávání aktualizací
 Date: 2011-12-05 16:44
-Author: Jakub Jedelsky
 Slug: centos-a-vydavani-aktualizaci
 
 Dnes jen krátce, ale za to se zajímavým odkazem.

@@ -1,6 +1,5 @@
 Title: Zábava s traceroute
 Date: 2013-03-15 07:42
-Author: Jakub Jedelsky
 Slug: zabava-s-traceroute
 
 `traceroute` je užitečný nástroj - projde a vypíše uzly, přes které váš
