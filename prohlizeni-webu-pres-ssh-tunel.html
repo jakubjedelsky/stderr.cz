@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Prohlížení webu přes SSH tunel @ stderr</title>
+
+        <meta charset="UTF-8">
+
+        <link href="http://g.stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/mystyle.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/pygment.css" rel="stylesheet" media="screen">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+                    </head>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="span8 offset3">
+                <ul class="breadcrumb menu">
+                                                            <li><a href="http://g.stderr.cz/o-autorovi">O autorovi</a> <span class="divider">/</span></li>
+                                        <li><a href="http://g.stderr.cz/archives">Archiv</a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3 text-right">
+                <div class="hero-unit">
+                    <h1><a href="http://g.stderr.cz">stderr</a></h1>
+                                        <p>poznámky</p>
+                                    </div>
+                                <div class="metadata">
+                    <h5>Autor</h5>
+                    <h6 class="font-style: italic;">Jakub Jedelský</h6>
+                                        <p>Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat.</p>
+                                                                        <h5>Social</h5>
+                    <ul class="social">
+                                                <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://g.stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                                                <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                                                <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                                        </ul>
+                                </div>
+            </div>
+            <div class="span8">
+                <h2>Prohlížení webu přes SSH tunel <time datetime=2011-02-28T00:00:00>/ 28. 02. 2011 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Prohlížení webu přes SSH tunel';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
+</div>
+<div class="article">
+<p><em>U příležitosti aktualizace na Wordpress 3.1 (se jménem Reinhardt,
+zvoleného podle jazzového kytaristy Jeana "Django" Reinhardta; že by
+to byla <a href="http://www.djangoproject.com/">provokace</a> nebo naznačení <a href="http://www.google.cz/search?q=django+blog+howto">budoucí cesty</a> projektu?) tu
+uveřejním článek, který ve stavu "rozepsán" už nějakou dobu visí v
+administraci.</em></p>
+<p>Existuje mnoho sítí, kde se nemusíte cítit zrovna bezpečně; ať je to
+wifi v kavárně, mobilní připojení nebo sdílení připojení se sousedy. A
+jsou situace, kdy byste rádi schovali to, na co koukáte. Co kdyby vás
+někdo sledoval, že ano. Nebo jiná situace: jste za firewallem a chcete
+se kouknout na zakázané weby (např. umístěné v intranetu). V takovém
+okamžiku se hodí mít jiný počítač/server umístěn v nějaké důvěryhodnější
+síti, "protunelovat" se na něj skrze ssh a veškerý HTTP(S) provoz z
+prohlížeče směřovat skrz toto připojení.  </p>
+<h3>SSH tunel</h3>
+<p>Nejdříve si zvolíme, na jakém portu ($PORT) chceme, aby spojení
+naslouchalo na našem počítači (zvolíte-li vyšší než 10000, nic tím asi
+nezkazíte) a připojíme se pomocí:</p>
+<div class="highlight"><pre>ssh -fND localhost:<span class="nv">$PORT</span> user@myserver
+</pre></div>
+
+
+<p>kde user je uživatel a myserver jméno vašeho vzdáleného serveru.</p>
+<h3>Tunelujeme Firefox</h3>
+<p><a href="http://firefox.mozilla.cz/">Firefox</a> umožňuje nastavit proxy pomocí kontextového menu: <em>Úpravy
+-> Předvolby</em>. V sekci <em>Rozšířené</em> je tab <em>Síť</em>. Proxy se nastavuje
+(nečekaně) v <em>Nastavení připojení...</em>, kde stačí zaškrtnout volbu <em>Ruční
+konfigurace proxy serverů</em>, jako SOCKS server zadat <em>localhost</em> a jako
+port náše výše zvolené číslo portu.</p>
+<p>Webový provoz nyní směřuje přes ssh, ale, jak se můžete například pomocí
+Wireshark, ne všechen. Firefox se stále dotazuje místních DNS serverů,
+pozorný čtenář (čti útočník) tedy stále ví, kam koukáte. I toto lze
+vyřešit: do řádku pro zadání URL napíšeme <em>about:config</em>, čímž se
+dostaneme do rozšířené konfigurace prohlížeče. Zde stačí změnit hodnotu
+<code>network.proxy.socks_remote_dns</code> na <em>True</em> a je vše hotovo.</p>
+<h3>Tunelujeme Google Chrome</h3>
+<p><em>Toto bych dříve asi ani nezmiňoval, ale nedávno jsem na notebooku, se
+kterým se do "divných" sítí dostávám nejčastěji, přešel z Firefoxu na
+Chrome. Kvůli rychlosti.</em></p>
+<p>Do nastavení <a href="http://www.google.com/chrome">Google Chrome</a> se lze dostat pomocí ikonky šroubováku(?)
+vedle řádku pro zadávání URL a kontextového menu <em>Nastavení</em>. Zde se,
+pod panelem <em>Pod pokličkou</em>, skrývá tlačítko pro <em>Změnu nastavení
+proxy</em>. Dále postupujeme jako dříve u Firefoxu: Použijeme <em>Ruční
+nastavení proxy</em>, do políčka pro SOCKS server zapíšeme <em>localhost</em>; port
+jsme si dříve zvolili. Zavřeme a skoro vše funguje.</p>
+<p>Skoro. Opět je tu problém s DNS servery, kdy se Chrome stále dotazuje
+místních a útočník tak ví, kam koukáte. I když jsem hledal, nenašel
+jsem, zda lze tento problém nějak vyřešit. Pokud o něčem víte, zmiňte se
+v komentářích.</p>
+<p>Zdroj: <a href="http://wiki.freaks-unidos.net/weblogs/azul/firefox-ssh-tunnel">http://wiki.freaks-unidos.net/weblogs/azul/firefox-ssh-tunnel</a></p>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'Prohlížení webu přes SSH tunel';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+                <p class="text-center" style="color: #666;">2009 ~ 2013</p>
+    </div>
+    </body>
+</html>

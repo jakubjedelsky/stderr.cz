@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CentOS: Rozšíření PECL pro PHP 5.2.x a 5.3.x @ stderr</title>
+
+        <meta charset="UTF-8">
+
+        <link href="http://g.stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/mystyle.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/pygment.css" rel="stylesheet" media="screen">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+                    </head>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="span8 offset3">
+                <ul class="breadcrumb menu">
+                                                            <li><a href="http://g.stderr.cz/o-autorovi">O autorovi</a> <span class="divider">/</span></li>
+                                        <li><a href="http://g.stderr.cz/archives">Archiv</a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3 text-right">
+                <div class="hero-unit">
+                    <h1><a href="http://g.stderr.cz">stderr</a></h1>
+                                        <p>poznámky</p>
+                                    </div>
+                                <div class="metadata">
+                    <h5>Autor</h5>
+                    <h6 class="font-style: italic;">Jakub Jedelský</h6>
+                                        <p>Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat.</p>
+                                                                        <h5>Social</h5>
+                    <ul class="social">
+                                                <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://g.stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                                                <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                                                <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                                        </ul>
+                                </div>
+            </div>
+            <div class="span8">
+                <h2>CentOS: Rozšíření PECL pro PHP 5.2.x a 5.3.x <time datetime=2010-12-02T17:39:00>/ 02. 12. 2010 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=CentOS: Rozšíření PECL pro PHP 5.2.x a 5.3.x';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
+</div>
+<div class="article">
+<p>V základních repozitářích distribuce <a href="http://www.centos.org">CentOS</a> 5.5 je dostupná verze
+PHP 5.1(.6), která už mnoha zákazníkům (docela pochopitelně) nedostačuje
+a požadují verze vyšší. Využít lze jak PHP 5.2.x, kde balíky jsou v
+repozitáři CentOS Testing nebo PHP 5.3.x z repozitáře remi.</p>
+<p>Pro tyto verze ale většinou neexistují rozšíření PECL ve formě balíku -
+nejsou dostupné pomocí yum. Musíme si tedy zkompilovat vlastní (a do
+budoucna s tím počítat, protože např. při aktualizaci PHP se může
+všechno rozbít..).  </p>
+<p>Začneme instalací balíků, které potřebujeme pro instalaci/kompilaci:</p>
+<div class="highlight"><pre>$ yum install php-devel gcc php-pear
+</pre></div>
+
+
+<p>Samotná instalace probíhá pomocí příkazu <code>pecl</code>. Pokud tedy chceme
+instalovat rozšíření <code>fileinfo</code>, použijeme tento příkaz:</p>
+<div class="highlight"><pre>$ pecl install fileinfo
+</pre></div>
+
+
+<p>Upravíme soubor <code>php.ini</code>, tak aby se naše rozšíření načetlo:</p>
+<div class="highlight"><pre>$ cat /etc/php.d/fileinfo.ini
+extension=fileinfo.so
+</pre></div>
+
+
+<p>A jsme na konci. Stačí znovunačíst nastavení webserveru a vše (by mělo)
+funguje jak má.</p>
+<div class="highlight"><pre>$ service httpd reload
+</pre></div>
+
+
+<p>Pro rychlé ověření můžete zkusit zavolat phpinfo z příkazové řádky:</p>
+<div class="highlight"><pre>$ php -r &quot;phpinfo();&quot; | grep &quot;fileinfo&quot;
+/etc/php.d/fileinfo.ini,
+fileinfo
+fileinfo support =&gt; enabled
+</pre></div>
+
+
+<p>Úplně jednoduché. PECL se sám postará o co je třeba, ale přece jen je
+CentOS postaven nad rpm balíčky, proto někdy v budoucnu ukážu, jak si
+takový balíček jednoduše vytvořit.</p>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'CentOS: Rozšíření PECL pro PHP 5.2.x a 5.3.x';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+                <p class="text-center" style="color: #666;">2009 ~ 2013</p>
+    </div>
+    </body>
+</html>
