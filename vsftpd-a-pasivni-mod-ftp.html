@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vsftpd a pasivní mód FTP @ stderr</title>
+
+        <meta charset="UTF-8">
+
+        <link href="http://g.stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/mystyle.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/pygment.css" rel="stylesheet" media="screen">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+                    </head>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="span8 offset3">
+                <ul class="breadcrumb menu">
+                                                            <li><a href="http://g.stderr.cz/o-autorovi">O autorovi</a> <span class="divider">/</span></li>
+                                        <li><a href="http://g.stderr.cz/archives">Archiv</a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3 text-right">
+                <div class="hero-unit">
+                    <h1><a href="http://g.stderr.cz">stderr</a></h1>
+                                        <p>poznámky</p>
+                                    </div>
+                                <div class="metadata">
+                    <h5>Autor</h5>
+                    <h6 class="font-style: italic;">Jakub Jedelský</h6>
+                                        <p>Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat.</p>
+                                                                        <h5>Social</h5>
+                    <ul class="social">
+                                                <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://g.stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                                                <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                                                <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                                        </ul>
+                                </div>
+            </div>
+            <div class="span8">
+                <h2>Vsftpd a pasivní mód FTP <time datetime=2010-08-24T17:00:00>/ 24. 08. 2010 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Vsftpd a pasivní mód FTP';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
+</div>
+<div class="article">
+<p><a href="http://vsftpd.beasts.org/">Vsftpd</a> je jednoduchý FTP server, jehož kódy jsou poskytovány pod
+licencí GPL. Najdete jej snad již ve všech linuxových distribucích a
+pomocí něj beží např. i ftp.redhat.com. Proč? Rychlý, bezpečný, stabilní
+a s jednoduchou konfigurací. Pro jednodušší řešení jak dělaný.</p>
+<h3>Aktivní vs. pasivní mód (režim)</h3>
+<p><em>Z <a href="http://cs.wikipedia.org/wiki/File_Transfer_Protocol">wikipedie</a>:</em></p>
+<blockquote>
+<p><strong>Aktivní režim</strong><br />
+ Na portu TCP/20 jsou přenášena data (data connection). V aktivním
+režimu navazuje připojení pro přenos dat server, klient naslouchá.
+Problém zpravidla nastává v případě, kdy se klient připojuje z
+privátní sítě a jeho IP adresa je překládána (NAT) nebo se nachází za
+firewallem.</p>
+<p><strong>Pasivní režim</strong><br />
+ V pasivním režimu navazuje data connection klient, kterému při
+sestavování připojení poslal server svou IP adresu a TCP port, na
+kterém naslouchá.</p>
+</blockquote>
+<p>Obsáhlejší objasnění (i s pěknými obrázky) můžete najít na
+<a href="http://slacksite.com/other/ftp.html">slacksite.com</a> (EN).  </p>
+<h3>Konfigurace vsftpd</h3>
+<p>V systému naleznete pouze jeden - pěkně dokumentovaný - soubor (v RHEL a
+klonech je to <code>/etc/vsftpd/vsftpd.conf</code>).</p>
+<p>Je dobré si projet celou konfiguraci. <em>vsftpd</em> má například ve výchozím
+nastavení povoleno anonymní přihlašování (nastavit na
+<code>anonymous_enable=NO</code>). Dobré je povolit uživatelům přístup pouze do
+jejich složek, aby se Vám nepotulovali po systému (direktiva
+<code>chroot_local_user=YES</code>).</p>
+<p>Samotné nastavení pro pasivní režim je následující:</p>
+<div class="highlight"><pre># passive mode
+pasv_enable=YES
+pasv_min_port=20000
+pasv_max_port=20100
+port_enable=YES
+</pre></div>
+
+
+<p>Kde pomocí <code>pasv_enable</code> povolíme pasivní režim, <code>pasv_min_port</code> a
+<code>pasv_max_port</code> stanoví, jaký rozsah portů se bude využívat - jejich
+hodnoty musí být mezi 1024 a 65535 (mnou zvolené jsou čistě náhodné).
+Direktiva <code>port_enable</code> nám povolí jak aktivní, tak pasivní režim.</p>
+<p>FTP server je poté nutné restartovat pro znovunačtení konfigurace:</p>
+<div class="highlight"><pre># pro RHEL
+$ service vsftpd restart
+# pro jiné
+$ /etc/init.d/vsftpd restart
+</pre></div>
+
+
+<h3>Nastavení firewallu</h3>
+<p>V konfiguraci jsme použili porty 20000 - 20100. Pro <code>iptables</code> musíme
+tento rozsah povolit a to umožňuje přepínač <code>--dport</code>:</p>
+<div class="highlight"><pre>$ iptables -A INPUT -p TCP --dport  20000:20100 -j ACCEPT
+</pre></div>
+
+
+<h3>Zdroj</h3>
+<p><a href="https://www.redhat.com/docs/manuals/enterprise/RHEL-3-Manual/ref-guide/s1-ftp-vsftpd-conf.html">Dokumentace RedHat</a>u Vám řekne (skoro) vše.</p>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'Vsftpd a pasivní mód FTP';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+                <p class="text-center" style="color: #666;">2009 ~ 2013</p>
+    </div>
+    </body>
+</html>

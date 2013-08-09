@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr - Articles by Jakub Jedelský</title>
+        <title>stderr</title>
 
         <meta charset="UTF-8">
 
@@ -43,53 +43,42 @@
             </div>
             <div class="span8">
                 
-<h2><a href="http://g.stderr.cz/cve-2012-2122-chyba-mysql-ktera-by-vas-mela-zajimat">CVE-2012-2122: Chyba MySQL, která by vás měla zajímat</a> <time datetime=2012-06-11T15:37:00>/ 11. 06. 2012 /</time></h2>
+<h2><a href="http://g.stderr.cz/zaklady-administratora-pridani-uzivatele-do-skupiny">Základy administrátora: přidání uživatele do skupiny</a> <time datetime=2010-11-09T15:54:00>/ 09. 11. 2010 /</time></h2>
 <div class="article">
-<p>Zásadní chybu (včetně opravy) týkající se MySQL a MariaDB serverů v
-sobotu na <a href="http://seclists.org/oss-sec/2012/q2/493">oss-sec</a> maillistu ohlásil Sergei Golubchik. Zpozornět by
-tedy měli všichni, kdo mají nějaký takový server pod svojí správou.  </p>
-<p>Pokud se uživatel chce k MariaDB/MySQL serveru připojit a ověřuje se
-heslem, vytvoří se právě z hesla a nějakých náhodných dat SHA otisk a
-porovnává se s uloženými údaji. Díky chybě v tomto porovnávání, vzniká
-šance 1:256, že vás systém vpustí i se špatným heslem. <em>Yay!</em></p>
-<h3>Týká ...</h3>
+<p><em>Toto je úvodní řeč, kterou můžete ignorovat a skočit rovnou na
+samotný článek.</em></p>
+<p>Nemám rád takové ty řeči jako <em>"ode dneška Vás budu pravidelně
+informovat ..."</em> nebo <em>"na tomot blogu budu psát o ..."</em>, protože to pak
+vždycky dopadne stejně: po chvíli (většinou po prvním, úvodním, článku)
+to autora přestane bavit a s pravidelným informováním nebo <em>"super novým
+seriálem o ..."</em> je konec. A tak začnu trošku jinak:</p>
+<p>Během práce si dělám poznámky, které příkazy a věci potřebuji jako
+systémový administrátor řešit častěji ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/dnes-je-den-ipv6">Dnes je den IPv6</a> <time datetime=2011-06-08T13:51:00>/ 08. 06. 2011 /</time></h2>
+<h2><a href="http://g.stderr.cz/arc-raid-a-obnova-hesla">ARC raid a obnova hesla</a> <time datetime=2010-10-25T23:19:00>/ 25. 10. 2010 /</time></h2>
 <div class="article">
-<p>Protože staré IP verze 4 docházejí (ISP a regionální registry ještě
-nějaké zásoby mají, ale <a href="http://blog.nic.cz/2011/02/03/iana-prazdna-leden-rekordni/">IANA je už od února prázdná</a>), je nutné stále
-více propagovat nové, delší, větší, krásnější a celkově lepší IPv6. A to
-se děje dnes: je <a href="http://www.worldipv6day.org/">Světový den IPv6</a>.</p>
-<p>Smyslem dnešního dne, kdy se na jeden den zpřístupní některé velké weby
-přes IPv6 (<a href="http://www.worldipv6day.org/participants/index.html">seznam účastníků</a>), je motivovat ISP, uživatele, správce
-sítí a vlastně vše co je k internetu připojeno k tomu, aby začali
-využívat právě nových ...</p>
+<p>Stalo se mi to, co by se správcům stávat nemělo - zapoměl jsem (nebo
+jsem se překlepl, to už teď nezjistím) přístupové heslo ke správě HW
+RAIDu. Je to, s prominutím, průser v okamžiku, kdy chcete vyměnit disk,
+zjistit jejich stav, nastavit nový Volume Set nebo s tím dělat jakékoliv
+jiné nastavení, protože prostě ... nemůžete. Jednalo se o řadič
+<strong>ARC-1680</strong>.  </p>
+<p>Samotná oficiální dokumentace (ať k řadiči nebo FAQ) žádné informace o
+obnově zapomenutého hesla neobsahuje a většina vygůglovaných výsledků
+hlásí obnovu ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/dnes-je-to-20-let">Dnes je to 20 let...</a> <time datetime=2011-08-26T11:03:00>/ 26. 08. 2011 /</time></h2>
+<h2><a href="http://g.stderr.cz/caps-lock">CAPS LOCK</a> <time datetime=2010-10-23T14:17:00>/ 23. 10. 2010 /</time></h2>
 <div class="article">
-<p>Už o tom píše kde kdo, tak se taky přidám. Dnes je to 20 let, co <a href="http://www.thelinuxdaily.com/wp-content/uploads/2010/04/linus1991.jpg">mladý
-finský student</a> <a href="http://cs.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> oznámil světu, že "jen tak pro
-zábavu" vytvořil operační systém.</p>
-<div class="highlight"><pre>Hello everybody out there using minix -
-I&#39;m doing a (free) operating system (just a hobby, won&#39;t be big and
-professional like gnu) for 386(486) AT clones.  This has been brewing
-since april, and is starting to get ready.  I&#39;d like any feedback on
-things people ...</pre></div>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/editace-sifrovanych-gpg-souboru-s-vim">Editace šifrovaných GPG souborů s vim</a> <time datetime=2011-09-08T00:00:00>/ 08. 09. 2011 /</time></h2>
-<div class="article">
-<h3>Motivace</h3>
-<p><em>Začnu zlehka motivací, kterou v klidu můžete přeskočit.</em><br />
-Už nějakou chvíli přemýšlím, jak bezpečně uchovávat hesla. Měl jsem na
-to jen pár (= dva) požadavků: <strong>bezpečnost</strong> a <strong>dostupnost</strong>.
-Bezpečnost je jasná - kromě hesel na "srandastránky" potřebuji uložit
-údaje k poměrně citlivým službám. A protože se k heslům potřebuji dostat
-nepravidelně jak z kanceláře, tak z domu, tak z nějaké kavárny,
-potřebuju nějaké centrální úložiště. Klikátka jsou passé kvůli druhému
-požadavku, ukládání do databáze v plaintext na nějakém mém serveru se ...</p>
+<p>CHTĚL JSEM TENTO BLOG VÉST TAK NĚJAK, ŘEKNĚME, HM, "ODBORNĚ". ALE ONO SE
+TO NE VŽDY PODAŘÍ, ZVLÁŠTĚ KDYŽ ZJISTÍTE, ŽE EXISTUJE TAKOVÝ DEN, JAKO
+TEN VČERA - <strong>MEZINÁRODNÍ DEN KLÁVESY CAPS LOCK</strong>. TO SE PŘECE MUSÍ
+OSLAVIT. TROŠKU OPOŽDĚNÝM ČLÁNKEM.  </p>
+<p>OSOBNĚ MÁM K TÉTO KLÁVESE ODPOR A POUŽÍVÁM JI JEN VÝJIMEČNĚ (VLASTNĚ
+ASI JEN PŘI PSANÍ TOHOTO ČLÁNKU). DOKONCE JSEM SE VČERA TROŠKU POPLET A
+CAPS LOCK PŘEJMENOVAL NA CAPS LOOK. CO UŽ. ZKRÁTKA PATŘÍM K TÉ SKUPINĚ
+LIDÍ, KTERÝM ...</p>
 <hr />
 </div>
 <h2><a href="http://g.stderr.cz/excurr-prevodnik-men">exCurr: převodník měn</a> <time datetime=2010-10-13T12:01:00>/ 13. 10. 2010 /</time></h2>
@@ -104,13 +93,26 @@ napsal vlastní skript (python) - převodník měn pro příkazovou řádku.  </
 <h3>Co to ...</h3>
 <hr />
 </div>
+<h2><a href="http://g.stderr.cz/python-jak-na-user-agent">Python: jak na User-Agent</a> <time datetime=2010-10-07T19:00:00>/ 07. 10. 2010 /</time></h2>
+<div class="article">
+<p>V poslední době si "hraju" s Pythonem a mám rozpracované
+některé programy, vyžadující data z webu. Pro tuto práci jsem si oblíbil
+knihovnu <code>urllib2</code>, která nabízí požadovanou funkčnost (je vlastně
+nějaká jiná?). Dosud jsem používal jednoduché stažení dat z webu pomocí
+<code>urllib2.urlopen(url)</code>, ale co když je třeba svoji aplikaci nějak
+identifikovat?  </p>
+<p>K identifikaci klienta připojujícího se pomocí protokolu HTTP (nejen)
+slouží <a href="http://www.w3.org/Protocols/HTTP/HTRQ_Headers.html#user-agent">hlavička User-Agent</a>, která označuje program a verzi (+ může
+<a href="http://www.useragentstring.com/">další info</a>). V pythonní knihovně urllib2 to lze řešit ...</p>
+<hr />
+</div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">
     <ul>
-                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky">« předchozí</a></span></li>
+                        <li><span><a href="http://g.stderr.cz/category/misc6">« předchozí</a></span></li>
             
-            <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky3">další »</a></span></li>
+            <li><span><a href="http://g.stderr.cz/category/misc8">další »</a></span></li>
         </ul>
 </div>
             </div>

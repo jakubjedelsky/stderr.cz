@@ -43,6 +43,60 @@
             </div>
             <div class="span8">
                 
+<h2><a href="http://g.stderr.cz/mysql-pridani-uzivatele-a-databaze-a-par-poznamek">MySQL: přidání uživatele a databáze (a pár poznámek)</a> <time datetime=2010-12-17T00:00:00>/ 17. 12. 2010 /</time></h2>
+<div class="article">
+<p>Další článek z velmi nepravidelné série "<a href="http://dev.stderr.cz/category/zaklady-administratora/">Základy administrátora</a>" se
+zaměřuje na tu úplně nejprvotnější práci s MySQL - vytvoření databáze a
+uživatele. Samozřejmě z řádky, pokud máš phpMyAdmin, můžeš si to ručně
+naklikat..</p>
+<p>Může Ti to připadat jako hloupost, ale věř, že dnes už existuje tolik
+služeb, které vyžadují MySQL, že se tyto základní jednoduché příkazy
+hodí znát "jako svoje boty". Už jen proto, že naklikání z nějakého
+webového/grafického rozhraní jednoduše zdržuje.  </p>
+<p>Ve všech případech začneme tím, že se přihlásíme ...</p>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a> <time datetime=2011-12-02T16:00:00>/ 02. 12. 2011 /</time></h2>
+<div class="article">
+<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
+vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
+počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
+programátorem zjistili, že jednou za čas se tam objeví spousta připojení
+ze vzdáleného (legitimního) serveru označená jako "unauthenticated
+user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
+<div class="highlight"><pre>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
+</pre></div>
+
+
+<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/nejvetsi-fotografie-interieru-na-svete">Největší fotografie interiéru na světě</a> <time datetime=2011-04-04T00:06:00>/ 04. 04. 2011 /</time></h2>
+<div class="article">
+<p>Web 360 Cities na sebe upoutal pozornost už několikrát. Stránky založil
+fotograf Jeffrey Martin bydlící v Praze, který se již od roku 2000
+zabývá panoramatickou fotografií. První úspěch přišel s <a href="http://www.360cities.net/prague-18-gigapixels">fotografií
+Prahy</a>, focené z Žižkovské věže v rozlišení 18,5 Gigapixelů, což byl v
+roce 2009 světový rekord. Pro srovnání doporučuji kouknout, jaké
+rozlišení má váš digitální fotoaparát, hádám 5 - 10 megapixelů.  </p>
+<p>Další rekord byl zaznamenán hned o rok později, kdy vznikla
+<a href="http://www.360cities.net/london-photo-en.html">panoramatická fotografie Londýna</a> v neuvěřitelné velikosti <strong>80
+Gigapixelů ...</strong></p>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/novinky-cz-a-ti-ostatni">Novinky.cz a ti ostatní</a> <time datetime=2011-04-14T15:11:00>/ 14. 04. 2011 /</time></h2>
+<div class="article">
+<p>Často se stává, že se nějaké nápady opakují, ale toto se serveru
+<a href="http://www.novinky.cz">novinky.cz</a> nepovedlo: během krátké doby se zde objevily dvě
+"opičárny". Nejdříve jsem na twitteru zachytil <a href="https://twitter.com/#!/kuratkoo/status/58444202987618304">informaci</a>
+upozorňující na více než podobnost mezi faviconkou <a href="http://www.linkedin.com">LinkedIn.com</a> a
+právě serverem Novinky.cz, ostatně porovnejte sami:</p>
+<p><img alt="Novinky.cz a LinkedIn.com" src="static/images//novinkylinkedin.png" title="Novinky.cz a LinkedIn.com" /></p>
+<p>Už o této podobnosti jsem tu chtěl napsat pár řádků, ale pak jsem si
+řekl, že nemá cenu ztrácet čas a <em>však on už to rozebere někdo jinej</em>.
+Co mě ale nakonec nakoplo, byla ...</p>
+<hr />
+</div>
 <h2><a href="http://g.stderr.cz/prohlizeni-webu-pres-ssh-tunel">Prohlížení webu přes SSH tunel</a> <time datetime=2011-02-28T00:00:00>/ 28. 02. 2011 /</time></h2>
 <div class="article">
 <p><em>U příležitosti aktualizace na Wordpress 3.1 (se jménem Reinhardt,
@@ -56,65 +110,13 @@ jsou situace, kdy byste rádi schovali to, na co koukáte. Co kdyby vás
 někdo sledoval, že ano ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/red-hat-certified-engineer">Red Hat Certified Engineer</a> <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
-<div class="article">
-<p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
-po tom co jsem <a href="http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/" title="RHCSA">dosáhl na RHCSA</a>, jsem se rozhodl pokračovat. Napoprvé
-mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
-se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify" title="Red Har Verification">111-122-990</a>
-najdete jako RHCE.  </p>
-<p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/red-hat-certified-system-administrator">Red Hat Certified System Administrator</a> <time datetime=2011-07-23T23:53:00>/ 23. 07. 2011 /</time></h2>
-<div class="article">
-<p>Dobrá věc se podařila a už jsem RHCSA. Najdete mě pod čílem
-<a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify">111-122-990</a>.</p>
-<p><center><img alt="Red Hat Certified System Administrator logo" src="static/images//RH_SystemsAdministrator_logo_rgb_200x350.png" title="Red Hat Certified System Administrator logo" /></center></p>
-<p>Napadlo mě, že bych mohl, v případě, že si najdu čas (a byl by zájem),
-zde na blogu publikovat "jak na to" k jednotlivým okruhům (a spojit to
-třeba s kategorií "Základy administrátora"). Ještě si to nechám projít
-hlavou; nějaké poznámky můžete zatím najít na <a href="http://dev.stderr.cz/rhcsa/">samotné speciální
-stránce</a></p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
-<div class="article">
-<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
-pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
-implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
-klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
-převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
-možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
-mé nejoblíbenější.  </p>
-<h3>Generujeme …</h3>
-<p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre>openssl genrsa -out klic.key 2048
-</pre></div>
-
-
-<p>… CSR s ...</p>
-<hr />
-</div>
-<h2><a href="http://g.stderr.cz/utoci-na-me-z">Útočí na mě z...</a> <time datetime=2011-12-19T16:00:00>/ 19. 12. 2011 /</time></h2>
-<div class="article">
-<p>Čas Vánoční je čas pohody, klidu a míru. To platí jen do určité chvíle.
-Třeba dokud na váš server nezačnou útočit z ... Číny.</p>
-<p>Jedná se o celkem aktuální aférku, o které se (pěkně blbě, takže to ani
-nečtěte) rozepsala <a href="http://www.lupa.cz/clanky/tisice-tuzemskych-e-shopu-melo-vypadky-muze-za-to-masivni-ddos-utok/">Lupa.cz</a>, nějaké detaily o probíhajících útocích
-jsou na <a href="http://www.rcnoviny.cz/2011/12/ddos-tok-na-strnky-s-rc-modely/">rcnoviny.cz</a>.  </p>
-<p>Ochrana proti takovému DDOS útoku není žádná sranda a jako admin
-serveru máte jen omezené pole působnosti. Dokud útočníci nezahltí linku
-(pak to řešte se svým ISP) a data k ...</p>
-<hr />
-</div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">
     <ul>
-                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky4.html">« předchozí</a></span></li>
+                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky4">« předchozí</a></span></li>
             
-            <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky6.html">další »</a></span></li>
+            <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky6">další »</a></span></li>
         </ul>
 </div>
             </div>

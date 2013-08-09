@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Synchronizace e-mailových účtů (IMAP) @ stderr</title>
+
+        <meta charset="UTF-8">
+
+        <link href="http://g.stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/mystyle.css" rel="stylesheet" media="screen">
+        <link href="http://g.stderr.cz/theme/css/pygment.css" rel="stylesheet" media="screen">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+                    </head>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="span8 offset3">
+                <ul class="breadcrumb menu">
+                                                            <li><a href="http://g.stderr.cz/o-autorovi">O autorovi</a> <span class="divider">/</span></li>
+                                        <li><a href="http://g.stderr.cz/archives">Archiv</a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3 text-right">
+                <div class="hero-unit">
+                    <h1><a href="http://g.stderr.cz">stderr</a></h1>
+                                        <p>poznámky</p>
+                                    </div>
+                                <div class="metadata">
+                    <h5>Autor</h5>
+                    <h6 class="font-style: italic;">Jakub Jedelský</h6>
+                                        <p>Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat.</p>
+                                                                        <h5>Social</h5>
+                    <ul class="social">
+                                                <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://g.stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                                                <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                                                <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://g.stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                                        </ul>
+                                </div>
+            </div>
+            <div class="span8">
+                <h2>Synchronizace e-mailových účtů (IMAP) <time datetime=2010-08-25T00:00:00>/ 25. 08. 2010 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Synchronizace e-mailových účtů (IMAP)';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
+</div>
+<div class="article">
+<p>Většina uživatelů se ke svým e-mailům nedostane jinak než přes protokol
+POP3 nebo IMAP (což vlastně úplně stačí). Problém nastává ve chvíli, kdy
+chceme e-maily zálohovat, synchronizovat nebo migrovat jinam. Hodní
+správcové nám můžou někam nahrát např. tarball, příp. data zkopírovat
+pomocí <code>rsync</code>.  </p>
+<p>Pokud jste ale na takové nenarazili (nebo je nechcete
+otravovat, protože mají fakt hodně práce :)), bude se Vám hodit utilitka
+napsaná v perlu - <code>imapsync</code>. Výhodou je, že ji nemusíte spouštět ani na
+jednom ze serverů, můžete tak převést e-maily z Hotmail ke Googlu nebo
+jinak dle chuti.</p>
+<p>Jak tedy na ni? Nejdříve ji nainstalujeme standardně z repozitáře (balík
+se nachází snad ve všech distribucích), připravte se na spoustu
+závislostí (ve výsledku ale zabere cca 4MB):</p>
+<div class="highlight"><pre># Debian a klony
+$ apt-get install imapsync 
+# RHEL a klony
+$ yum install imapsync
+</pre></div>
+
+
+<p>Volby <code>imapsync</code> můžeme rozdělit do 3 kategorií: globální, zdrojový
+(označovaný jako 1) a cílový (2) server. Před samotným kopírováním je
+dobré použít přepínač <code>--dry</code>, který provede pouze simulaci a
+zkontroluje, zda se lze k serverům připojit a data přesouvat.</p>
+<p>Pro připojení je dobré si ujasnit, zda se připojujeme se zabezpečením
+SSL (volba <code>--ssl1</code> nebo <code>--ssl2</code>) a také na jaký port se připojujeme
+(<code>--port1</code>/<code>2</code>). Informace o všech volbách včetně pár příkladů vám dají
+<a href="http://linux.die.net/man/1/imapsync">manuálové stránky</a>. Já jsem se po chvilce pátrání dostal např k
+tomuto:</p>
+<div class="highlight"><pre>$ imapsync --syncinternaldates --noauthmd5   
+&gt;    --host1 domain.tld --user1 uzivatelske_jmeno --password1 heslo --port1 143   
+&gt;    --host2 domena.cz --user2 user@domena.cz --password2 heslo --ssl2
+</pre></div>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'Synchronizace e-mailových účtů (IMAP)';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+                <p class="text-center" style="color: #666;">2009 ~ 2013</p>
+    </div>
+    </body>
+</html>

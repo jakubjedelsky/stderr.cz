@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>ARC raid a obnova hesla @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -42,55 +42,57 @@
                                 </div>
             </div>
             <div class="span8">
-                
-<h2><a href="http://g.stderr.cz/gmail-tecka-sem-tecka-tam">Gmail: tečka sem, tečka tam</a> <time datetime=2010-10-06T16:50:00>/ 06. 10. 2010 /</time></h2>
-<div class="article">
-<p>Je to už starší záležitost, ale na Twitter účtu
-<a href="http://twitter.com/gmail/status/26487625131">Gmailu</a> to nakousli, tak se to dostalo ke mě a protože mě to zaujalo,
-tak ... posílám dál: <em>V uživatelských jménech gmailu můžete používat
-tečku (".") dle libosti.</em></p>
-<h2>Tečka</h2>
-<p>Zaregistrujete-li si e-mail u Googlu, můžete spolu s ním využít i
-všechny alternativy s tečkama. Tedy e-maily
-<code>moje.uzivatelske.jmeno@gmail.com</code>, <code>moje.uzivatelskejmeno@gmail.com</code>
-nebo třeba <code>mojeuzivatelskejmeno@gmail.com</code> jsou si rovny a zprávy
-dojdou do jedné schránky. <em>Dobrý ne?</em> Abych se ...</p>
-<hr />
+                <h2>ARC raid a obnova hesla <time datetime=2010-10-25T23:19:00>/ 25. 10. 2010 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=ARC raid a obnova hesla';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
 </div>
-<h2><a href="http://g.stderr.cz/seo-po-cesku-domain-report-2009">SEO po česku (Domain Report 2009)</a> <time datetime=2010-05-24T11:32:00>/ 24. 05. 2010 /</time></h2>
 <div class="article">
-<p>Sdružení CZ.NIC (správce naší národní domény .cz) <a href="http://blog.nic.cz/2010/05/24/vsechno-co-jste-kdy-chteli-vedet-o-domenach-ale-bali-jste-se-zeptat/">vydalo Domain Report
-za rok 2009</a> (<a href="http://blog.nic.cz/wp-content/uploads/2010/05/DOMAIN-REPORT-2009-CZ-final.pdf">pdf</a>). Mimo jiného se zde dočtete, jaké jsou nejdelší
-české domény:</p>
-<div class="highlight"><pre>vozik-voziky-vysokozdvizny-vysokozdvizne-manipulacni-technika.cz
-aagtechnic-tesneni-a-tesnici-materialy-nove-mesto-nad-metuji.cz
-ubytovani-znojmo-znojemsko-havraniky-penzion-penziony-saldorf.cz
-sex-hublist-seznam-java-hry-zdarma-video-reality-seznamka-mp3.cz
-detsky-tabor-lyzovani-hory-hry-tabory-snowboard-lyze-dovolena.cz
-primy-prodej-seminare-knihy-skoleni-mlm-multi-level-marketing.cz
-bio-alkohol-krb-gel-elektricke-plynove-etanol-krby-bez-komina.cz
-verold-hradec-kralove-automobily-osobni-prodej-hradec-kralove.cz
+<p>Stalo se mi to, co by se správcům stávat nemělo - zapoměl jsem (nebo
+jsem se překlepl, to už teď nezjistím) přístupové heslo ke správě HW
+RAIDu. Je to, s prominutím, průser v okamžiku, kdy chcete vyměnit disk,
+zjistit jejich stav, nastavit nový Volume Set nebo s tím dělat jakékoliv
+jiné nastavení, protože prostě ... nemůžete. Jednalo se o řadič
+<strong>ARC-1680</strong>.  </p>
+<p>Samotná oficiální dokumentace (ať k řadiči nebo FAQ) žádné informace o
+obnově zapomenutého hesla neobsahuje a většina vygůglovaných výsledků
+hlásí obnovu pomocí jakéhosi placeného rescue cd (jehož web vypadá
+naprosto nedůvěryhodně). Naštěstí jsem po chvíli hledání narazil na
+užitečný <a href="http://phaq.phunsites.net/2007/01/12/master-password-for-areca-arc-1210-controller/">link</a>, kde je univerzální (a <em>funkční</em>) heslo pro zařízení
+Areco (výrobce ARC řadičů). Je to:</p>
+<div class="highlight"><pre>MNO974315743924
 </pre></div>
 
 
-<p>Nepřipadá vám to jako dokonalé SEO?</p>
-<p>A ještě bych rád vypíchnul jedno zajímavé info: na to, že IPv4 mají
-každou chvílí dojít (<a href="http://blog.nic.cz/2010/05/10/uz-mene-nez-rok/">blog CZ.NIC</a>), je nasazení IPv6 téměř nulové,
-viz:</p>
-<ul>
-<li>IPv6 DNS servery - podíl 3.53%</li>
-<li>IPv6 mail ...</li></ul>
-<hr />
+<p>Otestované řadiče jsou v <a href="http://phaq.phunsites.net/2007/01/12/master-password-for-areca-arc-1210-controller/#comments">komentářích</a> k původnímu blogpostu, já k nim
+přidávám právě ARC-1680. A ještě důležitá poznámka na závěr: <em>Heslo
+nefunguje při přístupu přes web (logicky), úpravy s ním lze provádět
+pouze přes CLI nebo McBIOS.</em></p>
+<p>Pokud by někdo měl s tímto blogpostem problém, <a href="http://dev.stderr.cz/kontakt/">napište</a>.</p>
 </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'ARC raid a obnova hesla';
 
-<!-- 5 -->
-<div class="pagination pagination-large">
-    <ul>
-            <li class="disabled"><span>« předchozí</span></li>
-    
-            <li class="disabled"><span>další »</span></li>
-        </ul>
-</div>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
             </div>
         </div>
     </div>

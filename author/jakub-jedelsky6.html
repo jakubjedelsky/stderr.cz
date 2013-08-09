@@ -43,57 +43,74 @@
             </div>
             <div class="span8">
                 
-<h2><a href="http://g.stderr.cz/wysinwyc-what-you-see-is-not-what-you-copy-exploit">WYSINWYC (What you see is not what you copy) exploit</a> <time datetime=2013-04-08T21:58:00>/ 08. 04. 2013 /</time></h2>
+<h2><a href="http://g.stderr.cz/python-jak-na-user-agent">Python: jak na User-Agent</a> <time datetime=2010-10-07T19:00:00>/ 07. 10. 2010 /</time></h2>
 <div class="article">
-<p>Je to docela známá fičura, která se objevuje (hlavně) na zpravodajských
-serverech - při zkopírování části textu se do clipboardu přidá daší
-text, o který nikdo tak úplně nestojí. Když už se ale do Wordu vloží,
-tak jej lehce umažeme (a <a href="http://www.ceskatelevize.cz/ct24/regiony/jihomoravsky-kraj/119385-onderkova-zaverecna-prace-na-vs-nevyhovuje-kriteriim/" title="O bakalářské práci nejlepšího primátora největšího města ČR">kašleme na nějaké citace</a>). Co když se ale
-zrovna nekopíruje část článku, ale <strong>unixové příkazy, u kterých je velká
-pravděpodobnost, že půjdou rovnou do terminálu?</strong>  </p>
-<p>Kolega mě upozornil na <a href="http://thejh.net/misc/website-terminal-copy-paste">pěknou ukázku</a>, jak tohoto zneužít. Vezměte
-si třeba tento jednoduchý příkaz ...</p>
+<p>V poslední době si "hraju" s Pythonem a mám rozpracované
+některé programy, vyžadující data z webu. Pro tuto práci jsem si oblíbil
+knihovnu <code>urllib2</code>, která nabízí požadovanou funkčnost (je vlastně
+nějaká jiná?). Dosud jsem používal jednoduché stažení dat z webu pomocí
+<code>urllib2.urlopen(url)</code>, ale co když je třeba svoji aplikaci nějak
+identifikovat?  </p>
+<p>K identifikaci klienta připojujícího se pomocí protokolu HTTP (nejen)
+slouží <a href="http://www.w3.org/Protocols/HTTP/HTRQ_Headers.html#user-agent">hlavička User-Agent</a>, která označuje program a verzi (+ může
+<a href="http://www.useragentstring.com/">další info</a>). V pythonní knihovně urllib2 to lze řešit ...</p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/z-lepsiho-spamu">Z lepšího spamu</a> <time datetime=2011-01-27T00:00:00>/ 27. 01. 2011 /</time></h2>
+<h2><a href="http://g.stderr.cz/red-hat-certified-engineer">Red Hat Certified Engineer</a> <time datetime=2011-12-05T17:00:00>/ 05. 12. 2011 /</time></h2>
 <div class="article">
-<p>Poučování o bezpečnosti není nikdy dost, tak ukážu, co mi před
-chviličkou přislo na e-mail. Zpráva se tváří věrohodně, na první pohled
-je od odesílate e-mail.cz a český text je tento:</p>
-<div class="highlight"><pre>Vážení e-mail.cz uživatele
-
-HTK4S virus byl zjištěn u e-mail.cz Webmail server, a e-mail.cz všechny webmail účetní závěrka musí být 
-aktualizován okamžitě, aby se zabránilo poškození webmail e-mail.cz.
-
-Jste požádáni o identifikaci účtu uvedené níže, které nám umožňují kontrolovat a udržovat svůj účet s novou ...</pre></div>
+<p>Úplně jsem se tu, narozdíl od <a href="https://twitter.com/#!/kubiis/status/140214957424902145" title="Twitter">Twitteru</a>, zapomněl pochlubit. Chvíli
+po tom co jsem <a href="http://dev.stderr.cz/2011/07/red-hat-certified-system-administrator/" title="RHCSA">dosáhl na RHCSA</a>, jsem se rozhodl pokračovat. Napoprvé
+mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
+se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify" title="Red Har Verification">111-122-990</a>
+najdete jako RHCE.  </p>
+<p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
 <hr />
 </div>
-<h2><a href="http://g.stderr.cz/zabava-s-traceroute">Zábava s traceroute</a> <time datetime=2013-03-15T07:42:00>/ 15. 03. 2013 /</time></h2>
+<h2><a href="http://g.stderr.cz/red-hat-certified-system-administrator">Red Hat Certified System Administrator</a> <time datetime=2011-07-23T23:53:00>/ 23. 07. 2011 /</time></h2>
 <div class="article">
-<p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
-dotaz prochází, u každého vrátí čas odezvy a ... skončí. Vlastně docela
-nuda. Pak jsem ale narazil na tento twít:</p>
-<blockquote class="twitter-tweet"><p>Dejte si traceroute na 216.81.59.173 a chvíli si počkejte :)</p>&mdash; Adéla (@adela_cz) <a href="https://twitter.com/adela_cz/statuses/312287606052380672">March 14, 2013</a></blockquote>
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Zkuste to:</p>
-<div class="highlight"><pre>traceroute -m 120 -q1 216.81.59.173
-</pre></div>
-
-
-<p>Výsledem bude opět výpis uzlů, ale počkat.. Jak by řekl anonymní
-komentující: <em>"Go home traceroute, you're drunk!"</em> Po přeskákání
-nejblžších uzlů se ...</p>
+<p>Dobrá věc se podařila a už jsem RHCSA. Najdete mě pod čílem
+<a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify">111-122-990</a>.</p>
+<p><center><img alt="Red Hat Certified System Administrator logo" src="static/images//RH_SystemsAdministrator_logo_rgb_200x350.png" title="Red Hat Certified System Administrator logo" /></center></p>
+<p>Napadlo mě, že bych mohl, v případě, že si najdu čas (a byl by zájem),
+zde na blogu publikovat "jak na to" k jednotlivým okruhům (a spojit to
+třeba s kategorií "Základy administrátora"). Ještě si to nechám projít
+hlavou; nějaké poznámky můžete zatím najít na <a href="http://dev.stderr.cz/rhcsa/">samotné speciální
+stránce</a></p>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/red-hat-enterprise-linux-6-je-venku">Red Hat Enterprise Linux 6 je venku</a> <time datetime=2010-11-11T14:49:00>/ 11. 11. 2010 /</time></h2>
+<div class="article">
+<p>Jen jsem včera dopsal článek o RHEL 5.6 Beta, kde se mimojiné
+zmiňuji o RHEL 6, doklikal jsem se k oznámení webcastu (naplánováno na
+11am PT / 2pm ET, kde se má oznámit <em>"velká novinka"</em>. Samozřejmě, že to
+byl <strong>Red Hat Enterprise Linux 6</strong>. Tak milý Red Hate, gratuluji a přeju
+hodně úspěchů. Oficiální oznámení je <a href="http://press.redhat.com/2010/11/10/red-hat-enterprise-linux-6-a-technical-look-at-red-hats-defining-new-operating-platform/">zde</a>.</p>
+<p>Novinek je <a href="http://www.redhat.com/rhel/server/details/">spousta</a> (nebudu se rozepisovat tak, jako včera,
+klikněte na odkaz). Co mě ale zaujalo je podpora Windows Serverů pod KVM
+virtualizací ...</p>
+<hr />
+</div>
+<h2><a href="http://g.stderr.cz/rhel-5-6-beta">RHEL 5.6 Beta</a> <time datetime=2010-11-10T13:10:00>/ 10. 11. 2010 /</time></h2>
+<div class="article">
+<p>Společnost <a href="http://www.redhat.com">Red Hat</a> nikam nechvátá s vypuštěním finálního systému
+<em>Red Hat Enterprise Linux 6</em>. Nemějme jim to za zlé, práce je na něm
+určitě až až. Asi aby byla touha zákazníků po novinkách alespoň trošku
+ukojena, <a href="https://www.redhat.com/archives/rhelv5-announce/2010-November/msg00000.html">oznámila</a> včera společnost vydání aktualizace pro stávající
+RHEL. Jsme již na verzi 5.6 (jedná se o betu, ale předpokládám, že
+finální produkt bude následovat brzy).</p>
+<p><strong>Co tedy RHEL 5.6 Beta přínáší:</strong></p>
+<ul>
+<li>dočkali jsme se plné podpory filesystému <strong>ext4</strong></li>
+<li>DNS server <strong>BIND</strong> je ...</li></ul>
 <hr />
 </div>
 
 <!-- 5 -->
 <div class="pagination pagination-large">
     <ul>
-                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky5.html">« předchozí</a></span></li>
+                        <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky5">« předchozí</a></span></li>
             
-            <li class="disabled"><span>další »</span></li>
+            <li><span><a href="http://g.stderr.cz/author/jakub-jedelsky7">další »</a></span></li>
         </ul>
 </div>
             </div>
