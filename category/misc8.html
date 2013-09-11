@@ -43,6 +43,19 @@
             </div>
             <div class="span8">
                 
+<h2><a href="http://g.stderr.cz/python-jak-na-user-agent">Python: jak na User-Agent</a> <time datetime=2010-10-07T19:00:00>/ 07. 10. 2010 /</time></h2>
+<div class="article">
+<p>V poslední době si "hraju" s Pythonem a mám rozpracované
+některé programy, vyžadující data z webu. Pro tuto práci jsem si oblíbil
+knihovnu <code>urllib2</code>, která nabízí požadovanou funkčnost (je vlastně
+nějaká jiná?). Dosud jsem používal jednoduché stažení dat z webu pomocí
+<code>urllib2.urlopen(url)</code>, ale co když je třeba svoji aplikaci nějak
+identifikovat?  </p>
+<p>K identifikaci klienta připojujícího se pomocí protokolu HTTP (nejen)
+slouží <a href="http://www.w3.org/Protocols/HTTP/HTRQ_Headers.html#user-agent">hlavička User-Agent</a>, která označuje program a verzi (+ může
+<a href="http://www.useragentstring.com/">další info</a>). V pythonní knihovně urllib2 to lze řešit ...</p>
+<hr />
+</div>
 <h2><a href="http://g.stderr.cz/zkrot-si-svuj-cron">Zkroť si svůj cron</a> <time datetime=2010-09-16T12:00:00>/ 16. 09. 2010 /</time></h2>
 <div class="article">
 <p>V tomto krátkém článku nechci popisovat funkci cronu ani práci s
