@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 ### blog info
 AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
-SITEURL = 'http://g.stderr.cz'
+SITEURL = 'http://stderr.cz'
 
 SITESUBTITLE = u'poznámky'
 AUTHOR_BIO = u"Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat."
