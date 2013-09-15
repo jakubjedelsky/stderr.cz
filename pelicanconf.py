@@ -18,9 +18,10 @@ DEFAULT_LANG = u'cs'
 DEFAULT_DATE_FORMAT = "%d. %m. %Y"
 
 ### feeds
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = 'feed.atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+
 
 ### nice urls
 ARTICLE_URL = '{slug}'
