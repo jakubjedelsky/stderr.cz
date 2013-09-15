@@ -68,6 +68,7 @@ function publish {
     fi
     $PELICAN $INPUTDIR -o $PUBLISHDIR -s $CONFFILE $PELICANOPTS
     pushd $PUBLISHDIR > /dev/null
+    rm -rf author category tag tags.html
     git add -A
     git commit -m "$COMMITCOMMENT"
     git push origin gh-pages
