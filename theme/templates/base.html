@@ -5,16 +5,16 @@
 
         <meta charset="UTF-8">
 
-        <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-        <link href="{{ SITEURL }}/theme/css/mystyle.css" rel="stylesheet" media="screen">
-        <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet" media="screen">
+        <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/mystyle.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-        {% if FEED_RSS %}
-        <link href="{{ SITEURL }}/{{ FEED_RSS }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
-        {% endif %}
-        {% if GOOGLE_ANALYTICS %}
+    {% if FEED_ALL_ATOM %}
+        <link rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} ATOM/RSS Feed" />
+    {% endif %}
+    {% if GOOGLE_ANALYTICS %}
         <script type="text/javascript">
 
             var _gaq = _gaq || [];
@@ -27,7 +27,7 @@
                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
             })();
         </script>
-        {% endif %}
+    {% endif %}
     </head>
 
     <body>
