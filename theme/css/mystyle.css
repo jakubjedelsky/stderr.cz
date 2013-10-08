@@ -25,6 +25,11 @@ p, ul li {
     font-size: 15px;
     line-height: 1.75;
 }
+pre {
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+}
 .hero-unit {
     padding-top: 0px;
     padding-right: 0;
