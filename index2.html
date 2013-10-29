@@ -56,6 +56,24 @@
             </div>
             <div class="span8">
                 
+<h2><a href="http://stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a> <time datetime=2013-04-05T10:00:00>/ 05. 04. 2013 /</time></h2>
+<div class="article">
+<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
+pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
+implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
+klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
+převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
+možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
+mé nejoblíbenější.  </p>
+<h3>Generujeme …</h3>
+<p>… samotný privátní klíč (RSA):</p>
+<div class="highlight"><pre>openssl genrsa -out klic.key 2048
+</pre></div>
+
+
+<p>… CSR s ...</p>
+<hr />
+</div>
 <h2><a href="http://stderr.cz/zabava-s-traceroute">Zábava s traceroute</a> <time datetime=2013-03-15T07:42:00>/ 15. 03. 2013 /</time></h2>
 <div class="article">
 <p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
@@ -107,20 +125,6 @@ mi další level v Red Hat certifikaci utekl o 2 body (ze 300), napodruhé
 se ale zadařilo. Od 25. listopadu mě tak pod číslem <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&amp;isSearch=False&amp;verify=Verify" title="Red Har Verification">111-122-990</a>
 najdete jako RHCE.  </p>
 <p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
-<hr />
-</div>
-<h2><a href="http://stderr.cz/centos-a-vydavani-aktualizaci">CentOS a vydávání aktualizací</a> <time datetime=2011-12-05T16:44:00>/ 05. 12. 2011 /</time></h2>
-<div class="article">
-<p>Dnes jen krátce, ale za to se zajímavým odkazem.</p>
-<p>Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že
-vydávání aktualizací minor verzí se oproti RHELu pořád zpožďuje.
-Vývojáři se snaží alespoň hotfixy a security aktualizace distribuovat
-přes <a href="http://wiki.centos.org/AdditionalResources/Repositories/CR" title="CR Repository">Continuous Release repozitář</a>. Proč se vývoj táhne <a href="http://lists.centos.org/pipermail/centos/2011-October/119027.html" title="CentOS maillist">vysvětluje v
-maillistu</a> Johnny Hughes. Ve zkratce: hledejte za tím rozdělení RHELu
-do několika skupin (Server, Workstation, ...), kde ve stejných skupinách
-jsou různé balíčky, a zpřísnění politiky pro sdílení některých
-souborů/balíčků.</p>
-<p>A tak se ...</p>
 <hr />
 </div>
 

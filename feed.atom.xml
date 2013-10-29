@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2013-09-24T00:00:00+02:00</updated><entry><title>Jak jsem mohl neznát doodle.com?</title><link href="http://stderr.cz/jak-jsem-mohl-neznat-doodle-com" rel="alternate"></link><updated>2013-09-24T00:00:00+02:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2013-09-24:jak-jsem-mohl-neznat-doodle-com</id><summary type="html">&lt;p&gt;Při plánování rozloučení s kolegy jsem potřeboval nějak jednoduše sjednotit informace o tom, kdy kdo (ne)může. Psaní e-mailů je otrava a po chvíli je v tom akorát zmatek, tak jsem se zeptal: &lt;em&gt;"Neexistuje nějaký jednoduchý nástroj na plánování scůzek?"&lt;/em&gt; A Google odpověděl, že existuje - a jmenuje se &lt;a href="http://doodle.com"&gt;doodle.com&lt;/a&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2013-10-29T00:00:00+01:00</updated><entry><title>Z Wordpressu na statickou stránku</title><link href="http://stderr.cz/z-wordpressu-na-statickou-stranku" rel="alternate"></link><updated>2013-10-29T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2013-10-29:z-wordpressu-na-statickou-stranku</id><summary type="html">&lt;p&gt;Dlouhou dobu jsem si vedl blog na Wordpressu, který mi běžel na vlastním serveru. Kvůli změně práce a tím i rušení serveru (resp. přesunu na méně výkoný virtuál) jsem začal řešit "kam s ním". Převod části článků sem je dobrý, ale jednak se mi nechtělo převádět vše a pak, návštěvníci si cestu na starý blog ještě najdou. Zavrhnul jsem proto jen jednoduché přesměrování. A aby mi Wordpress zbytečně neběžel a nežral zdroje pro PHP, když to už k ničemu nepotřebuju, bylo řešení docela snadné - převést celý blog na statické stránky.&lt;/p&gt;
+&lt;h3&gt;Krok 1.: Zálohujeme&lt;/h3&gt;
+&lt;p&gt;Zálohovat před každou větší změnou je docela dobrý zvyk. Zazáloha jednoduchým vykopírováním dat i databáze tu určitě stačí.&lt;/p&gt;
+&lt;h3&gt;Krok 2.: Odstranění dynamických prvků&lt;/h3&gt;
+&lt;p&gt;Protože chci, aby byl web kompletně statický, je potřeba vypnout všechny dynamické prvky. Zde to záleží od webu, ale určitě to jsou komentáře (&lt;em&gt;Nastavení -&amp;gt; Komentáře -&amp;gt; Odškrtnout možnost "Povolit návštěvníkům webu přidávat komentáře k příspěvkům a stránkám"&lt;/em&gt;), různé pluginy (u mě to byl třeba Contact Form) a vyhledávání.&lt;/p&gt;
+&lt;h3&gt;Krok 3.: Stažení dat&lt;/h3&gt;
+&lt;p&gt;A to je to kouzlo. Našel jsem sice bashovský skript &lt;a href="https://github.com/mossiso/WP-Static"&gt;WP-Static&lt;/a&gt;, který se má o vše postarat, ale funguje tak nějak na půl (už je přecejen starší). Obsahuje vlastně jen jeden užitečný řádek. Takže šup sem s ním:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;wget --mirror --cut-dirs&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$home_cdirs&lt;/span&gt; -P &lt;span class="nv"&gt;$home_static&lt;/span&gt;-static -nH -np -p -k -E &lt;span class="nv"&gt;$home_url&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Kde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;$home_cdirs&lt;/strong&gt; označuje, co všechno se má v URL po doméně odmazat. Pokud je URL Vašeho blogu example.com, pak to bude 0, pokud example.com/blog, pak 1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$home_static&lt;/strong&gt; je název adresáře, kam se obsah uloží&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$home_url&lt;/strong&gt; je URL samotného blogu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To si spustíte z příkazové řádky a během pár minut (v závislosti na množství stránek) máte ve složce &lt;code&gt;$home_static-static&lt;/code&gt; obsah celého webu ve formě html souborů.&lt;/p&gt;
+&lt;h3&gt;Krok 4.: Úprava stylů&lt;/h3&gt;
+&lt;p&gt;Pěkné na Wordpressu je, že si zachovává informace o použitých verzích stylů a skriptů přímo v URL. Bohužel pokud z nového serveru naservírujete uri "wp-content/themes/twentytwelve/style.css?ver=3.7" a budete se tvářit, že to má být obyčejný texťák, tak to nebude úplně fungovat. Takže zkuste zapojit třeba &lt;code&gt;sed&lt;/code&gt; a změnit všechny index.html soubory, tak aby v sobě měly jen čisté css a js. A zároveň kouknout, co už není potřeba a to smazat. Já použil něco takového, jako vidíte dole, ale bude se to lišit od webu. od použitého vzhledu a pluginů.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mv wp-content/themes/twentytwelve/style.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;3.7 wp-content/themes/twentytwelve/style.css
+mv wp-content/plugins/wp-syntax/css/wp-syntax.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;1.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
+&lt;span class="k"&gt;for &lt;/span&gt;i in &lt;span class="k"&gt;$(&lt;/span&gt;find . -name index.html -print&lt;span class="k"&gt;)&lt;/span&gt;; &lt;span class="k"&gt;do &lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;sed -i &lt;span class="s1"&gt;&amp;#39;s/wp-content\/themes\/twentytwelve\/style.css%3Fver=3.7/wp-content\/themes\/twentytwelve\/style.css/g&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed -i &lt;span class="s1"&gt;&amp;#39;s/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css%3Fver=1.0/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css/g&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/wp-content\/plugins\/contact-form-7\/includes\/css\/styles.css%3Fver=3.5.3/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/&amp;lt;meta name=&amp;quot;generator&amp;quot; content=&amp;quot;WordPress 3.7&amp;quot; \/&amp;gt;/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/Dynamic page generated in/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/Cached page generated by WP-Super-Cache/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/super cache/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;\/wp-content\/plugins\/contact-form-7\/includes\/js\/jquery.form.min.js%3Fver=3.44.0-2013.09.15/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/http:\/\/dev.stderr.cz\/wp-includes\/js\/jquery\/jquery-migrate.min.js/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/http:\/\/dev.stderr.cz\/wp-includes\/js\/jquery\/jquery.js/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+    sed  -i &lt;span class="s1"&gt;&amp;#39;/\/wp-content\/plugins\/jquery-image-lazy-loading\/js\/jquery.lazyload.min.js%3Fver=1.7.1/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Krok 5.: Nahrajte obsah na server&lt;/h3&gt;
+&lt;p&gt;...a &lt;a href="http://dev.stderr.cz"&gt;kochejte se&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Jak jsem mohl neznát doodle.com?</title><link href="http://stderr.cz/jak-jsem-mohl-neznat-doodle-com" rel="alternate"></link><updated>2013-09-24T00:00:00+02:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2013-09-24:jak-jsem-mohl-neznat-doodle-com</id><summary type="html">&lt;p&gt;Při plánování rozloučení s kolegy jsem potřeboval nějak jednoduše sjednotit informace o tom, kdy kdo (ne)může. Psaní e-mailů je otrava a po chvíli je v tom akorát zmatek, tak jsem se zeptal: &lt;em&gt;"Neexistuje nějaký jednoduchý nástroj na plánování scůzek?"&lt;/em&gt; A Google odpověděl, že existuje - a jmenuje se &lt;a href="http://doodle.com"&gt;doodle.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Asi jsem objevil Ameriku (sorry Kryštofe), ale jsem z toho webu tak nadšenej, že o něm musím napsat. Přesně tak jednuché, jak potřebuju a v základní verzi bez registrace. Znáte v dnešní době něco, kde se nemusíte registrovat? Já už skoro ne. &lt;/p&gt;
 &lt;p&gt;Jak funguje? Pojmenujete událost, zadáte navrhované časy, rozešlete odkaz (automaticky nebo ručně) a pak už jen čekáte, až se lidi naklikají. Jednodušší to být nemůže. Pro vyjádření, jde použít jednoduché zaškrtávátko nebo možnosti Ano/Ne/Možná.&lt;/p&gt;
 &lt;p&gt;Po registraci zdarma (prý) získáte propojení s kalendářem, což je další plus, ale to asi nevyužiju. Za zaplacení jsou další výhody, ty jsem nezkoumal.&lt;/p&gt;

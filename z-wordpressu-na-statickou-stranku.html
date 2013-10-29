@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Z Wordpressu na statickou stránku @ stderr</title>
+
+        <meta charset="UTF-8">
+
+        <link href="http://stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://stderr.cz/theme/css/pygment.css" rel="stylesheet">
+        <link href="http://stderr.cz/theme/css/mystyle.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+            <link rel="alternate" type="application/atom+xml" href="http://stderr.cz/feed.atom.xml" title="stderr ATOM/RSS Feed" />
+                <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-44139591-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        </head>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="span8 offset3">
+                <ul class="breadcrumb menu">
+                                                            <li><a href="http://stderr.cz/o-autorovi">O autorovi</a> <span class="divider">/</span></li>
+                                        <li><a href="http://stderr.cz/archives">Archiv</a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3 text-right">
+                <div class="hero-unit">
+                    <h1><a href="http://stderr.cz">stderr</a></h1>
+                                        <p>poznámky</p>
+                                    </div>
+                                <div class="metadata">
+                    <h5>Autor</h5>
+                    <h6 class="font-style: italic;">Jakub Jedelský</h6>
+                                        <p>Správce linuxových serverů v brněnském datacentru, milovník dobré hudby a jídla. Obdivuje ty, co dokáží něco dokázat.</p>
+                                                                        <h5>Social</h5>
+                    <ul class="social">
+                                                <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                                                <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                                                <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                                        </ul>
+                                </div>
+            </div>
+            <div class="span8">
+                <h2>Z Wordpressu na statickou stránku <time datetime=2013-10-29T00:00:00>/ 29. 10. 2013 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Z Wordpressu na statickou stránku';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
+</div>
+<div class="article">
+<p>Dlouhou dobu jsem si vedl blog na Wordpressu, který mi běžel na vlastním serveru. Kvůli změně práce a tím i rušení serveru (resp. přesunu na méně výkoný virtuál) jsem začal řešit "kam s ním". Převod části článků sem je dobrý, ale jednak se mi nechtělo převádět vše a pak, návštěvníci si cestu na starý blog ještě najdou. Zavrhnul jsem proto jen jednoduché přesměrování. A aby mi Wordpress zbytečně neběžel a nežral zdroje pro PHP, když to už k ničemu nepotřebuju, bylo řešení docela snadné - převést celý blog na statické stránky.</p>
+<h3>Krok 1.: Zálohujeme</h3>
+<p>Zálohovat před každou větší změnou je docela dobrý zvyk. Zazáloha jednoduchým vykopírováním dat i databáze tu určitě stačí.</p>
+<h3>Krok 2.: Odstranění dynamických prvků</h3>
+<p>Protože chci, aby byl web kompletně statický, je potřeba vypnout všechny dynamické prvky. Zde to záleží od webu, ale určitě to jsou komentáře (<em>Nastavení -&gt; Komentáře -&gt; Odškrtnout možnost "Povolit návštěvníkům webu přidávat komentáře k příspěvkům a stránkám"</em>), různé pluginy (u mě to byl třeba Contact Form) a vyhledávání.</p>
+<h3>Krok 3.: Stažení dat</h3>
+<p>A to je to kouzlo. Našel jsem sice bashovský skript <a href="https://github.com/mossiso/WP-Static">WP-Static</a>, který se má o vše postarat, ale funguje tak nějak na půl (už je přecejen starší). Obsahuje vlastně jen jeden užitečný řádek. Takže šup sem s ním:</p>
+<div class="highlight"><pre>wget --mirror --cut-dirs<span class="o">=</span><span class="nv">$home_cdirs</span> -P <span class="nv">$home_static</span>-static -nH -np -p -k -E <span class="nv">$home_url</span>
+</pre></div>
+
+
+<p>Kde:</p>
+<ul>
+<li><strong>$home_cdirs</strong> označuje, co všechno se má v URL po doméně odmazat. Pokud je URL Vašeho blogu example.com, pak to bude 0, pokud example.com/blog, pak 1.</li>
+<li><strong>$home_static</strong> je název adresáře, kam se obsah uloží</li>
+<li><strong>$home_url</strong> je URL samotného blogu</li>
+</ul>
+<p>To si spustíte z příkazové řádky a během pár minut (v závislosti na množství stránek) máte ve složce <code>$home_static-static</code> obsah celého webu ve formě html souborů.</p>
+<h3>Krok 4.: Úprava stylů</h3>
+<p>Pěkné na Wordpressu je, že si zachovává informace o použitých verzích stylů a skriptů přímo v URL. Bohužel pokud z nového serveru naservírujete uri "wp-content/themes/twentytwelve/style.css?ver=3.7" a budete se tvářit, že to má být obyčejný texťák, tak to nebude úplně fungovat. Takže zkuste zapojit třeba <code>sed</code> a změnit všechny index.html soubory, tak aby v sobě měly jen čisté css a js. A zároveň kouknout, co už není potřeba a to smazat. Já použil něco takového, jako vidíte dole, ale bude se to lišit od webu. od použitého vzhledu a pluginů.</p>
+<div class="highlight"><pre>mv wp-content/themes/twentytwelve/style.css<span class="se">\?</span>ver<span class="se">\=</span>3.7 wp-content/themes/twentytwelve/style.css
+mv wp-content/plugins/wp-syntax/css/wp-syntax.css<span class="se">\?</span>ver<span class="se">\=</span>1.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
+<span class="k">for </span>i in <span class="k">$(</span>find . -name index.html -print<span class="k">)</span>; <span class="k">do </span>
+<span class="k">    </span>sed -i <span class="s1">&#39;s/wp-content\/themes\/twentytwelve\/style.css%3Fver=3.7/wp-content\/themes\/twentytwelve\/style.css/g&#39;</span> <span class="nv">$i</span>
+    sed -i <span class="s1">&#39;s/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css%3Fver=1.0/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css/g&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/wp-content\/plugins\/contact-form-7\/includes\/css\/styles.css%3Fver=3.5.3/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/&lt;meta name=&quot;generator&quot; content=&quot;WordPress 3.7&quot; \/&gt;/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/Dynamic page generated in/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/Cached page generated by WP-Super-Cache/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/super cache/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;\/wp-content\/plugins\/contact-form-7\/includes\/js\/jquery.form.min.js%3Fver=3.44.0-2013.09.15/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/http:\/\/dev.stderr.cz\/wp-includes\/js\/jquery\/jquery-migrate.min.js/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/http:\/\/dev.stderr.cz\/wp-includes\/js\/jquery\/jquery.js/d&#39;</span> <span class="nv">$i</span>
+    sed  -i <span class="s1">&#39;/\/wp-content\/plugins\/jquery-image-lazy-loading\/js\/jquery.lazyload.min.js%3Fver=1.7.1/d&#39;</span> <span class="nv">$i</span>
+<span class="k">done</span>
+</pre></div>
+
+
+<h3>Krok 5.: Nahrajte obsah na server</h3>
+<p>...a <a href="http://dev.stderr.cz">kochejte se</a></p>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'Z Wordpressu na statickou stránku';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+                <p class="text-center" style="color: #666;">2009 ~ 2013</p>
+    </div>
+    </body>
+</html>
