@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2013-10-29T00:00:00+01:00</updated><entry><title>Z Wordpressu na statickou stránku</title><link href="http://stderr.cz/z-wordpressu-na-statickou-stranku" rel="alternate"></link><updated>2013-10-29T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2013-10-29:z-wordpressu-na-statickou-stranku</id><summary type="html">&lt;p&gt;Dlouhou dobu jsem si vedl blog na Wordpressu, který mi běžel na vlastním serveru. Kvůli změně práce a tím i rušení serveru (resp. přesunu na méně výkoný virtuál) jsem začal řešit "kam s ním". Převod části článků sem je dobrý, ale jednak se mi nechtělo převádět vše a pak, návštěvníci si cestu na starý blog ještě najdou. Zavrhnul jsem proto jen jednoduché přesměrování. A aby mi Wordpress zbytečně neběžel a nežral zdroje pro PHP, když to už k ničemu nepotřebuju, bylo řešení docela snadné - převést celý blog na statické stránky.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2013-10-29T00:00:00+01:00</updated><entry><title>Erlangu, Erlangu, ty zacyklená obludo</title><link href="http://stderr.cz/erlangu-erlangu-ty-zacyklena-obludo" rel="alternate"></link><updated>2013-10-29T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2013-10-29:erlangu-erlangu-ty-zacyklena-obludo</id><summary type="html">&lt;p&gt;Jsem fanouškem Fedory, RHELu a od nich odvozených distribucí. Ale RPM, nad kterým tyto distribuce pracují, občas nabízí nepěkná překvapení. Ne chybou samotného principu (mnohdy), ale občas se některý vývojář nechá unést. Zkuste si nainstalovat takový &lt;a href="http://www.erlang.org/"&gt;Erlang&lt;/a&gt;. &lt;code&gt;Yum&lt;/code&gt; nenabídne jen jeden balíček se základním prostředím pro vývoj nebo spuštění. On si tam dotáhne hned všechny subbalíčky, které k vývoji ani nepotřebujete (o takovém &lt;code&gt;unixODBC&lt;/code&gt; nemluvě). Na toto naštěstí už existuje &lt;a href="https://bugzilla.redhat.com/show_bug.cgi?id=784693"&gt;bug&lt;/a&gt;. Pěkné, ale skrývá se tu ještě jedna vypečenost...&lt;/p&gt;
+&lt;p&gt;Udělám malou odbočku a zamířím k &lt;a href="http://puppetlabs.com/"&gt;Puppetu&lt;/a&gt;, který jsem začal využívat. Pokud v něm chci odstranit balíček, použiji něco takového:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;package { &amp;#39;mujsuperbalicek&amp;#39;:
+    ensure  =&amp;gt; absent,
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Na distribucích založených nad RPM pak Puppet použije:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;/bin/rpm -e mujsuperbalicek
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Výhradu k tomu mám jednu velkou - musíme myslet na všechny závislosti a jednu po druhé sem vypsat, což je dost otravný a zdlouhavý. Teď ale přichází na řadu balík &lt;code&gt;erlang&lt;/code&gt; - pokud jej chcete pomocí příkazu &lt;code&gt;rpm&lt;/code&gt; odstranit, zahlásí, že potřebuje nejdřív odstranit &lt;code&gt;erlang-examples&lt;/code&gt; (proboha, proč?!). Ok, řeknete si v duchu, odstraníme nejprve &lt;code&gt;erlang-examples&lt;/code&gt; - ale ono to nejde, protože vyžaduje balíček ... počkej si ... &lt;code&gt;erlang&lt;/code&gt;! No není to zábavné?&lt;/p&gt;
+&lt;p&gt;Yum si s tím naštěstí poradí, takže puppetům nezbývá nic jiného než tato ošklivost:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;exec { &amp;#39;remove-erlang&amp;#39;:
+    command =&amp;gt; &amp;#39;/usr/bin/yum -y remove erlang&amp;#39;,
+    onlyif  =&amp;gt; &amp;#39;/bin/rpm -q erlang&amp;#39;
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Ale abych jen nebrbral, tak už je na to otevřený &lt;a href="https://bugzilla.redhat.com/show_bug.cgi?id=1038314"&gt;bug&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Z Wordpressu na statickou stránku</title><link href="http://stderr.cz/z-wordpressu-na-statickou-stranku" rel="alternate"></link><updated>2013-10-29T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2013-10-29:z-wordpressu-na-statickou-stranku</id><summary type="html">&lt;p&gt;Dlouhou dobu jsem si vedl blog na Wordpressu, který mi běžel na vlastním serveru. Kvůli změně práce a tím i rušení serveru (resp. přesunu na méně výkoný virtuál) jsem začal řešit "kam s ním". Převod části článků sem je dobrý, ale jednak se mi nechtělo převádět vše a pak, návštěvníci si cestu na starý blog ještě najdou. Zavrhnul jsem proto jen jednoduché přesměrování. A aby mi Wordpress zbytečně neběžel a nežral zdroje pro PHP, když to už k ničemu nepotřebuju, bylo řešení docela snadné - převést celý blog na statické stránky.&lt;/p&gt;
 &lt;h3&gt;Krok 1.: Zálohujeme&lt;/h3&gt;
 &lt;p&gt;Zálohovat před každou větší změnou je docela dobrý zvyk. Zazáloha jednoduchým vykopírováním dat i databáze tu určitě stačí.&lt;/p&gt;
 &lt;h3&gt;Krok 2.: Odstranění dynamických prvků&lt;/h3&gt;
