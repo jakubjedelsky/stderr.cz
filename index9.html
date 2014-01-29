@@ -56,6 +56,19 @@
             </div>
             <div class="span8">
                 
+<h2><a href="http://stderr.cz/python-jak-na-user-agent">Python: jak na User-Agent</a> <time datetime=2010-10-07T19:00:00>/ 07. 10. 2010 /</time></h2>
+<div class="article">
+<p>V poslední době si "hraju" s Pythonem a mám rozpracované
+některé programy, vyžadující data z webu. Pro tuto práci jsem si oblíbil
+knihovnu <code>urllib2</code>, která nabízí požadovanou funkčnost (je vlastně
+nějaká jiná?). Dosud jsem používal jednoduché stažení dat z webu pomocí
+<code>urllib2.urlopen(url)</code>, ale co když je třeba svoji aplikaci nějak
+identifikovat?  </p>
+<p>K identifikaci klienta připojujícího se pomocí protokolu HTTP (nejen)
+slouží <a href="http://www.w3.org/Protocols/HTTP/HTRQ_Headers.html#user-agent">hlavička User-Agent</a>, která označuje program a verzi (+ může
+<a href="http://www.useragentstring.com/">další info</a>). V pythonní knihovně urllib2 to lze řešit ...</p>
+<hr />
+</div>
 <h2><a href="http://stderr.cz/gmail-tecka-sem-tecka-tam">Gmail: tečka sem, tečka tam</a> <time datetime=2010-10-06T16:50:00>/ 06. 10. 2010 /</time></h2>
 <div class="article">
 <p>Je to už starší záležitost, ale na Twitter účtu
@@ -110,21 +123,6 @@ a s jednoduchou konfigurací. Pro jednodušší řešení jak dělaný.</p>
  Na portu TCP/20 jsou přenášena data (data connection). V aktivním
 režimu navazuje připojení pro přenos dat server, klient naslouchá.
 Problém zpravidla nastává v případě, kdy se klient připojuje ...</p></blockquote>
-<hr />
-</div>
-<h2><a href="http://stderr.cz/centos-red-hat-nastaveni-rozsahu-pro-vetsi-pocet-ip">CentOS (Red Hat): nastavení rozsahu pro větší počet IP</a> <time datetime=2010-08-02T18:00:00>/ 02. 08. 2010 /</time></h2>
-<div class="article">
-<p>Máte-li ve správě server (desktop) založený na distribuci <strong>Red Hat</strong>
-(Centos, Fedora, jánevímco), může Vám přijít vhod <strong>tip</strong>, jak jednoduše
-nastavit <strong>rozsah pro větší počet IP adres</strong>. <em>Pracujeme v příkazové
-řádce.</em></p>
-<p><img alt="system-config-network" src="static/images/system-config-network.png" /></p>
-<p>Běžně se
-používá utilita <code>system-config-network-tui</code> (viz obrázek výše), kde si vše můžete pěkně a
-přehledně zapsat do předpřipravených políček. Znalejší prostředí mohou
-upravovat přímo konfiguraci, která je k nalezení v
-<code>/etc/sysconfig/network-scripts</code> a je přehledně pojmenovaná
-<code>ifcfg-eth0:X</code>, kde <code>X</code> je alias pro zařízení eth0. Tato konfigurace pro ...</p>
 <hr />
 </div>
 

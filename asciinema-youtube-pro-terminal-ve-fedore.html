@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>stderr</title>
+        <title>asciinema: YouTube pro terminál ve Fedoře @ stderr</title>
 
         <meta charset="UTF-8">
 
@@ -55,56 +55,50 @@
                                 </div>
             </div>
             <div class="span8">
-                
-<h2><a href="http://stderr.cz/centos-red-hat-nastaveni-rozsahu-pro-vetsi-pocet-ip">CentOS (Red Hat): nastavení rozsahu pro větší počet IP</a> <time datetime=2010-08-02T18:00:00>/ 02. 08. 2010 /</time></h2>
-<div class="article">
-<p>Máte-li ve správě server (desktop) založený na distribuci <strong>Red Hat</strong>
-(Centos, Fedora, jánevímco), může Vám přijít vhod <strong>tip</strong>, jak jednoduše
-nastavit <strong>rozsah pro větší počet IP adres</strong>. <em>Pracujeme v příkazové
-řádce.</em></p>
-<p><img alt="system-config-network" src="static/images/system-config-network.png" /></p>
-<p>Běžně se
-používá utilita <code>system-config-network-tui</code> (viz obrázek výše), kde si vše můžete pěkně a
-přehledně zapsat do předpřipravených políček. Znalejší prostředí mohou
-upravovat přímo konfiguraci, která je k nalezení v
-<code>/etc/sysconfig/network-scripts</code> a je přehledně pojmenovaná
-<code>ifcfg-eth0:X</code>, kde <code>X</code> je alias pro zařízení eth0. Tato konfigurace pro ...</p>
-<hr />
+                <h2>asciinema: YouTube pro terminál ve Fedoře <time datetime=2014-01-29T00:00:00>/ 29. 01. 2014 /</time></h2>
+<div class="flattr">
+    <script id='flattrbtn'>
+    (function(i) {
+        var f,s=document.getElementById(i);
+        f=document.createElement('iframe');
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=asciinema: YouTube pro terminál ve Fedoře';
+        f.title='Flattr';
+        f.height=20;
+        f.width=110;
+        f.style.borderWidth=0;
+        s.parentNode.insertBefore(f,s);
+        })
+    ('flattrbtn');
+    </script>
 </div>
-<h2><a href="http://stderr.cz/seo-po-cesku-domain-report-2009">SEO po česku (Domain Report 2009)</a> <time datetime=2010-05-24T11:32:00>/ 24. 05. 2010 /</time></h2>
 <div class="article">
-<p>Sdružení CZ.NIC (správce naší národní domény .cz) <a href="http://blog.nic.cz/2010/05/24/vsechno-co-jste-kdy-chteli-vedet-o-domenach-ale-bali-jste-se-zeptat/">vydalo Domain Report
-za rok 2009</a> (<a href="http://blog.nic.cz/wp-content/uploads/2010/05/DOMAIN-REPORT-2009-CZ-final.pdf">pdf</a>). Mimo jiného se zde dočtete, jaké jsou nejdelší
-české domény:</p>
-<div class="highlight"><pre>vozik-voziky-vysokozdvizny-vysokozdvizne-manipulacni-technika.cz
-aagtechnic-tesneni-a-tesnici-materialy-nove-mesto-nad-metuji.cz
-ubytovani-znojmo-znojemsko-havraniky-penzion-penziony-saldorf.cz
-sex-hublist-seznam-java-hry-zdarma-video-reality-seznamka-mp3.cz
-detsky-tabor-lyzovani-hory-hry-tabory-snowboard-lyze-dovolena.cz
-primy-prodej-seminare-knihy-skoleni-mlm-multi-level-marketing.cz
-bio-alkohol-krb-gel-elektricke-plynove-etanol-krby-bez-komina.cz
-verold-hradec-kralove-automobily-osobni-prodej-hradec-kralove.cz
+<p>Na nástroj <a href="http://asciinema.org">asciinema</a> jsem poprvé narazil na <a href="https://news.ycombinator.com/item?id=6556106">HackerNews</a> a zamiloval si jej na první pohled. Jedním příkazem zaznamenat, co se odehrává v terminálu, odeslat "video" na server a sdílet. Nebo si jej vložit na vlastní stránky. A sdílet. Video dávám schválně do uvozovek - ve skutečnosti se jedná o textový výstup (terminálový emulátor napsaný v javascriptu) a příkazy si můžete pěkně vykopírovat. V době videotutoriálů a ukázek možností různých nástrojů je to moc pěkné řešení. O kousek níž se můžete podívat, jak jsem si pěkně zahrál <code>moon-buggy</code>.</p>
+<p><center><script type="text/javascript" src="https://asciinema.org/a/7412.js" id="asciicast-7412" async></script></center></p>
+<p>Jedná se kompletně o opensource - <a href="https://github.com/sickill/asciinema">klient</a> je napsaný v Pythonu a dostupný přes pip, <a href="https://github.com/sickill/asciinema.org">serverová</a> část je pak postavená nad Ruby on Rails. Chopil jsem se příležitosti, zkusil si balíček zabalit do rpm a projít procesem dodání do repozitářů Fedory. Chvilku to trvalo (hlavně proto, že to byl můj první příspěvek balíkem), ale klienta si už teď můžete nainstalovat jak ve Fedoře, tak i z repozitářů EPELu. Zatím tedy jen z testovacích větví, ale během pár dní by se to mělo dostat do stabilních:</p>
+<p>Pro Fedoru 19 a 20: </p>
+<div class="highlight"><pre>yum --enablerepo=updates-testing asciinema
 </pre></div>
 
 
-<p>Nepřipadá vám to jako dokonalé SEO?</p>
-<p>A ještě bych rád vypíchnul jedno zajímavé info: na to, že IPv4 mají
-každou chvílí dojít (<a href="http://blog.nic.cz/2010/05/10/uz-mene-nez-rok/">blog CZ.NIC</a>), je nasazení IPv6 téměř nulové,
-viz:</p>
-<ul>
-<li>IPv6 DNS servery - podíl 3.53%</li>
-<li>IPv6 mail ...</li></ul>
-<hr />
-</div>
+<p>Pro instalaci z EPEL repozitáře, např. do RHEL, CentOSu, aj:</p>
+<div class="highlight"><pre>yum --enablerepo=epel-testing install asciinema
+</pre></div>
 
-<!-- 5 -->
-<div class="pagination pagination-large">
-    <ul>
-                        <li><span><a href="http://stderr.cz/index9">« předchozí</a></span></li>
-            
-            <li class="disabled"><span>další »</span></li>
-        </ul>
+
+<p>Zkoušejte, testujte a hlašte bugy.</p>
 </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'stderr-cz-blog';
+    var disqus_title = 'asciinema: YouTube pro terminál ve Fedoře';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Komentáře pouze s JavaScriptem.</noscript>
             </div>
         </div>
     </div>
