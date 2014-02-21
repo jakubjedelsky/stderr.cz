@@ -8,11 +8,9 @@
 }
 body {
     color: #333332;
-}
-h1, h2, small, a, p, .nav {
     font-family:  'Open Sans', sans-serif;
 }
-h1 {
+h1, h2 {
     margin-top: 0;
 }
 h1 a, h1 a:hover, h2 a, h2 a:hover, h5, h6 {
@@ -66,7 +64,7 @@ time {
 .menu {
     background: none;
     color: #999;
-    margin-bottom: 95px;
+    margin-bottom: 80px;
 }
 .menu a {
     color: #999;
