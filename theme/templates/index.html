@@ -2,7 +2,8 @@
 {% block content %}
 
 {% for article in articles_page.object_list %}
-<h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>{% if not HIDE_DATE %} <time datetime={{ article.date.isoformat() }}>/ {{article.locale_date }} /</time>{% endif %}</h2>
+<h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+{% if not HIDE_DATE %} <time datetime={{ article.date.isoformat() }}>{{article.locale_date }}</time>{% endif %}
 <div class="article">
 {{ article.summary }}
 <hr />

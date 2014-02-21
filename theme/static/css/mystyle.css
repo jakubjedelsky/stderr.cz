@@ -10,7 +10,6 @@ body {
     color: #333332;
 }
 h1, h2, small, a, p, .nav {
-    /*font-family: 'Noticia Text', serif;*/
     font-family:  'Open Sans', sans-serif;
 }
 h1 {
@@ -41,13 +40,9 @@ pre {
     line-height: 1;
 }
 time {
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding: 0;
     color: #999999;
-    font-style: italic;
     font-weight: normal;
-    font-size: 0.35em;
-    vertical-align: top;
 }
 .footer {
     border-top: 1px solid #e0e0df;
@@ -88,7 +83,6 @@ ul.social li img {
     background-size:32px 32px;
     height: 32px;
     width: 32px;
-/*    background: #000; */
 }
 .si-twitter {
     background: #00ACED;
@@ -98,4 +92,7 @@ ul.social li img {
 }
 .si-linkedin {
     background: #007FB1;
+}
+.flattr {
+	float: right;
 }
