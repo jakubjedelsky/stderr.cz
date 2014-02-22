@@ -1,21 +1,21 @@
 <!-- {{ DEFAULT_PAGINATION }} -->
 {% if   DEFAULT_PAGINATION %}
-<div class="pagination pagination-large">
-    <ul>
+<div>
+    <ul class="pagination pagination-lg">
     {% if articles_page.has_previous() %}
         {% if articles_page.previous_page_number() == 1 %}
-            <li><span><a href="{{ SITEURL }}/{{ page_name }}">« předchozí</a></span></li>
+            <li><a href="{{ SITEURL }}/{{ page_name }}">&laquo; předchozí</a></li>
         {% else %}
-            <li><span><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}">« předchozí</a></span></li>
+            <li><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}">&laquo; předchozí</a></li>
         {% endif %}
     {% else %}
-        <li class="disabled"><span>« předchozí</span></li>
+        <li class="disabled"><a href="#">&laquo; předchozí</a></li>
     {% endif %}
 
     {% if articles_page.has_next() %}
-        <li><span><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}">další »</a></span></li>
+        <li><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}">další »</a></li>
     {% else %}
-        <li class="disabled"><span>další »</span></li>
+<li class="disabled">další »</li>
     {% endif %}
     </ul>
 </div>
