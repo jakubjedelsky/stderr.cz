@@ -8,8 +8,6 @@
 }
 body {
     color: #333332;
-}
-h1, h2, small, a, p, .nav {
     font-family:  'Open Sans', sans-serif;
 }
 h1, h2 {
