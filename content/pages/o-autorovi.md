@@ -3,11 +3,11 @@ Slug: o-autorovi
 
 Jmenuji se **Jakub Jedelský**, těší mě.
 
-Už pár let pracuji v brněnském [datacentru](http://www.master.cz) jako administrátor (převážně) *linuxových* serverů - nejraději se starám o RHEL/CentOS (můžu se pochlubit certifikací [RHCE](https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&isSearch=False&verify=Verify)), ale orientuji se i v jiných distribucích. Konfiguruji, zabezpečuji a připravuji vše od jednoduchých webserverů po komplexní HA řešení. *Bash* je mým každodenním chlebem, *python* zábavou.
+<del>Už pár let pracuji v brněnském [datacentru](http://www.master.cz) jako administrátor (převážně) *linuxových* serverů.</del> Od října 2014 mě potkáte v brněnské kanceláři [GoodData](http://www.gooddata.com), kde se v <abbr title="Relational Online Analytical Processing">ROLAP</abbr> teamu starám o databázové a jiné servery. Nejraději se šťourám v RHEL/CentOS/Scientific Linuxu (můžu se pochlubit certifikací [RHCE](https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&isSearch=False&verify=Verify)). Umím konfigurovat, zabezpečovat a připravit vše od jednoduchých webserverů po komplexní HA řešení. *Bash* je mým každodenním chlebem, *python* zábavou. Zvládám pár kytarových riffů.
 
 Webový medailonek najede na: [jakubjedelsky.cz](http://www.jakubjedelsky.cz)
 
-*Tato stránka bude (jednou) náhrada za mé dosavadní blogy [dev.stderr.cz](http://dev.stderr.cz) a [sys.stderr.cz](http://sys.stderr.cz), zatím zde nic není. Máte-li k tomuto webu nějaké výhrady, můžete mi jej pomoci upravit. Zdrojové kódy jsou na [Githubu](https://github.com/jakubjedelsky/stderr.cz).*
+Máte-li k tomuto webu nějaké výhrady, můžete mi jej pomoci upravit. Zdrojové kódy jsou na [Githubu](https://github.com/jakubjedelsky/stderr.cz).
 
 ### Co je to ten stderr?
 Manuálová stránka napoví. Možná.
