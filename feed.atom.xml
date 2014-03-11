@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2014-01-29T00:00:00+01:00</updated><entry><title>asciinema: YouTube pro terminál ve Fedoře</title><link href="http://stderr.cz/asciinema-youtube-pro-terminal-ve-fedore" rel="alternate"></link><updated>2014-01-29T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-01-29:asciinema-youtube-pro-terminal-ve-fedore</id><summary type="html">&lt;p&gt;Na nástroj &lt;a href="http://asciinema.org"&gt;asciinema&lt;/a&gt; jsem poprvé narazil na &lt;a href="https://news.ycombinator.com/item?id=6556106"&gt;HackerNews&lt;/a&gt; a zamiloval si jej na první pohled. Jedním příkazem zaznamenat, co se odehrává v terminálu, odeslat "video" na server a sdílet. Nebo si jej vložit na vlastní stránky. A sdílet. Video dávám schválně do uvozovek - ve skutečnosti se jedná o textový výstup (terminálový emulátor napsaný v javascriptu) a příkazy si můžete pěkně vykopírovat. V době videotutoriálů a ukázek možností různých nástrojů je to moc pěkné řešení. O kousek níž se můžete podívat, jak jsem si pěkně zahrál &lt;code&gt;moon-buggy&lt;/code&gt;.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2014-03-11T00:00:00+01:00</updated><entry><title>Docker: jak jsme se seznámili</title><link href="http://stderr.cz/docker-jak-jsme-se-seznamili" rel="alternate"></link><updated>2014-03-11T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-03-11:docker-jak-jsme-se-seznamili</id><summary type="html">&lt;p&gt;Dění kolem lehkých linuxových kontejnerů jde spíše kolem mě. Až na &lt;a href="https://www.docker.io/"&gt;Docker&lt;/a&gt; - čím déle jej sleduju, tím víc se mi líbí. A konečně jsem se dopracoval i k tomu si s ním trošku pohrát.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img alt="Docker logo" src="https://www.docker.io/static/img/docker-top-logo.png" /&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Chvilka nezajímavého povídání:&lt;/em&gt; Potřeboval jsem testovat a upravovat SQL dotazy nad MySQL. Už jsem vyrostl z toho, že si všechno nainstaluju do svého systému a pak nevím, co mi kde běží - snažím se jej naopak udržovat tak nějak v čistotě. Taky se mi s daty nechtělo pracovat na vzdáleném serveru - třeba ve vlaku je připojení dost mizerný. A v neposlední řadě se mi nechtělo kvůli MySQL serveru rozcházet KVM virtualizaci. Takže ideální čas pro Docker. &lt;em&gt;Konec nezajímavého povídání. Teda jak pro koho...&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Znám pouze základy, takže tu nečekejte připravený Dockerfile (to třeba později, hehe), ale jen "tupý" postup, jak si rozběhnout jednoduchý MySQL server. Zároveň jsem dost línej rozepisovat, co jednotlivé příkazy přesně znamenají. Naštěstí u každého můžete použít &lt;code&gt;--help&lt;/code&gt; nebo nakouknout do &lt;a href="http://docs.docker.io/en/latest/reference/commandline/"&gt;dokumentace&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vše začíná stažením obrazu (image) systému, který chcete použít. Já vyrůstal s rpm, takže CentOS byla jasná volba:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker pull centos
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Zkusíme kontejner nastartovat a hned se přepnout do příkazové řádky:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker run -t -i centos /bin/bash
+bash-4.1#
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Systém si zaktualizuju, nainstaluju balíčky, které potřebuju ...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;bash-4.1# yum -y update
+bash-4.1# yum -y install mysql mysql-server
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;... a zkusím pustit MySQL server (což mi skončilo chybou).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;bash-4.1# service mysqld start
+/etc/init.d/mysqld: line 23: /etc/sysconfig/network: No such file or directory
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Tento soubor se načítá jen pro dodatečné funkce; init skript uspokojíme i prázným souborem. Služba pak naběhne jak má:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;bash-4.1# touch /etc/sysconfig/network
+bash-4.1# service mysqld start
+Initializing MySQL database: ...
+(...)
+Starting mysqld: [  OK  ]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Funguje! Jen po odhlášení z kontejneru zjistíte, že nic neběží a že i vytvoření network souboru bylo zbytečné.&lt;/p&gt;
+&lt;p&gt;Abych si upravený obraz mohl spustit a připojit se na něj, je potřeba změny commitnout (omlouvám se za to cizí slovo, ale nějak mě nenapadá český ekvivalent). Docker pracuje s otisky podobně jako git (odtud ten commit) - nazývá je jednoduše ID. Poslední změněný obraz ukáže příkaz ps:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker ps -l
+CONTAINER ID   IMAGE        COMMAND     CREATED         STATUS   PORTS   NAMES
+e5055fbceaec   centos:6.4   /bin/bash   9 minutes ago   Exit 0           cocky_brown
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A o commit se postará příkaz ... wait for it ... commit:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker commit e5055fbceaec centos/mysql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Tímto jsme řekli, že změny, které jsou v otisku &lt;code&gt;e5055fbceaec&lt;/code&gt; chceme uložit pod &lt;code&gt;centos/mysql&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Teď už zbývá jen MySQL v kontejneru spustit a přesměrovat si porty:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;docker run -d -p :3306:3306 centos/mysql /usr/bin/mysqld_safe
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A to je vše. Teď se jen musíme ze systému připojit ...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# mysql -u root -h 0.0.0.0
+ERROR 1130 (HY000): Host &amp;#39;172.17.42.1&amp;#39; is not allowed to connect to this MySQL server
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;... a zjistíme, že to vlastně úplně nejde. Proč? To nechám na pozorném čtenáři, případně do dalšího článku.&lt;/p&gt;
+&lt;p&gt;Závěrem snad jen - běžící kontejnery vypíše příkaz &lt;code&gt;ps&lt;/code&gt; a zastaví &lt;code&gt;stop&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker ps
+CONTAINER ID        IMAGE                 COMMAND                CREATED              STATUS              PORTS                    NAMES
+beae68f2b5a3        centos/mysql:latest   /usr/bin/mysqld_safe   About a minute ago   Up About a minute   0.0.0.0:3306-&amp;gt;3306/tcp   focused_nobel
+$ docker stop beae68f2b5a3
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>asciinema: YouTube pro terminál ve Fedoře</title><link href="http://stderr.cz/asciinema-youtube-pro-terminal-ve-fedore" rel="alternate"></link><updated>2014-01-29T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-01-29:asciinema-youtube-pro-terminal-ve-fedore</id><summary type="html">&lt;p&gt;Na nástroj &lt;a href="http://asciinema.org"&gt;asciinema&lt;/a&gt; jsem poprvé narazil na &lt;a href="https://news.ycombinator.com/item?id=6556106"&gt;HackerNews&lt;/a&gt; a zamiloval si jej na první pohled. Jedním příkazem zaznamenat, co se odehrává v terminálu, odeslat "video" na server a sdílet. Nebo si jej vložit na vlastní stránky. A sdílet. Video dávám schválně do uvozovek - ve skutečnosti se jedná o textový výstup (terminálový emulátor napsaný v javascriptu) a příkazy si můžete pěkně vykopírovat. V době videotutoriálů a ukázek možností různých nástrojů je to moc pěkné řešení. O kousek níž se můžete podívat, jak jsem si pěkně zahrál &lt;code&gt;moon-buggy&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;script type="text/javascript" src="https://asciinema.org/a/7412.js" id="asciicast-7412" async&gt;&lt;/script&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Jedná se kompletně o opensource - &lt;a href="https://github.com/sickill/asciinema"&gt;klient&lt;/a&gt; je napsaný v Pythonu a dostupný přes pip, &lt;a href="https://github.com/sickill/asciinema.org"&gt;serverová&lt;/a&gt; část je pak postavená nad Ruby on Rails. Chopil jsem se příležitosti, zkusil si balíček zabalit do rpm a projít procesem dodání do repozitářů Fedory. Chvilku to trvalo (hlavně proto, že to byl můj první příspěvek balíkem), ale klienta si už teď můžete nainstalovat jak ve Fedoře, tak i z repozitářů EPELu. Zatím tedy jen z testovacích větví, ale během pár dní by se to mělo dostat do stabilních:&lt;/p&gt;
 &lt;p&gt;Pro Fedoru 19 a 20: &lt;/p&gt;
