@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2014-03-11T00:00:00+01:00</updated><entry><title>Docker: jak jsme se seznámili</title><link href="http://stderr.cz/docker-jak-jsme-se-seznamili" rel="alternate"></link><updated>2014-03-11T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-03-11:docker-jak-jsme-se-seznamili</id><summary type="html">&lt;p&gt;Dění kolem lehkých linuxových kontejnerů jde spíše kolem mě. Až na &lt;a href="https://www.docker.io/"&gt;Docker&lt;/a&gt; - čím déle jej sleduju, tím víc se mi líbí. A konečně jsem se dopracoval i k tomu si s ním trošku pohrát.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2014-03-23T00:00:00+01:00</updated><entry><title>Docker: Jak jsme se seznámili - 2.díl</title><link href="http://stderr.cz/docker-jak-jsme-se-seznamili-2-dil" rel="alternate"></link><updated>2014-03-23T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-03-23:docker-jak-jsme-se-seznamili-2-dil</id><summary type="html">&lt;p&gt;V &lt;a href="http://stderr.cz/docker-jak-jsme-se-seznamili"&gt;první části&lt;/a&gt; seznamování jsem skončil dost narychlo. Na jednu stranu jsem nechtěl zatěžovat hlavu váženého čtenáře dlouhým čtením a na druhou jsem psal v noci a už se mi chtělo spát. Zkusím tu tedy dokončit zprovoznění MySQL pod Dockerem (pokud se vám to ještě nepovedlo). Tentokrát vám na začátek dopřeju lehce teorie. Pokračovat pak budu v podobném duchu - z pohledu člověka, který k Dockeru jen lehce přičuchl. Pokud mě doplníte v komentářích jako u prvního dílu (doporučuju přečíst), máte u mě veliký dík!&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img alt="Docker logo" src="https://www.docker.io/static/img/docker-top-logo.png" /&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Mimochodem, Docker &lt;a href="http://blog.docker.io/2014/03/happy-birthday-docker/"&gt;oslavil 20. března první narozeniny&lt;/a&gt;. Takže vše nej a hodně spokojených uživatelů do dalších let!&lt;/p&gt;
+&lt;h3&gt;Z praxe k teorii&lt;/h3&gt;
+&lt;p&gt;Více do hloubky jsem se Dockerem začal zabývat až díky komentáři od &lt;a href="http://stderr.cz/docker-jak-jsme-se-seznamili#comment-1281963896"&gt;AoJ&lt;/a&gt; - byla tu teda jistá pravděpodobnost, že zkušenějšímu dockeristovi mohly při čtení běhat mžitky před očima. Neručím za to, že to bude lepší. Dovolte mi se, před nastartováním MySQL, lehce otřít o teorii.&lt;/p&gt;
+&lt;h4&gt;Obraz versus kontejner&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;TL;DR:&lt;/em&gt; Docker rozlišuje mezi obrazem (&lt;a href="http://docs.docker.io/en/latest/terms/image/"&gt;Image&lt;/a&gt;), což je neměnný a read-only stav systému, a kontejnerem (&lt;a href="http://docs.docker.io/en/latest/terms/container/"&gt;Container&lt;/a&gt;) - read-write vrstvou nad obrazem.&lt;/p&gt;
+&lt;p&gt;Jednotlivé obrazy se rozlišují pomocí ID, jsou uklády v repozitářích (např. &lt;code&gt;centos&lt;/code&gt;) a odděleny tagy (např. &lt;code&gt;6.4&lt;/code&gt;). V okamžiku, kdy nějaký obraz chceme použít, Docker jej vezme a přidá vrstvu &lt;a href="http://docs.docker.io/en/latest/terms/filesystem/"&gt;Union File Systému&lt;/a&gt;, který už je zapisovatelný. Této vrstvě (ke které jsou připojené nějaké další informace, jako třeba nastavení sítě) se pak říká kontejner.&lt;/p&gt;
+&lt;p&gt;Kontejner může mít dva stavy: &lt;strong&gt;běžící&lt;/strong&gt; (running) a &lt;strong&gt;ukončený&lt;/strong&gt; (exited). Běžící je asi pochopitelný - to je ten, kde běží nějaký proces (bash, mysql, ...). Ale ten ukončený (nebo zastavený, chcete-li), ten zmátl nejen mě. Pokud jste totiž z obrazu kontejner pustili, změnili, zastavili a opět spustili, byly všechny změny pryč. Je to právě tím, že jste si druhým spuštěním vytvořili nový kontejner z původního read-only obrazu. Původní kontejner je ale stále uložený - tyto kontejnery si můžete vypsat pomocí &lt;code&gt;docker ps -a&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ukončený kontejner můžete opět nastartovat se všemi parametry (&lt;code&gt;docker start&lt;/code&gt;), můžete jej smazat (&lt;code&gt;docker rm&lt;/code&gt;) nebo si změny, které jste udělali, commitnout do obrazu (to je ten &lt;code&gt;docker commit&lt;/code&gt; z prvního dílu). Commitem si můžete změnit stávající obraz nebo vytvořit nový. Pokud si už chvilku s Dockerem hrajete, pak těch kontejnerů budete mít dost a každý si bere nějaké místo z disku, není od věci je tak promazat:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;docker ps -a | grep &amp;quot;Exit&amp;quot; | awk &amp;#39;{print $1}&amp;#39; | xargs docker rm
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Z teorie zpět k praxi (dokončení)&lt;/h3&gt;
+&lt;p&gt;Skončil jsem tím, že jsem se zkusil připojit k MySQL server. Zareagoval tak, že poslal chybu: &lt;code&gt;ERROR 1130 (HY000): Host '172.17.42.1' is not allowed to connect to this MySQL server&lt;/code&gt;. Pokud jste se s tím nikdy nesetkali, tak blahopřeju. Chyba neznamená nic jiného, než že uživat root nemá právo k přihlášení z jiného systému (ta zpráva je vlastně docela jasná). Čeká nás tak drobná oprava kontejneru. Vezmu to rychle, protože se víceméně jen opakuji:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Vypneme běžící kontejner&lt;/p&gt;
+&lt;p&gt;Ten jsem našel a vypnul už posledně, posloží k tomu &lt;code&gt;docker ps&lt;/code&gt; a &lt;code&gt;docker stop&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Přihlásíme se do bashe a pod ním do mysql&lt;/p&gt;
+&lt;p&gt;I přihlášení do bashe kontejneru jsme absolvovali, pak jen mysql spustíme a přihlásíme se (protože z 'localhostu' to jde).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker run -t -i centos/mysql /bin/bash
+bash-4.1# service mysqld start
+bash-4.1# mysql -u root
+mysql&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Opravíme práva&lt;/p&gt;
+&lt;p&gt;Tady už od Dockeru uhýbám víc než chci, ale pojďme to nastavit (na bezpečnost teď nehledíme):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mysql&amp;gt; GRANT ALL ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39;;
+mysql&amp;gt; quit;
+bash-4.1# exit
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Protože chceme používat původní obraz, commitneme do něj změny&lt;/p&gt;
+&lt;p&gt;Další opáčko:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker ps -l
+CONTAINER ID      (...)
+9fcaef7a2b56      (...)
+$ docker commit 9fcaef7a2b56 centos/mysql
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A nastartujeme kontejner&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ docker run -p :3306:3306 -d centos/mysql /usr/bin/mysqld_safe
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A je hotovo, můžete setřít pot z čela. Pokud se teď zkusíme přihlásit, neměli bychom mít problém a můžeme s mysql vesele pracovat:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ mysql -u root -h 0.0.0.0
+mysql&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A příště to všechno zkompletujeme pod jeden &lt;a href="https://www.docker.io/learn/dockerfile/"&gt;Dockerfile&lt;/a&gt;, abychom to na jiném systému mohli sběhnout všechno na jeden příkaz. Toto je jedna z důležitých věcí, kvůli které je Docker tak oblíbený.&lt;/p&gt;</summary></entry><entry><title>Docker: jak jsme se seznámili</title><link href="http://stderr.cz/docker-jak-jsme-se-seznamili" rel="alternate"></link><updated>2014-03-11T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-03-11:docker-jak-jsme-se-seznamili</id><summary type="html">&lt;p&gt;Dění kolem lehkých linuxových kontejnerů jde spíše kolem mě. Až na &lt;a href="https://www.docker.io/"&gt;Docker&lt;/a&gt; - čím déle jej sleduju, tím víc se mi líbí. A konečně jsem se dopracoval i k tomu si s ním trošku pohrát.&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;img alt="Docker logo" src="https://www.docker.io/static/img/docker-top-logo.png" /&gt;
 &lt;/center&gt;&lt;/p&gt;
