@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title }} @ {{ super() }}{% endblock %}
+{% block twittercard %}
+    <meta name="twitter:card" value="summary" />
+    <meta name="twitter:creator" content="@{{ TWITTER_NAME }}" />
+    <meta name="twitter:title" content="{{ article.title }}" />
+    <meta name="twitter:description" content="{{ article.content|striptags|truncate(length=200, killwords=False) }}" />
+{% endblock %}
 
 {% block content %}
 <h2>{{ article.title }}{% if not HIDE_DATE %}</h2>

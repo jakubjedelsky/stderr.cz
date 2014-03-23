@@ -10,6 +10,7 @@
         <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/css/mystyle.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        {% block twittercard %}{% endblock %}
 
     {% if FEED_ALL_ATOM %}
         <link rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} ATOM/RSS Feed" />

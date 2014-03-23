@@ -54,6 +54,7 @@ SOCIAL = {
     'linkedin': 'http://www.linkedin.com/in/jedelsky',
     'github': 'https://github.com/jakubjedelsky',
 }
+TWITTER_NAME = 'kubiis'
 # flattr
 FLATTR_ID = 'stderr'
 # disqus
