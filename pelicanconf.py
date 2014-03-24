@@ -5,8 +5,7 @@ from __future__ import unicode_literals
 ### blog info
 AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
-#SITEURL = 'http://stderr.cz'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'http://stderr.cz'
 
 SITESUBTITLE = u'poznámky'
 AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
@@ -35,12 +34,15 @@ PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
 
 ### static things
-STATIC_PATHS = ['images']
-FILES_TO_COPY = ( 
-        ('extra/robots.txt', 'robots.txt'),
-        ('extra/CNAME', 'CNAME'),
-    )   
-
+STATIC_PATHS = [
+	'images',
+	'extra/robots.txt',
+	'extra/CNAME',
+]
+EXTRA_PATH_METADATA = {
+	'extra/robots.txt': {'path': 'robots.txt'},
+	'extra/CNAME': {'path': 'CNAME'},
+}
 ### theme
 THEME = 'theme'
 DISPLAY_PAGES_ON_MENU = True
