@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 ### blog info
 AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
-SITEURL = 'http://stderr.cz'
+#SITEURL = 'http://stderr.cz'
+SITEURL = 'http://localhost:8000'
 
 SITESUBTITLE = u'poznámky'
 AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
