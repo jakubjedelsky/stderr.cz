@@ -25,7 +25,7 @@ Kontejner může mít dva stavy: **běžící** (running) a **ukončený** (exit
 Ukončený kontejner můžete opět nastartovat se všemi parametry (`docker start`), můžete jej smazat (`docker rm`) nebo si změny, které jste udělali, commitnout do obrazu (to je ten `docker commit` z prvního dílu). Commitem si můžete změnit stávající obraz nebo vytvořit nový. Pokud si už chvilku s Dockerem hrajete, pak těch kontejnerů budete mít dost a každý si bere nějaké místo z disku, není od věci je tak promazat:
 
     :::text
-    docker ps -a | grep "Exit" | awk '{print $1}' | xargs docker rm
+    docker rm $(docker ps -a -q)
 
 ### Z teorie zpět k praxi (dokončení)
 
