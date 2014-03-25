@@ -90,7 +90,7 @@
 <p>Jednotlivé obrazy se rozlišují pomocí ID, jsou uklády v repozitářích (např. <code>centos</code>) a odděleny tagy (např. <code>6.4</code>). V okamžiku, kdy nějaký obraz chceme použít, Docker jej vezme a přidá vrstvu <a href="http://docs.docker.io/en/latest/terms/filesystem/">Union File Systému</a>, který už je zapisovatelný. Této vrstvě (ke které jsou připojené nějaké další informace, jako třeba nastavení sítě) se pak říká kontejner.</p>
 <p>Kontejner může mít dva stavy: <strong>běžící</strong> (running) a <strong>ukončený</strong> (exited). Běžící je asi pochopitelný - to je ten, kde běží nějaký proces (bash, mysql, ...). Ale ten ukončený (nebo zastavený, chcete-li), ten zmátl nejen mě. Pokud jste totiž z obrazu kontejner pustili, změnili, zastavili a opět spustili, byly všechny změny pryč. Je to právě tím, že jste si druhým spuštěním vytvořili nový kontejner z původního read-only obrazu. Původní kontejner je ale stále uložený - tyto kontejnery si můžete vypsat pomocí <code>docker ps -a</code>.</p>
 <p>Ukončený kontejner můžete opět nastartovat se všemi parametry (<code>docker start</code>), můžete jej smazat (<code>docker rm</code>) nebo si změny, které jste udělali, commitnout do obrazu (to je ten <code>docker commit</code> z prvního dílu). Commitem si můžete změnit stávající obraz nebo vytvořit nový. Pokud si už chvilku s Dockerem hrajete, pak těch kontejnerů budete mít dost a každý si bere nějaké místo z disku, není od věci je tak promazat:</p>
-<div class="highlight"><pre>docker ps -a | grep &quot;Exit&quot; | awk &#39;{print $1}&#39; | xargs docker rm
+<div class="highlight"><pre>docker rm $(docker ps -a -q)
 </pre></div>
 
 
