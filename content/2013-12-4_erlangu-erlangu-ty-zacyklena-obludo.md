@@ -6,14 +6,14 @@ Jsem fanouškem Fedory, RHELu a od nich odvozených distribucí. Ale RPM, nad kt
 
 Udělám malou odbočku a zamířím k [Puppetu](http://puppetlabs.com/), který jsem začal využívat. Pokud v něm chci odstranit balíček, použiji něco takového:
 
-```text
+```puppet
 package { 'mujsuperbalicek':
 	ensure	=> absent,
 }
 ```
 Na distribucích založených nad RPM pak Puppet použije:
 
-```text
+```bash
 /bin/rpm -e mujsuperbalicek
 ```
 
@@ -21,7 +21,7 @@ Výhradu k tomu mám jednu velkou - musíme myslet na všechny závislosti a jed
 
 Yum si s tím naštěstí poradí, takže puppetům nezbývá nic jiného než tato ošklivost:
 
-```text
+```puppet
 exec { 'remove-erlang':
 	command	=> '/usr/bin/yum -y remove erlang',
 	onlyif	=> '/bin/rpm -q erlang'
