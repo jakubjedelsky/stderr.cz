@@ -1,5 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2014-03-23T00:00:00+01:00</updated><entry><title>Docker: Jak jsme se seznámili - 2.díl</title><link href="http://stderr.cz/docker-jak-jsme-se-seznamili-2-dil" rel="alternate"></link><updated>2014-03-23T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-03-23:docker-jak-jsme-se-seznamili-2-dil</id><summary type="html">&lt;p&gt;V &lt;a href="http://stderr.cz/docker-jak-jsme-se-seznamili"&gt;první části&lt;/a&gt; seznamování jsem skončil dost narychlo. Na jednu stranu jsem nechtěl zatěžovat hlavu váženého čtenáře dlouhým čtením a na druhou jsem psal v noci a už se mi chtělo spát. Zkusím tu tedy dokončit zprovoznění MySQL pod Dockerem (pokud se vám to ještě nepovedlo). Tentokrát vám na začátek dopřeju lehce teorie. Pokračovat pak budu v podobném duchu - z pohledu člověka, který k Dockeru jen lehce přičuchl. Pokud mě doplníte v komentářích jako u prvního dílu (doporučuju přečíst), máte u mě veliký dík!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link href="http://stderr.cz/" rel="alternate"></link><link href="http://stderr.cz/feed.atom.xml" rel="self"></link><id>http://stderr.cz/</id><updated>2014-04-04T00:00:00+02:00</updated><entry><title>Jak dostat vlastní RPM do Fedory</title><link href="http://stderr.cz/jak-dostat-vlastni-rpm-do-fedory" rel="alternate"></link><updated>2014-04-04T00:00:00+02:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-04-04:jak-dostat-vlastni-rpm-do-fedory</id><summary type="html">&lt;p&gt;&lt;em&gt;TL;DR:&lt;/em&gt; Toto není návod na sestavení RPM. Jen jsem si potřeboval utříbit a sepsat postup pro doručení již připraveného balíčku do repozitářů Fedory a EPELu. Ani nechci zabíhat do detailu - většinou odkazuji na příslušnou &lt;a href="http://fedoraproject.org/wiki/"&gt;wiki&lt;/a&gt; (ale často jsem se neudržel).&lt;/p&gt;
+&lt;p&gt;Postup jsem popsal pro balíček &lt;code&gt;vertica-python&lt;/code&gt;, který si tuto cestu už absolvoval. Hned na začátek doporučuji nastavit filtr e-mailu - do gmailu mi naskákalo celkem kolem 30 zpráv ve 13 vláknech.&lt;/p&gt;
+&lt;h3&gt;Všechno začíná (a končí) v bugzille&lt;/h3&gt;
+&lt;p&gt;Každý nový balíček se musí pěkně &lt;a href="https://fedoraproject.org/wiki/Packaging:NamingGuidelines"&gt;jmenovat&lt;/a&gt; a splnit &lt;a href="https://fedoraproject.org/wiki/Packaging:ReviewGuidelines"&gt;pár jednoduchých podmínek&lt;/a&gt;, aby prošel kontrolou od některého z jiných vývojářů. Ke komunikaci slouží ticket typu &lt;a href="https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Fedora&amp;amp;format=fedora-review"&gt;Review Request&lt;/a&gt;, kam kromě základních informací pošlete odkaz své SPEC a SRPM soubory. Pokud jde o váš úplně nejprvnější balík, je potřeba si sehnat svého &lt;a href="https://fedoraproject.org/wiki/How_to_get_sponsored_into_the_packager_group"&gt;sponzora&lt;/a&gt;, který se za nováčka "zaručí" a bude mu případně pomáhat. Potom, co vám ostatní najdou spoustu chyb, vy je úspěšně opravíte (nebo obhájíte) a někdo nastaví flag &lt;code&gt;fedora-review&lt;/code&gt; na &lt;code&gt;+&lt;/code&gt;, zažádáme o nový repozitář.&lt;/p&gt;
+&lt;p&gt;Žádost o repozitář, ze kterého pak probíhá vlastní sestavení balíku, jde opět formou komentáře do Review Request ticketu. Zároveň s tím změníme flag &lt;code&gt;fedora-csv&lt;/code&gt; na &lt;code&gt;?&lt;/code&gt; (aby si nás admini všimli). Komentář vypadá nějak takto, vzor je opět na &lt;a href="http://fedoraproject.org/wiki/Package_SCM_admin_requests"&gt;wiki&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;New Package SCM Request
+=======================
+Package Name: vertica-python
+Short description: A native python adapter for the Vertica database
+Owners: kubo
+Branches: f19 f20 el6 epel7
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;K tomu snad jedinou poznámku - větev &lt;code&gt;master&lt;/code&gt; (pro &lt;code&gt;rawhide&lt;/code&gt;) dostanete automaticky.&lt;/p&gt;
+&lt;p&gt;Do pár hodin pak máte odpověď od některého z adminů, že je repozitář připravený, flag &lt;code&gt;fedora-csv&lt;/code&gt; se změní na &lt;code&gt;+&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Repozitář, sestavení a zveřejnění&lt;/h3&gt;
+&lt;p&gt;Zdrojové kódy se SPEC souborem a případnými patchi (nebo patchemi, patchema? Pačema?) se ukládají do &lt;a href="http://pkgs.fedoraproject.org"&gt;veřejně přístupného&lt;/a&gt; &lt;code&gt;git&lt;/code&gt;ovského repozitáře. Fedora nabízí pro práci (nejen) s tímto repozitářem nástroj &lt;code&gt;fedpkg&lt;/code&gt;, ale obejdete se i bez něj. Ale ne zde v dalších krocích.&lt;/p&gt;
+&lt;p&gt;Nejprve si repozitář naklonujeme k sobě...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fedpkg clone vertica-python
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;...a naimportujeme schválený SRPM balík&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;vertica-python
+fedpkg import /var/lib/mock/fedora-rawhide-x86_64/result/vertica-python-0.2.0-4.fc21.src.rpm
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Import na nás vyrukuje s logem, který zkontrolujeme a změny &lt;a href="http://fedoraproject.org/wiki/Join_the_package_collection_maintainers#Import.2C_Commit.2Cand_Build_Your_Package"&gt;commitneme&lt;/a&gt;. Vše pošleme do vzdáleného repozitáře a spustíme build na &lt;a href="http://koji.fedoraproject.org"&gt;koji&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# hele ho, git!&lt;/span&gt;
+git commit -m &lt;span class="s2"&gt;&amp;quot;Initial import (#1080669)&amp;quot;&lt;/span&gt;
+git push
+fedpkg build
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;V tuto chvíli se sestavuje balíček pro &lt;code&gt;rawhide&lt;/code&gt;. Můžeme zatím vesele pokračovat s dalšími větvemi (od nejvyšší verze dolů):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;fedpkg switch-branch f20
+git merge master
+git push
+fedpkg build
+fedpkg switch-branch f19
+...
+..
+.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;V &lt;a href="http://koji.fedoraproject.org"&gt;koji&lt;/a&gt; už teď máme uložená sestavení, která (předpokládám) prošla - můžeme tak začít balíček ládovat do repozitářů. Toto probíhá pomocí nástroje &lt;a href="https://admin.fedoraproject.org/updates"&gt;Bodhi&lt;/a&gt;. Pro všechny větve (kromě &lt;code&gt;masteru&lt;/code&gt; a aktuálně &lt;code&gt;epel7&lt;/code&gt;, který je v betě) pošleme požadavek na zařazení do testovacích repozitářů (udělat to lze i přes webové rozhraní Bodhi):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git checkout f20 &lt;span class="c"&gt;# nebo fedpkg switch-branch f20&lt;/span&gt;
+fedpkg update
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Update bude chtít vyplnit pár informací. Nás zajímají řádky:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;type=&lt;/code&gt; (jde o opravu chyby, vylepšení nebo nový balíček?)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;request=&lt;/code&gt; (žádáte o testovací nebo stable repozitář?)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bugs=&lt;/code&gt; (ID v Bugzille)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;notes=&lt;/code&gt; (u nového balíčku krátký popis).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pro &lt;code&gt;vertica-python&lt;/code&gt; to vypadalo takto:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt; vertica-python-0.2.0-4.fc20 &lt;span class="o"&gt;]&lt;/span&gt;
+
+&lt;span class="c"&gt;# bugfix, security, enhancement, newpackage (required)&lt;/span&gt;
+&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;newpackage
+
+&lt;span class="c"&gt;# testing, stable&lt;/span&gt;
+&lt;span class="nv"&gt;request&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;testing
+
+&lt;span class="c"&gt;# Bug numbers: 1234,9876&lt;/span&gt;
+&lt;span class="nv"&gt;bugs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1080669
+
+&lt;span class="c"&gt;# Changelog:&lt;/span&gt;
+&lt;span class="c"&gt;# - remove buildrood tag&lt;/span&gt;
+&lt;span class="c"&gt;# - edit dateutil patch for el6 &lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# Here is where you give an explanation of your update. &lt;/span&gt;
+&lt;span class="nv"&gt;notes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;A native python adapter &lt;span class="k"&gt;for &lt;/span&gt;the Vertica database
+
+&lt;span class="c"&gt;# Enable request automation based on the stable/unstable karma thresholds&lt;/span&gt;
+&lt;span class="nv"&gt;autokarma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True
+&lt;span class="nv"&gt;stable_karma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3
+&lt;span class="nv"&gt;unstable_karma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-3
+
+&lt;span class="c"&gt;# Automatically close bugs when this marked as stable&lt;/span&gt;
+&lt;span class="nv"&gt;close_bugs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True
+
+&lt;span class="c"&gt;# Suggest that users restart after update&lt;/span&gt;
+&lt;span class="nv"&gt;suggest_reboot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;False
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Po uložení se žádost zpracuje a dostaneme potvrzení:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Creating a new update for  vertica-python-0.2.0-4.fc20 
+Update successfully created
+================================================================================
+     vertica-python-0.2.0-4.fc20
+================================================================================
+    Release: Fedora 20
+     Status: pending
+       Type: newpackage
+      Karma: 0
+    Request: testing
+       Bugs: 1080669 - Review Request: vertica-python - A native Python adapter
+           : for the Vertica database
+      Notes: A native Python adapter for the Vertica database
+  Submitter: kubo
+  Submitted: 2014-03-31 13:35:36
+   Comments: bodhi - 2014-03-31 13:35:49 (karma 0)
+             This update has been submitted for testing by kubo.
+
+  https://admin.fedoraproject.org/updates/vertica-python-0.2.0-4.fc20
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Na posledním řádku je vidět i odkaz, kde můžete sledovat, jak se požadavek zpracovává a kudy rpm cestuje. Cesta do stabilních repozitářů Fedory trvá týden, pro EPEL jsou to hned týdny dva. Mezitím vám jiní uživatelé (QA) můžou dávat veselý a smutný smajlíky. Za tři veselý se do stabilního repozitáře dostanete hned, dobrý ne?&lt;/p&gt;
+&lt;h3&gt;Končíme na Bugzille&lt;/h3&gt;
+&lt;p&gt;Kecám. Pokud vše projde jak má a balíček se prokouše až do stabilních repozitářů, pak Bodhli za vás ticket automaticky zavře. Takže se už o nic nemusíte starat.&lt;/p&gt;
+&lt;p&gt;A na závěr nezbývá než popřát všem RPM balíkům šťastnou cestu.&lt;/p&gt;</summary></entry><entry><title>Docker: Jak jsme se seznámili - 2.díl</title><link href="http://stderr.cz/docker-jak-jsme-se-seznamili-2-dil" rel="alternate"></link><updated>2014-03-23T00:00:00+01:00</updated><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2014-03-23:docker-jak-jsme-se-seznamili-2-dil</id><summary type="html">&lt;p&gt;V &lt;a href="http://stderr.cz/docker-jak-jsme-se-seznamili"&gt;první části&lt;/a&gt; seznamování jsem skončil dost narychlo. Na jednu stranu jsem nechtěl zatěžovat hlavu váženého čtenáře dlouhým čtením a na druhou jsem psal v noci a už se mi chtělo spát. Zkusím tu tedy dokončit zprovoznění MySQL pod Dockerem (pokud se vám to ještě nepovedlo). Tentokrát vám na začátek dopřeju lehce teorie. Pokračovat pak budu v podobném duchu - z pohledu člověka, který k Dockeru jen lehce přičuchl. Pokud mě doplníte v komentářích jako u prvního dílu (doporučuju přečíst), máte u mě veliký dík!&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;
 &lt;img alt="Docker logo" src="https://www.docker.io/static/img/docker-top-logo.png" /&gt;
 &lt;/center&gt;&lt;/p&gt;
