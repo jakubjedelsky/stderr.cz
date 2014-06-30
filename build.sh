@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PY=python
+PY=$(which python)
 PELICAN=pelican
 PELICANOPTS=""
 
