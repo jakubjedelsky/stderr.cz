@@ -13,6 +13,9 @@ body {
 h1, h2 {
     margin-top: 0;
 }
+h2 {
+    font-variant: small-caps;
+}
 h1 a, h1 a:hover, h2 a, h2 a:hover, h5, h6 {
     color: #36393d;
     text-decoration: none;
