@@ -1,6 +1,6 @@
 Title: Cestopis: O přechodu Rychlebských hor
 Slug: cestopis-o-prechodu-rychlebskych-hor
-Date: 2014-07-22
+Date: 2014-08-04
 
 O prvním červencovém víkendu jsem vypnul mobil, zahodil notebook, nasadil nově koupený turstický boty a s tátou vyrazil na pochod přes Rychlebské hory. Z Bílé vody do Žulové, jen s batohy a stanem. Kdybyste nevěděli kde hledat, tak se [koukněte kousek nad Jeseníky](http://mapy.cz/s/bmri) (a ty jsou na severu Moravy, mrk mrk). Bylo to fajn, takže si dovolím jedno ne-IT téma. Pokud byste se ztráceli, sledujte [mapu](http://mapy.cz/s/bmtz).
 
