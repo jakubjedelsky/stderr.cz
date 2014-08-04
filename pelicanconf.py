@@ -50,7 +50,7 @@ THEME = 'theme'
 DISPLAY_PAGES_ON_MENU = True
 SUMMARY_MAX_LENGTH = 80
 # pagination
-DEFAULT_PAGINATION = 5 
+DEFAULT_PAGINATION = 5
 
 ### social things
 # socicons
@@ -58,6 +58,7 @@ SOCIAL = {
     'twitter': 'https://twitter.com/kubiis',
     'linkedin': 'http://www.linkedin.com/in/jedelsky',
     'github': 'https://github.com/jakubjedelsky',
+    'rss': 'http://stderr.cz/feed.atom.xml'
 }
 TWITTER_NAME = 'kubiis'
 # flattr
