@@ -29,7 +29,7 @@ Popošli jsme dalších pár kilometrů směrem k rozcestníku nazvaný Buk, ale
 
 ## V neděli domů
 
-V lese u potoka se spí samo, takže jsme se vzbudili asi po dvanácti hodinách a kolem deváté už byli zase na cestě. A šlapali na Smrk - nejvyšší horu Rychleb. Kolem další osamělé turistické chaty, kde nás odchytl déšť (a doprovázel až do konce), jsme vyběhli skoro k vrcholu. Na samotnou horu vede odbočka z turistické značky, tak jsme po chvíli mudrování odhodili batohy do křa a šli zase do kopce. Nahoře je to zklamání - najdete tu jen vrcholovou mohylku a rozcestník. Jinak všude kolem les a výhled nula. Skoro to ani za těch 400m nestojí.
+V lese u potoka se spí samo, takže jsme se vzbudili asi po dvanácti hodinách a kolem deváté už byli zase na cestě. A šlapali na Špičák - nejvyšší horu Rychleb. Kolem další osamělé turistické chaty, kde nás odchytl déšť (a doprovázel až do konce), jsme vyběhli skoro k vrcholu. Na samotnou horu vede odbočka z turistické značky, tak jsme po chvíli mudrování odhodili batohy do křa a šli zase do kopce. Nahoře je to zklamání - najdete tu jen vrcholovou mohylku a rozcestník. Jinak všude kolem les a výhled nula. Skoro to ani za těch 400m nestojí.
 
 Závěr cesty už je jen z, dámy prominou, kurevsky prudkého kopce, který se táhne až do 3km vzdálených Skorošic. A samotná dědina má další 3km než se dostanete k autobusové zastávce. A tam se dozvíte, že vlastně už nic nejede. Nezbývalo než chvilku spočnout, protáhnout nohy, vyfotit se a zabrat posledních pár kilometrů do Žulové na vlak.
 
