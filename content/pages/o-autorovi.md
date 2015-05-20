@@ -3,14 +3,12 @@ Slug: o-autorovi
 
 Jmenuji se **Jakub Jedelský**, těší mě.
 
-<del>Už pár let pracuji v brněnském [datacentru](http://www.master.cz) jako administrátor (převážně) *linuxových* serverů.</del> Od října 2014 mě potkáte v brněnské kanceláři [GoodData](http://www.gooddata.com), kde se v <abbr title="Relational Online Analytical Processing">ROLAP</abbr> teamu starám o databázové a jiné servery. Nejraději se šťourám v RHEL/CentOS/Scientific Linuxu (můžu se pochlubit certifikací [RHCE](https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&isSearch=False&verify=Verify)). Umím konfigurovat, zabezpečovat a připravit vše od jednoduchých webserverů po komplexní HA řešení. *Bash* je mým každodenním chlebem, *python* zábavou. Zvládám pár kytarových riffů.
-
-Webový medailonek najede na: [jakubjedelsky.cz](http://www.jakubjedelsky.cz)
+Od října 2014 mě potkáte v brněnské kanceláři [GoodData](http://www.gooddata.com), kde se v <abbr title="Relational Online Analytical Processing">ROLAP</abbr> týmu starám o databázové a další servery. Mimo to spravuju pár [balíčků pro Fedoru](https://admin.fedoraproject.org/pkgdb/packager/kubo/). <del>Můžu se pochlubit certifikací [RHCE](https://www.redhat.com/wapps/training/certification/verify.html?certNumber=111-122-990&isSearch=False&verify=Verify)</del>. Zvládám pár kytarových riffů.
 
 Máte-li k tomuto webu nějaké výhrady, můžete mi jej pomoci upravit. Zdrojové kódy jsou na [Githubu](https://github.com/jakubjedelsky/stderr.cz).
 
 ### Co je to ten stderr?
-Manuálová stránka napoví. Možná.
+
 ```text
 NAME
     stdin, stdout, stderr - standard I/O streams
