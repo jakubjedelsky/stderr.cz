@@ -52,8 +52,8 @@
                     <p>{{ SITESUBTITLE }}</p>
                     {% endif %}
                 </div>
-                {% if AUTHOR %}
                 <div class="metadata">
+                {% if AUTHOR_BIO %}
                     <h5>Autor</h5>
                     <h6 class="font-style: italic;">{{ AUTHOR }}</h6>
                     {% if AUTHOR_BIO %}
@@ -61,7 +61,6 @@
                     {% endif %}
                 {% endif %}
                 {% if SOCIAL %}
-                    <h5>Social</h5>
                     <ul class="social">
                     {% for social, link in SOCIAL.iteritems() %}
                             <li><a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/social/{{ social|lower }}-32.png" title="{{ social|capitalize }}" class="si-{{ social|lower }}" /></a></li>

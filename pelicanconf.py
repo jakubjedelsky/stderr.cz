@@ -7,8 +7,8 @@ AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
 SITEURL = 'http://stderr.cz'
 
-SITESUBTITLE = u'poznámky'
-AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
+SITESUBTITLE = u'2>&1'
+#AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
 
 ### timezone and l10n
 TIMEZONE = 'Europe/Prague'
