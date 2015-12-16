@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 ### blog info
 AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
-SITEURL = 'http://stderr.cz'
+SITEURL = 'https://stderr.cz'
 
 SITESUBTITLE = u'2>&1'
 #AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
@@ -56,9 +56,9 @@ DEFAULT_PAGINATION = 5
 # socicons
 SOCIAL = {
     'twitter': 'https://twitter.com/kubiis',
-    'linkedin': 'http://www.linkedin.com/in/jedelsky',
+    'linkedin': 'https://www.linkedin.com/in/jedelsky',
     'github': 'https://github.com/jakubjedelsky',
-    'rss': 'http://stderr.cz/feed.atom.xml'
+    'rss': 'https://stderr.cz/feed.atom.xml'
 }
 TWITTER_NAME = 'kubiis'
 # flattr
