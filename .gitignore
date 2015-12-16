@@ -2,3 +2,5 @@ output
 *.py[co]
 .*.swp
 .*.swo
+
+cache/
