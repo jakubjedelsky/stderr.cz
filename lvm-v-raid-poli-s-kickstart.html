@@ -7,17 +7,17 @@
 
 		<link rel="shortcut icon" href="favicon.ico" />
 
-        <link href="http://stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="http://stderr.cz/theme/css/pygment.css" rel="stylesheet">
-        <link href="http://stderr.cz/theme/css/mystyle.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href="https://stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="https://stderr.cz/theme/css/pygment.css" rel="stylesheet">
+        <link href="https://stderr.cz/theme/css/mystyle.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <meta name="twitter:card" value="summary" />
     <meta name="twitter:creator" content="@kubiis" />
     <meta name="twitter:title" content="LVM v RAID poli s kickstart" />
-    <meta name="twitter:description" content="Anaconda při instalaci CentOS 6 pomocí kickstart souboru trpí zvláštním nešvarem: při rozdělení disků pro použití LVM může zahlásit chybu new lv is too large to fit in free space (celý výpis chyby); ..." />
+    <meta name="twitter:description" content="Anaconda při instalaci CentOS 6 pomocí kickstart souboru trpí zvláštním nešvarem: při rozdělení disků pro použití LVM může zahlásit chybu new lv is too large to fit in free space (celý výpis ..." />
 
-        <link rel="alternate" type="application/atom+xml" href="http://stderr.cz/feed.atom.xml" title="stderr ATOM/RSS Feed" />
+        <link rel="alternate" type="application/atom+xml" href="https://stderr.cz/feed.atom.xml" title="stderr ATOM/RSS Feed" />
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,23 +34,23 @@
         <div class="row">
             <div class="span8 offset3">
                 <ul class="breadcrumb menu">
-                    <li><a href="http://stderr.cz/o-autorovi">O autorovi</a></li>
-                    <li><a href="http://stderr.cz/archives">Archiv</a></li>
+                    <li><a href="https://stderr.cz/o-autorovi">O autorovi</a></li>
+                    <li><a href="https://stderr.cz/archives">Archiv</a></li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="span3 text-right">
                 <div class="hero-unit">
-                    <h1><a href="http://stderr.cz">stderr</a></h1>
+                    <h1><a href="https://stderr.cz">stderr</a></h1>
                     <p>2>&1</p>
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
-                            <li><a href="http://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="http://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
+                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="https://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="https://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="https://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="https://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -82,10 +82,10 @@ Mějme dva identické disky, které budou v softwarovém RAIDu 1
 kterém bude swap a /. Podle <a href="http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html#s2-kickstart2-options-part-examples" title="32.4.1. Advanced Partitioning Example">dokumentace</a> jsem začal s tímto:</p>
 <div class="highlight"><pre><span class="c"># initialize and partitioning</span>
 clearpart --all --initlabel
-part raid.11    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sda
-part raid.12    --size<span class="o">=</span>1 --grow              --ondrive<span class="o">=</span>sda
-part raid.21    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sdb
-part raid.22    --size<span class="o">=</span>1 --grow              --ondrive<span class="o">=</span>sdb
+part raid.11    --size<span class="o">=</span><span class="m">256</span>      --asprimary  --ondrive<span class="o">=</span>sda
+part raid.12    --size<span class="o">=</span><span class="m">1</span> --grow              --ondrive<span class="o">=</span>sda
+part raid.21    --size<span class="o">=</span><span class="m">256</span>      --asprimary  --ondrive<span class="o">=</span>sdb
+part raid.22    --size<span class="o">=</span><span class="m">1</span> --grow              --ondrive<span class="o">=</span>sdb
 
 <span class="c"># RAID</span>
 raid /boot      --fstype ext4   --device md0    --level<span class="o">=</span>RAID1 raid.11 raid.21
@@ -93,8 +93,8 @@ raid pv.01      --fstype ext4   --device md1    --level<span class="o">=</span>R
 
 <span class="c"># LVM</span>
 volgroup sysvol pv.01
-logvol swap     --vgname<span class="o">=</span>sysvol --fstype<span class="o">=</span>swap   --size<span class="o">=</span>8192        --name<span class="o">=</span>swap
-logvol /        --vgname<span class="o">=</span>sysvol --fstype<span class="o">=</span>ext4   --size<span class="o">=</span>1 --grow    --name<span class="o">=</span>root
+logvol swap     --vgname<span class="o">=</span>sysvol --fstype<span class="o">=</span>swap   --size<span class="o">=</span><span class="m">8192</span>        --name<span class="o">=</span>swap
+logvol /        --vgname<span class="o">=</span>sysvol --fstype<span class="o">=</span>ext4   --size<span class="o">=</span><span class="m">1</span> --grow    --name<span class="o">=</span>root
 </pre></div>
 
 
@@ -106,10 +106,10 @@ swap nevejde. <strong>Heuréka</strong>.</p>
 <p>Dočasné řešení (dokud nevyjde CentOS s aktualizovanou instalačkou) je
 tedy používat velikost raid oddílu větší než je součet logických svazků
 <em>(např.: 9000 > 8192 + 1)</em>:</p>
-<div class="highlight"><pre>part raid.11    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sda
-part raid.12    --size<span class="o">=</span>9000 --grow           --ondrive<span class="o">=</span>sda
-part raid.21    --size<span class="o">=</span>256      --asprimary  --ondrive<span class="o">=</span>sdb
-part raid.22    --size<span class="o">=</span>9000 --grow           --ondrive<span class="o">=</span>sdb
+<div class="highlight"><pre>part raid.11    --size<span class="o">=</span><span class="m">256</span>      --asprimary  --ondrive<span class="o">=</span>sda
+part raid.12    --size<span class="o">=</span><span class="m">9000</span> --grow           --ondrive<span class="o">=</span>sda
+part raid.21    --size<span class="o">=</span><span class="m">256</span>      --asprimary  --ondrive<span class="o">=</span>sdb
+part raid.22    --size<span class="o">=</span><span class="m">9000</span> --grow           --ondrive<span class="o">=</span>sdb
 </pre></div>
 </div>
 <div id="disqus_thread"></div>
