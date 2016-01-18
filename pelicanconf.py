@@ -2,10 +2,13 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+ENABLE_HTTPS = False
+http_proto = "https://" if ENABLE_HTTPS else "http://"
+
 ### blog info
 AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
-SITEURL = 'https://stderr.cz'
+SITEURL = http_proto + 'stderr.cz'
 
 SITESUBTITLE = u'Jakub Jedelský'
 #AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
@@ -66,4 +69,4 @@ FLATTR_ID = 'stderr'
 # disqus
 DISQUS_SITENAME = 'stderr-cz-blog'
 # GA
-GOOGLE_ANALYTICS = 'UA-44139591-1'
+#GOOGLE_ANALYTICS = 'UA-44139591-1'
