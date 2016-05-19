@@ -23,7 +23,7 @@
     <body>
     <div class="container">
         <div class="row">
-            <div class="span8 offset3">
+            <div class="span9 offset2">
                 <ul class="breadcrumb menu">
                     <li><a href="http://stderr.cz/o-autorovi">O autorovi</a></li>
                     <li><a href="http://stderr.cz/archives">Archiv</a></li>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="offset1 span2 text-center">
+            <div class="span2 text-center">
                 <div class="hero-unit">
                     <div id="avatar"></div>
                     <h1><a href="http://stderr.cz">stderr</a></h1>
@@ -46,7 +46,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="span8">
+            <div class="span9">
 <h2>CentOS (Red Hat): nastavení rozsahu pro větší počet IP</h2>
 <time datetime=2010-08-02T18:00:00+02:00>02. 08. 2010</time><div class="flattr">
     <script id='flattrbtn'>
@@ -77,7 +77,7 @@ upravovat přímo konfiguraci, která je k nalezení v
 <code>ifcfg-eth0:X</code>, kde <code>X</code> je alias pro zařízení eth0. Tato konfigurace pro
 alias 0 (<code>/etc/sysconfig/network-scripts/ifcfg-eth0:0</code>) může vypadat
 např. takto:</p>
-<div class="highlight"><pre>DEVICE=eth0:0
+<div class="highlight"><pre><span></span>DEVICE=eth0:0
 BOOTPROTO=none
 BROADCAST=192.168.0.255
 HWADDR=01:23:45:67:89:ab
@@ -104,7 +104,7 @@ do konfigurace pojmenované <code>ifcfg-eth0-rangeX</code>, kde <code>X</code> j
 jednotlivých rozsahů od <code>0</code>. Z našich 254 nepřehledných konfigurací tak
 vznikne jedna, která mlže vypadat třeba takto (zapsáno v
 <code>/etc/sysconfig/network-scripts/ifcfg-eth0-range0</code>):</p>
-<div class="highlight"><pre>IPADDR_START=192.168.0.2
+<div class="highlight"><pre><span></span>IPADDR_START=192.168.0.2
 IPADDR_END=192.168.0.254
 CLONENUM_START=0
 </pre></div>
@@ -116,7 +116,7 @@ je IP, kterou náš rozsah začíná a <code>IPADDR_END</code> je ta, kterou kon
 aliasů. V případně, že si systém správně nepřepočte netmasku, lze použít
 i proměnnou <code>NETMASK</code>.</p>
 <p>A nezapomeňte restartovat službu sítě:</p>
-<div class="highlight"><pre>$ service network restart
+<div class="highlight"><pre><span></span>$ service network restart
 </pre></div>
 </div>
 <div id="disqus_thread"></div>
@@ -136,7 +136,7 @@ i proměnnou <code>NETMASK</code>.</p>
     </div>
 
     <div class="footer">
-        <p class="text-center" style="color: #666;">2009 ~ 2014</p>
+        <p class="text-center" style="color: #666;">2009 ~ 2016</p>
     </div>
     </body>
 </html>

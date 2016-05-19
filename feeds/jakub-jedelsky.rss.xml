@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>stderr</title><link>http://stderr.cz/</link><description>Jakub Jedelský</description><atom:link href="http://stderr.cz/feeds/jakub-jedelsky.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 04 Aug 2014 00:00:00 +0200</lastBuildDate><item><title>Cestopis: O přechodu Rychlebských hor</title><link>http://stderr.cz/cestopis-o-prechodu-rychlebskych-hor</link><description>&lt;p&gt;O prvním červencovém víkendu jsem vypnul mobil, zahodil notebook, nasadil nově koupený turstický boty a s tátou vyrazil na pochod přes Rychlebské hory. Z Bílé vody do Žulové, jen s batohy a stanem. Kdybyste nevěděli kde hledat, tak se &lt;a href="http://mapy.cz/s/bmri"&gt;koukněte kousek nad Jeseníky&lt;/a&gt; (a ty jsou na severu Moravy, mrk mrk). Bylo to fajn, takže si dovolím jedno ne-IT téma. Pokud byste se ztráceli, sledujte &lt;a href="http://mapy.cz/s/bmtz"&gt;mapu&lt;/a&gt;.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>stderr</title><link>http://stderr.cz/</link><description>Jakub Jedelský</description><atom:link href="http://stderr.cz/feeds/jakub-jedelsky.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 19 May 2016 00:00:00 +0200</lastBuildDate><item><title>Zákon o hazardu a blokování internetu</title><link>http://stderr.cz/zakon-o-hazardu-a-blokovani-internetu</link><description>&lt;p&gt;&lt;em&gt;Málem mi zaskočilo čerstvě rozžmoulané sousto, když jsem zjistil, že poslední článek jsem tu vypotil před téměř dvěma roky. Zkusím se polepšit.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Pokud jste to ještě nezachytili, tak se kolem potuluje strašák v podobě zákona o hazardu a části, která se týká blokování internetu. Smutně a pasivně jsem ho sledoval od doby, kdy se o tom začalo mluvit. Ze začátku jsem to považoval za drobný výstřelek, který přece nemůže projít. Později, přiznávám, jsem trošku rezigoval s tím, že "se mě to přece tak moc netýká". Až teď, kdy má zákon jít do Senátu a různě po internetech se píše, že by bylo fajn kolem toho udělat trošku humbuk, jsem se odhodlal a sepsal svojemu senátorovi e-mail. Třeba si z něj něco vezme a snad bude někoho z vás inspirovat k sepsání podobného.&lt;/p&gt;
+&lt;p&gt;V Senátu se má zákon schvalovat &lt;em&gt;25. 5. 2016&lt;/em&gt;, tak je ještě trošku času s tím něco udělat. A v mezičase můžete hlasovat na webu &lt;a href="https://www.prichazicenzor.cz/"&gt;Přichází cenzor&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Co jsem napsal:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Vážený pane senátore,&lt;/p&gt;
+&lt;p&gt;se zájmem sleduji dění kolem zákona o hazardních hrách, který se má&lt;br /&gt;
+25.5.2016 schvalovat v Senátu ČR. Dlouhodobě se pracovně (i zájmově)&lt;br /&gt;
+pohybuji v oblasti IT a souhlasím s názorem odborníků, kteří poukazují&lt;br /&gt;
+na problémy, které tento zákon přinese. Netvrdím, že nepovolený hazard&lt;br /&gt;
+není problém, spíše mě zaráží přístup Ministerstva financí, které by&lt;br /&gt;
+mělo o blokování rozhodovat.&lt;/p&gt;
+&lt;p&gt;V prvé řadě - blokování internetu je takřka nemožné. Ať bude mít&lt;br /&gt;
+poskytovatel internetu sebelepší infrastrukturu, vždy je možné se na&lt;br /&gt;
+web, který chci vidět, nějak dostat. Dovolí to např. jednoduchá změna&lt;br /&gt;
+DNS serverů (právě blokování na úrovni DNS, tedy překladu doménového&lt;br /&gt;
+jména na IP adresu serveru, je nejjednodušší možnost), použitím proxy&lt;br /&gt;
+serveru nebo VPN (kdy ke stránkám můžete přistupovat "jakoby" od&lt;br /&gt;
+jiného poskytovatele/státu) nebo použitím sítě TOR (anonymní sítě,&lt;br /&gt;
+výklad viz [1] a použití viz [2]).&lt;/p&gt;
+&lt;p&gt;Pro opravdu účelné blokování bychom u nás museli zavést analýzu&lt;br /&gt;
+veškerého internetového provozu a použít stejné filtrování obsahu,&lt;br /&gt;
+jako používají v Číně (viz např. [3]). Pevně věřím, že dokud je náš&lt;br /&gt;
+stát prezentován jako demokratický, tak se k tomuto kroku nedostaneme.&lt;/p&gt;
+&lt;p&gt;Dále si nedokážu představit, že by o blokování měl rozhodovat úředník&lt;br /&gt;
+ministerstva, resp. sám ministr financí [4]. V tomto případě bychom se&lt;br /&gt;
+již bavili o cenzuře, kdy by bylo možné blokovat takřka cokoliv. Pokud&lt;br /&gt;
+někdo, měl by v tomto případě rozhodovat nezávislý soud.&lt;/p&gt;
+&lt;p&gt;Internetové firmy a odborníci bijí v poslední době na poplach pomocí&lt;br /&gt;
+informační stránky Přichází cenzor (&lt;a href="https://www.prichazicenzor.cz/"&gt;https://www.prichazicenzor.cz/&lt;/a&gt;) a&lt;br /&gt;
+informační kampaní přímo na půdě Senátu ČR, o kterém informují&lt;br /&gt;
+zaměstnanci CZ NIC na blogu, spolu s dalšími argumenty: [5] a [6] Díky&lt;br /&gt;
+tomu se již dva výbory podařilo přesvědčit, že zákon není napsán úplně&lt;br /&gt;
+nejlépe a blokování internetových stránek by se měl vyhnout.&lt;/p&gt;
+&lt;p&gt;Bohužel jsem nikde nedohledal, jaký je v tomto případě váš názor a byl&lt;br /&gt;
+bych rád, kdybyste při hlasování zvážil výše zmíněné problémy. Budu&lt;br /&gt;
+rád, když mi odpovíte a ještě raději, když budete hlasovat proti&lt;br /&gt;
+tomuto zákonu.&lt;/p&gt;
+&lt;p&gt;S pozdravem a přáním pěkného dne,&lt;/p&gt;
+&lt;p&gt;Jakub Jedelský,&lt;br /&gt;
+Rajhrad&lt;/p&gt;
+&lt;p&gt;Zdroje:&lt;br /&gt;
+[1] &lt;a href="https://cs.wikipedia.org/wiki/Tor_%28software%29"&gt;https://cs.wikipedia.org/wiki/Tor_%28software%29&lt;/a&gt;&lt;br /&gt;
+[2] jak obejít blokaci internetových stránek (YouTube):&lt;br /&gt;
+&lt;a href="https://www.youtube.com/watch?v=65mQivpxdio&amp;amp;feature=youtu.be"&gt;https://www.youtube.com/watch?v=65mQivpxdio&amp;amp;feature=youtu.be&lt;/a&gt;&lt;br /&gt;
+[3] &lt;a href="http://hlidacipes.org/velky-cinsky-firewall-odrizl-risi-stredu-od-sveta-fungovat-vam-tam-nebude-ani-mail/"&gt;http://hlidacipes.org/velky-cinsky-firewall-odrizl-risi-stredu-od-sveta-fungovat-vam-tam-nebude-ani-mail/&lt;/a&gt;&lt;br /&gt;
+[4] "Závodský navíc uvedl, že správní řízení bude dvoustupňové a v&lt;br /&gt;
+případě odvolání provozovatele stránek bude jednat takzvaná rozkladová&lt;br /&gt;
+komise. Zároveň však přiznal, že bez ohledu na její názor či&lt;br /&gt;
+doporučení bude mít poslední slovo ministr financí Andrej Babiš, který&lt;br /&gt;
+tak bude mít podle kritiků odpojování webových serverů zcela ve své&lt;br /&gt;
+moci." zdroj: &lt;a href="http://zpravy.aktualne.cz/domaci/senatorum-se-nelibi-cenzura-internetu/r~2ff961101cf211e6abfa0025900fea04/"&gt;http://zpravy.aktualne.cz/domaci/senatorum-se-nelibi-cenzura-internetu/r~2ff961101cf211e6abfa0025900fea04/&lt;/a&gt;&lt;br /&gt;
+[5] &lt;a href="http://blog.nic.cz/2016/05/18/drobne-vitezstvi/"&gt;http://blog.nic.cz/2016/05/18/drobne-vitezstvi/&lt;/a&gt;&lt;br /&gt;
+[6] &lt;a href="http://blog.nic.cz/2016/05/19/druhe-drobne-vitezstvi/"&gt;http://blog.nic.cz/2016/05/19/druhe-drobne-vitezstvi/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img alt="Jste pro zavedení cenzury na internetu?!" src="https://www.prichazicenzor.cz/bannery/prichazi-cenzor-300x300.png" /&gt;
+&lt;/center&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Thu, 19 May 2016 00:00:00 +0200</pubDate><guid>tag:stderr.cz,2016-05-19:zakon-o-hazardu-a-blokovani-internetu</guid></item><item><title>Cestopis: O přechodu Rychlebských hor</title><link>http://stderr.cz/cestopis-o-prechodu-rychlebskych-hor</link><description>&lt;p&gt;O prvním červencovém víkendu jsem vypnul mobil, zahodil notebook, nasadil nově koupený turstický boty a s tátou vyrazil na pochod přes Rychlebské hory. Z Bílé vody do Žulové, jen s batohy a stanem. Kdybyste nevěděli kde hledat, tak se &lt;a href="http://mapy.cz/s/bmri"&gt;koukněte kousek nad Jeseníky&lt;/a&gt; (a ty jsou na severu Moravy, mrk mrk). Bylo to fajn, takže si dovolím jedno ne-IT téma. Pokud byste se ztráceli, sledujte &lt;a href="http://mapy.cz/s/bmtz"&gt;mapu&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Výlet není nijak náročný (ve výsledku jsme ušli nějakých 35km), takže pro ajťáky ideální. Doporučuju sbalit baťůžek a vyrazit, je tam krásně!&lt;/p&gt;
 &lt;h2&gt;Startujeme v pátek&lt;/h2&gt;
 &lt;p&gt;Z Brna jsme vyjeli hned po ránu, abychom rozumně dorazili do Lipové - Lázně, kde bylo v plánu odložit auto. Mají tam krásný nádraží, ze kterého jednou za čas jede vlak do Javorníku. Měli jsme dlouhou chvíli, tak jsme zašli na pivo do místní nádražky - úplně jsem tam viděl &lt;a href="http://cs.wikipedia.org/wiki/Alois_Nebel"&gt;výpravčího Aloise Nebela&lt;/a&gt;. Z Javorníku je to už jen co by z autobusu kamenem dohodil do Bílé vody. Autobus nenavazuje, ale zase je hned u zastávky hospoda. Bílá voda, která
@@ -33,7 +90,7 @@ leží v nejsevernějším cípu Slezka, byla na začátku naší pěší cesty.
 &lt;h3&gt;Všechno začíná (a končí) v bugzille&lt;/h3&gt;
 &lt;p&gt;Každý nový balíček se musí pěkně &lt;a href="https://fedoraproject.org/wiki/Packaging:NamingGuidelines"&gt;jmenovat&lt;/a&gt; a splnit &lt;a href="https://fedoraproject.org/wiki/Packaging:ReviewGuidelines"&gt;pár jednoduchých podmínek&lt;/a&gt;, aby prošel kontrolou od některého z jiných vývojářů. Ke komunikaci slouží ticket typu &lt;a href="https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Fedora&amp;amp;format=fedora-review"&gt;Review Request&lt;/a&gt;, kam kromě základních informací pošlete odkaz své SPEC a SRPM soubory. Pokud jde o váš úplně nejprvnější balík, je potřeba si sehnat svého &lt;a href="https://fedoraproject.org/wiki/How_to_get_sponsored_into_the_packager_group"&gt;sponzora&lt;/a&gt;, který se za nováčka "zaručí" a bude mu případně pomáhat. Potom, co vám ostatní najdou spoustu chyb, vy je úspěšně opravíte (nebo obhájíte) a někdo nastaví flag &lt;code&gt;fedora-review&lt;/code&gt; na &lt;code&gt;+&lt;/code&gt;, zažádáme o nový repozitář.&lt;/p&gt;
 &lt;p&gt;Žádost o repozitář, ze kterého pak probíhá vlastní sestavení balíku, jde opět formou komentáře do Review Request ticketu. Zároveň s tím změníme flag &lt;code&gt;fedora-csv&lt;/code&gt; na &lt;code&gt;?&lt;/code&gt; (aby si nás admini všimli). Komentář vypadá nějak takto, vzor je opět na &lt;a href="http://fedoraproject.org/wiki/Package_SCM_admin_requests"&gt;wiki&lt;/a&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;New Package SCM Request
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;New Package SCM Request
 =======================
 Package Name: vertica-python
 Short description: A native python adapter for the Vertica database
@@ -47,18 +104,18 @@ Branches: f19 f20 el6 epel7
 &lt;h3&gt;Repozitář, sestavení a zveřejnění&lt;/h3&gt;
 &lt;p&gt;Zdrojové kódy se SPEC souborem a případnými patchi (nebo patchemi, patchema? Pačema?) se ukládají do &lt;a href="http://pkgs.fedoraproject.org"&gt;veřejně přístupného&lt;/a&gt; &lt;code&gt;git&lt;/code&gt;ovského repozitáře. Fedora nabízí pro práci (nejen) s tímto repozitářem nástroj &lt;code&gt;fedpkg&lt;/code&gt;, ale obejdete se i bez něj. Ale ne zde v dalších krocích.&lt;/p&gt;
 &lt;p&gt;Nejprve si repozitář naklonujeme k sobě...&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;fedpkg clone vertica-python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fedpkg clone vertica-python
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;...a naimportujeme schválený SRPM balík&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;vertica-python
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; vertica-python
 fedpkg import /var/lib/mock/fedora-rawhide-x86_64/result/vertica-python-0.2.0-4.fc21.src.rpm
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Import na nás vyrukuje s logem, který zkontrolujeme a změny &lt;a href="http://fedoraproject.org/wiki/Join_the_package_collection_maintainers#Import.2C_Commit.2Cand_Build_Your_Package"&gt;commitneme&lt;/a&gt;. Vše pošleme do vzdáleného repozitáře a spustíme build na &lt;a href="http://koji.fedoraproject.org"&gt;koji&lt;/a&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# hele ho, git!&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# hele ho, git!&lt;/span&gt;
 git commit -m &lt;span class="s2"&gt;&amp;quot;Initial import (#1080669)&amp;quot;&lt;/span&gt;
 git push
 fedpkg build
@@ -66,7 +123,7 @@ fedpkg build
 
 
 &lt;p&gt;V tuto chvíli se sestavuje balíček pro &lt;code&gt;rawhide&lt;/code&gt;. Můžeme zatím vesele pokračovat s dalšími větvemi (od nejvyšší verze dolů):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;fedpkg switch-branch f20
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;fedpkg switch-branch f20
 git merge master
 git push
 fedpkg build
@@ -78,7 +135,7 @@ fedpkg switch-branch f19
 
 
 &lt;p&gt;V &lt;a href="http://koji.fedoraproject.org"&gt;koji&lt;/a&gt; už teď máme uložená sestavení, která (předpokládám) prošla - můžeme tak začít balíček ládovat do repozitářů. Toto probíhá pomocí nástroje &lt;a href="https://admin.fedoraproject.org/updates"&gt;Bodhi&lt;/a&gt;. Pro všechny větve (kromě &lt;code&gt;masteru&lt;/code&gt; a aktuálně &lt;code&gt;epel7&lt;/code&gt;, který je v betě) pošleme požadavek na zařazení do testovacích repozitářů (udělat to lze i přes webové rozhraní Bodhi):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git checkout f20 &lt;span class="c"&gt;# nebo fedpkg switch-branch f20&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git checkout f20 &lt;span class="c1"&gt;# nebo fedpkg switch-branch f20&lt;/span&gt;
 fedpkg update
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -91,39 +148,39 @@ fedpkg update
 &lt;li&gt;&lt;code&gt;notes=&lt;/code&gt; (u nového balíčku krátký popis).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Pro &lt;code&gt;vertica-python&lt;/code&gt; to vypadalo takto:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;[&lt;/span&gt; vertica-python-0.2.0-4.fc20 &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt; vertica-python-0.2.0-4.fc20 &lt;span class="o"&gt;]&lt;/span&gt;
 
-&lt;span class="c"&gt;# bugfix, security, enhancement, newpackage (required)&lt;/span&gt;
-&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;newpackage
+&lt;span class="c1"&gt;# bugfix, security, enhancement, newpackage (required)&lt;/span&gt;
+&lt;span class="nv"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;newpackage
 
-&lt;span class="c"&gt;# testing, stable&lt;/span&gt;
+&lt;span class="c1"&gt;# testing, stable&lt;/span&gt;
 &lt;span class="nv"&gt;request&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;testing
 
-&lt;span class="c"&gt;# Bug numbers: 1234,9876&lt;/span&gt;
+&lt;span class="c1"&gt;# Bug numbers: 1234,9876&lt;/span&gt;
 &lt;span class="nv"&gt;bugs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1080669
 
-&lt;span class="c"&gt;# Changelog:&lt;/span&gt;
-&lt;span class="c"&gt;# - remove buildrood tag&lt;/span&gt;
-&lt;span class="c"&gt;# - edit dateutil patch for el6 &lt;/span&gt;
-&lt;span class="c"&gt;#&lt;/span&gt;
-&lt;span class="c"&gt;# Here is where you give an explanation of your update. &lt;/span&gt;
+&lt;span class="c1"&gt;# Changelog:&lt;/span&gt;
+&lt;span class="c1"&gt;# - remove buildrood tag&lt;/span&gt;
+&lt;span class="c1"&gt;# - edit dateutil patch for el6 &lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Here is where you give an explanation of your update. &lt;/span&gt;
 &lt;span class="nv"&gt;notes&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;A native python adapter &lt;span class="k"&gt;for&lt;/span&gt; the Vertica database
 
-&lt;span class="c"&gt;# Enable request automation based on the stable/unstable karma thresholds&lt;/span&gt;
+&lt;span class="c1"&gt;# Enable request automation based on the stable/unstable karma thresholds&lt;/span&gt;
 &lt;span class="nv"&gt;autokarma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True
 &lt;span class="nv"&gt;stable_karma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3
 &lt;span class="nv"&gt;unstable_karma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-3
 
-&lt;span class="c"&gt;# Automatically close bugs when this marked as stable&lt;/span&gt;
+&lt;span class="c1"&gt;# Automatically close bugs when this marked as stable&lt;/span&gt;
 &lt;span class="nv"&gt;close_bugs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True
 
-&lt;span class="c"&gt;# Suggest that users restart after update&lt;/span&gt;
+&lt;span class="c1"&gt;# Suggest that users restart after update&lt;/span&gt;
 &lt;span class="nv"&gt;suggest_reboot&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;False
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Po uložení se žádost zpracuje a dostaneme potvrzení:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Creating a new update for  vertica-python-0.2.0-4.fc20 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Creating a new update for  vertica-python-0.2.0-4.fc20 
 Update successfully created
 ================================================================================
      vertica-python-0.2.0-4.fc20
@@ -160,7 +217,7 @@ Update successfully created
 &lt;p&gt;Jednotlivé obrazy se rozlišují pomocí ID, jsou uklády v repozitářích (např. &lt;code&gt;centos&lt;/code&gt;) a odděleny tagy (např. &lt;code&gt;6.4&lt;/code&gt;). V okamžiku, kdy nějaký obraz chceme použít, Docker jej vezme a přidá vrstvu &lt;a href="http://docs.docker.io/en/latest/terms/filesystem/"&gt;Union File Systému&lt;/a&gt;, který už je zapisovatelný. Této vrstvě (ke které jsou připojené nějaké další informace, jako třeba nastavení sítě) se pak říká kontejner.&lt;/p&gt;
 &lt;p&gt;Kontejner může mít dva stavy: &lt;strong&gt;běžící&lt;/strong&gt; (running) a &lt;strong&gt;ukončený&lt;/strong&gt; (exited). Běžící je asi pochopitelný - to je ten, kde běží nějaký proces (bash, mysql, ...). Ale ten ukončený (nebo zastavený, chcete-li), ten zmátl nejen mě. Pokud jste totiž z obrazu kontejner pustili, změnili, zastavili a opět spustili, byly všechny změny pryč. Je to právě tím, že jste si druhým spuštěním vytvořili nový kontejner z původního read-only obrazu. Původní kontejner je ale stále uložený - tyto kontejnery si můžete vypsat pomocí &lt;code&gt;docker ps -a&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Ukončený kontejner můžete opět nastartovat se všemi parametry (&lt;code&gt;docker start&lt;/code&gt;), můžete jej smazat (&lt;code&gt;docker rm&lt;/code&gt;) nebo si změny, které jste udělali, commitnout do obrazu (to je ten &lt;code&gt;docker commit&lt;/code&gt; z prvního dílu). Commitem si můžete změnit stávající obraz nebo vytvořit nový. Pokud si už chvilku s Dockerem hrajete, pak těch kontejnerů budete mít dost a každý si bere nějaké místo z disku, není od věci je tak promazat:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;docker rm $(docker ps -a -q)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker rm $(docker ps -a -q)
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -174,7 +231,7 @@ Update successfully created
 &lt;li&gt;
 &lt;p&gt;Přihlásíme se do bashe a pod ním do mysql&lt;/p&gt;
 &lt;p&gt;I přihlášení do bashe kontejneru jsme absolvovali, pak jen mysql spustíme a přihlásíme se (protože z 'localhostu' to jde).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker run -t -i centos/mysql /bin/bash
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker run -t -i centos/mysql /bin/bash
 bash-4.1# service mysqld start
 bash-4.1# mysql -u root
 mysql&amp;gt;
@@ -185,7 +242,7 @@ mysql&amp;gt;
 &lt;li&gt;
 &lt;p&gt;Opravíme práva&lt;/p&gt;
 &lt;p&gt;Tady už od Dockeru uhýbám víc než chci, ale pojďme to nastavit (na bezpečnost teď nehledíme):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mysql&amp;gt; GRANT ALL ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39;;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mysql&amp;gt; GRANT ALL ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;%&amp;#39;;
 mysql&amp;gt; quit;
 bash-4.1# exit
 &lt;/pre&gt;&lt;/div&gt;
@@ -195,7 +252,7 @@ bash-4.1# exit
 &lt;li&gt;
 &lt;p&gt;Protože chceme používat původní obraz, commitneme do něj změny&lt;/p&gt;
 &lt;p&gt;Další opáčko:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker ps -l
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker ps -l
 CONTAINER ID      (...)
 9fcaef7a2b56      (...)
 $ docker commit 9fcaef7a2b56 centos/mysql
@@ -205,14 +262,14 @@ $ docker commit 9fcaef7a2b56 centos/mysql
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A nastartujeme kontejner&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker run -p :3306:3306 -d centos/mysql /usr/bin/mysqld_safe
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker run -p :3306:3306 -d centos/mysql /usr/bin/mysqld_safe
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;A je hotovo, můžete setřít pot z čela. Pokud se teď zkusíme přihlásit, neměli bychom mít problém a můžeme s mysql vesele pracovat:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ mysql -u root -h 0.0.0.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mysql -u root -h 0.0.0.0
 mysql&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -224,30 +281,30 @@ mysql&amp;gt;
 &lt;p&gt;&lt;em&gt;Chvilka nezajímavého povídání:&lt;/em&gt; Potřeboval jsem testovat a upravovat SQL dotazy nad MySQL. Už jsem vyrostl z toho, že si všechno nainstaluju do svého systému a pak nevím, co mi kde běží - snažím se jej naopak udržovat tak nějak v čistotě. Taky se mi s daty nechtělo pracovat na vzdáleném serveru - třeba ve vlaku je připojení dost mizerný. A v neposlední řadě se mi nechtělo kvůli MySQL serveru rozcházet KVM virtualizaci. Takže ideální čas pro Docker. &lt;em&gt;Konec nezajímavého povídání. Teda jak pro koho...&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Znám pouze základy, takže tu nečekejte připravený Dockerfile (to třeba později, hehe), ale jen "tupý" postup, jak si rozběhnout jednoduchý MySQL server. Zároveň jsem dost línej rozepisovat, co jednotlivé příkazy přesně znamenají. Naštěstí u každého můžete použít &lt;code&gt;--help&lt;/code&gt; nebo nakouknout do &lt;a href="http://docs.docker.io/en/latest/reference/commandline/"&gt;dokumentace&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Vše začíná stažením obrazu (image) systému, který chcete použít. Já vyrůstal s rpm, takže CentOS byla jasná volba:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker pull centos
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker pull centos
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Zkusíme kontejner nastartovat a hned se přepnout do příkazové řádky:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker run -t -i centos /bin/bash
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker run -t -i centos /bin/bash
 bash-4.1#
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Systém si zaktualizuju, nainstaluju balíčky, které potřebuju ...&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;bash-4.1# yum -y update
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bash-4.1# yum -y update
 bash-4.1# yum -y install mysql mysql-server
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;... a zkusím pustit MySQL server (což mi skončilo chybou).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;bash-4.1# service mysqld start
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bash-4.1# service mysqld start
 /etc/init.d/mysqld: line 23: /etc/sysconfig/network: No such file or directory
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Tento soubor se načítá jen pro dodatečné funkce; init skript uspokojíme i prázným souborem. Služba pak naběhne jak má:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;bash-4.1# touch /etc/sysconfig/network
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bash-4.1# touch /etc/sysconfig/network
 bash-4.1# service mysqld start
 Initializing MySQL database: ...
 (...)
@@ -257,32 +314,32 @@ Starting mysqld: [  OK  ]
 
 &lt;p&gt;Funguje! Jen po odhlášení z kontejneru zjistíte, že nic neběží a že i vytvoření network souboru bylo zbytečné.&lt;/p&gt;
 &lt;p&gt;Abych si upravený obraz mohl spustit a připojit se na něj, je potřeba změny commitnout (omlouvám se za to cizí slovo, ale nějak mě nenapadá český ekvivalent). Docker pracuje s otisky podobně jako git (odtud ten commit) - nazývá je jednoduše ID. Poslední změněný obraz ukáže příkaz ps:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker ps -l
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker ps -l
 CONTAINER ID   IMAGE        COMMAND     CREATED         STATUS   PORTS   NAMES
 e5055fbceaec   centos:6.4   /bin/bash   9 minutes ago   Exit 0           cocky_brown
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;A o commit se postará příkaz ... wait for it ... commit:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker commit e5055fbceaec centos/mysql
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker commit e5055fbceaec centos/mysql
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Tímto jsme řekli, že změny, které jsou v otisku &lt;code&gt;e5055fbceaec&lt;/code&gt; chceme uložit pod &lt;code&gt;centos/mysql&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Teď už zbývá jen MySQL v kontejneru spustit a přesměrovat si porty:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;docker run -d -p :3306:3306 centos/mysql /usr/bin/mysqld_safe
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker run -d -p :3306:3306 centos/mysql /usr/bin/mysqld_safe
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;A to je vše. Teď se jen musíme ze systému připojit ...&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# mysql -u root -h 0.0.0.0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# mysql -u root -h 0.0.0.0
 ERROR 1130 (HY000): Host &amp;#39;172.17.42.1&amp;#39; is not allowed to connect to this MySQL server
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;... a zjistíme, že to vlastně úplně nejde. Proč? To nechám na pozorném čtenáři, případně do dalšího článku.&lt;/p&gt;
 &lt;p&gt;Závěrem snad jen - běžící kontejnery vypíše příkaz &lt;code&gt;ps&lt;/code&gt; a zastaví &lt;code&gt;stop&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ docker ps
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ docker ps
 CONTAINER ID        IMAGE                 COMMAND                CREATED              STATUS              PORTS                    NAMES
 beae68f2b5a3        centos/mysql:latest   /usr/bin/mysqld_safe   About a minute ago   Up About a minute   0.0.0.0:3306-&amp;gt;3306/tcp   focused_nobel
 $ docker stop beae68f2b5a3
@@ -290,12 +347,12 @@ $ docker stop beae68f2b5a3
 &lt;p&gt;&lt;center&gt;&lt;script type="text/javascript" src="https://asciinema.org/a/7412.js" id="asciicast-7412" async&gt;&lt;/script&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;Jedná se kompletně o opensource - &lt;a href="https://github.com/sickill/asciinema"&gt;klient&lt;/a&gt; je napsaný v Pythonu a dostupný přes pip, &lt;a href="https://github.com/sickill/asciinema.org"&gt;serverová&lt;/a&gt; část je pak postavená nad Ruby on Rails. Chopil jsem se příležitosti, zkusil si balíček zabalit do rpm a projít procesem dodání do repozitářů Fedory. Chvilku to trvalo (hlavně proto, že to byl můj první příspěvek balíkem), ale klienta si už teď můžete nainstalovat jak ve Fedoře, tak i z repozitářů EPELu. Zatím tedy jen z testovacích větví, ale během pár dní by se to mělo dostat do stabilních:&lt;/p&gt;
 &lt;p&gt;Pro Fedoru 19 a 20: &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;yum --enablerepo=updates-testing asciinema
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum --enablerepo=updates-testing asciinema
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Pro instalaci z EPEL repozitáře, např. do RHEL, CentOSu, aj:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;yum --enablerepo=epel-testing install asciinema
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum --enablerepo=epel-testing install asciinema
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -304,20 +361,20 @@ $ docker stop beae68f2b5a3
 &lt;p&gt;Nezbývá než popřát pěkné testování.&lt;/p&gt;
 &lt;p&gt;A aby toho nebylo málo, tak je &lt;a href="http://fedora.cz/fedora-20-rc1-je-na-svete/"&gt;nově dostupná i Fedora 20 RC1&lt;/a&gt;. Tak snad bude vše v pořádku a 17. prosince bude dostupná už stabilní verze.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Thu, 12 Dec 2013 00:00:00 +0100</pubDate><guid>tag:stderr.cz,2013-12-12:red-hat-enterprise-linux-7-beta-je-venku</guid></item><item><title>Erlangu, Erlangu, ty zacyklená obludo</title><link>http://stderr.cz/erlangu-erlangu-ty-zacyklena-obludo</link><description>&lt;p&gt;Jsem fanouškem Fedory, RHELu a od nich odvozených distribucí. Ale RPM, nad kterým tyto distribuce pracují, občas nabízí nepěkná překvapení. Ne chybou samotného principu (mnohdy), ale občas se některý vývojář nechá unést. Zkuste si nainstalovat takový &lt;a href="http://www.erlang.org/"&gt;Erlang&lt;/a&gt;. &lt;code&gt;Yum&lt;/code&gt; nenabídne jen jeden balíček se základním prostředím pro vývoj nebo spuštění. On si tam dotáhne hned všechny subbalíčky, které k vývoji ani nepotřebujete (o takovém &lt;code&gt;unixODBC&lt;/code&gt; nemluvě). Na toto naštěstí už existuje &lt;a href="https://bugzilla.redhat.com/show_bug.cgi?id=784693"&gt;bug&lt;/a&gt;. Pěkné, ale skrývá se tu ještě jedna vypečenost...&lt;/p&gt;
 &lt;p&gt;Udělám malou odbočku a zamířím k &lt;a href="http://puppetlabs.com/"&gt;Puppetu&lt;/a&gt;, který jsem začal využívat. Pokud v něm chci odstranit balíček, použiji něco takového:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;package&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;mujsuperbalicek&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;package&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;mujsuperbalicek&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="na"&gt;ensure&lt;/span&gt;  &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;absent&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Na distribucích založených nad RPM pak Puppet použije:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;/bin/rpm -e mujsuperbalicek
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/bin/rpm -e mujsuperbalicek
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Výhradu k tomu mám jednu velkou - musíme myslet na všechny závislosti a jednu po druhé sem vypsat, což je dost otravný a zdlouhavý. Teď ale přichází na řadu balík &lt;code&gt;erlang&lt;/code&gt; - pokud jej chcete pomocí příkazu &lt;code&gt;rpm&lt;/code&gt; odstranit, zahlásí, že potřebuje nejdřív odstranit &lt;code&gt;erlang-examples&lt;/code&gt; (proboha, proč?!). Ok, řeknete si v duchu, odstraníme nejprve &lt;code&gt;erlang-examples&lt;/code&gt; - ale ono to nejde, protože vyžaduje balíček ... počkej si ... &lt;code&gt;erlang&lt;/code&gt;! No není to zábavné?&lt;/p&gt;
 &lt;p&gt;Yum si s tím naštěstí poradí, takže puppetům nezbývá nic jiného než tato ošklivost:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;exec&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;remove-erlang&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;exec&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;remove-erlang&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="na"&gt;command&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/usr/bin/yum -y remove erlang&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="na"&gt;onlyif&lt;/span&gt;  &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/bin/rpm -q erlang&amp;#39;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
@@ -331,7 +388,7 @@ $ docker stop beae68f2b5a3
 &lt;p&gt;Protože chci, aby byl web kompletně statický, je potřeba vypnout všechny dynamické prvky. Zde to záleží od webu, ale určitě to jsou komentáře (&lt;em&gt;Nastavení -&amp;gt; Komentáře -&amp;gt; Odškrtnout možnost "Povolit návštěvníkům webu přidávat komentáře k příspěvkům a stránkám"&lt;/em&gt;), různé pluginy (u mě to byl třeba Contact Form) a vyhledávání.&lt;/p&gt;
 &lt;h3&gt;Krok 3.: Stažení dat&lt;/h3&gt;
 &lt;p&gt;A to je to kouzlo. Našel jsem sice bashovský skript &lt;a href="https://github.com/mossiso/WP-Static"&gt;WP-Static&lt;/a&gt;, který se má o vše postarat, ale funguje tak nějak na půl (už je přecejen starší). Obsahuje vlastně jen jeden užitečný řádek. Takže šup sem s ním:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;wget --mirror --cut-dirs&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$home_cdirs&lt;/span&gt; -P &lt;span class="nv"&gt;$home_static&lt;/span&gt;-static -nH -np -p -k -E &lt;span class="nv"&gt;$home_url&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget --mirror --cut-dirs&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$home_cdirs&lt;/span&gt; -P &lt;span class="nv"&gt;$home_static&lt;/span&gt;-static -nH -np -p -k -E &lt;span class="nv"&gt;$home_url&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -344,7 +401,7 @@ $ docker stop beae68f2b5a3
 &lt;p&gt;To si spustíte z příkazové řádky a během pár minut (v závislosti na množství stránek) máte ve složce &lt;code&gt;$home_static-static&lt;/code&gt; obsah celého webu ve formě html souborů.&lt;/p&gt;
 &lt;h3&gt;Krok 4.: Úprava stylů&lt;/h3&gt;
 &lt;p&gt;Pěkné na Wordpressu je, že si zachovává informace o použitých verzích stylů a skriptů přímo v URL. Bohužel pokud z nového serveru naservírujete uri "wp-content/themes/twentytwelve/style.css?ver=3.7" a budete se tvářit, že to má být obyčejný texťák, tak to nebude úplně fungovat. Takže zkuste zapojit třeba &lt;code&gt;sed&lt;/code&gt; a změnit všechny index.html soubory, tak aby v sobě měly jen čisté css a js. A zároveň kouknout, co už není potřeba a to smazat. Já použil něco takového, jako vidíte dole, ale bude se to lišit od webu. od použitého vzhledu a pluginů.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mv wp-content/themes/twentytwelve/style.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;3.7 wp-content/themes/twentytwelve/style.css
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mv wp-content/themes/twentytwelve/style.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;3.7 wp-content/themes/twentytwelve/style.css
 mv wp-content/plugins/wp-syntax/css/wp-syntax.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;1.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
 &lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="k"&gt;$(&lt;/span&gt;find . -name index.html -print&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; 
     sed -i &lt;span class="s1"&gt;&amp;#39;s/wp-content\/themes\/twentytwelve\/style.css%3Fver=3.7/wp-content\/themes\/twentytwelve\/style.css/g&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
@@ -426,7 +483,7 @@ se přidá i skrytý bonus. Zkus to.&lt;/p&gt;
 &lt;p&gt;Celý trik je v tom, že část, kterou před uživatelem chceme schovat,
 pomocí tagu &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; lehce posuneme. Celé to pak vypadá
 nějak takto:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git clone 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone 
 &amp;lt;span &lt;span class="nv"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;position: absolute; left: -100px; top: -100px;&amp;quot;&lt;/span&gt;&amp;gt;
     /dev/null&lt;span class="p"&gt;;&lt;/span&gt; 
     clear&lt;span class="p"&gt;;&lt;/span&gt; 
@@ -480,55 +537,55 @@ možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jse
 mé nejoblíbenější.  &lt;/p&gt;
 &lt;h3&gt;Generujeme …&lt;/h3&gt;
 &lt;p&gt;… samotný privátní klíč (RSA):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl genrsa -out klic.key 2048
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl genrsa -out klic.key 2048
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… CSR s novým klíčem&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl req -new -newkey rsa:2048 -nodes -keyout klic.key -out zadost.csr
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl req -new -newkey rsa:2048 -nodes -keyout klic.key -out zadost.csr
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… CSR s již existujícím klíčem&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl req -new -key klic.key -out zadost.csr
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl req -new -key klic.key -out zadost.csr
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… vlastní certifikát (self-signed) bez CSR na jeden rok&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl req -x509 -nodes -newkey rsa:2048 -keyout klic.key -days &lt;span class="m"&gt;365&lt;/span&gt; -out certifikat.crt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl req -x509 -nodes -newkey rsa:2048 -keyout klic.key -days &lt;span class="m"&gt;365&lt;/span&gt; -out certifikat.crt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… vlastní certifikát z CSR&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl x509 -req -in zadost.csr -days &lt;span class="m"&gt;356&lt;/span&gt; -signkey podpisovyklic.key -out certifikat.crt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl x509 -req -in zadost.csr -days &lt;span class="m"&gt;356&lt;/span&gt; -signkey podpisovyklic.key -out certifikat.crt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Kontrolujeme …&lt;/h3&gt;
 &lt;p&gt;… certifikát&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl x509 -text -noout -in certifikat.crt
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl x509 -text -noout -in certifikat.crt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… CSR&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl req -text -noout -in zadost.csr
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl req -text -noout -in zadost.csr
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… privátní klíč&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl rsa -check -in klic.key
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl rsa -check -in klic.key
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… certifikát webserveru&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl s_client -connect dev.stderr.cz:443
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl s_client -connect dev.stderr.cz:443
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Jako malý bonus zkontrolujeme platnost certifikátu webové stránky.
 Spustil jsem to pro původní web abych se ujistil, že certifikát je opravdu
 už skoro dva měsíce propadlý. Včetně výstupu:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\ &lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\ &lt;/span&gt;
 &amp;gt; openssl s_client -connect dev.stderr.cz:443 2&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
 &amp;gt; openssl x509 -noout -dates
 &lt;span class="nv"&gt;notBefore&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Feb &lt;span class="m"&gt;23&lt;/span&gt; 12:58:12 &lt;span class="m"&gt;2012&lt;/span&gt; GMT
@@ -539,12 +596,12 @@ už skoro dva měsíce propadlý. Včetně výstupu:&lt;/p&gt;
 &lt;h3&gt;Převádíme …&lt;/h3&gt;
 &lt;p&gt;… PKCS#12 (.pfx, .p12 které má rád např. MS Exchange) na PEM
 (certifikát + privátní klíč v jednom souboru)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl pkcs12 -in certifikat.pfx -out certifikat.pem -nodes
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl pkcs12 -in certifikat.pfx -out certifikat.pem -nodes
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;… zpět z certifikátu a klíče na PKCS#12&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;openssl pkcs12 -export -inkey klic.key -in certifikat.crt -out certifikat.pfx
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl pkcs12 -export -inkey klic.key -in certifikat.crt -out certifikat.pfx
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -560,7 +617,7 @@ nuda. Pak jsem ale narazil na tento twít:&lt;/p&gt;
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;p&gt;Zkuste to:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;traceroute -m 120 -q1 216.81.59.173
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;traceroute -m 120 -q1 216.81.59.173
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -572,39 +629,39 @@ Na svědomí si to vzal &lt;a href="http://beaglenetworks.net/post/42707829171/s
 &lt;h3&gt;Hvězdné války v ASCII&lt;/h3&gt;
 &lt;p&gt;Pokud vás ten úvod navnadil a rádi byste díl viděli celý, zkuste se přes
 telnet připojit na towel.blinkenlights.nl.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;telnet towel.blinkenlights.nl
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;telnet towel.blinkenlights.nl
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Nyan Cat!&lt;/h3&gt;
 &lt;p&gt;Podobná hříčka je &lt;a href="http://www.youtube.com/watch?v=QH2-TGUlwu4" title="Nyan Cat"&gt;nyan cat&lt;/a&gt; přes telnet (ňaňání bez zvuku vydržíte
 dloho):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;telnet miku.acm.uiuc.edu
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;telnet miku.acm.uiuc.edu
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;MUD&lt;/h3&gt;
 &lt;p&gt;Fantazii se meze nekladou. Textových Multi User Dungeonů přes telnet
 ještě pár běží (i když nejlepší už asi mají za sebou). Namátkou:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;telnet aardmud.org
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;telnet aardmud.org
 telnet zombiemud.org
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;a další ...&lt;/h3&gt;
 &lt;p&gt;Telehack vám řekne vtip, vypočítá příklad nebo spustí traceroute:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;telnet telehack.com
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;telnet telehack.com
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Výmluvy, proč se spojení ukončilo, nabízí autoři hvězdných válek v ascii
 (viz výše):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;telnet towel.blinkenlights.nl 666
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;telnet towel.blinkenlights.nl 666
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;A konečně ten osekaný výpis z traceroute:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    Episode.IV
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    Episode.IV
     A.NEW.HOPE
     It.is.a.period.of.civil.war
     Rebel.spaceships
@@ -661,7 +718,7 @@ porovnává se s uloženými údaji. Díky chybě v tomto porovnávání, vznik�
 šance 1:256, že vás systém vpustí i se špatným heslem. &lt;em&gt;Yay!&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;Týká se mě to?&lt;/h3&gt;
 &lt;p&gt;Podle původního příspěvku jsou na chybu náchylné tyto verze:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;All MariaDB and MySQL versions up to 5.1.61, 5.2.11, 5.3.5, 5.5.22 are vulnerable.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;All MariaDB and MySQL versions up to 5.1.61, 5.2.11, 5.3.5, 5.5.22 are vulnerable.
 MariaDB versions from 5.1.62, 5.2.12, 5.3.6, 5.5.23 are not.
 MySQL versions from 5.1.63, 5.5.24, 5.6.6 are not.
 &lt;/pre&gt;&lt;/div&gt;
@@ -669,7 +726,7 @@ MySQL versions from 5.1.63, 5.5.24, 5.6.6 are not.
 
 &lt;p&gt;Zda tímto neduhem trpí váš server, můžete otestovat jednoduchým
 jednořádkovým skriptem:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;1&lt;/span&gt; 1000&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; mysql -u root --password&lt;span class="o"&gt;=&lt;/span&gt;blabla -h 127.0.0.1 2&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;1&lt;/span&gt; 1000&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; mysql -u root --password&lt;span class="o"&gt;=&lt;/span&gt;blabla -h 127.0.0.1 2&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -701,7 +758,7 @@ možností, jak se těch nevyžádaných zbavit:&lt;/p&gt;
     je ale botnet velký, stačí útočníkovi pouze omezený počet spojení a
     stejně vás položí. Naopak můžete omezit uživatele, kteří jsou za
     velkým NATem. Zkusit to ale preventivně můžete:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# zablokování portu 80 (webserver) nad 20 současných připojení
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# zablokování portu 80 (webserver) nad 20 současných připojení
 iptables -A INPUT -p TCP --syn --dport 80 -m connlimit --connlimit-above 20 -j REJECT
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -710,7 +767,7 @@ iptables -A INPUT -p TCP --syn --dport 80 -m connlimit --connlimit-above 20 -j R
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Omezení připojení za časový úsek:&lt;/strong&gt; má podobné omezení, jako výše
     uvedené.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# zablokování nových TCP spojení
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# zablokování nových TCP spojení
 iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -723,7 +780,7 @@ iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
     nemusíte komunikovat. Veškeré subnety rozdělené podle zemí najdete
     na webu &lt;a href="http://www.ipdeny.com/ipblocks/"&gt;ipdeny.com&lt;/a&gt;. Pro omezení příchozích spojení z Číny proto
     provedeme:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;wget http://www.ipdeny.com/ipblocks/data/countries/cn.zone&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;wget http://www.ipdeny.com/ipblocks/data/countries/cn.zone&lt;/span&gt;
 &lt;span class="x"&gt;while read SUBNET ; do iptables -I INPUT -s &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;SUBNET&lt;/span&gt;&lt;span class="x"&gt; -j REJECT ; done &amp;lt; cn.zone&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -761,7 +818,7 @@ počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
 programátorem zjistili, že jednou za čas se tam objeví spousta připojení
 ze vzdáleného (legitimního) serveru označená jako "unauthenticated
 user". Výpis MySQL procesů byl pak plný takovýchto řádek:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -807,7 +864,7 @@ dokolečka. Admini jsou přece lidé líní..&lt;/p&gt;
 zakódovat GPG soubor - jé, o tom jsem psal o pár řádků výš, jaká náhoda!
 Na řešení jsem dnes narazil na &lt;a href="http://vim.wikia.com/wiki/Edit_gpg_encrypted_files#Related_plugins" title="Edit gpg encrypted files"&gt;vim wiki&lt;/a&gt;. Jednoduše si do &lt;code&gt;~/.vimrc&lt;/code&gt;
 přidejte těchto pár řádků:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;quot; Transparent editing of gpg encrypted files.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;quot; Transparent editing of gpg encrypted files.&lt;/span&gt;
 augroup encrypted
 &lt;span class="k"&gt;au&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot; First make sure nothing is written to ~/.viminfo while editing&lt;/span&gt;
@@ -846,7 +903,7 @@ pokud používáte více soukromých klíčů, tak myslete na to, že v
 konfiguraci se používá přepínač &lt;code&gt;--default-recipient-self&lt;/code&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Thu, 08 Sep 2011 00:00:00 +0200</pubDate><guid>tag:stderr.cz,2011-09-08:editace-sifrovanych-gpg-souboru-s-vim</guid></item><item><title>Dnes je to 20 let...</title><link>http://stderr.cz/dnes-je-to-20-let</link><description>&lt;p&gt;Už o tom píše kde kdo, tak se taky přidám. Dnes je to 20 let, co &lt;a href="http://www.thelinuxdaily.com/wp-content/uploads/2010/04/linus1991.jpg"&gt;mladý
 finský student&lt;/a&gt; &lt;a href="http://cs.wikipedia.org/wiki/Linus_Torvalds"&gt;Linus Torvalds&lt;/a&gt; oznámil světu, že "jen tak pro
 zábavu" vytvořil operační systém.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Hello everybody out there using minix -
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Hello everybody out there using minix -
 I&amp;#39;m doing a (free) operating system (just a hobby, won&amp;#39;t be big and
 professional like gnu) for 386(486) AT clones.  This has been brewing
 since april, and is starting to get ready.  I&amp;#39;d like any feedback on
@@ -875,18 +932,18 @@ i když to není pravda. Kde je problém?&lt;/p&gt;
 Mějme dva identické disky, které budou v softwarovém RAIDu 1
 (mirroring), rozděleny budou na \~250MB /boot a zbytek pro LVM, ve
 kterém bude swap a /. Podle &lt;a href="http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html#s2-kickstart2-options-part-examples" title="32.4.1. Advanced Partitioning Example"&gt;dokumentace&lt;/a&gt; jsem začal s tímto:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# initialize and partitioning&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# initialize and partitioning&lt;/span&gt;
 clearpart --all --initlabel
 part raid.11    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;256&lt;/span&gt;      --asprimary  --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sda
 part raid.12    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --grow              --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sda
 part raid.21    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;256&lt;/span&gt;      --asprimary  --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sdb
 part raid.22    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --grow              --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sdb
 
-&lt;span class="c"&gt;# RAID&lt;/span&gt;
+&lt;span class="c1"&gt;# RAID&lt;/span&gt;
 raid /boot      --fstype ext4   --device md0    --level&lt;span class="o"&gt;=&lt;/span&gt;RAID1 raid.11 raid.21
 raid pv.01      --fstype ext4   --device md1    --level&lt;span class="o"&gt;=&lt;/span&gt;RAID1 raid.12 raid.22
 
-&lt;span class="c"&gt;# LVM&lt;/span&gt;
+&lt;span class="c1"&gt;# LVM&lt;/span&gt;
 volgroup sysvol pv.01
 logvol swap     --vgname&lt;span class="o"&gt;=&lt;/span&gt;sysvol --fstype&lt;span class="o"&gt;=&lt;/span&gt;swap   --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8192&lt;/span&gt;        --name&lt;span class="o"&gt;=&lt;/span&gt;swap
 logvol /        --vgname&lt;span class="o"&gt;=&lt;/span&gt;sysvol --fstype&lt;span class="o"&gt;=&lt;/span&gt;ext4   --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --grow    --name&lt;span class="o"&gt;=&lt;/span&gt;root
@@ -901,7 +958,7 @@ swap nevejde. &lt;strong&gt;Heuréka&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Dočasné řešení (dokud nevyjde CentOS s aktualizovanou instalačkou) je
 tedy používat velikost raid oddílu větší než je součet logických svazků
 &lt;em&gt;(např.: 9000 &gt; 8192 + 1)&lt;/em&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;part raid.11    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;256&lt;/span&gt;      --asprimary  --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sda
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;part raid.11    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;256&lt;/span&gt;      --asprimary  --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sda
 part raid.12    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;9000&lt;/span&gt; --grow           --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sda
 part raid.21    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;256&lt;/span&gt;      --asprimary  --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sdb
 part raid.22    --size&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;9000&lt;/span&gt; --grow           --ondrive&lt;span class="o"&gt;=&lt;/span&gt;sdb
@@ -933,7 +990,7 @@ Samozřejmě se jedná jen o zbulvarizovaný titulek.&lt;/p&gt;
 stránkách &lt;a href="http://test-ipv6.cz/"&gt;test-ipv6.cz&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Že s novými adresami může být i "IT zábava" ukazuje Facebook nebo
 britská BBC:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;facebbok.com: 2620:0:1c00:0:face:b00c:0:2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;facebbok.com: 2620:0:1c00:0:face:b00c:0:2
 bbc.co.uk: 2001:4b10:bbc::1
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -952,13 +1009,13 @@ uspávání nebolí. Michal Schmidt na &lt;a href="http://dev.stderr.cz/2011/05/
 že po úpravách zkrouhnul boot na cca 3 sekundy.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3&gt;Čas:&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ systemd-analyze time
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ systemd-analyze time
 Startup finished in 1433ms (kernel) + 15086ms (initrd) + 21817ms (userspace) = 38337ms
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Textový výpis:&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ systemd-analyze blame
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ systemd-analyze blame
   6452ms udev-settle.service
   6153ms systemd-vconsole-setup.service
   4699ms fedora-readonly.service
@@ -975,7 +1032,7 @@ Startup finished in 1433ms (kernel) + 15086ms (initrd) + 21817ms (userspace) = 3
 &lt;h3&gt;Grafický výstup:&lt;/h3&gt;
 &lt;p&gt;Vygeneruje grafický svg výstup, který není nepodobný výstupu z výše
 zmíněného bootchart.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ systemd-analyze plot &amp;gt; ~/plot.svg
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ systemd-analyze plot &amp;gt; ~/plot.svg
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -991,16 +1048,16 @@ zachoval pouze oddíl s &lt;code&gt;/home&lt;/code&gt; a zrovna pro procesy goog
 zřejmě nějak změnily požadavky na kontext v &lt;code&gt;.config&lt;/code&gt; adresáři, kam si
 Chrome ukládá uživatelské nastavení a cache. Do teď (ve Fedoře 14) mi
 fungovalo následující:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ls -dZ .config/google-chrome
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ls -dZ .config/google-chrome
 drwx------. kuba kuba system_u:object_r:file_t:s0      google-chrome
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Nově SELinux vyžaduje změnu kontextu pro data uživatele, což provedeme
 příkazem &lt;code&gt;chcon&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/.config
-&lt;span class="nv"&gt;$ &lt;/span&gt;sudo chcon -Rv unconfined_u:object_r:config_home_t:s0 google-chrome
-&lt;span class="nv"&gt;$ &lt;/span&gt;ls -dZ google-chrome
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;cd&lt;/span&gt; ~/.config
+$ sudo chcon -Rv unconfined_u:object_r:config_home_t:s0 google-chrome
+$ ls -dZ google-chrome
 drwx------. kuba kuba unconfined_u:object_r:config_home_t:s0 google-chrome
 &lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Wed, 25 May 2011 18:30:00 +0200</pubDate><guid>tag:stderr.cz,2011-05-25:fedora-15-a-google-chrome-aw-snap</guid></item><item><title>Fedora 15 Release Party v Brně</title><link>http://stderr.cz/fedora-15-release-party-v-brne</link><description>&lt;p&gt;Včera podle plánu vyšla finální podoba &lt;a href="http://fedoraproject.org/"&gt;Fedory 15&lt;/a&gt; a při té
 příležitosti se v Brně uskutečnila &lt;a href="https://fedoraproject.org/wiki/Release_Party_F15_Brno"&gt;Fedora 15 Release Party&lt;/a&gt;. Záštitu
@@ -1221,7 +1278,7 @@ prohlížeče směřovat skrz toto připojení.  &lt;/p&gt;
 &lt;p&gt;Nejdříve si zvolíme, na jakém portu ($PORT) chceme, aby spojení
 naslouchalo na našem počítači (zvolíte-li vyšší než 10000, nic tím asi
 nezkazíte) a připojíme se pomocí:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;ssh -fND localhost:&lt;span class="nv"&gt;$PORT&lt;/span&gt; user@myserver
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh -fND localhost:&lt;span class="nv"&gt;$PORT&lt;/span&gt; user@myserver
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1296,7 +1353,7 @@ alespoň některých kroků můžete použít i LiveCD, přesné postupy jak co
 dělat a kam zapsat výsledky naleznete na &lt;a href="http://fedoraproject.org/wiki/Test_Day:2011-02-03_GNOME3_Alpha"&gt;wiki&lt;/a&gt;.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Tue, 01 Feb 2011 00:00:00 +0100</pubDate><guid>tag:stderr.cz,2011-02-01:fedora-test-day-gnome-3</guid></item><item><title>Z lepšího spamu</title><link>http://stderr.cz/z-lepsiho-spamu</link><description>&lt;p&gt;Poučování o bezpečnosti není nikdy dost, tak ukážu, co mi před
 chviličkou přislo na e-mail. Zpráva se tváří věrohodně, na první pohled
 je od odesílate e-mail.cz a český text je tento:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Vážení e-mail.cz uživatele
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Vážení e-mail.cz uživatele
 
 HTK4S virus byl zjištěn u e-mail.cz Webmail server, a e-mail.cz všechny webmail účetní závěrka musí být 
 aktualizován okamžitě, aby se zabránilo poškození webmail e-mail.cz.
@@ -1361,7 +1418,7 @@ hodí znát "jako svoje boty". Už jen proto, že naklikání z nějakého
 webového/grafického rozhraní jednoduše zdržuje.  &lt;/p&gt;
 &lt;p&gt;Ve všech případech začneme tím, že se přihlásíme na MySQL server (pod
 účtem root):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;mysql -u root -p -h localhost
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mysql -u root -p -h localhost
 Enter password:
 mysql&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1369,7 +1426,7 @@ mysql&amp;gt;
 
 &lt;h3&gt;Jak na databázi&lt;/h3&gt;
 &lt;p&gt;Začněme databází, k jejímu vytvoření použijeme příkaz &lt;code&gt;CREATE DATABASE&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;DATABASE&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;DATABASE&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1389,13 +1446,13 @@ kódování pomocí &lt;code&gt;CHARACTER SET&lt;/code&gt; třeba na univerzáln
 porovnávání se nastavuje pomocí &lt;code&gt;COLLATE&lt;/code&gt;, v ČR se hodí
 &lt;code&gt;utf8_czech_ci&lt;/code&gt;. Více info o MySQL a jazycích je na &lt;a href="http://interval.cz/clanky/mysql-cestina-a-slovenstina/"&gt;Intervalu&lt;/a&gt;.
 Celý příkaz by byl pak:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;DATABASE&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt; &lt;span class="k"&gt;CHARACTER&lt;/span&gt; &lt;span class="kt"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;utf8&lt;/span&gt; &lt;span class="k"&gt;COLLATE&lt;/span&gt; &lt;span class="n"&gt;utf8_czech_ci&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="k"&gt;DATABASE&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt; &lt;span class="k"&gt;CHARACTER&lt;/span&gt; &lt;span class="kt"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;utf8&lt;/span&gt; &lt;span class="k"&gt;COLLATE&lt;/span&gt; &lt;span class="n"&gt;utf8_czech_ci&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Jak na uživatele&lt;/h3&gt;
 &lt;p&gt;Vytvoření uživatele je tak jednoduché, že na to zase stačí jeden příkaz:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="n"&gt;USER&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uzivatel&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;IDENTIFIED&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nejake-heslo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="n"&gt;USER&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uzivatel&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;IDENTIFIED&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nejake-heslo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1407,7 +1464,7 @@ stroje(!) přihlásit a...to je skoro vše. Ještě jsme mu nedali práva k
 stroje. Zadat zde můžeme jak &lt;em&gt;jméno počítače&lt;/em&gt;, tak &lt;em&gt;IP adresu&lt;/em&gt;. Chceš-li
 vytvořit uživatele, který se může přihlašovat &lt;em&gt;odkudkoliv&lt;/em&gt;, je třeba
 příkaz trošku upravit:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="n"&gt;USER&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uzivatel&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;%&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;IDENTIFIED&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nejake-heslo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;CREATE&lt;/span&gt; &lt;span class="n"&gt;USER&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uzivatel&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;%&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;IDENTIFIED&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nejake-heslo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1416,12 +1473,12 @@ přihlásit z jakéhokoliv počítače.&lt;/p&gt;
 &lt;h3&gt;Jak to dát dohromady&lt;/h3&gt;
 &lt;p&gt;Už máme databázi i uživatele, takže nám zbývá jen je spojit neboli
 přiřadit uživateli &lt;code&gt;uzivatel&lt;/code&gt; práva k databázi &lt;code&gt;jmeno_databaze&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;GRANT&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="n"&gt;PRIVILEGES&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;TO&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uzivatel&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;GRANT&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="n"&gt;PRIVILEGES&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;TO&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;uzivatel&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Vytvoření uživatele a přiřazení práv můžeme spojit do jednoho příkazu:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;GRANT&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;TO&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;uzivatel&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;IDENTIFIED&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;nejake&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;heslo&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mysql&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;GRANT&lt;/span&gt; &lt;span class="k"&gt;ALL&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="n"&gt;jmeno_databaze&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;TO&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;uzivatel&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="o"&gt;@&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt; &lt;span class="n"&gt;IDENTIFIED&lt;/span&gt; &lt;span class="k"&gt;BY&lt;/span&gt; &lt;span class="err"&gt;‘&lt;/span&gt;&lt;span class="n"&gt;nejake&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;heslo&lt;/span&gt;&lt;span class="err"&gt;’&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1439,30 +1496,30 @@ nejsou dostupné pomocí yum. Musíme si tedy zkompilovat vlastní (a do
 budoucna s tím počítat, protože např. při aktualizaci PHP se může
 všechno rozbít..).  &lt;/p&gt;
 &lt;p&gt;Začneme instalací balíků, které potřebujeme pro instalaci/kompilaci:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ yum install php-devel gcc php-pear
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ yum install php-devel gcc php-pear
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Samotná instalace probíhá pomocí příkazu &lt;code&gt;pecl&lt;/code&gt;. Pokud tedy chceme
 instalovat rozšíření &lt;code&gt;fileinfo&lt;/code&gt;, použijeme tento příkaz:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ pecl install fileinfo
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ pecl install fileinfo
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Upravíme soubor &lt;code&gt;php.ini&lt;/code&gt;, tak aby se naše rozšíření načetlo:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ cat /etc/php.d/fileinfo.ini
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ cat /etc/php.d/fileinfo.ini
 extension=fileinfo.so
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;A jsme na konci. Stačí znovunačíst nastavení webserveru a vše (by mělo)
 funguje jak má.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ service httpd reload
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ service httpd reload
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Pro rychlé ověření můžete zkusit zavolat phpinfo z příkazové řádky:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ php -r &amp;quot;phpinfo();&amp;quot; | grep &amp;quot;fileinfo&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ php -r &amp;quot;phpinfo();&amp;quot; | grep &amp;quot;fileinfo&amp;quot;
 /etc/php.d/fileinfo.ini,
 fileinfo
 fileinfo support =&amp;gt; enabled
@@ -1546,13 +1603,13 @@ můžete najít v &lt;code&gt;/etc/group&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Při vytváření uživatele můžeme zařazení do skupiny zadat pomocí
 přepínače &lt;code&gt;-G, --groups&lt;/code&gt;. Chceme-li tedy vytvořit uživatele &lt;code&gt;rex&lt;/code&gt; a
 zároveň jej zařadit do skupiny &lt;code&gt;dynosauri&lt;/code&gt; použijeme:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ useradd -G dynosauri rex
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ useradd -G dynosauri rex
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Uživatele můžeme přidat do více skupin najednou, stačí je oddělit
 čárkami (bez mezery):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ useradd -G dynosauri,prvohory rex
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ useradd -G dynosauri,prvohory rex
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1562,18 +1619,18 @@ souboru &lt;code&gt;/etc/group&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Jak jsem zmínil výše, příkaz &lt;code&gt;usermod&lt;/code&gt; pracuje s již existujícími účty.
 Pro práci se skupinami využijeme přepínače &lt;code&gt;-a, -G&lt;/code&gt; a &lt;code&gt;-g&lt;/code&gt;. Pokud tedy
 chceme uživatele &lt;code&gt;rex&lt;/code&gt; zařadit do skupiny &lt;code&gt;prvohory&lt;/code&gt; použijeme:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ usermod -a -G prvohory rex
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ usermod -a -G prvohory rex
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Samozřejmě lze změnit i uživatelovu primární skupinu (která má většinou
 stejné jméno jako je jméno uživatele):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ usermod -g dynosauri rex
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ usermod -g dynosauri rex
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;Zdroj&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;man useradd
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;man useradd
 man usermod
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1590,7 +1647,7 @@ hlásí obnovu pomocí jakéhosi placeného rescue cd (jehož web vypadá
 naprosto nedůvěryhodně). Naštěstí jsem po chvíli hledání narazil na
 užitečný &lt;a href="http://phaq.phunsites.net/2007/01/12/master-password-for-areca-arc-1210-controller/"&gt;link&lt;/a&gt;, kde je univerzální (a &lt;em&gt;funkční&lt;/em&gt;) heslo pro zařízení
 Areco (výrobce ARC řadičů). Je to:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;MNO974315743924
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;MNO974315743924
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1625,7 +1682,7 @@ napsal vlastní skript (python) - převodník měn pro příkazovou řádku.  &l
 aktuální kurzovní lístek a s ním dále pracuje (převod z jedné měny do
 druhé zvládne každý, jde o trojčlenku :) ). Pomocí přepínače &lt;code&gt;-h&lt;/code&gt; je
 možné zobrazit nápovědu:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Usage: exCurr.py [options] CASTKA
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Usage: exCurr.py [options] CASTKA
 
 Prevede CASTKA z nebo na CZK (ceske koruny) podle aktualniho kurzu Ceske
 narodni banky (CNB). Hodnota je zaokrouhlena na dve desetinna mista. Pro
@@ -1644,13 +1701,13 @@ Options:
 
 &lt;h3&gt;Příklady&lt;/h3&gt;
 &lt;p&gt;Převedení 100 amerických dolarů (USD) na koruny:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ ./exCurr.py -f USD 100
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ./exCurr.py -f USD 100
 1772.70 CZK
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Převedení 50 korun na filipínské peso:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ ./exCurr.py -t PHP 50
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ./exCurr.py -t PHP 50
 123.27 PHP
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -1658,7 +1715,7 @@ Options:
 &lt;h3&gt;Stažení&lt;/h3&gt;
 &lt;p&gt;Kód je dostupný na &lt;a href="http://github.com/jakubjedelsky/exCurr"&gt;github.com&lt;/a&gt;, kde můžete stahovat aktuální zdroják
 ve formě &lt;a href="http://github.com/jakubjedelsky/exCurr/tarball/master"&gt;.tar.gz&lt;/a&gt; nebo &lt;a href="http://github.com/jakubjedelsky/exCurr/zipball/master"&gt;.zip&lt;/a&gt;. Nebo pomocí git:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;git clone http://github.com/jakubjedelsky/exCurr.git
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone http://github.com/jakubjedelsky/exCurr.git
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1673,9 +1730,9 @@ identifikovat?  &lt;/p&gt;
 slouží &lt;a href="http://www.w3.org/Protocols/HTTP/HTRQ_Headers.html#user-agent"&gt;hlavička User-Agent&lt;/a&gt;, která označuje program a verzi (+ může
 &lt;a href="http://www.useragentstring.com/"&gt;další info&lt;/a&gt;). V pythonní knihovně urllib2 to lze řešit pomocí třídy
 &lt;a href="http://docs.python.org/library/urllib2.html#urllib2.Request"&gt;Request&lt;/a&gt; a funkce &lt;code&gt;add_header()&lt;/code&gt;. Viz následující kód:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;http://dev.stderr.cz/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_header&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;User-Agent&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;MujSkvelyProgram/0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;urllib2&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Request&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;http://dev.stderr.cz/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_header&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;User-Agent&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;MujSkvelyProgram/0.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;opener&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;urllib2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;build_opener&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;opener&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;request&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1729,7 +1786,7 @@ práci jak uživatelům, tak adminům. Ale pozor, ne vše může všude fungovat
 &lt;p&gt;&lt;code&gt;text
 * * * * *     /cesta/k/ukecanemu/skriptu &amp;gt; /dev/null &amp;gt; 2&amp;gt;&amp;amp;1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Směrování do logu:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# vse do jednoho logu
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# vse do jednoho logu
 * * * * *     /cesta/k/ukecanemu/skriptu &amp;gt; /var/log/vas_log 2&amp;gt;&amp;amp;1
 # rozdeleni standardniho vystupu a error logu (stderr)
 * * * * *     /cesta/k/ukecanemu/skriptu &amp;gt; /var/log/vas_log 2&amp;gt; /var/log/vas_error_log
@@ -1771,7 +1828,7 @@ jinak dle chuti.&lt;/p&gt;
 &lt;p&gt;Jak tedy na ni? Nejdříve ji nainstalujeme standardně z repozitáře (balík
 se nachází snad ve všech distribucích), připravte se na spoustu
 závislostí (ve výsledku ale zabere cca 4MB):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# Debian a klony
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Debian a klony
 $ apt-get install imapsync 
 # RHEL a klony
 $ yum install imapsync
@@ -1787,7 +1844,7 @@ SSL (volba &lt;code&gt;--ssl1&lt;/code&gt; nebo &lt;code&gt;--ssl2&lt;/code&gt;)
 (&lt;code&gt;--port1&lt;/code&gt;/&lt;code&gt;2&lt;/code&gt;). Informace o všech volbách včetně pár příkladů vám dají
 &lt;a href="http://linux.die.net/man/1/imapsync"&gt;manuálové stránky&lt;/a&gt;. Já jsem se po chvilce pátrání dostal např k
 tomuto:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ imapsync --syncinternaldates --noauthmd5   
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ imapsync --syncinternaldates --noauthmd5   
 &amp;gt;    --host1 domain.tld --user1 uzivatelske_jmeno --password1 heslo --port1 143   
 &amp;gt;    --host2 domena.cz --user2 user@domena.cz --password2 heslo --ssl2
 &lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Wed, 25 Aug 2010 00:00:00 +0200</pubDate><guid>tag:stderr.cz,2010-08-25:synchronizace-e-mailovych-uctu-imap</guid></item><item><title>Vsftpd a pasivní mód FTP</title><link>http://stderr.cz/vsftpd-a-pasivni-mod-ftp</link><description>&lt;p&gt;&lt;a href="http://vsftpd.beasts.org/"&gt;Vsftpd&lt;/a&gt; je jednoduchý FTP server, jehož kódy jsou poskytovány pod
@@ -1819,7 +1876,7 @@ nastavení povoleno anonymní přihlašování (nastavit na
 jejich složek, aby se Vám nepotulovali po systému (direktiva
 &lt;code&gt;chroot_local_user=YES&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;Samotné nastavení pro pasivní režim je následující:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# passive mode
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# passive mode
 pasv_enable=YES
 pasv_min_port=20000
 pasv_max_port=20100
@@ -1832,7 +1889,7 @@ port_enable=YES
 hodnoty musí být mezi 1024 a 65535 (mnou zvolené jsou čistě náhodné).
 Direktiva &lt;code&gt;port_enable&lt;/code&gt; nám povolí jak aktivní, tak pasivní režim.&lt;/p&gt;
 &lt;p&gt;FTP server je poté nutné restartovat pro znovunačtení konfigurace:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;# pro RHEL
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# pro RHEL
 $ service vsftpd restart
 # pro jiné
 $ /etc/init.d/vsftpd restart
@@ -1842,7 +1899,7 @@ $ /etc/init.d/vsftpd restart
 &lt;h3&gt;Nastavení firewallu&lt;/h3&gt;
 &lt;p&gt;V konfiguraci jsme použili porty 20000 - 20100. Pro &lt;code&gt;iptables&lt;/code&gt; musíme
 tento rozsah povolit a to umožňuje přepínač &lt;code&gt;--dport&lt;/code&gt;:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ iptables -A INPUT -p TCP --dport  20000:20100 -j ACCEPT
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ iptables -A INPUT -p TCP --dport  20000:20100 -j ACCEPT
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1860,7 +1917,7 @@ upravovat přímo konfiguraci, která je k nalezení v
 &lt;code&gt;ifcfg-eth0:X&lt;/code&gt;, kde &lt;code&gt;X&lt;/code&gt; je alias pro zařízení eth0. Tato konfigurace pro
 alias 0 (&lt;code&gt;/etc/sysconfig/network-scripts/ifcfg-eth0:0&lt;/code&gt;) může vypadat
 např. takto:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;DEVICE=eth0:0
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;DEVICE=eth0:0
 BOOTPROTO=none
 BROADCAST=192.168.0.255
 HWADDR=01:23:45:67:89:ab
@@ -1887,7 +1944,7 @@ do konfigurace pojmenované &lt;code&gt;ifcfg-eth0-rangeX&lt;/code&gt;, kde &lt;
 jednotlivých rozsahů od &lt;code&gt;0&lt;/code&gt;. Z našich 254 nepřehledných konfigurací tak
 vznikne jedna, která mlže vypadat třeba takto (zapsáno v
 &lt;code&gt;/etc/sysconfig/network-scripts/ifcfg-eth0-range0&lt;/code&gt;):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;IPADDR_START=192.168.0.2
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;IPADDR_START=192.168.0.2
 IPADDR_END=192.168.0.254
 CLONENUM_START=0
 &lt;/pre&gt;&lt;/div&gt;
@@ -1899,11 +1956,11 @@ je IP, kterou náš rozsah začíná a &lt;code&gt;IPADDR_END&lt;/code&gt; je ta
 aliasů. V případně, že si systém správně nepřepočte netmasku, lze použít
 i proměnnou &lt;code&gt;NETMASK&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A nezapomeňte restartovat službu sítě:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;$ service network restart
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ service network restart
 &lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Mon, 02 Aug 2010 18:00:00 +0200</pubDate><guid>tag:stderr.cz,2010-08-02:centos-red-hat-nastaveni-rozsahu-pro-vetsi-pocet-ip</guid></item><item><title>SEO po česku (Domain Report 2009)</title><link>http://stderr.cz/seo-po-cesku-domain-report-2009</link><description>&lt;p&gt;Sdružení CZ.NIC (správce naší národní domény .cz) &lt;a href="http://blog.nic.cz/2010/05/24/vsechno-co-jste-kdy-chteli-vedet-o-domenach-ale-bali-jste-se-zeptat/"&gt;vydalo Domain Report
 za rok 2009&lt;/a&gt; (&lt;a href="http://blog.nic.cz/wp-content/uploads/2010/05/DOMAIN-REPORT-2009-CZ-final.pdf"&gt;pdf&lt;/a&gt;). Mimo jiného se zde dočtete, jaké jsou nejdelší
 české domény:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;vozik-voziky-vysokozdvizny-vysokozdvizne-manipulacni-technika.cz
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vozik-voziky-vysokozdvizny-vysokozdvizne-manipulacni-technika.cz
 aagtechnic-tesneni-a-tesnici-materialy-nove-mesto-nad-metuji.cz
 ubytovani-znojmo-znojemsko-havraniky-penzion-penziony-saldorf.cz
 sex-hublist-seznam-java-hry-zdarma-video-reality-seznamka-mp3.cz

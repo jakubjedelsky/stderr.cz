@@ -23,7 +23,7 @@
     <body>
     <div class="container">
         <div class="row">
-            <div class="span8 offset3">
+            <div class="span9 offset2">
                 <ul class="breadcrumb menu">
                     <li><a href="http://stderr.cz/o-autorovi">O autorovi</a></li>
                     <li><a href="http://stderr.cz/archives">Archiv</a></li>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="offset1 span2 text-center">
+            <div class="span2 text-center">
                 <div class="hero-unit">
                     <div id="avatar"></div>
                     <h1><a href="http://stderr.cz">stderr</a></h1>
@@ -46,7 +46,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="span8">
+            <div class="span9">
 <h2>Z Wordpressu na statickou stránku</h2>
 <time datetime=2013-10-29T00:00:00+01:00>29. 10. 2013</time><div class="flattr">
     <script id='flattrbtn'>
@@ -71,7 +71,7 @@
 <p>Protože chci, aby byl web kompletně statický, je potřeba vypnout všechny dynamické prvky. Zde to záleží od webu, ale určitě to jsou komentáře (<em>Nastavení -&gt; Komentáře -&gt; Odškrtnout možnost "Povolit návštěvníkům webu přidávat komentáře k příspěvkům a stránkám"</em>), různé pluginy (u mě to byl třeba Contact Form) a vyhledávání.</p>
 <h3>Krok 3.: Stažení dat</h3>
 <p>A to je to kouzlo. Našel jsem sice bashovský skript <a href="https://github.com/mossiso/WP-Static">WP-Static</a>, který se má o vše postarat, ale funguje tak nějak na půl (už je přecejen starší). Obsahuje vlastně jen jeden užitečný řádek. Takže šup sem s ním:</p>
-<div class="highlight"><pre>wget --mirror --cut-dirs<span class="o">=</span><span class="nv">$home_cdirs</span> -P <span class="nv">$home_static</span>-static -nH -np -p -k -E <span class="nv">$home_url</span>
+<div class="highlight"><pre><span></span>wget --mirror --cut-dirs<span class="o">=</span><span class="nv">$home_cdirs</span> -P <span class="nv">$home_static</span>-static -nH -np -p -k -E <span class="nv">$home_url</span>
 </pre></div>
 
 
@@ -84,7 +84,7 @@
 <p>To si spustíte z příkazové řádky a během pár minut (v závislosti na množství stránek) máte ve složce <code>$home_static-static</code> obsah celého webu ve formě html souborů.</p>
 <h3>Krok 4.: Úprava stylů</h3>
 <p>Pěkné na Wordpressu je, že si zachovává informace o použitých verzích stylů a skriptů přímo v URL. Bohužel pokud z nového serveru naservírujete uri "wp-content/themes/twentytwelve/style.css?ver=3.7" a budete se tvářit, že to má být obyčejný texťák, tak to nebude úplně fungovat. Takže zkuste zapojit třeba <code>sed</code> a změnit všechny index.html soubory, tak aby v sobě měly jen čisté css a js. A zároveň kouknout, co už není potřeba a to smazat. Já použil něco takového, jako vidíte dole, ale bude se to lišit od webu. od použitého vzhledu a pluginů.</p>
-<div class="highlight"><pre>mv wp-content/themes/twentytwelve/style.css<span class="se">\?</span>ver<span class="se">\=</span>3.7 wp-content/themes/twentytwelve/style.css
+<div class="highlight"><pre><span></span>mv wp-content/themes/twentytwelve/style.css<span class="se">\?</span>ver<span class="se">\=</span>3.7 wp-content/themes/twentytwelve/style.css
 mv wp-content/plugins/wp-syntax/css/wp-syntax.css<span class="se">\?</span>ver<span class="se">\=</span>1.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
 <span class="k">for</span> i in <span class="k">$(</span>find . -name index.html -print<span class="k">)</span><span class="p">;</span> <span class="k">do</span> 
     sed -i <span class="s1">&#39;s/wp-content\/themes\/twentytwelve\/style.css%3Fver=3.7/wp-content\/themes\/twentytwelve\/style.css/g&#39;</span> <span class="nv">$i</span>
@@ -122,7 +122,7 @@ mv wp-content/plugins/wp-syntax/css/wp-syntax.css<span class="se">\?</span>ver<s
     </div>
 
     <div class="footer">
-        <p class="text-center" style="color: #666;">2009 ~ 2014</p>
+        <p class="text-center" style="color: #666;">2009 ~ 2016</p>
     </div>
     </body>
 </html>

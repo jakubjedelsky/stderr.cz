@@ -19,7 +19,7 @@
     <body>
     <div class="container">
         <div class="row">
-            <div class="span8 offset3">
+            <div class="span9 offset2">
                 <ul class="breadcrumb menu">
                     <li><a href="http://stderr.cz/o-autorovi">O autorovi</a></li>
                     <li><a href="http://stderr.cz/archives">Archiv</a></li>
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="offset1 span2 text-center">
+            <div class="span2 text-center">
                 <div class="hero-unit">
                     <div id="avatar"></div>
                     <h1><a href="http://stderr.cz">stderr</a></h1>
@@ -42,8 +42,26 @@
                     </ul>
                 </div>
             </div>
-            <div class="span8">
+            <div class="span9">
 
+<h2><a href="http://stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a></h2>
+ <time datetime=2013-04-05T10:00:00+02:00>05. 04. 2013</time><div class="article">
+<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
+pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
+implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
+klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
+převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
+možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
+mé nejoblíbenější.  </p>
+<h3>Generujeme …</h3>
+<p>… samotný privátní klíč (RSA):</p>
+<div class="highlight"><pre><span></span>openssl genrsa -out klic.key 2048
+</pre></div>
+
+
+<p>… CSR s ...</p>
+<hr />
+</div>
 <h2><a href="http://stderr.cz/zabava-s-traceroute">Zábava s traceroute</a></h2>
  <time datetime=2013-03-15T07:42:00+01:00>15. 03. 2013</time><div class="article">
 <p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
@@ -54,7 +72,7 @@ nuda. Pak jsem ale narazil na tento twít:</p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>Zkuste to:</p>
-<div class="highlight"><pre>traceroute -m 120 -q1 216.81.59.173
+<div class="highlight"><pre><span></span>traceroute -m 120 -q1 216.81.59.173
 </pre></div>
 
 
@@ -97,20 +115,6 @@ najdete jako RHCE.  </p>
 <p><center><img alt="Red Hat Certified Engineer" src="/static/images/RH_CertifiedEngineer_logo_rgb_200x350px.jpg" /></center></p>
 <hr />
 </div>
-<h2><a href="http://stderr.cz/centos-a-vydavani-aktualizaci">CentOS a vydávání aktualizací</a></h2>
- <time datetime=2011-12-05T16:44:00+01:00>05. 12. 2011</time><div class="article">
-<p>Dnes jen krátce, ale za to se zajímavým odkazem.</p>
-<p>Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že
-vydávání aktualizací minor verzí se oproti RHELu pořád zpožďuje.
-Vývojáři se snaží alespoň hotfixy a security aktualizace distribuovat
-přes <a href="http://wiki.centos.org/AdditionalResources/Repositories/CR" title="CR Repository">Continuous Release repozitář</a>. Proč se vývoj táhne <a href="http://lists.centos.org/pipermail/centos/2011-October/119027.html" title="CentOS maillist">vysvětluje v
-maillistu</a> Johnny Hughes. Ve zkratce: hledejte za tím rozdělení RHELu
-do několika skupin (Server, Workstation, ...), kde ve stejných skupinách
-jsou různé balíčky, a zpřísnění politiky pro sdílení některých
-souborů/balíčků.</p>
-<p>A tak se ...</p>
-<hr />
-</div>
 
 <!-- 5 -->
 <div>
@@ -125,7 +129,7 @@ souborů/balíčků.</p>
     </div>
 
     <div class="footer">
-        <p class="text-center" style="color: #666;">2009 ~ 2014</p>
+        <p class="text-center" style="color: #666;">2009 ~ 2016</p>
     </div>
     </body>
 </html>

@@ -23,7 +23,7 @@
     <body>
     <div class="container">
         <div class="row">
-            <div class="span8 offset3">
+            <div class="span9 offset2">
                 <ul class="breadcrumb menu">
                     <li><a href="http://stderr.cz/o-autorovi">O autorovi</a></li>
                     <li><a href="http://stderr.cz/archives">Archiv</a></li>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="offset1 span2 text-center">
+            <div class="span2 text-center">
                 <div class="hero-unit">
                     <div id="avatar"></div>
                     <h1><a href="http://stderr.cz">stderr</a></h1>
@@ -46,7 +46,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="span8">
+            <div class="span9">
 <h2>Docker: jak jsme se seznámili</h2>
 <time datetime=2014-03-11T00:00:00+01:00>11. 03. 2014</time><div class="flattr">
     <script id='flattrbtn'>
@@ -71,30 +71,30 @@
 <p><em>Chvilka nezajímavého povídání:</em> Potřeboval jsem testovat a upravovat SQL dotazy nad MySQL. Už jsem vyrostl z toho, že si všechno nainstaluju do svého systému a pak nevím, co mi kde běží - snažím se jej naopak udržovat tak nějak v čistotě. Taky se mi s daty nechtělo pracovat na vzdáleném serveru - třeba ve vlaku je připojení dost mizerný. A v neposlední řadě se mi nechtělo kvůli MySQL serveru rozcházet KVM virtualizaci. Takže ideální čas pro Docker. <em>Konec nezajímavého povídání. Teda jak pro koho...</em></p>
 <p>Znám pouze základy, takže tu nečekejte připravený Dockerfile (to třeba později, hehe), ale jen "tupý" postup, jak si rozběhnout jednoduchý MySQL server. Zároveň jsem dost línej rozepisovat, co jednotlivé příkazy přesně znamenají. Naštěstí u každého můžete použít <code>--help</code> nebo nakouknout do <a href="http://docs.docker.io/en/latest/reference/commandline/">dokumentace</a>.</p>
 <p>Vše začíná stažením obrazu (image) systému, který chcete použít. Já vyrůstal s rpm, takže CentOS byla jasná volba:</p>
-<div class="highlight"><pre>$ docker pull centos
+<div class="highlight"><pre><span></span>$ docker pull centos
 </pre></div>
 
 
 <p>Zkusíme kontejner nastartovat a hned se přepnout do příkazové řádky:</p>
-<div class="highlight"><pre>$ docker run -t -i centos /bin/bash
+<div class="highlight"><pre><span></span>$ docker run -t -i centos /bin/bash
 bash-4.1#
 </pre></div>
 
 
 <p>Systém si zaktualizuju, nainstaluju balíčky, které potřebuju ...</p>
-<div class="highlight"><pre>bash-4.1# yum -y update
+<div class="highlight"><pre><span></span>bash-4.1# yum -y update
 bash-4.1# yum -y install mysql mysql-server
 </pre></div>
 
 
 <p>... a zkusím pustit MySQL server (což mi skončilo chybou).</p>
-<div class="highlight"><pre>bash-4.1# service mysqld start
+<div class="highlight"><pre><span></span>bash-4.1# service mysqld start
 /etc/init.d/mysqld: line 23: /etc/sysconfig/network: No such file or directory
 </pre></div>
 
 
 <p>Tento soubor se načítá jen pro dodatečné funkce; init skript uspokojíme i prázným souborem. Služba pak naběhne jak má:</p>
-<div class="highlight"><pre>bash-4.1# touch /etc/sysconfig/network
+<div class="highlight"><pre><span></span>bash-4.1# touch /etc/sysconfig/network
 bash-4.1# service mysqld start
 Initializing MySQL database: ...
 (...)
@@ -104,32 +104,32 @@ Starting mysqld: [  OK  ]
 
 <p>Funguje! Jen po odhlášení z kontejneru zjistíte, že nic neběží a že i vytvoření network souboru bylo zbytečné.</p>
 <p>Abych si upravený obraz mohl spustit a připojit se na něj, je potřeba změny commitnout (omlouvám se za to cizí slovo, ale nějak mě nenapadá český ekvivalent). Docker pracuje s otisky podobně jako git (odtud ten commit) - nazývá je jednoduše ID. Poslední změněný obraz ukáže příkaz ps:</p>
-<div class="highlight"><pre>$ docker ps -l
+<div class="highlight"><pre><span></span>$ docker ps -l
 CONTAINER ID   IMAGE        COMMAND     CREATED         STATUS   PORTS   NAMES
 e5055fbceaec   centos:6.4   /bin/bash   9 minutes ago   Exit 0           cocky_brown
 </pre></div>
 
 
 <p>A o commit se postará příkaz ... wait for it ... commit:</p>
-<div class="highlight"><pre>$ docker commit e5055fbceaec centos/mysql
+<div class="highlight"><pre><span></span>$ docker commit e5055fbceaec centos/mysql
 </pre></div>
 
 
 <p>Tímto jsme řekli, že změny, které jsou v otisku <code>e5055fbceaec</code> chceme uložit pod <code>centos/mysql</code>.</p>
 <p>Teď už zbývá jen MySQL v kontejneru spustit a přesměrovat si porty:</p>
-<div class="highlight"><pre>docker run -d -p :3306:3306 centos/mysql /usr/bin/mysqld_safe
+<div class="highlight"><pre><span></span>docker run -d -p :3306:3306 centos/mysql /usr/bin/mysqld_safe
 </pre></div>
 
 
 <p>A to je vše. Teď se jen musíme ze systému připojit ...</p>
-<div class="highlight"><pre># mysql -u root -h 0.0.0.0
+<div class="highlight"><pre><span></span># mysql -u root -h 0.0.0.0
 ERROR 1130 (HY000): Host &#39;172.17.42.1&#39; is not allowed to connect to this MySQL server
 </pre></div>
 
 
 <p>... a zjistíme, že to vlastně úplně nejde. Proč? To nechám na pozorném čtenáři, případně do dalšího článku.</p>
 <p>Závěrem snad jen - běžící kontejnery vypíše příkaz <code>ps</code> a zastaví <code>stop</code>:</p>
-<div class="highlight"><pre>$ docker ps
+<div class="highlight"><pre><span></span>$ docker ps
 CONTAINER ID        IMAGE                 COMMAND                CREATED              STATUS              PORTS                    NAMES
 beae68f2b5a3        centos/mysql:latest   /usr/bin/mysqld_safe   About a minute ago   Up About a minute   0.0.0.0:3306-&gt;3306/tcp   focused_nobel
 $ docker stop beae68f2b5a3
@@ -152,7 +152,7 @@ $ docker stop beae68f2b5a3
     </div>
 
     <div class="footer">
-        <p class="text-center" style="color: #666;">2009 ~ 2014</p>
+        <p class="text-center" style="color: #666;">2009 ~ 2016</p>
     </div>
     </body>
 </html>
