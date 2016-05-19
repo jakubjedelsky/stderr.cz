@@ -8,6 +8,8 @@ Pokud jste to ještě nezachytili, tak se kolem potuluje strašák v podobě zá
 
 V Senátu se má zákon schvalovat *25. 5. 2016*, tak je ještě trošku času s tím něco udělat. A v mezičase můžete hlasovat na webu [Přichází cenzor](https://www.prichazicenzor.cz/).
 
+_Aktualizace: zapomněl jsem na bodík, kdy poskytovatelé budou muset cenzurování z něčeho zafinancovat a tak se může zvednout cena za internety. Taky dobrý důvod proč hlasovat proti, no ne?_
+
 Co jsem napsal:
 > Vážený pane senátore,
 > 
