@@ -139,3 +139,8 @@ pre {
 	word-wrap: normal;
 	white-space: pre;
 }
+
+blockquote {
+	font-size: 75%;
+  color: #5B5B5A;
+}
