@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jakubjedelsky
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://stderr.cz
+  * I am jakubjedelsky (https://keybase.io/jakubjedelsky) on keybase.
+  * I have a public key ASBl0wgQDg9-anReqyg4KQPGzSS1iTGafMXWtvsJKHLhOQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012065d308100e0f7e6a745eab28382903c6cd24b589319a7cc5d6b6fb092872e1390a",
+            "host": "keybase.io",
+            "kid": "012065d308100e0f7e6a745eab28382903c6cd24b589319a7cc5d6b6fb092872e1390a",
+            "uid": "ba1dd9eec9cd020c5990e8dd773f2f19",
+            "username": "jakubjedelsky"
+        },
+        "service": {
+            "hostname": "stderr.cz",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1468184857,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1468184796,
+        "hash": "9a3135919ff41a3fb9f12d9f402106ff5253edd1d81e8e024c7db34530945c3826c258fb6c82f041b1d4e40f943434d7f2f73a45e4ec4d9031b93571578b5f51",
+        "seqno": 516778
+    },
+    "prev": "04585338701fbb85c615dfb1c4040dc782eee30c3dae1aedb27a71a298bef7bc",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgZdMIEA4Pfmp0XqsoOCkDxs0ktYkxmnzF1rb7CShy4TkKp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNjVkMzA4MTAwZTBmN2U2YTc0NWVhYjI4MzgyOTAzYzZjZDI0YjU4OTMxOWE3Y2M1ZDZiNmZiMDkyODcyZTEzOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNjVkMzA4MTAwZTBmN2U2YTc0NWVhYjI4MzgyOTAzYzZjZDI0YjU4OTMxOWE3Y2M1ZDZiNmZiMDkyODcyZTEzOTBhIiwidWlkIjoiYmExZGQ5ZWVjOWNkMDIwYzU5OTBlOGRkNzczZjJmMTkiLCJ1c2VybmFtZSI6Impha3ViamVkZWxza3kifSwic2VydmljZSI6eyJob3N0bmFtZSI6InN0ZGVyci5jeiIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE2In0sImN0aW1lIjoxNDY4MTg0ODU3LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NjgxODQ3OTYsImhhc2giOiI5YTMxMzU5MTlmZjQxYTNmYjlmMTJkOWY0MDIxMDZmZjUyNTNlZGQxZDgxZThlMDI0YzdkYjM0NTMwOTQ1YzM4MjZjMjU4ZmI2YzgyZjA0MWIxZDRlNDBmOTQzNDM0ZDdmMmY3M2E0NWU0ZWM0ZDkwMzFiOTM1NzE1NzhiNWY1MSIsInNlcW5vIjo1MTY3Nzh9LCJwcmV2IjoiMDQ1ODUzMzg3MDFmYmI4NWM2MTVkZmIxYzQwNDBkYzc4MmVlZTMwYzNkYWUxYWVkYjI3YTcxYTI5OGJlZjdiYyIsInNlcW5vIjo3LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQKdSAkkcdFWXET2SrD4unRkmUJOxEgqlnVRxiiYvjGZbjHW5VD2mlkhIKJp6RcdTViM11NYqr8kIAIOPjL25CAeoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDGzQ2Go3XI0Ly6nNwNqBeekzQevUXNn0LHUdd3f6ZPF6N0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jakubjedelsky
+
+==================================================================
