@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PY=$(which python)
-PELICAN=pelican
+PY=$(which python3)
+PELICAN=py3-pelican
 PELICANOPTS=""
 
 BASEDIR=$(pwd)
