@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link rel="alternate" href="http://stderr.cz/"></link><link rel="self" href="http://stderr.cz/feed.atom.xml"></link><id>http://stderr.cz/</id><updated>2016-05-31T00:00:00+02:00</updated><entry><title>Zákon o hazardu a blokování internetu - pokračování</title><link rel="alternate" href="http://stderr.cz/zakon-o-hazardu-a-blokovani-internetu-pokracovani"></link><published>2016-05-31T00:00:00+02:00</published><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2016-05-31:zakon-o-hazardu-a-blokovani-internetu-pokracovani</id><summary type="html">&lt;p&gt;Před necelými dvěma týdny jsem napsal svému senátorovi, že zákon o hazardu, tak jak se dostal ze sněmovny, není úplně v pořádku. Blkování internetu, které předkládali, totiž není jednoduše uskutečnitelné. Nevím na kolik se zamyslel, ale nakonec hlasoval pro přijetí. Protože mi před tím neodpověděl, tak jsem se po hlasování v dalším e-mailu zeptal, co ho vedlo k hlasování pro. Tu je odpověď:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link rel="alternate" href="http://stderr.cz/"></link><link rel="self" href="http://stderr.cz/feed.atom.xml"></link><id>http://stderr.cz/</id><updated>2016-10-13T00:00:00+02:00</updated><entry><title>Hacktoberfest</title><link rel="alternate" href="http://stderr.cz/hacktoberfest"></link><published>2016-10-13T00:00:00+02:00</published><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2016-10-13:hacktoberfest</id><summary type="html">&lt;p&gt;Přispějte do opensource projektu a dostanete za to (kromě dobrého pocitu) tričko. Na získání dárku máte už ale jen 14 dní! Během měsíce října totiž probíhá &lt;a href="https://hacktoberfest.digitalocean.com/"&gt;Hacktoberfest&lt;/a&gt; - projekt společností DigitalOcean a Github, který má přimět lidi něco pro &lt;abbr title="OpenSouce Software"&gt;OSS&lt;/abbr&gt; dělat. Abyste odměnu získali, stačí 4 (slovy: čtyři) pull requesty do opensource projektů umístěných na Githubu. A to se vyplatí.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;a href="https://hacktoberfest.digitalocean.com/"&gt;&lt;img alt="Banner" src="/images/hacktoberfest_banner.png" /&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Pokud se chcete zůčastnit, potřebujete pouze účet na Githubu, zaregistrovat se na &lt;a href="https://hacktoberfest.digitalocean.com"&gt;stránce projektu&lt;/a&gt; a začít bušit do klávesnice. Bacha na to, že do Hacktoberfestu se počítají pouze pull requesty vytvořené právě na Githubu. Ale klidně přispějte i jinde, je to chválihodné :)&lt;/p&gt;
+&lt;p&gt;Pojďme se do toho pustit, je to fakt jednoduchý:&lt;/p&gt;
+&lt;h1&gt;Git a Github&lt;/h1&gt;
+&lt;p&gt;Git je nástroj pro správu verzí. Github je služba, která podporuje vývoj a sdílení softwaru za pomoci právě &lt;code&gt;git&lt;/code&gt;u.&lt;/p&gt;
+&lt;p&gt;Přiznávám, že jsem líný se tu o tom více rozepisovat, protože návodů, kterak používat &lt;code&gt;git&lt;/code&gt; je asi &lt;a href="http://necyklopedie.wikia.com/wiki/Bambilion"&gt;bambilión&lt;/a&gt;. Takže - do hloubky jde &lt;a href="https://git-scm.com/book/cs/v1"&gt;Pro Git&lt;/a&gt;, který má web i v češtině. Pro rychlejší zorientování je třeba web s podtitulem &lt;a href="http://rogerdudler.github.io/git-guide/"&gt;no deep shit&lt;/a&gt;. A pak &lt;a href="http://lmgtfy.com/?q=how+to+git"&gt;Google&lt;/a&gt;, že jo.&lt;/p&gt;
+&lt;p&gt;Github vezmeme zkratkou:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;po registraci si nezapomeňte &lt;a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/"&gt;nastavit SSH klíč&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/fork-a-repo/"&gt;forkněte&lt;/a&gt; si projekt, který chcete upravovat&lt;/li&gt;
+&lt;li&gt;vytvořte lokální klon (&lt;code&gt;git clone&lt;/code&gt;) a vlastní větev (&lt;code&gt;git branch&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;upravujte a commitujte&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push&lt;/code&gt; do svého forku&lt;/li&gt;
+&lt;li&gt;a na závěr &lt;a href="https://help.github.com/articles/creating-a-pull-request/"&gt;vytvořte pull request&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Co, kde a jak mám upravovat?&lt;/h1&gt;
+&lt;p&gt;Pokud nejste přispěvatelem do nějakého projektu, může být tento krok nejsložitější. Zkusím nabídnout pár možností:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pokud nějaký OSS program &lt;strong&gt;každodenně používáte&lt;/strong&gt;, pak víte o jeho chybách. Zkuste se na ně blíže zaměřit.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dokumentace&lt;/strong&gt; je jádrem každé knihovny. Chybí vám něco? Zkuste to sami doplnit.&lt;/li&gt;
+&lt;li&gt;Github má &lt;strong&gt;vyhledávání&lt;/strong&gt;. Zkuste label &lt;a href="https://github.com/search?l=&amp;amp;q=state%3Aopen+label%3Ahacktoberfest&amp;amp;ref=advsearch&amp;amp;type=Issues&amp;amp;utf8=%E2%9C%93"&gt;hacktoberfest&lt;/a&gt;, &lt;a href="https://github.com/search?utf8=%E2%9C%93&amp;amp;q=state%3Aopen+label%3Aeasyfix&amp;amp;type=Issues&amp;amp;ref=searchresults"&gt;easyfix&lt;/a&gt;, apod. Umí filtrovat i podle jazyka.&lt;/li&gt;
+&lt;li&gt;(tento web je hostovaný na githubu. Kdybyste třeba našli překladfalep... ;) )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ještě není od věci tomu dodat trošku štábní kultury. Aby &lt;abbr title="Pull Request"&gt;PR&lt;/abbr&gt; za něco stál, tak by měl:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mít srozumitelný komentář&lt;/li&gt;
+&lt;li&gt;být složený jen ze souvisejících commitů, které mají srozumitelnou commit message&lt;/li&gt;
+&lt;li&gt;mít testy (pokud se používají)&lt;/li&gt;
+&lt;li&gt;procházet testy&lt;/li&gt;
+&lt;li&gt;respektovat coding style projektu&lt;/li&gt;
+&lt;li&gt;odpovídat dalším požadavkům, které lze často najít v CONTRIBUTING souboru&lt;/li&gt;
+&lt;li&gt;být pouze jeden (tzn. pokud plánujete změnu, použijte force push do stejné větve, neotvírejte zbytečně stejný problém vícekrát)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Kdybyste se chtěli inspirovat, tak moje PR můžete najít v projektech &lt;code&gt;py3status&lt;/code&gt; ([&lt;a href="https://github.com/ultrabug/py3status/pull/505"&gt;1&lt;/a&gt;]) a &lt;code&gt;asciinema&lt;/code&gt; ([&lt;a href="https://github.com/asciinema/asciinema/pull/180"&gt;2&lt;/a&gt;], [&lt;a href="https://github.com/asciinema/asciinema/pull/179"&gt;3&lt;/a&gt;], [&lt;a href="https://github.com/asciinema/asciinema/pull/181"&gt;4&lt;/a&gt;], ...)&lt;/p&gt;
+&lt;p&gt;A úplně na závěr prosba: pokud jste se dočetli až sem a zápisek vám k něčemu byl, tak mi dejte vědět. Ať už pull requestem, tak třeba komentářem. Díky.&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;
+&lt;img alt="Happy Hacking" src="/images/hacktoberfest.png" /&gt;
+&lt;/center&gt;&lt;/p&gt;</summary></entry><entry><title>Zákon o hazardu a blokování internetu - pokračování</title><link rel="alternate" href="http://stderr.cz/zakon-o-hazardu-a-blokovani-internetu-pokracovani"></link><published>2016-05-31T00:00:00+02:00</published><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2016-05-31:zakon-o-hazardu-a-blokovani-internetu-pokracovani</id><summary type="html">&lt;p&gt;Před necelými dvěma týdny jsem napsal svému senátorovi, že zákon o hazardu, tak jak se dostal ze sněmovny, není úplně v pořádku. Blkování internetu, které předkládali, totiž není jednoduše uskutečnitelné. Nevím na kolik se zamyslel, ale nakonec hlasoval pro přijetí. Protože mi před tím neodpověděl, tak jsem se po hlasování v dalším e-mailu zeptal, co ho vedlo k hlasování pro. Tu je odpověď:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Pro moje hlasování bylo rozhodující vystoupení předkladatele, a to ministra
 financí, o postupu možné blokace - viz jeho závěrečné vystoupení, které bude
