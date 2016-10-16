@@ -1,6 +1,6 @@
 Title: Hacktoberfest 
 Slug: hacktoberfest
-Date: 2016-10-13
+Date: 2016-10-17
 
 Přispějte do opensource projektu a dostanete za to (kromě dobrého pocitu) tričko. Na získání dárku máte už ale jen 14 dní! Během měsíce října totiž probíhá [Hacktoberfest](https://hacktoberfest.digitalocean.com/) - projekt společností DigitalOcean a Github, který má přimět lidi něco pro <abbr title="OpenSouce Software">OSS</abbr> dělat. Abyste odměnu získali, stačí 4 (slovy: čtyři) pull requesty do opensource projektů umístěných na Githubu. A to se vyplatí.
 
