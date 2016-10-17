@@ -36,7 +36,7 @@ Pokud nejste přispěvatelem do nějakého projektu, může být tento krok nejs
 * pokud nějaký OSS program **každodenně používáte**, pak víte o jeho chybách. Zkuste se na ně blíže zaměřit.
 * **dokumentace** je jádrem každé knihovny. Chybí vám něco? Zkuste to sami doplnit.
 * Github má **vyhledávání**. Zkuste label [hacktoberfest](https://github.com/search?l=&q=state%3Aopen+label%3Ahacktoberfest&ref=advsearch&type=Issues&utf8=%E2%9C%93), [easyfix](https://github.com/search?utf8=%E2%9C%93&q=state%3Aopen+label%3Aeasyfix&type=Issues&ref=searchresults), apod. Umí filtrovat i podle jazyka.
-* (tento web je hostovaný na githubu. Kdybyste třeba našli překladfalep... ;) )
+* ([tento web](https://github.com/jakubjedelsky/stderr.cz) je hostovaný na githubu. Kdybyste třeba našli překladfalep... ;) )
 
 Ještě není od věci tomu dodat trošku štábní kultury. Aby <abbr title="Pull Request">PR</abbr> za něco stál, tak by měl:
 
@@ -50,8 +50,7 @@ Ještě není od věci tomu dodat trošku štábní kultury. Aby <abbr title="Pu
 
 Kdybyste se chtěli inspirovat, tak moje PR můžete najít v projektech `py3status` ([[1](https://github.com/ultrabug/py3status/pull/505)]) a `asciinema` ([[2](https://github.com/asciinema/asciinema/pull/180)], [[3](https://github.com/asciinema/asciinema/pull/179)], [[4](https://github.com/asciinema/asciinema/pull/181)], ...)
 
-A úplně na závěr prosba: pokud jste se dočetli až sem a zápisek vám k něčemu byl, tak mi dejte vědět. Ať už pull requestem, tak třeba komentářem. Díky.
-
+Hodně štěstí!
 <center>
 ![Happy Hacking](/images/hacktoberfest.png)
 </center>
