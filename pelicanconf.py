@@ -11,6 +11,7 @@ SITENAME = u'stderr'
 SITEURL = http_proto + 'stderr.cz'
 
 SITESUBTITLE = u'Jakub Jedelský'
+FOOTER = u'vzniká od r. 2009'
 #AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
 
 ### timezone and l10n
