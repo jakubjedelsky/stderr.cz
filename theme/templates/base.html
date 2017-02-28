@@ -27,13 +27,13 @@
             ga('create', '{{ GOOGLE_ANALYTICS }}', 'auto');
             ga('send', 'pageview');
         </script>
+    {% endif %}
         <!-- Minified Cookie Consent served from a CDN -->
         <script src="{{ SITEURL }}/theme/js/cookieconsent.js"></script>
         <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
         <script type="text/javascript">
             window.cookieconsent_options = {"message":"Hej, psst! Přidej se na temnou stranu, mám tu koláčky (cookies)","dismiss":"Ano!","learnMore":"Více info","link":null,"theme":"light-floating"};
         </script>
-    {% endif %}
     </head>
 
     <body>
