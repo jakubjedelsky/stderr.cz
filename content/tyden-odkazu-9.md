@@ -16,3 +16,7 @@ Další týden se blíží ke konci a tu je výběr zajímavých odkazů, na kte
 
     <https://blog.mozilla.org/blog/2017/02/27/mozilla-acquires-pocket/>
 
+*   [en] Hračky připojené k internetu nejsou úplně tak super, jak by se mohlo zdát. Zvláště, když se k datům (třeba zaznameným rozhovorům před vaším oblíbeným plyšákem!) dostanou hackeři.
+
+    <https://thehackernews.com/2017/02/iot-teddy-bear.html>
+
