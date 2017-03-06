@@ -42,15 +42,30 @@
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                             <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                             <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
                     </ul>
                 </div>
             </div>
             <div class="span9">
 
+<h2><a href="http://stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a></h2>
+ <time datetime=2011-12-02T16:00:00+01:00>02. 12. 2011</time><div class="article">
+<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
+vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
+počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
+programátorem zjistili, že jednou za čas se tam objeví spousta připojení
+ze vzdáleného (legitimního) serveru označená jako "unauthenticated
+user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
+<div class="highlight"><pre><span></span>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
+</pre></div>
+
+
+<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
+<hr />
+</div>
 <h2><a href="http://stderr.cz/editace-sifrovanych-gpg-souboru-s-vim">Editace šifrovaných GPG souborů s vim</a></h2>
  <time datetime=2011-09-08T00:00:00+02:00>08. 09. 2011</time><div class="article">
 <h3>Motivace</h3>
@@ -99,18 +114,6 @@ zde na blogu publikovat "jak na to" k jednotlivým okruhům (a spojit to
 třeba s kategorií "Základy administrátora"). Ještě si to nechám projít
 hlavou; nějaké poznámky můžete zatím najít na <a href="http://dev.stderr.cz/rhcsa/">samotné speciální
 stránce</a></p>
-<hr />
-</div>
-<h2><a href="http://stderr.cz/dnes-je-den-ipv6">Dnes je den IPv6</a></h2>
- <time datetime=2011-06-08T13:51:00+02:00>08. 06. 2011</time><div class="article">
-<p>Protože staré IP verze 4 docházejí (ISP a regionální registry ještě
-nějaké zásoby mají, ale <a href="http://blog.nic.cz/2011/02/03/iana-prazdna-leden-rekordni/">IANA je už od února prázdná</a>), je nutné stále
-více propagovat nové, delší, větší, krásnější a celkově lepší IPv6. A to
-se děje dnes: je <a href="http://www.worldipv6day.org/">Světový den IPv6</a>.</p>
-<p>Smyslem dnešního dne, kdy se na jeden den zpřístupní některé velké weby
-přes IPv6 (<a href="http://www.worldipv6day.org/participants/index.html">seznam účastníků</a>), je motivovat ISP, uživatele, správce
-sítí a vlastně vše co je k internetu připojeno k tomu, aby začali
-využívat právě nových ...</p>
 <hr />
 </div>
 
