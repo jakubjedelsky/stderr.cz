@@ -42,15 +42,20 @@
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                             <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
                             <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
+                            <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
                     </ul>
                 </div>
             </div>
             <div class="span9">
 
+<h2><a href="http://stderr.cz/z-wordpressu-na-statickou-stranku">Z Wordpressu na statickou stránku</a></h2>
+ <time datetime=2013-10-29T00:00:00+01:00>29. 10. 2013</time><div class="article">
+<p>Dlouhou dobu jsem si vedl blog na Wordpressu, který mi běžel na vlastním serveru. Kvůli změně práce a tím i rušení serveru (resp. přesunu na méně výkoný virtuál) jsem začal řešit "kam s ním". Převod části článků sem je dobrý, ale jednak se mi nechtělo převádět vše a pak, návštěvníci si cestu na starý blog ještě najdou. Zavrhnul jsem proto jen jednoduché přesměrování. A aby mi Wordpress zbytečně neběžel a nežral zdroje pro PHP, když to už k ničemu nepotřebuju ...</p>
+<hr />
+</div>
 <h2><a href="http://stderr.cz/jak-jsem-mohl-neznat-doodle-com">Jak jsem mohl neznát doodle.com?</a></h2>
  <time datetime=2013-09-24T00:00:00+02:00>24. 09. 2013</time><div class="article">
 <p>Při plánování rozloučení s kolegy jsem potřeboval nějak jednoduše sjednotit informace o tom, kdy kdo (ne)může. Psaní e-mailů je otrava a po chvíli je v tom akorát zmatek, tak jsem se zeptal: <em>"Neexistuje nějaký jednoduchý nástroj na plánování scůzek?"</em> A Google odpověděl, že existuje - a jmenuje se <a href="http://doodle.com">doodle.com</a>.</p>
@@ -92,24 +97,6 @@ všech třech případech jde o protokoly používané pro přenos souborů, to 
     fungování využívá portů 20 a 21. Jde o jednoduchý protokol,
     využívající pouze <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol#List_of_FTP_commands" title="Seznam příkazů FTP, Wikipedie">pár příkazů</a>.</li>
 <li><strong>FTPS:</strong> Jde o ten <em>stejný</em> jednoduchý ...</li></ul>
-<hr />
-</div>
-<h2><a href="http://stderr.cz/tipy-a-triky-pro-openssl">Tipy a triky pro OpenSSL</a></h2>
- <time datetime=2013-04-05T10:00:00+02:00>05. 04. 2013</time><div class="article">
-<p>Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR
-pro certifikační autoritu, jako by nebyl. OpenSSL je opensource
-implementace pro SSL a TLS a díky pár příkazům dokážete vygenerovat
-klíč, CSR i samotný certifikát. A zpětně pak tyto data zkontrolovat nebo
-převést na jiný formát. Jen je vhodné si zapamatovat pár přepínačů a
-možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jsem
-mé nejoblíbenější.  </p>
-<h3>Generujeme …</h3>
-<p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre><span></span>openssl genrsa -out klic.key 2048
-</pre></div>
-
-
-<p>… CSR s ...</p>
 <hr />
 </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CentOS a vydávání aktualizací @ stderr</title>
+        <title>Tyden odkazů #10 @ stderr</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +15,8 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <meta name="twitter:card" value="summary" />
     <meta name="twitter:creator" content="@kubiis" />
-    <meta name="twitter:title" content="CentOS a vydávání aktualizací" />
-    <meta name="twitter:description" content="Dnes jen krátce, ale za to se zajímavým odkazem. Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že vydávání aktualizací minor verzí se oproti RHELu pořád zpožďuje. Vývojáři se ..." />
+    <meta name="twitter:title" content="Tyden odkazů #10" />
+    <meta name="twitter:description" content="Desátý týden je za náma a tak jsem zpracoval další várku zajímavých odkazů. Není jich mnoho, ale na druhou stranu jsou pěkně dlouhý. [en] Začnu tím, co mi hlava nebere. Krystal, který existuje ve ..." />
 
         <link rel="alternate" type="application/atom+xml" href="http://stderr.cz/feed.atom.xml" title="stderr ATOM/RSS Feed" />
         <!-- Minified Cookie Consent served from a CDN -->
@@ -54,13 +54,13 @@
                 </div>
             </div>
             <div class="span9">
-<h2>CentOS a vydávání aktualizací</h2>
-<time datetime=2011-12-05T16:44:00+01:00>05. 12. 2011</time><div class="flattr">
+<h2>Tyden odkazů #10</h2>
+<time datetime=2017-03-13T00:00:00+01:00>13. 03. 2017</time><div class="flattr">
     <script id='flattrbtn'>
     (function(i) {
         var f,s=document.getElementById(i);
         f=document.createElement('iframe');
-        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=CentOS a vydávání aktualizací';
+        f.src='//api.flattr.com/button/view/?uid=stderr&button=compact&url='+encodeURIComponent(document.URL)+'&title=Tyden odkazů #10';
         f.title='Flattr';
         f.height=20;
         f.width=110;
@@ -71,21 +71,40 @@
     </script>
 </div>
 <div class="article">
-<p>Dnes jen krátce, ale za to se zajímavým odkazem.</p>
-<p>Pokud jste uživateli distribuce CentOS, určitě jste si všimli, že
-vydávání aktualizací minor verzí se oproti RHELu pořád zpožďuje.
-Vývojáři se snaží alespoň hotfixy a security aktualizace distribuovat
-přes <a href="http://wiki.centos.org/AdditionalResources/Repositories/CR" title="CR Repository">Continuous Release repozitář</a>. Proč se vývoj táhne <a href="http://lists.centos.org/pipermail/centos/2011-October/119027.html" title="CentOS maillist">vysvětluje v
-maillistu</a> Johnny Hughes. Ve zkratce: hledejte za tím rozdělení RHELu
-do několika skupin (Server, Workstation, ...), kde ve stejných skupinách
-jsou různé balíčky, a zpřísnění politiky pro sdílení některých
-souborů/balíčků.</p>
-<p>A tak se z CentOS "přebalovačů" stávají opravdoví vývojáři..</p>
+<p>Desátý týden je za náma a tak jsem zpracoval další várku zajímavých odkazů. Není jich mnoho, ale na druhou stranu jsou pěkně dlouhý.</p>
+<hr />
+<ul>
+<li>
+<p>[en] Začnu tím, co mi hlava nebere. Krystal, který existuje ve 4D prostoru. <a href="http://www.urbandictionary.com/define.php?term=dafuq">Dafuq</a>?! Kromě toho, že z různých stran vypadá různě (není symetrický jako např. koule), vypadá různě i v čase bez toho aby nějak ovlivňoval své okolí a aby okolí ovlivňovalo jej. V roce 2012 existenci <em>"time crystal"</em> (nevím, jak to přeložit) předpověděl nositel Nobelovy ceny Frank Wilczek. A teď to experimentálně potvrdili týmy z Hazvardu a Univerzity v Marylandu.</p>
+<p><a href="https://motherboard.vice.com/en_us/article/two-research-teams-have-independently-made-a-real-life-time-crystal">https://motherboard.vice.com/en_us/article/two-research-teams-have-independently-made-a-real-life-time-crystal</a></p>
+<p><a href="https://motherboard.vice.com/en_us/article/ok-wtf-is-a-time-crystal">https://motherboard.vice.com/en_us/article/ok-wtf-is-a-time-crystal</a></p>
+</li>
+<li>
+<p>[en] [video] Github je (pro vývojáře) významná služba, která potřebuje mít automatizovaný deployment a doručovaní změn. K tomu používají <a href="https://puppet.com/">Puppet</a> a jak ho používají popisuje jeden z jejich inženýrů.</p>
+<p><a href="https://www.youtube.com/watch?v=H7cQcoXVacU">https://www.youtube.com/watch?v=H7cQcoXVacU</a></p>
+</li>
+<li>
+<p>[en] Kdo nemonitoruje vlastní systémy, neví co se děje. 25 postřehů k tomu, jak lépe využít <a href="https://graphiteapp.org/">Graphite</a>, <a href="http://grafana.org/">Grafanu</a> a <a href="https://github.com/etsy/statsd">statsd</a>.</p>
+<p><a href="https://blog.raintank.io/25-graphite-grafana-and-statsd-gotchas/">https://blog.raintank.io/25-graphite-grafana-and-statsd-gotchas/</a></p>
+</li>
+<li>
+<p>[en] Dlouhý čtení o tom, jak uvnitř fungují relační databáze. Perfetně vysvětlené a rozepsané do detailu.</p>
+<p><a href="http://coding-geek.com/how-databases-work/">http://coding-geek.com/how-databases-work/</a></p>
+</li>
+<li>
+<p>[en] Další detailní popis. Tentokrát o tom, co se stane, když zmáčknete tlačítko napájení na svém počítači.</p>
+<p><a href="https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html">https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-1.html</a></p>
+</li>
+<li>
+<p>[en] A pár detailů do třetice. Jak najít XSS chybu na Google Mapách (a dostat za to $5000)</p>
+<p><a href="https://medium.com/@marin_m/how-i-found-a-5-000-google-maps-xss-by-fiddling-with-protobuf-963ee0d9caff#.szg15cl70">https://medium.com/@marin_m/how-i-found-a-5-000-google-maps-xss-by-fiddling-with-protobuf-963ee0d9caff#.szg15cl70</a></p>
+</li>
+</ul>
 </div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'stderr-cz-blog';
-    var disqus_title = 'CentOS a vydávání aktualizací';
+    var disqus_title = 'Tyden odkazů #10';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
