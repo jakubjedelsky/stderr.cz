@@ -42,15 +42,28 @@
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
                             <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                             <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
                     </ul>
                 </div>
             </div>
             <div class="span9">
 
+<h2><a href="http://stderr.cz/lvm-v-raid-poli-s-kickstart">LVM v RAID poli s kickstart</a></h2>
+ <time datetime=2011-08-10T00:00:00+02:00>10. 08. 2011</time><div class="article">
+<p><a href="http://fedoraproject.org/wiki/Anaconda">Anaconda</a> při instalaci CentOS 6 pomocí kickstart souboru trpí
+zvláštním nešvarem: při rozdělení disků pro použití LVM může zahlásit
+chybu <em>new lv is too large to fit in free space</em> (<a href="http://pastebin.com/BsrRipue">celý výpis chyby</a>);
+i když to není pravda. Kde je problém?</p>
+<p>Začnu tím, jak chci mít disky rozděleny:<br />
+Mějme dva identické disky, které budou v softwarovém RAIDu 1
+(mirroring), rozděleny budou na \~250MB /boot a zbytek pro LVM, ve
+kterém bude swap a /. Podle <a href="http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html#s2-kickstart2-options-part-examples" title="32.4.1. Advanced Partitioning Example">dokumentace</a> jsem začal s tímto:</p>
+<div class="highlight"><pre><span></span><span class="c1"># initialize ...</span></pre></div>
+<hr />
+</div>
 <h2><a href="http://stderr.cz/red-hat-certified-system-administrator">Red Hat Certified System Administrator</a></h2>
  <time datetime=2011-07-23T23:53:00+02:00>23. 07. 2011</time><div class="article">
 <p>Dobrá věc se podařila a už jsem RHCSA. Najdete mě pod čílem
@@ -101,18 +114,6 @@ prohlížeče. Odkaz z chybové stránky vás navede na <a href="http://www.goog
 pro novou Fedoru (a vůbec pro linux) jen stěží najdete radu. Tak jsem
 zapátral a...</p>
 <p>...je to v SELinuxu. Notebook jsem si ...</p>
-<hr />
-</div>
-<h2><a href="http://stderr.cz/fedora-15-release-party-v-brne">Fedora 15 Release Party v Brně</a></h2>
- <time datetime=2011-05-25T16:48:00+02:00>25. 05. 2011</time><div class="article">
-<p>Včera podle plánu vyšla finální podoba <a href="http://fedoraproject.org/">Fedory 15</a> a při té
-příležitosti se v Brně uskutečnila <a href="https://fedoraproject.org/wiki/Release_Party_F15_Brno">Fedora 15 Release Party</a>. Záštitu
-nad akcí přebrala brněnská pobočka <a href="http://www.cz.redhat.com/">Red Hatu</a>, jejíž zaměstnanci tu
-prezentovali svoji práci - a zároveň novinky ve Fedoře.</p>
-<p><em>Předem upozorňuji, že jsem si nedělal poznámky a to, co zde píši,
-doluji z hlavy, kde se mi nemuselo uchytit úplně všechno. <s>Zároveň se
-předem omlouvám za kvalitu fotografií. Vše bylo foceno telefonem bez
-blesku a na některých obrázcích je vidět ...</s></em></p>
 <hr />
 </div>
 
