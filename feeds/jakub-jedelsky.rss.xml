@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>stderr</title><link>http://stderr.cz/</link><description>Jakub Jedelský</description><atom:link rel="self" href="http://stderr.cz/feeds/jakub-jedelsky.rss.xml"></atom:link><lastBuildDate>Mon, 10 Apr 2017 00:00:00 +0200</lastBuildDate><item><title>Týden odkazů #14</title><link>http://stderr.cz/tyden-odkazu-14</link><description>&lt;p&gt;Týden se s měsícem sešel a po 10 následuje 14, to dá rozum. Příjemné čtení!&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>stderr</title><link>http://stderr.cz/</link><description>Jakub Jedelský</description><atom:link href="http://stderr.cz/feeds/jakub-jedelsky.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 10 Apr 2017 00:00:00 +0200</lastBuildDate><item><title>Týden odkazů #14</title><link>http://stderr.cz/tyden-odkazu-14</link><description>&lt;p&gt;Týden se s měsícem sešel a po 10 následuje 14, to dá rozum. Příjemné čtení!&lt;/p&gt;
 &lt;hr /&gt;
 &lt;ul&gt;
 &lt;li&gt;
