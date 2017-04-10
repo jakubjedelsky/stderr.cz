@@ -6,6 +6,9 @@
 {% if not HIDE_DATE %} <time datetime={{ article.date.isoformat() }}>{{article.locale_date }}</time>{% endif %}
 <div class="article">
 {{ article.summary }}
+<p class="read-more">
+	<a href="{{ SITEURL }}/{{ article.url }}" role="button" class="btn btn-default">Přečíst celé</a>
+</p>
 <hr />
 </div>
 {% endfor %}

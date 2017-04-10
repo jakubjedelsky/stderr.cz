@@ -146,3 +146,7 @@ blockquote {
 	font-size: 75%;
   color: #5B5B5A;
 }
+
+.read-more {
+	text-align: right;
+}
