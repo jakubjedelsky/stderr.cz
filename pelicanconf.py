@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-ENABLE_HTTPS = False
+ENABLE_HTTPS = True
 http_proto = "https://" if ENABLE_HTTPS else "http://"
 
 ### blog info
