@@ -46,10 +46,10 @@
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                             <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
                             <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -108,8 +108,8 @@ iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
     nemusíte komunikovat. Veškeré subnety rozdělené podle zemí najdete
     na webu <a href="http://www.ipdeny.com/ipblocks/">ipdeny.com</a>. Pro omezení příchozích spojení z Číny proto
     provedeme:</p>
-<div class="highlight"><pre><span></span><span class="x">wget http://www.ipdeny.com/ipblocks/data/countries/cn.zone</span>
-<span class="x">while read SUBNET ; do iptables -I INPUT -s </span><span class="p">$</span><span class="nv">SUBNET</span><span class="x"> -j REJECT ; done &lt; cn.zone</span>
+<div class="highlight"><pre><span></span>wget http://www.ipdeny.com/ipblocks/data/countries/cn.zone
+while read SUBNET ; do iptables -I INPUT -s $SUBNET -j REJECT ; done &lt; cn.zone
 </pre></div>
 
 

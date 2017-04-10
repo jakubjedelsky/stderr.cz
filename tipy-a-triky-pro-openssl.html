@@ -46,10 +46,10 @@
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                             <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
                             <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -80,7 +80,7 @@ možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jse
 mé nejoblíbenější.  </p>
 <h3>Generujeme …</h3>
 <p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre><span></span>openssl genrsa -out klic.key 2048
+<div class="highlight"><pre><span></span>openssl genrsa -out klic.key <span class="m">2048</span>
 </pre></div>
 
 
@@ -129,10 +129,10 @@ mé nejoblíbenější.  </p>
 Spustil jsem to pro původní web abych se ujistil, že certifikát je opravdu
 už skoro dva měsíce propadlý. Včetně výstupu:</p>
 <div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">|</span><span class="se">\ </span>
-&gt; openssl s_client -connect dev.stderr.cz:443 2&gt;/dev/null <span class="p">|</span><span class="se">\</span>
+&gt; openssl s_client -connect dev.stderr.cz:443 <span class="m">2</span>&gt;/dev/null <span class="p">|</span><span class="se">\</span>
 &gt; openssl x509 -noout -dates
-<span class="nv">notBefore</span><span class="o">=</span>Feb <span class="m">23</span> 12:58:12 <span class="m">2012</span> GMT
-<span class="nv">notAfter</span><span class="o">=</span>Feb <span class="m">22</span> 12:58:12 <span class="m">2013</span> GMT
+<span class="nv">notBefore</span><span class="o">=</span>Feb <span class="m">23</span> <span class="m">12</span>:58:12 <span class="m">2012</span> GMT
+<span class="nv">notAfter</span><span class="o">=</span>Feb <span class="m">22</span> <span class="m">12</span>:58:12 <span class="m">2013</span> GMT
 </pre></div>
 
 

@@ -46,10 +46,10 @@
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                             <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
                             <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -91,8 +91,8 @@
 <p>To si spustíte z příkazové řádky a během pár minut (v závislosti na množství stránek) máte ve složce <code>$home_static-static</code> obsah celého webu ve formě html souborů.</p>
 <h3>Krok 4.: Úprava stylů</h3>
 <p>Pěkné na Wordpressu je, že si zachovává informace o použitých verzích stylů a skriptů přímo v URL. Bohužel pokud z nového serveru naservírujete uri "wp-content/themes/twentytwelve/style.css?ver=3.7" a budete se tvářit, že to má být obyčejný texťák, tak to nebude úplně fungovat. Takže zkuste zapojit třeba <code>sed</code> a změnit všechny index.html soubory, tak aby v sobě měly jen čisté css a js. A zároveň kouknout, co už není potřeba a to smazat. Já použil něco takového, jako vidíte dole, ale bude se to lišit od webu. od použitého vzhledu a pluginů.</p>
-<div class="highlight"><pre><span></span>mv wp-content/themes/twentytwelve/style.css<span class="se">\?</span>ver<span class="se">\=</span>3.7 wp-content/themes/twentytwelve/style.css
-mv wp-content/plugins/wp-syntax/css/wp-syntax.css<span class="se">\?</span>ver<span class="se">\=</span>1.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
+<div class="highlight"><pre><span></span>mv wp-content/themes/twentytwelve/style.css<span class="se">\?</span>ver<span class="se">\=</span><span class="m">3</span>.7 wp-content/themes/twentytwelve/style.css
+mv wp-content/plugins/wp-syntax/css/wp-syntax.css<span class="se">\?</span>ver<span class="se">\=</span><span class="m">1</span>.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
 <span class="k">for</span> i in <span class="k">$(</span>find . -name index.html -print<span class="k">)</span><span class="p">;</span> <span class="k">do</span> 
     sed -i <span class="s1">&#39;s/wp-content\/themes\/twentytwelve\/style.css%3Fver=3.7/wp-content\/themes\/twentytwelve\/style.css/g&#39;</span> <span class="nv">$i</span>
     sed -i <span class="s1">&#39;s/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css%3Fver=1.0/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css/g&#39;</span> <span class="nv">$i</span>

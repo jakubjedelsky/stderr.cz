@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link rel="alternate" href="http://stderr.cz/"></link><link rel="self" href="http://stderr.cz/feeds/jakub-jedelsky.atom.xml"></link><id>http://stderr.cz/</id><updated>2017-03-27T00:00:00+02:00</updated><entry><title>Blíží se konec Eudyptula Challenge</title><link rel="alternate" href="http://stderr.cz/blizi-se-konec-eudyptula-challenge"></link><published>2017-03-27T00:00:00+02:00</published><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2017-03-27:blizi-se-konec-eudyptula-challenge</id><summary type="html">&lt;p&gt;Teď by měli zpozornět ti, které zajímá vývoj linuxového kernelu a ještě se neodhodlali pro to cokoliv udělat. &lt;a href="http://eudyptula-challenge.org/"&gt;Eudyptula Challenge&lt;/a&gt; je soubor úkolů, které vás začátky vývoje provedou. A pomalu zavírají!&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>stderr</title><link rel="alternate" href="http://stderr.cz/"></link><link rel="self" href="http://stderr.cz/feeds/jakub-jedelsky.atom.xml"></link><id>http://stderr.cz/</id><updated>2017-04-10T00:00:00+02:00</updated><entry><title>Týden odkazů #14</title><link rel="alternate" href="http://stderr.cz/tyden-odkazu-14"></link><published>2017-04-10T00:00:00+02:00</published><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2017-04-10:tyden-odkazu-14</id><summary type="html">&lt;p&gt;Týden se s měsícem sešel a po 10 následuje 14, to dá rozum. Příjemné čtení!&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://stackoverflow.com/insights/survey/2017"&gt;Stack Overflow Developer Survey 2017&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;64 tisíc uživatelů Stack Overflow se zůčastnilo výročního průzkumu této služby. Dozvíte se třeba to, že nejlépe zaplaceno dostanete za vývoj v Clojure (v celosvětovém měřítku). Každopádně dost dostanete i za vývoj v Perlu a ten používáme u nás v GoodData, tak se koukněte, třeba vás nějaká &lt;a href="http://app.jobvite.com/m?3GLGwiwq"&gt;naše otevřená pozice osloví&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://zwischenzugs.wordpress.com/2017/04/04/things-i-learned-managing-site-reliability-for-some-of-the-worlds-busiest-gambling-sites/"&gt;Things I Learned Managing Site Reliability for Some of the World’s Busiest Gambling Sites&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sedm měsíců práce na rozdělení a zdokumentování alertů z platformy (bylo jich 1700). Výsledkem je efektivnější SRE tým. Proč ne, čtení je to zajímavý.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://codeword.xyz/2017/03/15/that-time-i-trolled-the-entire-internet/"&gt;That Time I Trolled the Entire Internet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Byla jednou jedna internetová společnost Net Authority, která dohlížela na to, zda se internet ubíra správným - křesťanským - směrem. Vlastně nebyla, celé to byla sranda, která se tak trošku vymkla kontrole.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.keithf4.com/a-large-database-does-not-mean-large-shared_buffers/"&gt;A Large Database Does Not Mean Large shared_buffers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Už tu dlouho nebylo nic o PostgreSQL. Pěkné shrnutí, jak se postavit k nastavení &lt;code&gt;shared_buffers&lt;/code&gt; a hlavně jak najít (plus mínus autobus) ideální hodnotu pro vaše použití.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://rhaas.blogspot.cz/2017/04/new-features-coming-in-postgresql-10.html"&gt;New festures coming in PostgreSQL 10&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Postgres podruhé. Verze 9.6 přišla s paralelním zpracováním dotazů a desátá verze to dále vylepšuje. Zde je soupis, co nás v této verzi čeká dalšího (tl;dr: moc!)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://arstechnica.com/tech-policy/2017/03/doj-drops-case-against-child-porn-suspect-rather-than-disclose-fbi-hack/"&gt;To keep Tor hack source code secret, DOJ dismisses child porn case&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Raději stáhnout veškerá obvinění, než vyzradit, jak se vyšetřovatelům podařilo nabourat "anonymní" přístup k internetu pomocí TOR. Tak postupovalo Ministerstvo spravedlnosti USA, které díky tomu neobvinilo člověka za držení dětského porna. To by se u nás nestalo. U nás se i prezidenti udávají sami.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://dip.felk.cvut.cz/browse/pdfcache/kratoj11_2012bach.pdf"&gt;Bakalářská práce: Přínos digitálních technologií v oboru železničního modelářství&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Někdo tuto bakalářku nasdílel na Twitteru a dost mě pobavila. Vlastně v ní jde jen o poděkování a závěr (pokud vás zrovna nezajímá spojení digitálních technologií a železníčního modelářství). Nedokážete někdo najít, jak ji obhájil? Docela by mě to zajímalo :)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jsou lidé kterým bych i poděkovat chtěl, ale nechci nikoho stáhnout s sebou.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.meetup.com/DevOps-Club-Brno/events/238289496/"&gt;DevOps Club Brno&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Už zítra (11. dubna) je v Brněnském Impact Hubu další DevOps Club. Tak se zastavte, třeba se potkáme.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Blíží se konec Eudyptula Challenge</title><link rel="alternate" href="http://stderr.cz/blizi-se-konec-eudyptula-challenge"></link><published>2017-03-27T00:00:00+02:00</published><author><name>Jakub Jedelský</name></author><id>tag:stderr.cz,2017-03-27:blizi-se-konec-eudyptula-challenge</id><summary type="html">&lt;p&gt;Teď by měli zpozornět ti, které zajímá vývoj linuxového kernelu a ještě se neodhodlali pro to cokoliv udělat. &lt;a href="http://eudyptula-challenge.org/"&gt;Eudyptula Challenge&lt;/a&gt; je soubor úkolů, které vás začátky vývoje provedou. A pomalu zavírají!&lt;/p&gt;
 &lt;p&gt;Podle posledního (dost nepravidelného) Status reportu je zaregistrovaných více než 19000 lidí. Z toho pouze 149 dokončilo celou sérii. Vývojáře (nikdo vlastně neví, co nebo kdo za tím stojí) to už trošku unavuje, tak se rozhodli, že při 20000 zaregistrovaných lidech zavřou krám. Naštěstí ne úplně - stávající nechají dojet, ale noví se už nebudou moci zaregistrovat.&lt;/p&gt;
 &lt;p&gt;Celá série obsahuje 20 úkolů, kde si napíšete vlastní jednoduchý modul (s různýma úpravama), upravíte driver, naučíte se některé základní kernelové struktury a jak správně odesílat patche (vývoj kernelu frčí na mailinglistech, takže zapomeňte na nějaký fešný pull requesty přes klikátko). Sám jsem se po dvou letech dopracoval k 16. úkolu, kde mě čeká odeslání nějakých drobných změn do upstreamu.&lt;/p&gt;
 &lt;p&gt;Nutno podotknout, že i ze strany uživatele je potřeba se obrnit trpělivostí. Vyhodnocení úkolů často vezme několik dnů. V jednom případě jsem čekal, kvůli zasknutému systému, půl roku.&lt;/p&gt;
@@ -380,7 +418,7 @@ fedpkg update
 &lt;span class="nv"&gt;request&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;testing
 
 &lt;span class="c1"&gt;# Bug numbers: 1234,9876&lt;/span&gt;
-&lt;span class="nv"&gt;bugs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1080669
+&lt;span class="nv"&gt;bugs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1080669&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Changelog:&lt;/span&gt;
 &lt;span class="c1"&gt;# - remove buildrood tag&lt;/span&gt;
@@ -391,7 +429,7 @@ fedpkg update
 
 &lt;span class="c1"&gt;# Enable request automation based on the stable/unstable karma thresholds&lt;/span&gt;
 &lt;span class="nv"&gt;autokarma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;True
-&lt;span class="nv"&gt;stable_karma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3
+&lt;span class="nv"&gt;stable_karma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;
 &lt;span class="nv"&gt;unstable_karma&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;-3
 
 &lt;span class="c1"&gt;# Automatically close bugs when this marked as stable&lt;/span&gt;
@@ -624,8 +662,8 @@ $ docker stop beae68f2b5a3
 &lt;p&gt;To si spustíte z příkazové řádky a během pár minut (v závislosti na množství stránek) máte ve složce &lt;code&gt;$home_static-static&lt;/code&gt; obsah celého webu ve formě html souborů.&lt;/p&gt;
 &lt;h3&gt;Krok 4.: Úprava stylů&lt;/h3&gt;
 &lt;p&gt;Pěkné na Wordpressu je, že si zachovává informace o použitých verzích stylů a skriptů přímo v URL. Bohužel pokud z nového serveru naservírujete uri "wp-content/themes/twentytwelve/style.css?ver=3.7" a budete se tvářit, že to má být obyčejný texťák, tak to nebude úplně fungovat. Takže zkuste zapojit třeba &lt;code&gt;sed&lt;/code&gt; a změnit všechny index.html soubory, tak aby v sobě měly jen čisté css a js. A zároveň kouknout, co už není potřeba a to smazat. Já použil něco takového, jako vidíte dole, ale bude se to lišit od webu. od použitého vzhledu a pluginů.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mv wp-content/themes/twentytwelve/style.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;3.7 wp-content/themes/twentytwelve/style.css
-mv wp-content/plugins/wp-syntax/css/wp-syntax.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;1.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mv wp-content/themes/twentytwelve/style.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;.7 wp-content/themes/twentytwelve/style.css
+mv wp-content/plugins/wp-syntax/css/wp-syntax.css&lt;span class="se"&gt;\?&lt;/span&gt;ver&lt;span class="se"&gt;\=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
 &lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="k"&gt;$(&lt;/span&gt;find . -name index.html -print&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; 
     sed -i &lt;span class="s1"&gt;&amp;#39;s/wp-content\/themes\/twentytwelve\/style.css%3Fver=3.7/wp-content\/themes\/twentytwelve\/style.css/g&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
     sed -i &lt;span class="s1"&gt;&amp;#39;s/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css%3Fver=1.0/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css/g&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$i&lt;/span&gt;
@@ -760,7 +798,7 @@ možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jse
 mé nejoblíbenější.  &lt;/p&gt;
 &lt;h3&gt;Generujeme …&lt;/h3&gt;
 &lt;p&gt;… samotný privátní klíč (RSA):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl genrsa -out klic.key 2048
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;openssl genrsa -out klic.key &lt;span class="m"&gt;2048&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -809,10 +847,10 @@ mé nejoblíbenější.  &lt;/p&gt;
 Spustil jsem to pro původní web abych se ujistil, že certifikát je opravdu
 už skoro dva měsíce propadlý. Včetně výstupu:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\ &lt;/span&gt;
-&amp;gt; openssl s_client -connect dev.stderr.cz:443 2&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&amp;gt; openssl s_client -connect dev.stderr.cz:443 &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
 &amp;gt; openssl x509 -noout -dates
-&lt;span class="nv"&gt;notBefore&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Feb &lt;span class="m"&gt;23&lt;/span&gt; 12:58:12 &lt;span class="m"&gt;2012&lt;/span&gt; GMT
-&lt;span class="nv"&gt;notAfter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Feb &lt;span class="m"&gt;22&lt;/span&gt; 12:58:12 &lt;span class="m"&gt;2013&lt;/span&gt; GMT
+&lt;span class="nv"&gt;notBefore&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Feb &lt;span class="m"&gt;23&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt;:58:12 &lt;span class="m"&gt;2012&lt;/span&gt; GMT
+&lt;span class="nv"&gt;notAfter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Feb &lt;span class="m"&gt;22&lt;/span&gt; &lt;span class="m"&gt;12&lt;/span&gt;:58:12 &lt;span class="m"&gt;2013&lt;/span&gt; GMT
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -949,7 +987,7 @@ MySQL versions from 5.1.63, 5.5.24, 5.6.6 are not.
 
 &lt;p&gt;Zda tímto neduhem trpí váš server, můžete otestovat jednoduchým
 jednořádkovým skriptem:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;1&lt;/span&gt; 1000&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; mysql -u root --password&lt;span class="o"&gt;=&lt;/span&gt;blabla -h 127.0.0.1 2&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="sb"&gt;`&lt;/span&gt;seq &lt;span class="m"&gt;1&lt;/span&gt; &lt;span class="m"&gt;1000&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; mysql -u root --password&lt;span class="o"&gt;=&lt;/span&gt;blabla -h &lt;span class="m"&gt;127&lt;/span&gt;.0.0.1 &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1003,8 +1041,8 @@ iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
     nemusíte komunikovat. Veškeré subnety rozdělené podle zemí najdete
     na webu &lt;a href="http://www.ipdeny.com/ipblocks/"&gt;ipdeny.com&lt;/a&gt;. Pro omezení příchozích spojení z Číny proto
     provedeme:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="x"&gt;wget http://www.ipdeny.com/ipblocks/data/countries/cn.zone&lt;/span&gt;
-&lt;span class="x"&gt;while read SUBNET ; do iptables -I INPUT -s &lt;/span&gt;&lt;span class="p"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;SUBNET&lt;/span&gt;&lt;span class="x"&gt; -j REJECT ; done &amp;lt; cn.zone&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://www.ipdeny.com/ipblocks/data/countries/cn.zone
+while read SUBNET ; do iptables -I INPUT -s $SUBNET -j REJECT ; done &amp;lt; cn.zone
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1582,7 +1620,7 @@ HTK4S virus byl zjištěn u e-mail.cz Webmail server, a e-mail.cz všechny webma
 aktualizován okamžitě, aby se zabránilo poškození webmail e-mail.cz.
 
 Jste požádáni o identifikaci účtu uvedené níže, které nám umožňují kontrolovat a udržovat svůj účet s novou 
-verzí anti-virus/anti-Spam HTK4S 2011. neposkytnutí platné informace, bude váš účet dočasně pozastaven z 
+verzí anti-virus/anti-Spam HTK4S &lt;span class="m"&gt;2011&lt;/span&gt;. neposkytnutí platné informace, bude váš účet dočasně pozastaven z 
 našich služeb.
 
 Jméno :..................
