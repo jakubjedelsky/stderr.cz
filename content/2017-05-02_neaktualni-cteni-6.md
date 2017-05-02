@@ -24,11 +24,11 @@ Týden se s týdnem sešel a nabídl pár dalších zajímavých odkazů.
 
 *   **[How Swat.io migrated from MySQL to PostgreSQL in 2 years](http://garage.socialisten.at/2017/04/how-swat-io-migrated-from-mysql-to-postgresql-in-2-years/)** <span class="label label-success">DB</span>
 
-    Další článek na téma MySQL vs. PostgreSQL. Tentokrát jak vývojáři služy swat.io pomalu přecházeli k PostreSQL, proč a jaké z toho vydobili poznatky.
+    Další článek na téma MySQL vs. PostgreSQL. Tentokrát jak vývojáři služy swat.io pomalu přecházeli k PostreSQL, co si zkusili a co se z toho naučili.
 
 *   **[Cyril Northcote Parkinson](https://cs.wikipedia.org/wiki/Cyril_Northcote_Parkinson)** <span class="label label-default">LINK</span>
 
-    Na internetech najdete milióny navodů jak si organizovat práci, od GTD přes ZTD až po jednoduché todo listy. Přitom tento pán zformuloval větu, která platí pro všechny už v roce 1955 (a i jeho ostatní "zákony" stojí za přečtení):
+    Na internetech najdete milióny navodů jak si organizovat práci, od jednoduchých todo listů až po GTD . Přitom tento pán zformuloval už v roce 1955 větu, kterou to všechno shrnuje (a i další jeho zákony stojí za přečtení):
 
     > Každá práce trvá tak dlouho, kolik je na ni k dispozici času.
 
