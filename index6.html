@@ -42,15 +42,37 @@
                 </div>
                 <div class="metadata">
                     <ul class="social">
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="https://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
                             <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="https://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
                             <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="https://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="https://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
                             <li><a href="https://twitter.com/kubiis" target="_blank"><img src="https://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
                     </ul>
                 </div>
             </div>
             <div class="span9">
 
+<h2><a href="https://stderr.cz/zabava-s-traceroute">Zábava s traceroute</a></h2>
+ <time datetime=2013-03-15T07:42:00+01:00>15. 03. 2013</time><div class="article">
+<p><code>traceroute</code> je užitečný nástroj - projde a vypíše uzly, přes které váš
+dotaz prochází, u každého vrátí čas odezvy a ... skončí. Vlastně docela
+nuda. Pak jsem ale narazil na tento twít:</p>
+<blockquote class="twitter-tweet"><p>Dejte si traceroute na 216.81.59.173 a chvíli si počkejte :)</p>&mdash; Adéla (@adela_cz) <a href="https://twitter.com/adela_cz/statuses/312287606052380672">March 14, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Zkuste to:</p>
+<div class="highlight"><pre><span></span>traceroute -m 120 -q1 216.81.59.173
+</pre></div>
+
+
+<p>Výsledem bude opět výpis uzlů, ale počkat.. Jak by řekl anonymní
+komentující: <em>"Go home traceroute, you're drunk!"</em> Po přeskákání
+nejblžších uzlů se ...</p>
+<p class="read-more">
+	<a href="https://stderr.cz/zabava-s-traceroute" role="button" class="btn btn-default">Přečíst celé</a>
+</p>
+<hr />
+</div>
 <h2><a href="https://stderr.cz/cve-2012-2122-chyba-mysql-ktera-by-vas-mela-zajimat">CVE-2012-2122: Chyba MySQL, která by vás měla zajímat</a></h2>
  <time datetime=2012-06-11T15:37:00+02:00>11. 06. 2012</time><div class="article">
 <p>Zásadní chybu (včetně opravy) týkající se MySQL a MariaDB serverů v
@@ -108,24 +130,6 @@ souborů/balíčků.</p>
 <p>A tak se ...</p>
 <p class="read-more">
 	<a href="https://stderr.cz/centos-a-vydavani-aktualizaci" role="button" class="btn btn-default">Přečíst celé</a>
-</p>
-<hr />
-</div>
-<h2><a href="https://stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a></h2>
- <time datetime=2011-12-02T16:00:00+01:00>02. 12. 2011</time><div class="article">
-<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
-vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
-počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
-programátorem zjistili, že jednou za čas se tam objeví spousta připojení
-ze vzdáleného (legitimního) serveru označená jako "unauthenticated
-user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
-<div class="highlight"><pre><span></span>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
-</pre></div>
-
-
-<p>Po chvilce pátrání jsem zjistil, že nejde o ...</p>
-<p class="read-more">
-	<a href="https://stderr.cz/mysql-unauthenticated-user" role="button" class="btn btn-default">Přečíst celé</a>
 </p>
 <hr />
 </div>
