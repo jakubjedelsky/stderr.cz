@@ -43,11 +43,13 @@ STATIC_PATHS = [
 	'extra/robots.txt',
 	'extra/CNAME',
 	'extra/tux-favicon.ico',
+    'extra/keybase.txt',
 ]
 EXTRA_PATH_METADATA = {
 	'extra/robots.txt': {'path': 'robots.txt'},
 	'extra/CNAME': {'path': 'CNAME'},
 	'extra/tux-favicon.ico': {'path': 'favicon.ico'},
+    'extra/keybase.txt': {'path': 'keybase.txt'},
 }
 ### theme
 THEME = 'theme'
