@@ -68,5 +68,3 @@ SOCIAL = {
     'rss': 'https://stderr.cz/feed.atom.xml'
 }
 TWITTER_NAME = 'kubiis'
-# disqus
-DISQUS_SITENAME = 'stderr-cz-blog'
