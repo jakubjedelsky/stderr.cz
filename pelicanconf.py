@@ -51,6 +51,7 @@ EXTRA_PATH_METADATA = {
 	'extra/tux-favicon.ico': {'path': 'favicon.ico'},
     'extra/keybase.txt': {'path': 'keybase.txt'},
 }
+PAGE_PATHS = ['pages']
 ### theme
 THEME = 'theme'
 DISPLAY_PAGES_ON_MENU = True
