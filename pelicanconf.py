@@ -70,5 +70,3 @@ SOCIAL = {
 TWITTER_NAME = 'kubiis'
 # disqus
 DISQUS_SITENAME = 'stderr-cz-blog'
-# GA
-#GOOGLE_ANALYTICS = 'UA-44139591-1'
