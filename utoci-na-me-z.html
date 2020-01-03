@@ -32,6 +32,8 @@
         <div class="row">
             <div class="span9 offset2">
                 <ul class="breadcrumb menu">
+                    <li><a href="https://stderr.cz">Úvod</a></li>
+                    <li><a href="https://stderr.cz/o-autorovi">O autorovi</a></li>
                     <li><a href="https://stderr.cz/archives">Archiv</a></li>
                 </ul>
             </div>
@@ -70,8 +72,8 @@ možností, jak se těch nevyžádaných zbavit:</p>
     je ale botnet velký, stačí útočníkovi pouze omezený počet spojení a
     stejně vás položí. Naopak můžete omezit uživatele, kteří jsou za
     velkým NATem. Zkusit to ale preventivně můžete:</p>
-<div class="highlight"><pre><span></span># zablokování portu 80 (webserver) nad 20 současných připojení
-iptables -A INPUT -p TCP --syn --dport 80 -m connlimit --connlimit-above 20 -j REJECT
+<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">zablokování</span> <span class="n">portu</span> <span class="mi">80</span> <span class="p">(</span><span class="n">webserver</span><span class="p">)</span> <span class="n">nad</span> <span class="mi">20</span> <span class="n">současných</span> <span class="n">připojení</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="k">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">TCP</span> <span class="c1">--syn --dport 80 -m connlimit --connlimit-above 20 -j REJECT</span>
 </pre></div>
 
 
@@ -79,8 +81,8 @@ iptables -A INPUT -p TCP --syn --dport 80 -m connlimit --connlimit-above 20 -j R
 <li>
 <p><strong>Omezení připojení za časový úsek:</strong> má podobné omezení, jako výše
     uvedené.</p>
-<div class="highlight"><pre><span></span># zablokování nových TCP spojení
-iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
+<div class="highlight"><pre><span></span># <span class="nv">zablokov</span>á<span class="nv">n</span>í <span class="nv">nov</span>ý<span class="nv">ch</span> <span class="nv">TCP</span> <span class="nv">spojen</span>í
+<span class="nv">iptables</span> <span class="o">-</span><span class="nv">A</span> <span class="nv">INPUT</span> <span class="o">-</span><span class="nv">p</span> <span class="nv">tcp</span> <span class="o">--</span><span class="nv">syn</span> <span class="o">-</span><span class="nv">m</span> <span class="nv">limit</span> <span class="o">--</span><span class="nv">limit</span> <span class="mi">1</span><span class="o">/</span><span class="nv">s</span> <span class="o">--</span><span class="nv">limit</span><span class="o">-</span><span class="nv">burst</span> <span class="mi">3</span> <span class="o">-</span><span class="nv">j</span> <span class="k">RETURN</span>
 </pre></div>
 
 
@@ -92,8 +94,8 @@ iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j RETURN
     nemusíte komunikovat. Veškeré subnety rozdělené podle zemí najdete
     na webu <a href="http://www.ipdeny.com/ipblocks/">ipdeny.com</a>. Pro omezení příchozích spojení z Číny proto
     provedeme:</p>
-<div class="highlight"><pre><span></span>wget http://www.ipdeny.com/ipblocks/data/countries/cn.zone
-while read SUBNET ; do iptables -I INPUT -s $SUBNET -j REJECT ; done &lt; cn.zone
+<div class="highlight"><pre><span></span><span class="nv">wget</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">ipdeny</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">ipblocks</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">countries</span><span class="o">/</span><span class="nv">cn</span>.<span class="nv">zone</span>
+<span class="k">while</span> <span class="nv">read</span> <span class="nv">SUBNET</span> <span class="c1">; do iptables -I INPUT -s $SUBNET -j REJECT ; done &lt; cn.zone</span>
 </pre></div>
 
 
