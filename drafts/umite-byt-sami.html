@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Synchronizace e-mailových účtů (IMAP) @ stderr</title>
+        <title>Umíte být sami? @ stderr</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +15,8 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <meta name="twitter:card" value="summary" />
     <meta name="twitter:creator" content="@kubiis" />
-    <meta name="twitter:title" content="Synchronizace e-mailových účtů (IMAP)" />
-    <meta name="twitter:description" content="Většina uživatelů se ke svým e-mailům nedostane jinak než přes protokol POP3 nebo IMAP (což vlastně úplně stačí). Problém nastává ve chvíli, kdy chceme e-maily zálohovat, synchronizovat nebo..." />
+    <meta name="twitter:title" content="Umíte být sami?" />
+    <meta name="twitter:description" content="" />
 
         <link rel="alternate" type="application/atom+xml" href="http://localhost:8000/feed.atom.xml" title="stderr ATOM/RSS Feed" />
         <!-- Minified Cookie Consent served from a CDN -->
@@ -55,41 +55,9 @@
                 </div>
             </div>
             <div class="span9">
-<h2>Synchronizace e-mailových účtů (IMAP)</h2>
-<time datetime=2010-08-25T00:00:00+02:00>25. 08. 2010</time><div class="article">
-<p>Většina uživatelů se ke svým e-mailům nedostane jinak než přes protokol
-POP3 nebo IMAP (což vlastně úplně stačí). Problém nastává ve chvíli, kdy
-chceme e-maily zálohovat, synchronizovat nebo migrovat jinam. Hodní
-správcové nám můžou někam nahrát např. tarball, příp. data zkopírovat
-pomocí <code>rsync</code>.  </p>
-<p>Pokud jste ale na takové nenarazili (nebo je nechcete
-otravovat, protože mají fakt hodně práce :)), bude se Vám hodit utilitka
-napsaná v perlu - <code>imapsync</code>. Výhodou je, že ji nemusíte spouštět ani na
-jednom ze serverů, můžete tak převést e-maily z Hotmail ke Googlu nebo
-jinak dle chuti.</p>
-<p>Jak tedy na ni? Nejdříve ji nainstalujeme standardně z repozitáře (balík
-se nachází snad ve všech distribucích), připravte se na spoustu
-závislostí (ve výsledku ale zabere cca 4MB):</p>
-<div class="highlight"><pre><span></span><code># Debian a klony
-$ apt-get install imapsync 
-# RHEL a klony
-$ yum install imapsync
-</code></pre></div>
+<h2>Umíte být sami?</h2>
+<time datetime=2020-02-10T00:00:00+01:00>10. 02. 2020</time><div class="article">
 
-
-<p>Volby <code>imapsync</code> můžeme rozdělit do 3 kategorií: globální, zdrojový
-(označovaný jako 1) a cílový (2) server. Před samotným kopírováním je
-dobré použít přepínač <code>--dry</code>, který provede pouze simulaci a
-zkontroluje, zda se lze k serverům připojit a data přesouvat.</p>
-<p>Pro připojení je dobré si ujasnit, zda se připojujeme se zabezpečením
-SSL (volba <code>--ssl1</code> nebo <code>--ssl2</code>) a také na jaký port se připojujeme
-(<code>--port1</code>/<code>2</code>). Informace o všech volbách včetně pár příkladů vám dají
-<a href="http://linux.die.net/man/1/imapsync">manuálové stránky</a>. Já jsem se po chvilce pátrání dostal např k
-tomuto:</p>
-<div class="highlight"><pre><span></span><code>$ imapsync --syncinternaldates --noauthmd5   
-&gt;    --host1 domain.tld --user1 uzivatelske_jmeno --password1 heslo --port1 143   
-&gt;    --host2 domena.cz --user2 user@domena.cz --password2 heslo --ssl2
-</code></pre></div>
 </div>
             </div>
         </div>

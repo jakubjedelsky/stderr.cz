@@ -8,19 +8,19 @@
 
         <link rel="shortcut icon" href="favicon.ico" />
 
-        <link href="https://stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="https://stderr.cz/theme/css/pygment.css" rel="stylesheet">
-        <link href="https://stderr.cz/theme/css/mystyle.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/pygment.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/mystyle.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <meta name="twitter:card" value="summary" />
     <meta name="twitter:creator" content="@kubiis" />
     <meta name="twitter:title" content="Jak dostat vlastní RPM do Fedory" />
     <meta name="twitter:description" content="TL;DR: Toto není návod na sestavení RPM. Jen jsem si potřeboval utříbit a sepsat postup pro doručení již připraveného balíčku do repozitářů Fedory a EPELu. Ani nechci zabíhat do detailu - většinou..." />
 
-        <link rel="alternate" type="application/atom+xml" href="https://stderr.cz/feed.atom.xml" title="stderr ATOM/RSS Feed" />
+        <link rel="alternate" type="application/atom+xml" href="http://localhost:8000/feed.atom.xml" title="stderr ATOM/RSS Feed" />
         <!-- Minified Cookie Consent served from a CDN -->
-        <script src="https://stderr.cz/theme/js/cookieconsent.js"></script>
+        <script src="http://localhost:8000/theme/js/cookieconsent.js"></script>
         <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
         <script type="text/javascript">
             window.cookieconsent_options = {"message":"Hej, psst! Přidej se na temnou stranu, mám tu koláčky (cookies)","dismiss":"Ano!","learnMore":"Více info","link":null,"theme":"light-floating"};
@@ -32,9 +32,9 @@
         <div class="row">
             <div class="span9 offset2">
                 <ul class="breadcrumb menu">
-                    <li><a href="https://stderr.cz">Úvod</a></li>
-                    <li><a href="https://stderr.cz/o-autorovi">O autorovi</a></li>
-                    <li><a href="https://stderr.cz/archives">Archiv</a></li>
+                    <li><a href="http://localhost:8000">Úvod</a></li>
+                    <li><a href="http://localhost:8000/o-autorovi">O autorovi</a></li>
+                    <li><a href="http://localhost:8000/archives">Archiv</a></li>
                 </ul>
             </div>
         </div>
@@ -42,15 +42,15 @@
             <div class="span2 text-center">
                 <div class="hero-unit">
                     <div id="avatar"></div>
-                    <h1><a href="https://stderr.cz">stderr</a></h1>
+                    <h1><a href="http://localhost:8000">stderr</a></h1>
                     <p>Jakub Jedelský</p>
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="https://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
-                            <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="https://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="https://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
-                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="https://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
+                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://localhost:8000/theme/social/twitter-24.png" width="24" height="24" title="Twitter" class="si-twitter" /></a></li>
+                            <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://localhost:8000/theme/social/linkedin-24.png" width="24" height="24" title="Linkedin" class="si-linkedin" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://localhost:8000/theme/social/github-24.png" width="24" height="24" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://localhost:8000/theme/social/rss-24.png" width="24" height="24" title="Rss" class="si-rss" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -62,13 +62,13 @@
 <h3>Všechno začíná (a končí) v bugzille</h3>
 <p>Každý nový balíček se musí pěkně <a href="https://fedoraproject.org/wiki/Packaging:NamingGuidelines">jmenovat</a> a splnit <a href="https://fedoraproject.org/wiki/Packaging:ReviewGuidelines">pár jednoduchých podmínek</a>, aby prošel kontrolou od některého z jiných vývojářů. Ke komunikaci slouží ticket typu <a href="https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Fedora&amp;format=fedora-review">Review Request</a>, kam kromě základních informací pošlete odkaz své SPEC a SRPM soubory. Pokud jde o váš úplně nejprvnější balík, je potřeba si sehnat svého <a href="https://fedoraproject.org/wiki/How_to_get_sponsored_into_the_packager_group">sponzora</a>, který se za nováčka "zaručí" a bude mu případně pomáhat. Potom, co vám ostatní najdou spoustu chyb, vy je úspěšně opravíte (nebo obhájíte) a někdo nastaví flag <code>fedora-review</code> na <code>+</code>, zažádáme o nový repozitář.</p>
 <p>Žádost o repozitář, ze kterého pak probíhá vlastní sestavení balíku, jde opět formou komentáře do Review Request ticketu. Zároveň s tím změníme flag <code>fedora-csv</code> na <code>?</code> (aby si nás admini všimli). Komentář vypadá nějak takto, vzor je opět na <a href="http://fedoraproject.org/wiki/Package_SCM_admin_requests">wiki</a>:</p>
-<div class="highlight"><pre><span></span>New Package SCM Request
+<div class="highlight"><pre><span></span><code>New Package SCM Request
 =======================
 Package Name: vertica-python
 Short description: A native python adapter for the Vertica database
 Owners: kubo
 Branches: f19 f20 el6 epel7
-</pre></div>
+</code></pre></div>
 
 
 <p>K tomu snad jedinou poznámku - větev <code>master</code> (pro <code>rawhide</code>) dostanete automaticky.</p>
@@ -76,26 +76,26 @@ Branches: f19 f20 el6 epel7
 <h3>Repozitář, sestavení a zveřejnění</h3>
 <p>Zdrojové kódy se SPEC souborem a případnými patchi (nebo patchemi, patchema? Pačema?) se ukládají do <a href="http://pkgs.fedoraproject.org">veřejně přístupného</a> <code>git</code>ovského repozitáře. Fedora nabízí pro práci (nejen) s tímto repozitářem nástroj <code>fedpkg</code>, ale obejdete se i bez něj. Ale ne zde v dalších krocích.</p>
 <p>Nejprve si repozitář naklonujeme k sobě...</p>
-<div class="highlight"><pre><span></span>fedpkg clone vertica-python
-</pre></div>
+<div class="highlight"><pre><span></span><code>fedpkg clone vertica-python
+</code></pre></div>
 
 
 <p>...a naimportujeme schválený SRPM balík</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> vertica-python
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> vertica-python
 fedpkg import /var/lib/mock/fedora-rawhide-x86_64/result/vertica-python-0.2.0-4.fc21.src.rpm
-</pre></div>
+</code></pre></div>
 
 
 <p>Import na nás vyrukuje s logem, který zkontrolujeme a změny <a href="http://fedoraproject.org/wiki/Join_the_package_collection_maintainers#Import.2C_Commit.2Cand_Build_Your_Package">commitneme</a>. Vše pošleme do vzdáleného repozitáře a spustíme build na <a href="http://koji.fedoraproject.org">koji</a>:</p>
-<div class="highlight"><pre><span></span><span class="c1"># hele ho, git!</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># hele ho, git!</span>
 git commit -m <span class="s2">&quot;Initial import (#1080669)&quot;</span>
 git push
 fedpkg build
-</pre></div>
+</code></pre></div>
 
 
 <p>V tuto chvíli se sestavuje balíček pro <code>rawhide</code>. Můžeme zatím vesele pokračovat s dalšími větvemi (od nejvyšší verze dolů):</p>
-<div class="highlight"><pre><span></span>fedpkg switch-branch f20
+<div class="highlight"><pre><span></span><code>fedpkg switch-branch f20
 git merge master
 git push
 fedpkg build
@@ -103,13 +103,13 @@ fedpkg switch-branch f19
 ...
 ..
 .
-</pre></div>
+</code></pre></div>
 
 
 <p>V <a href="http://koji.fedoraproject.org">koji</a> už teď máme uložená sestavení, která (předpokládám) prošla - můžeme tak začít balíček ládovat do repozitářů. Toto probíhá pomocí nástroje <a href="https://admin.fedoraproject.org/updates">Bodhi</a>. Pro všechny větve (kromě <code>masteru</code> a aktuálně <code>epel7</code>, který je v betě) pošleme požadavek na zařazení do testovacích repozitářů (udělat to lze i přes webové rozhraní Bodhi):</p>
-<div class="highlight"><pre><span></span>git checkout f20 <span class="c1"># nebo fedpkg switch-branch f20</span>
+<div class="highlight"><pre><span></span><code>git checkout f20 <span class="c1"># nebo fedpkg switch-branch f20</span>
 fedpkg update
-</pre></div>
+</code></pre></div>
 
 
 <p>Update bude chtít vyplnit pár informací. Nás zajímají řádky:</p>
@@ -120,7 +120,7 @@ fedpkg update
 <li><code>notes=</code> (u nového balíčku krátký popis).</li>
 </ul>
 <p>Pro <code>vertica-python</code> to vypadalo takto:</p>
-<div class="highlight"><pre><span></span><span class="o">[</span> vertica-python-0.2.0-4.fc20 <span class="o">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">[</span> vertica-python-0.2.0-4.fc20 <span class="o">]</span>
 
 <span class="c1"># bugfix, security, enhancement, newpackage (required)</span>
 <span class="nv">type</span><span class="o">=</span>newpackage
@@ -148,11 +148,11 @@ fedpkg update
 
 <span class="c1"># Suggest that users restart after update</span>
 <span class="nv">suggest_reboot</span><span class="o">=</span>False
-</pre></div>
+</code></pre></div>
 
 
 <p>Po uložení se žádost zpracuje a dostaneme potvrzení:</p>
-<div class="highlight"><pre><span></span>Creating a new update for  vertica-python-0.2.0-4.fc20 
+<div class="highlight"><pre><span></span><code>Creating a new update for  vertica-python-0.2.0-4.fc20 
 Update successfully created
 ================================================================================
      vertica-python-0.2.0-4.fc20
@@ -171,7 +171,7 @@ Update successfully created
              This update has been submitted for testing by kubo.
 
   https://admin.fedoraproject.org/updates/vertica-python-0.2.0-4.fc20
-</pre></div>
+</code></pre></div>
 
 
 <p>Na posledním řádku je vidět i odkaz, kde můžete sledovat, jak se požadavek zpracovává a kudy rpm cestuje. Cesta do stabilních repozitářů Fedory trvá týden, pro EPEL jsou to hned týdny dva. Mezitím vám jiní uživatelé (QA) můžou dávat veselý a smutný smajlíky. Za tři veselý se do stabilního repozitáře dostanete hned, dobrý ne?</p>

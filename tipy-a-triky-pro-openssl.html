@@ -8,19 +8,19 @@
 
         <link rel="shortcut icon" href="favicon.ico" />
 
-        <link href="https://stderr.cz/theme/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://stderr.cz/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="https://stderr.cz/theme/css/pygment.css" rel="stylesheet">
-        <link href="https://stderr.cz/theme/css/mystyle.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/pygment.css" rel="stylesheet">
+        <link href="http://localhost:8000/theme/css/mystyle.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <meta name="twitter:card" value="summary" />
     <meta name="twitter:creator" content="@kubiis" />
     <meta name="twitter:title" content="Tipy a triky pro OpenSSL" />
     <meta name="twitter:description" content="Kdo si ještě nevygeneroval svůj self-signed certifikát nebo alespoň CSR pro certifikační autoritu, jako by nebyl. OpenSSL je opensource implementace pro SSL a TLS a díky pár příkazům dokážete..." />
 
-        <link rel="alternate" type="application/atom+xml" href="https://stderr.cz/feed.atom.xml" title="stderr ATOM/RSS Feed" />
+        <link rel="alternate" type="application/atom+xml" href="http://localhost:8000/feed.atom.xml" title="stderr ATOM/RSS Feed" />
         <!-- Minified Cookie Consent served from a CDN -->
-        <script src="https://stderr.cz/theme/js/cookieconsent.js"></script>
+        <script src="http://localhost:8000/theme/js/cookieconsent.js"></script>
         <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
         <script type="text/javascript">
             window.cookieconsent_options = {"message":"Hej, psst! Přidej se na temnou stranu, mám tu koláčky (cookies)","dismiss":"Ano!","learnMore":"Více info","link":null,"theme":"light-floating"};
@@ -32,9 +32,9 @@
         <div class="row">
             <div class="span9 offset2">
                 <ul class="breadcrumb menu">
-                    <li><a href="https://stderr.cz">Úvod</a></li>
-                    <li><a href="https://stderr.cz/o-autorovi">O autorovi</a></li>
-                    <li><a href="https://stderr.cz/archives">Archiv</a></li>
+                    <li><a href="http://localhost:8000">Úvod</a></li>
+                    <li><a href="http://localhost:8000/o-autorovi">O autorovi</a></li>
+                    <li><a href="http://localhost:8000/archives">Archiv</a></li>
                 </ul>
             </div>
         </div>
@@ -42,15 +42,15 @@
             <div class="span2 text-center">
                 <div class="hero-unit">
                     <div id="avatar"></div>
-                    <h1><a href="https://stderr.cz">stderr</a></h1>
+                    <h1><a href="http://localhost:8000">stderr</a></h1>
                     <p>Jakub Jedelský</p>
                 </div>
                 <div class="metadata">
                     <ul class="social">
-                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="https://stderr.cz/theme/social/twitter-32.png" title="Twitter" class="si-twitter" /></a></li>
-                            <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="https://stderr.cz/theme/social/linkedin-32.png" title="Linkedin" class="si-linkedin" /></a></li>
-                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="https://stderr.cz/theme/social/github-32.png" title="Github" class="si-github" /></a></li>
-                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="https://stderr.cz/theme/social/rss-32.png" title="Rss" class="si-rss" /></a></li>
+                            <li><a href="https://twitter.com/kubiis" target="_blank"><img src="http://localhost:8000/theme/social/twitter-24.png" width="24" height="24" title="Twitter" class="si-twitter" /></a></li>
+                            <li><a href="https://www.linkedin.com/in/jedelsky" target="_blank"><img src="http://localhost:8000/theme/social/linkedin-24.png" width="24" height="24" title="Linkedin" class="si-linkedin" /></a></li>
+                            <li><a href="https://github.com/jakubjedelsky" target="_blank"><img src="http://localhost:8000/theme/social/github-24.png" width="24" height="24" title="Github" class="si-github" /></a></li>
+                            <li><a href="https://stderr.cz/feed.atom.xml" target="_blank"><img src="http://localhost:8000/theme/social/rss-24.png" width="24" height="24" title="Rss" class="si-rss" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -66,72 +66,72 @@ možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jse
 mé nejoblíbenější.  </p>
 <h3>Generujeme …</h3>
 <p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre><span></span>openssl genrsa -out klic.key <span class="m">2048</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl genrsa -out klic.key <span class="m">2048</span>
+</code></pre></div>
 
 
 <p>… CSR s novým klíčem</p>
-<div class="highlight"><pre><span></span>openssl req -new -newkey rsa:2048 -nodes -keyout klic.key -out zadost.csr
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl req -new -newkey rsa:2048 -nodes -keyout klic.key -out zadost.csr
+</code></pre></div>
 
 
 <p>… CSR s již existujícím klíčem</p>
-<div class="highlight"><pre><span></span>openssl req -new -key klic.key -out zadost.csr
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl req -new -key klic.key -out zadost.csr
+</code></pre></div>
 
 
 <p>… vlastní certifikát (self-signed) bez CSR na jeden rok</p>
-<div class="highlight"><pre><span></span>openssl req -x509 -nodes -newkey rsa:2048 -keyout klic.key -days <span class="m">365</span> -out certifikat.crt
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl req -x509 -nodes -newkey rsa:2048 -keyout klic.key -days <span class="m">365</span> -out certifikat.crt
+</code></pre></div>
 
 
 <p>… vlastní certifikát z CSR</p>
-<div class="highlight"><pre><span></span>openssl x509 -req -in zadost.csr -days <span class="m">356</span> -signkey podpisovyklic.key -out certifikat.crt
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl x509 -req -in zadost.csr -days <span class="m">356</span> -signkey podpisovyklic.key -out certifikat.crt
+</code></pre></div>
 
 
 <h3>Kontrolujeme …</h3>
 <p>… certifikát</p>
-<div class="highlight"><pre><span></span>openssl x509 -text -noout -in certifikat.crt
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl x509 -text -noout -in certifikat.crt
+</code></pre></div>
 
 
 <p>… CSR</p>
-<div class="highlight"><pre><span></span>openssl req -text -noout -in zadost.csr
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl req -text -noout -in zadost.csr
+</code></pre></div>
 
 
 <p>… privátní klíč</p>
-<div class="highlight"><pre><span></span>openssl rsa -check -in klic.key
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl rsa -check -in klic.key
+</code></pre></div>
 
 
 <p>… certifikát webserveru</p>
-<div class="highlight"><pre><span></span>openssl s_client -connect dev.stderr.cz:443
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl s_client -connect dev.stderr.cz:443
+</code></pre></div>
 
 
 <p>Jako malý bonus zkontrolujeme platnost certifikátu webové stránky.
 Spustil jsem to pro původní web abych se ujistil, že certifikát je opravdu
 už skoro dva měsíce propadlý. Včetně výstupu:</p>
-<div class="highlight"><pre><span></span>$ <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">|</span><span class="se">\ </span>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">|</span><span class="se">\ </span>
 &gt; openssl s_client -connect dev.stderr.cz:443 <span class="m">2</span>&gt;/dev/null <span class="p">|</span><span class="se">\</span>
 &gt; openssl x509 -noout -dates
 <span class="nv">notBefore</span><span class="o">=</span>Feb <span class="m">23</span> <span class="m">12</span>:58:12 <span class="m">2012</span> GMT
 <span class="nv">notAfter</span><span class="o">=</span>Feb <span class="m">22</span> <span class="m">12</span>:58:12 <span class="m">2013</span> GMT
-</pre></div>
+</code></pre></div>
 
 
 <h3>Převádíme …</h3>
 <p>… PKCS#12 (.pfx, .p12 které má rád např. MS Exchange) na PEM
 (certifikát + privátní klíč v jednom souboru)</p>
-<div class="highlight"><pre><span></span>openssl pkcs12 -in certifikat.pfx -out certifikat.pem -nodes
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl pkcs12 -in certifikat.pfx -out certifikat.pem -nodes
+</code></pre></div>
 
 
 <p>… zpět z certifikátu a klíče na PKCS#12</p>
-<div class="highlight"><pre><span></span>openssl pkcs12 -export -inkey klic.key -in certifikat.crt -out certifikat.pfx
-</pre></div>
+<div class="highlight"><pre><span></span><code>openssl pkcs12 -export -inkey klic.key -in certifikat.crt -out certifikat.pfx
+</code></pre></div>
 
 
 <h3>Zdroje a doporučené čtení:</h3>
