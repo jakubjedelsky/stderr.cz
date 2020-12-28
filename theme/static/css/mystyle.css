@@ -1,13 +1,5 @@
  @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&subset=latin-ext');
 
-::selection {
-    background: #d62828;
-    color: #fff;
-}
-::-moz-selection {
-    background: #d62828;
-    color: #fff;
-}
 body {
     color: #666;
     font-family: 'Roboto', sans-serif;
@@ -28,9 +20,10 @@ h1 a, h1 a:hover, h2 a, h2 a:hover, h5, h6 {
     text-decoration: none;
 }
 p, ul li {
-    font-weight: 400;
-    font-size:1.6rem;
-    line-height: 1.7em;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.6em;
+    margin: 0 0 2.5rem;
 }
 #avatar {
     width: 80px; height: 80px;
@@ -90,36 +83,8 @@ ul.social, ul.social li {
     margin: 0;
     padding: 0;
 }
-ul.social li img {
-    background-size:32px 32px;
-    height: 32px;
-    width: 32px;
-}
-.si-twitter {
-    background: #00ACED;
-}
-.si-github {
-    background: #4183C4;
-}
-.si-linkedin {
-    background: #007FB1;
-}
-.si-rss {
-    background: #FF8300;
-}
 .flattr {
 	float: right;
-}
-code {
-	/* copied from bootstrap */
-	font-family: Monaco, Consolas, "Lucida Console", monospace;
-	font-size: 1em;
-	padding: 2px 4px;
-	font-size: 90%;
-	color: #c7254e;
-	background-color: #f9f2f4;
-	white-space: nowrap;
-	border-radius: 4px
 }
 pre {
 	overflow-x: visible;
