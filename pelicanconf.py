@@ -2,13 +2,10 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-ENABLE_HTTPS = True
-http_proto = "https://" if ENABLE_HTTPS else "http://"
-
 ### blog info
 AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
-SITEURL = http_proto + 'stderr.cz'
+SITEURL = 'http://localhost:8000'
 
 SITESUBTITLE = u'Jakub Jedelský'
 FOOTER = u'vzniká od r. 2009'

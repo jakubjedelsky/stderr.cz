@@ -8,6 +8,7 @@ BASEDIR=$(pwd)
 INPUTDIR=$BASEDIR/content
 OUTPUTDIR=$BASEDIR/output
 CONFFILE=$BASEDIR/pelicanconf.py
+PUBLISHCONF=$BASEDIR/publishconf.py
 PUBLISHDIR=~/.stderr.cz
 
 GITHUBSSH="git@github.com:jakubjedelsky/stderr.cz"
@@ -66,7 +67,7 @@ function publish {
         git pull origin gh-pages
         popd > /dev/null
     fi
-    $PELICAN $INPUTDIR -o $PUBLISHDIR -s $CONFFILE $PELICANOPTS
+    $PELICAN $INPUTDIR -o $PUBLISHDIR -s $PUBLISHCONF $PELICANOPTS
     pushd $PUBLISHDIR > /dev/null
     rm -rf author category tag tags.html
     git add -A
