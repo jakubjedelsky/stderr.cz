@@ -12,7 +12,6 @@ h1, h2 {
 h2 {
     font-size: 3.6rem;
     letter-spacing:-1px;
-    font-variant: small-caps;
     font-weight: 700;
 }
 h1 a, h1 a:hover, h2 a, h2 a:hover, h5, h6 {
