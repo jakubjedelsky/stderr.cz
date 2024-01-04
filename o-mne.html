@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CentOS: Rozšíření PECL pro PHP 5.2.x a 5.3.x @ stderr</title>
+        <title>O mně @ stderr</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,6 @@
         <link href="https://stderr.cz/theme/css/pygment.css" rel="stylesheet">
         <link href="https://stderr.cz/theme/css/mystyle.css" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <meta name="twitter:card" value="summary" />
-    <meta name="twitter:creator" content="@" />
-    <meta name="twitter:title" content="CentOS: Rozšíření PECL pro PHP 5.2.x a 5.3.x" />
-    <meta name="twitter:description" content="V základních repozitářích distribuce CentOS 5.5 je dostupná verze PHP 5.1(.6), která už mnoha zákazníkům (docela pochopitelně) nedostačuje a požadují verze vyšší. Využít lze jak PHP 5.2.x, kde..." />
 
         <link rel="alternate" type="application/atom+xml" href="https://stderr.cz/feed.atom.xml" title="stderr ATOM/RSS Feed" />
         <!-- Minified Cookie Consent served from a CDN -->
@@ -54,45 +50,29 @@
                 </div>
             </div>
             <div class="span9">
-<h2>CentOS: Rozšíření PECL pro PHP 5.2.x a 5.3.x</h2>
-<time datetime=2010-12-02T17:39:00+01:00>02. 12. 2010</time><div class="article">
-<p>V základních repozitářích distribuce <a href="http://www.centos.org">CentOS</a> 5.5 je dostupná verze
-PHP 5.1(.6), která už mnoha zákazníkům (docela pochopitelně) nedostačuje
-a požadují verze vyšší. Využít lze jak PHP 5.2.x, kde balíky jsou v
-repozitáři CentOS Testing nebo PHP 5.3.x z repozitáře remi.</p>
-<p>Pro tyto verze ale většinou neexistují rozšíření PECL ve formě balíku -
-nejsou dostupné pomocí yum. Musíme si tedy zkompilovat vlastní (a do
-budoucna s tím počítat, protože např. při aktualizaci PHP se může
-všechno rozbít..).  </p>
-<p>Začneme instalací balíků, které potřebujeme pro instalaci/kompilaci:</p>
-<div class="highlight"><pre><span></span><code>$ yum install php-devel gcc php-pear
-</code></pre></div>
+<h2>O mně</h2>
 
-<p>Samotná instalace probíhá pomocí příkazu <code>pecl</code>. Pokud tedy chceme
-instalovat rozšíření <code>fileinfo</code>, použijeme tento příkaz:</p>
-<div class="highlight"><pre><span></span><code>$ pecl install fileinfo
-</code></pre></div>
+<div class="article">
+<h3>Co je to ten stderr?</h3>
+<div class="highlight"><pre><span></span><code>NAME
+    stdin, stdout, stderr - standard I/O streams
+SYNOPSIS
+     #include
+     extern FILE *stderr;
 
-<p>Upravíme soubor <code>php.ini</code>, tak aby se naše rozšíření načetlo:</p>
-<div class="highlight"><pre><span></span><code>$ cat /etc/php.d/fileinfo.ini
-extension=fileinfo.so
-</code></pre></div>
+DESCRIPTION
+     Under normal circumstances every Unix program has three
+     streams opened fot it when it starts up, one for input,
+     one for output, and one for printing diagnostic or error
+     mesages.
 
-<p>A jsme na konci. Stačí znovunačíst nastavení webserveru a vše (by mělo)
-funguje jak má.</p>
-<div class="highlight"><pre><span></span><code>$ service httpd reload
+     The input stream is referred to as ‘‘standard input’’; the
+     output stream is referred to as ‘‘standard output’’; and
+     the error stream is referred to as ‘‘standard error’’.
+     These terms are abbreviated to form the symbols used to
+     refer to these files, namely stdin, stdout, and stderr.
+(...)
 </code></pre></div>
-
-<p>Pro rychlé ověření můžete zkusit zavolat phpinfo z příkazové řádky:</p>
-<div class="highlight"><pre><span></span><code>$ php -r &quot;phpinfo();&quot; | grep &quot;fileinfo&quot;
-/etc/php.d/fileinfo.ini,
-fileinfo
-fileinfo support =&gt; enabled
-</code></pre></div>
-
-<p>Úplně jednoduché. PECL se sám postará o co je třeba, ale přece jen je
-CentOS postaven nad rpm balíčky, proto někdy v budoucnu ukážu, jak si
-takový balíček jednoduše vytvořit.</p>
 </div>
             </div>
         </div>
