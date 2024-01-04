@@ -59,9 +59,7 @@ DEFAULT_PAGINATION = 5
 ### social things
 # socicons
 SOCIAL = {
-    'twitter': 'https://twitter.com/kubiis',
     'linkedin': 'https://www.linkedin.com/in/jedelsky',
     'github': 'https://github.com/jakubjedelsky',
     'rss': 'https://stderr.cz/feed.atom.xml'
 }
-TWITTER_NAME = 'kubiis'
