@@ -72,7 +72,6 @@ uspávání nebolí. Michal Schmidt na <a href="http://dev.stderr.cz/2011/05/fed
 Startup finished in 1433ms (kernel) + 15086ms (initrd) + 21817ms (userspace) = 38337ms
 </code></pre></div>
 
-
 <h3>Textový výpis:</h3>
 <div class="highlight"><pre><span></span><code>$ systemd-analyze blame
   6452ms udev-settle.service
@@ -87,13 +86,11 @@ Startup finished in 1433ms (kernel) + 15086ms (initrd) + 21817ms (userspace) = 3
  (...)
 </code></pre></div>
 
-
 <h3>Grafický výstup:</h3>
 <p>Vygeneruje grafický svg výstup, který není nepodobný výstupu z výše
 zmíněného bootchart.</p>
 <div class="highlight"><pre><span></span><code>$ systemd-analyze plot &gt; ~/plot.svg
 </code></pre></div>
-
 
 <p><img alt="systemd-analyze plot" src="static/images/systemd-plot.png"></p>
 </div>

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>stderr - Jakub Jedelský</title><link>https://stderr.cz/</link><description>Jakub Jedelský</description><lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0100</lastBuildDate><item><title>Reading Challenge 2020, 2019 a 2018</title><link>https://stderr.cz/reading-challenge-2020-2019-a-2018</link><description>&lt;p&gt;Není po třech letech lepšího návratu, než s tím, s čím jsem zde na blogu skončil - se seznamem knížek, které jsem za uplynulý rok zvládl přečíst. Nebudu vás, drazí čtenáři, šetřit a seznamy vám naservíruji hned tři. Za každý rok jeden.&lt;/p&gt;
+<rss version="2.0"><channel><title>stderr - Jakub Jedelský</title><link>https://stderr.cz/</link><description>Jakub Jedelský</description><lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0100</lastBuildDate><item><title>100 věcí, které mi dělaly radost (2023)</title><link>https://stderr.cz/100-veci-ktere-mi-delaly-radost-2023</link><description>&lt;p&gt;Inspirováno &lt;a href="https://austinkleon.com/2024/01/03/100-things-that-made-my-year-2023/"&gt;Austinem Kleonem&lt;/a&gt; a &lt;a href="https://www.tesnevedle.com/2023/12/22/100-veci-ktere-mi-delaly-v-roce-2023-radost/"&gt;Michelle Losekoot&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Mít kolem sebe super rodinu...&lt;/li&gt;
+&lt;li&gt;...zdravou rodinu. Well, až na výjimky.&lt;/li&gt;
+&lt;li&gt;Být rád, že výjimky jsou tu s náma.&lt;/li&gt;
+&lt;li&gt;Mít u sebe Janču, co mě postaví na nohy, když jsem ve sračkách.&lt;/li&gt;
+&lt;li&gt;Přežít i druhé kolo layoffs v Productboardu (z čehož jsem byl ve sračkách)&lt;/li&gt;
+&lt;li&gt;Najít jsem si &lt;a href="https://milanpavlicek.cz/"&gt;terapeuta/kouče&lt;/a&gt;...&lt;/li&gt;
+&lt;li&gt;...díky kterému jsem začal chodit na &lt;a href="https://improvizacnikurzy.cz/"&gt;kurzy improvizace&lt;/a&gt;...&lt;/li&gt;
+&lt;li&gt;...se kterými jsme měli představení před lidma. Živýma! V divadle!&lt;/li&gt;
+&lt;li&gt;Naučit se nové písničky na kytaru …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Thu, 04 Jan 2024 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:stderr.cz,2024-01-04:/100-veci-ktere-mi-delaly-radost-2023</guid><category>misc</category></item><item><title>Reading Challenge 2020, 2019 a 2018</title><link>https://stderr.cz/reading-challenge-2020-2019-a-2018</link><description>&lt;p&gt;Není po třech letech lepšího návratu, než s tím, s čím jsem zde na blogu skončil - se seznamem knížek, které jsem za uplynulý rok zvládl přečíst. Nebudu vás, drazí čtenáři, šetřit a seznamy vám naservíruji hned tři. Za každý rok jeden.&lt;/p&gt;
 &lt;p&gt;Abych to ulehčil těm, kteří si přišli pro inspiraci, tak jsem z každého roku vyzobl tři knížky, které bych doporučil každému. Jsou označeny ✅.&lt;/p&gt;
 &lt;p&gt;Veškeré čtivo je seřazeno podle toho, jak jsem četl.&lt;/p&gt;
 &lt;h3&gt;2020: 27 knih&lt;/h3&gt;
@@ -81,7 +91,6 @@ financí, o postupu možné blokace - viz jeho …&lt;/p&gt;&lt;/blockquote&gt;<
 &lt;/blockquote&gt;
 &lt;p&gt;A to teda já o některých zajímavých účtech …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Fri, 13 Jun 2014 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:stderr.cz,2014-06-13:/jak-jsem-si-nevedel-rady-s-ff-ffcz</guid><category>misc</category></item><item><title>Naučte se SELinux ... s omalovánkama</title><link>https://stderr.cz/naucte-se-selinux-s-omalovankama</link><description>&lt;p&gt;Na toto jsem byl zvědavý od první zmínky Daniela Walshe na Twitteru, takže mě dnešní článek na &lt;a href="http://fedora.cz/jak-se-naucit-selinux-s-omalovankami/"&gt;fedora.cz&lt;/a&gt; potěšil.&lt;/p&gt;
 &lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;SELinux coloring book &lt;a href="http://t.co/0p6myLwiqE"&gt;pic.twitter.com/0p6myLwiqE&lt;/a&gt;&lt;/p&gt;&amp;mdash; Daniel Walsh (@rhatdan) &lt;a href="https://twitter.com/rhatdan/statuses/451845033063632898"&gt;April 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
-
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;p&gt;Obrázky z omalovánek, které mají za úkol seznámit se základy SELinuxu, byly původně zveřejněné u článku na &lt;a href="http://opensource.com/business/13/11/selinux-policy-guide"&gt;opensource.org&lt;/a&gt;. Později se z toho stala knížečka nabízená na dnes končícím &lt;a href="https://www.redhat.com/summit/"&gt;Red Hat Summitu&lt;/a&gt;. A teď, konečně, můžeme &lt;a href="http://blog.linuxgrrl.com/2014/04/16/the-selinux-coloring-book/"&gt;stahovat, tisknout a vymalovávat&lt;/a&gt; i my ostatní. Dostupná je i SVG …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Thu, 17 Apr 2014 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:stderr.cz,2014-04-17:/naucte-se-selinux-s-omalovankama</guid><category>misc</category></item><item><title>Jak dostat vlastní RPM do Fedory</title><link>https://stderr.cz/jak-dostat-vlastni-rpm-do-fedory</link><description>&lt;p&gt;&lt;em&gt;TL;DR:&lt;/em&gt; Toto není návod na sestavení RPM. Jen jsem si potřeboval utříbit a sepsat postup pro doručení již připraveného balíčku do repozitářů Fedory a EPELu. Ani nechci zabíhat do detailu - většinou odkazuji na příslušnou &lt;a href="http://fedoraproject.org/wiki/"&gt;wiki&lt;/a&gt; (ale často jsem se neudržel).&lt;/p&gt;
@@ -128,18 +137,15 @@ mé nejoblíbenější.  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;openssl genrsa -out klic.key &lt;span class="m"&gt;2048&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-
 &lt;p&gt;… CSR s …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Fri, 05 Apr 2013 10:00:00 +0200</pubDate><guid isPermaLink="false">tag:stderr.cz,2013-04-05:/tipy-a-triky-pro-openssl</guid><category>misc</category></item><item><title>Zábava s traceroute</title><link>https://stderr.cz/zabava-s-traceroute</link><description>&lt;p&gt;&lt;code&gt;traceroute&lt;/code&gt; je užitečný nástroj - projde a vypíše uzly, přes které váš
 dotaz prochází, u každého vrátí čas odezvy a ... skončí. Vlastně docela
 nuda. Pak jsem ale narazil na tento twít:&lt;/p&gt;
 &lt;blockquote class="twitter-tweet"&gt;&lt;p&gt;Dejte si traceroute na 216.81.59.173 a chvíli si počkejte :)&lt;/p&gt;&amp;mdash; Adéla (@adela_cz) &lt;a href="https://twitter.com/adela_cz/statuses/312287606052380672"&gt;March 14, 2013&lt;/a&gt;&lt;/blockquote&gt;
-
 &lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
 
 &lt;p&gt;Zkuste to:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;traceroute -m 120 -q1 216.81.59.173
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Výsledem bude opět výpis uzlů, ale počkat.. Jak by řekl anonymní
 komentující: &lt;em&gt;"Go home traceroute, you're drunk!"&lt;/em&gt; Po přeskákání
@@ -179,7 +185,6 @@ ze vzdáleného (legitimního) serveru označená jako "unauthenticated
 user". Výpis MySQL procesů byl pak plný takovýchto řádek:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Po chvilce pátrání jsem zjistil, že nejde o …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Fri, 02 Dec 2011 16:00:00 +0100</pubDate><guid isPermaLink="false">tag:stderr.cz,2011-12-02:/mysql-unauthenticated-user</guid><category>misc</category></item><item><title>Editace šifrovaných GPG souborů s vim</title><link>https://stderr.cz/editace-sifrovanych-gpg-souboru-s-vim</link><description>&lt;h3&gt;Motivace&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Začnu zlehka motivací, kterou v klidu můžete přeskočit.&lt;/em&gt;&lt;br&gt;
@@ -447,7 +452,6 @@ primy-prodej-seminare-knihy-skoleni-mlm-multi-level-marketing.cz
 bio-alkohol-krb-gel-elektricke-plynove-etanol-krby-bez-komina.cz
 verold-hradec-kralove-automobily-osobni-prodej-hradec-kralove.cz
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
 &lt;p&gt;Nepřipadá vám to jako dokonalé SEO?&lt;/p&gt;
 &lt;p&gt;A ještě bych rád vypíchnul jedno zajímavé info: na to, že IPv4 mají

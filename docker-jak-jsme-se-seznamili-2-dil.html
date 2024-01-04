@@ -72,7 +72,6 @@
 <div class="highlight"><pre><span></span><code>docker rm $(docker ps -a -q)
 </code></pre></div>
 
-
 <h3>Z teorie zpět k praxi (dokončení)</h3>
 <p>Skončil jsem tím, že jsem se zkusil připojit k MySQL server. Zareagoval tak, že poslal chybu: <code>ERROR 1130 (HY000): Host '172.17.42.1' is not allowed to connect to this MySQL server</code>. Pokud jste se s tím nikdy nesetkali, tak blahopřeju. Chyba neznamená nic jiného, než že uživat root nemá právo k přihlášení z jiného systému (ta zpráva je vlastně docela jasná). Čeká nás tak drobná oprava kontejneru. Vezmu to rychle, protože se víceméně jen opakuji:</p>
 <ol>
@@ -89,7 +88,6 @@ bash-4.1# mysql -u root
 mysql&gt;
 </code></pre></div>
 
-
 </li>
 <li>
 <p>Opravíme práva</p>
@@ -98,7 +96,6 @@ mysql&gt;
 mysql&gt; quit;
 bash-4.1# exit
 </code></pre></div>
-
 
 </li>
 <li>
@@ -110,13 +107,11 @@ CONTAINER ID      (...)
 $ docker commit 9fcaef7a2b56 centos/mysql
 </code></pre></div>
 
-
 </li>
 <li>
 <p>A nastartujeme kontejner</p>
 <div class="highlight"><pre><span></span><code>$ docker run -p :3306:3306 -d centos/mysql /usr/bin/mysqld_safe
 </code></pre></div>
-
 
 </li>
 </ol>
@@ -124,7 +119,6 @@ $ docker commit 9fcaef7a2b56 centos/mysql
 <div class="highlight"><pre><span></span><code>$ mysql -u root -h 0.0.0.0
 mysql&gt;
 </code></pre></div>
-
 
 <p>A příště to všechno zkompletujeme pod jeden <a href="https://www.docker.io/learn/dockerfile/">Dockerfile</a>, abychom to na jiném systému mohli sběhnout všechno na jeden příkaz. Toto je jedna z důležitých věcí, kvůli které je Docker tak oblíbený.</p>
 </div>

@@ -52,6 +52,23 @@
             </div>
             <div class="span9">
 
+<h2><a href="https://stderr.cz/mysql-unauthenticated-user">MySQL: unauthenticated user</a></h2>
+ <time datetime=2011-12-02T16:00:00+01:00>02. 12. 2011</time><div class="article">
+<p>Nedávno jsem narazil na zajímavý problém: MySQL na jednom nepříliš
+vytíženém serveru začalo vracet chybu <code>Too many connections</code>, i když z
+počet spojení běžně stačí s rezervou. Po chvilce pátrání jsme s
+programátorem zjistili, že jednou za čas se tam objeví spousta připojení
+ze vzdáleného (legitimního) serveru označená jako "unauthenticated
+user". Výpis MySQL procesů byl pak plný takovýchto řádek:</p>
+<div class="highlight"><pre><span></span><code>| 263718676 | unauthenticated user | 10.0.0.2:51896 | NULL    | Connect     |   NULL | login  | NULL |
+</code></pre></div>
+
+<p>Po chvilce pátrání jsem zjistil, že nejde o …</p>
+<p class="read-more">
+	<a href="https://stderr.cz/mysql-unauthenticated-user" role="button" class="btn btn-default">Přečíst celé</a>
+</p>
+<hr />
+</div>
 <h2><a href="https://stderr.cz/editace-sifrovanych-gpg-souboru-s-vim">Editace šifrovaných GPG souborů s vim</a></h2>
  <time datetime=2011-09-08T00:00:00+02:00>08. 09. 2011</time><div class="article">
 <h3>Motivace</h3>
@@ -111,21 +128,6 @@ hlavou; nějaké poznámky můžete zatím najít na <a href="http://dev.stderr.
 stránce</a></p>
 <p class="read-more">
 	<a href="https://stderr.cz/red-hat-certified-system-administrator" role="button" class="btn btn-default">Přečíst celé</a>
-</p>
-<hr />
-</div>
-<h2><a href="https://stderr.cz/dnes-je-den-ipv6">Dnes je den IPv6</a></h2>
- <time datetime=2011-06-08T13:51:00+02:00>08. 06. 2011</time><div class="article">
-<p>Protože staré IP verze 4 docházejí (ISP a regionální registry ještě
-nějaké zásoby mají, ale <a href="http://blog.nic.cz/2011/02/03/iana-prazdna-leden-rekordni/">IANA je už od února prázdná</a>), je nutné stále
-více propagovat nové, delší, větší, krásnější a celkově lepší IPv6. A to
-se děje dnes: je <a href="http://www.worldipv6day.org/">Světový den IPv6</a>.</p>
-<p>Smyslem dnešního dne, kdy se na jeden den zpřístupní některé velké weby
-přes IPv6 (<a href="http://www.worldipv6day.org/participants/index.html">seznam účastníků</a>), je motivovat ISP, uživatele, správce
-sítí a vlastně vše co je k internetu připojeno k tomu, aby začali
-využívat právě nových …</p>
-<p class="read-more">
-	<a href="https://stderr.cz/dnes-je-den-ipv6" role="button" class="btn btn-default">Přečíst celé</a>
 </p>
 <hr />
 </div>

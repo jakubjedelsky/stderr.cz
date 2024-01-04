@@ -24,6 +24,14 @@ p, ul li {
     line-height: 1.6em;
     margin: 0 0 2.5rem;
 }
+
+ol li {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1em;
+    margin: 0 0 1rem;
+}
+
 #avatar {
     width: 80px; height: 80px;
     background: url("/images/avatar.jpg");

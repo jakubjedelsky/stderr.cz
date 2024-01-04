@@ -59,25 +59,22 @@
 <time datetime=2013-10-29T00:00:00+01:00>29. 10. 2013</time><div class="article">
 <p>Jsem fanouškem Fedory, RHELu a od nich odvozených distribucí. Ale RPM, nad kterým tyto distribuce pracují, občas nabízí nepěkná překvapení. Ne chybou samotného principu (mnohdy), ale občas se některý vývojář nechá unést. Zkuste si nainstalovat takový <a href="http://www.erlang.org/">Erlang</a>. <code>Yum</code> nenabídne jen jeden balíček se základním prostředím pro vývoj nebo spuštění. On si tam dotáhne hned všechny subbalíčky, které k vývoji ani nepotřebujete (o takovém <code>unixODBC</code> nemluvě). Na toto naštěstí už existuje <a href="https://bugzilla.redhat.com/show_bug.cgi?id=784693">bug</a>. Pěkné, ale skrývá se tu ještě jedna vypečenost...</p>
 <p>Udělám malou odbočku a zamířím k <a href="http://puppetlabs.com/">Puppetu</a>, který jsem začal využívat. Pokud v něm chci odstranit balíček, použiji něco takového:</p>
-<div class="highlight"><pre><span></span><code><span class="k">package</span> <span class="p">{</span> <span class="s">&#39;mujsuperbalicek&#39;</span><span class="p">:</span>
-    <span class="na">ensure</span>  <span class="o">=&gt;</span> <span class="k">absent</span><span class="p">,</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&#39;mujsuperbalicek&#39;</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="na">ensure</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">absent</span><span class="p">,</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
-
 
 <p>Na distribucích založených nad RPM pak Puppet použije:</p>
 <div class="highlight"><pre><span></span><code>/bin/rpm -e mujsuperbalicek
 </code></pre></div>
 
-
 <p>Výhradu k tomu mám jednu velkou - musíme myslet na všechny závislosti a jednu po druhé sem vypsat, což je dost otravný a zdlouhavý. Teď ale přichází na řadu balík <code>erlang</code> - pokud jej chcete pomocí příkazu <code>rpm</code> odstranit, zahlásí, že potřebuje nejdřív odstranit <code>erlang-examples</code> (proboha, proč?!). Ok, řeknete si v duchu, odstraníme nejprve <code>erlang-examples</code> - ale ono to nejde, protože vyžaduje balíček ... počkej si ... <code>erlang</code>! No není to zábavné?</p>
 <p>Yum si s tím naštěstí poradí, takže puppetům nezbývá nic jiného než tato ošklivost:</p>
-<div class="highlight"><pre><span></span><code><span class="k">exec</span> <span class="p">{</span> <span class="s">&#39;remove-erlang&#39;</span><span class="p">:</span>
-    <span class="na">command</span> <span class="o">=&gt;</span> <span class="s">&#39;/usr/bin/yum -y remove erlang&#39;</span><span class="p">,</span>
-    <span class="na">onlyif</span>  <span class="o">=&gt;</span> <span class="s">&#39;/bin/rpm -q erlang&#39;</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">exec</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&#39;remove-erlang&#39;</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="na">command</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&#39;/usr/bin/yum -y remove erlang&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="na">onlyif</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&#39;/bin/rpm -q erlang&#39;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </code></pre></div>
-
 
 <p>Ale abych jen nebrbral, tak už je na to otevřený <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1038314">bug</a>.</p>
 </div>

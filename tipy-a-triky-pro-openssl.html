@@ -69,47 +69,38 @@ mé nejoblíbenější.  </p>
 <div class="highlight"><pre><span></span><code>openssl genrsa -out klic.key <span class="m">2048</span>
 </code></pre></div>
 
-
 <p>… CSR s novým klíčem</p>
 <div class="highlight"><pre><span></span><code>openssl req -new -newkey rsa:2048 -nodes -keyout klic.key -out zadost.csr
 </code></pre></div>
-
 
 <p>… CSR s již existujícím klíčem</p>
 <div class="highlight"><pre><span></span><code>openssl req -new -key klic.key -out zadost.csr
 </code></pre></div>
 
-
 <p>… vlastní certifikát (self-signed) bez CSR na jeden rok</p>
 <div class="highlight"><pre><span></span><code>openssl req -x509 -nodes -newkey rsa:2048 -keyout klic.key -days <span class="m">365</span> -out certifikat.crt
 </code></pre></div>
 
-
 <p>… vlastní certifikát z CSR</p>
 <div class="highlight"><pre><span></span><code>openssl x509 -req -in zadost.csr -days <span class="m">356</span> -signkey podpisovyklic.key -out certifikat.crt
 </code></pre></div>
-
 
 <h3>Kontrolujeme …</h3>
 <p>… certifikát</p>
 <div class="highlight"><pre><span></span><code>openssl x509 -text -noout -in certifikat.crt
 </code></pre></div>
 
-
 <p>… CSR</p>
 <div class="highlight"><pre><span></span><code>openssl req -text -noout -in zadost.csr
 </code></pre></div>
-
 
 <p>… privátní klíč</p>
 <div class="highlight"><pre><span></span><code>openssl rsa -check -in klic.key
 </code></pre></div>
 
-
 <p>… certifikát webserveru</p>
 <div class="highlight"><pre><span></span><code>openssl s_client -connect dev.stderr.cz:443
 </code></pre></div>
-
 
 <p>Jako malý bonus zkontrolujeme platnost certifikátu webové stránky.
 Spustil jsem to pro původní web abych se ujistil, že certifikát je opravdu
@@ -121,18 +112,15 @@ už skoro dva měsíce propadlý. Včetně výstupu:</p>
 <span class="nv">notAfter</span><span class="o">=</span>Feb <span class="m">22</span> <span class="m">12</span>:58:12 <span class="m">2013</span> GMT
 </code></pre></div>
 
-
 <h3>Převádíme …</h3>
 <p>… PKCS#12 (.pfx, .p12 které má rád např. MS Exchange) na PEM
 (certifikát + privátní klíč v jednom souboru)</p>
 <div class="highlight"><pre><span></span><code>openssl pkcs12 -in certifikat.pfx -out certifikat.pem -nodes
 </code></pre></div>
 
-
 <p>… zpět z certifikátu a klíče na PKCS#12</p>
 <div class="highlight"><pre><span></span><code>openssl pkcs12 -export -inkey klic.key -in certifikat.crt -out certifikat.pfx
 </code></pre></div>
-
 
 <h3>Zdroje a doporučené čtení:</h3>
 <ul>

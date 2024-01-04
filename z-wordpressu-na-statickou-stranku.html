@@ -67,7 +67,6 @@
 <div class="highlight"><pre><span></span><code>wget --mirror --cut-dirs<span class="o">=</span><span class="nv">$home_cdirs</span> -P <span class="nv">$home_static</span>-static -nH -np -p -k -E <span class="nv">$home_url</span>
 </code></pre></div>
 
-
 <p>Kde:</p>
 <ul>
 <li><strong>$home_cdirs</strong> označuje, co všechno se má v URL po doméně odmazat. Pokud je URL Vašeho blogu example.com, pak to bude 0, pokud example.com/blog, pak 1.</li>
@@ -79,7 +78,7 @@
 <p>Pěkné na Wordpressu je, že si zachovává informace o použitých verzích stylů a skriptů přímo v URL. Bohužel pokud z nového serveru naservírujete uri "wp-content/themes/twentytwelve/style.css?ver=3.7" a budete se tvářit, že to má být obyčejný texťák, tak to nebude úplně fungovat. Takže zkuste zapojit třeba <code>sed</code> a změnit všechny index.html soubory, tak aby v sobě měly jen čisté css a js. A zároveň kouknout, co už není potřeba a to smazat. Já použil něco takového, jako vidíte dole, ale bude se to lišit od webu. od použitého vzhledu a pluginů.</p>
 <div class="highlight"><pre><span></span><code>mv wp-content/themes/twentytwelve/style.css<span class="se">\?</span>ver<span class="se">\=</span><span class="m">3</span>.7 wp-content/themes/twentytwelve/style.css
 mv wp-content/plugins/wp-syntax/css/wp-syntax.css<span class="se">\?</span>ver<span class="se">\=</span><span class="m">1</span>.0 wp-content/plugins/wp-syntax/css/wp-syntax.css
-<span class="k">for</span> i in <span class="k">$(</span>find . -name index.html -print<span class="k">)</span><span class="p">;</span> <span class="k">do</span> 
+<span class="k">for</span> i <span class="k">in</span> <span class="k">$(</span>find . -name index.html -print<span class="k">)</span><span class="p">;</span> <span class="k">do</span> 
     sed -i <span class="s1">&#39;s/wp-content\/themes\/twentytwelve\/style.css%3Fver=3.7/wp-content\/themes\/twentytwelve\/style.css/g&#39;</span> <span class="nv">$i</span>
     sed -i <span class="s1">&#39;s/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css%3Fver=1.0/wp-content\/plugins\/wp-syntax\/css\/wp-syntax.css/g&#39;</span> <span class="nv">$i</span>
     sed  -i <span class="s1">&#39;/wp-content\/plugins\/contact-form-7\/includes\/css\/styles.css%3Fver=3.5.3/d&#39;</span> <span class="nv">$i</span>
@@ -93,7 +92,6 @@ mv wp-content/plugins/wp-syntax/css/wp-syntax.css<span class="se">\?</span>ver<s
     sed  -i <span class="s1">&#39;/\/wp-content\/plugins\/jquery-image-lazy-loading\/js\/jquery.lazyload.min.js%3Fver=1.7.1/d&#39;</span> <span class="nv">$i</span>
 <span class="k">done</span>
 </code></pre></div>
-
 
 <h3>Krok 5.: Nahrajte obsah na server</h3>
 <p>...a <a href="http://dev.stderr.cz">kochejte se</a></p>

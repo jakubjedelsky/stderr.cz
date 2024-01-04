@@ -70,7 +70,6 @@ Owners: kubo
 Branches: f19 f20 el6 epel7
 </code></pre></div>
 
-
 <p>K tomu snad jedinou poznámku - větev <code>master</code> (pro <code>rawhide</code>) dostanete automaticky.</p>
 <p>Do pár hodin pak máte odpověď od některého z adminů, že je repozitář připravený, flag <code>fedora-csv</code> se změní na <code>+</code>.</p>
 <h3>Repozitář, sestavení a zveřejnění</h3>
@@ -79,12 +78,10 @@ Branches: f19 f20 el6 epel7
 <div class="highlight"><pre><span></span><code>fedpkg clone vertica-python
 </code></pre></div>
 
-
 <p>...a naimportujeme schválený SRPM balík</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> vertica-python
 fedpkg import /var/lib/mock/fedora-rawhide-x86_64/result/vertica-python-0.2.0-4.fc21.src.rpm
 </code></pre></div>
-
 
 <p>Import na nás vyrukuje s logem, který zkontrolujeme a změny <a href="http://fedoraproject.org/wiki/Join_the_package_collection_maintainers#Import.2C_Commit.2Cand_Build_Your_Package">commitneme</a>. Vše pošleme do vzdáleného repozitáře a spustíme build na <a href="http://koji.fedoraproject.org">koji</a>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># hele ho, git!</span>
@@ -92,7 +89,6 @@ git commit -m <span class="s2">&quot;Initial import (#1080669)&quot;</span>
 git push
 fedpkg build
 </code></pre></div>
-
 
 <p>V tuto chvíli se sestavuje balíček pro <code>rawhide</code>. Můžeme zatím vesele pokračovat s dalšími větvemi (od nejvyšší verze dolů):</p>
 <div class="highlight"><pre><span></span><code>fedpkg switch-branch f20
@@ -105,12 +101,10 @@ fedpkg switch-branch f19
 .
 </code></pre></div>
 
-
 <p>V <a href="http://koji.fedoraproject.org">koji</a> už teď máme uložená sestavení, která (předpokládám) prošla - můžeme tak začít balíček ládovat do repozitářů. Toto probíhá pomocí nástroje <a href="https://admin.fedoraproject.org/updates">Bodhi</a>. Pro všechny větve (kromě <code>masteru</code> a aktuálně <code>epel7</code>, který je v betě) pošleme požadavek na zařazení do testovacích repozitářů (udělat to lze i přes webové rozhraní Bodhi):</p>
 <div class="highlight"><pre><span></span><code>git checkout f20 <span class="c1"># nebo fedpkg switch-branch f20</span>
 fedpkg update
 </code></pre></div>
-
 
 <p>Update bude chtít vyplnit pár informací. Nás zajímají řádky:</p>
 <ul>
@@ -150,7 +144,6 @@ fedpkg update
 <span class="nv">suggest_reboot</span><span class="o">=</span>False
 </code></pre></div>
 
-
 <p>Po uložení se žádost zpracuje a dostaneme potvrzení:</p>
 <div class="highlight"><pre><span></span><code>Creating a new update for  vertica-python-0.2.0-4.fc20 
 Update successfully created
@@ -172,7 +165,6 @@ Update successfully created
 
   https://admin.fedoraproject.org/updates/vertica-python-0.2.0-4.fc20
 </code></pre></div>
-
 
 <p>Na posledním řádku je vidět i odkaz, kde můžete sledovat, jak se požadavek zpracovává a kudy rpm cestuje. Cesta do stabilních repozitářů Fedory trvá týden, pro EPEL jsou to hned týdny dva. Mezitím vám jiní uživatelé (QA) můžou dávat veselý a smutný smajlíky. Za tři veselý se do stabilního repozitáře dostanete hned, dobrý ne?</p>
 <h3>Končíme na Bugzille</h3>

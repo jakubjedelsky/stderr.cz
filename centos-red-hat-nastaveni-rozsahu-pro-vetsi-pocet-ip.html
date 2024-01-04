@@ -70,18 +70,17 @@ upravovat přímo konfiguraci, která je k nalezení v
 <code>ifcfg-eth0:X</code>, kde <code>X</code> je alias pro zařízení eth0. Tato konfigurace pro
 alias 0 (<code>/etc/sysconfig/network-scripts/ifcfg-eth0:0</code>) může vypadat
 např. takto:</p>
-<div class="highlight"><pre><span></span><code><span class="err">DEVICE=eth0:0</span>
-<span class="err">BOOTPROTO=none</span>
-<span class="err">BROADCAST=192.168.0.255</span>
-<span class="err">HWADDR=01:23:45:67:89:ab</span>
-<span class="err">IPADDR=192.168.0.15</span>
-<span class="err">NETMASK=255.255.255.0</span>
-<span class="err">NETWORK=192.168.0.0</span>
-<span class="err">ONBOOT=yes</span>
-<span class="err">GATEWAY=192.168.0.1</span>
-<span class="err">TYPE=Ethernet</span>
+<div class="highlight"><pre><span></span><code>DEVICE=eth0:0
+BOOTPROTO=none
+BROADCAST=192.168.0.255
+HWADDR=01:23:45:67:89:ab
+IPADDR=192.168.0.15
+NETMASK=255.255.255.0
+NETWORK=192.168.0.0
+ONBOOT=yes
+GATEWAY=192.168.0.1
+TYPE=Ethernet
 </code></pre></div>
-
 
 <p><strong>Problém: chci přidat celou /24 síť (254 IP adres).</strong></p>
 <p>Máte-li dostatek času (nebo chce-li se vám psát nějaký skript), můžete
@@ -97,11 +96,10 @@ do konfigurace pojmenované <code>ifcfg-eth0-rangeX</code>, kde <code>X</code> j
 jednotlivých rozsahů od <code>0</code>. Z našich 254 nepřehledných konfigurací tak
 vznikne jedna, která mlže vypadat třeba takto (zapsáno v
 <code>/etc/sysconfig/network-scripts/ifcfg-eth0-range0</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="err">IPADDR_START=192.168.0.2</span>
-<span class="err">IPADDR_END=192.168.0.254</span>
-<span class="err">CLONENUM_START=0</span>
+<div class="highlight"><pre><span></span><code><span class="n">IPADDR_START</span><span class="o">=</span><span class="mf">192.168</span><span class="p">.</span><span class="mf">0.2</span>
+<span class="n">IPADDR_END</span><span class="o">=</span><span class="mf">192.168</span><span class="p">.</span><span class="mf">0.254</span>
+<span class="n">CLONENUM_START</span><span class="o">=</span><span class="mi">0</span>
 </code></pre></div>
-
 
 <p>Vysvětlení jednotlivých proměnných je vcelku jednoduché: <code>IPADDR_START</code>
 je IP, kterou náš rozsah začíná a <code>IPADDR_END</code> je ta, kterou končí

@@ -67,24 +67,20 @@
 <div class="highlight"><pre><span></span><code>$ docker pull centos
 </code></pre></div>
 
-
 <p>Zkusíme kontejner nastartovat a hned se přepnout do příkazové řádky:</p>
 <div class="highlight"><pre><span></span><code>$ docker run -t -i centos /bin/bash
 bash-4.1#
 </code></pre></div>
-
 
 <p>Systém si zaktualizuju, nainstaluju balíčky, které potřebuju ...</p>
 <div class="highlight"><pre><span></span><code>bash-4.1# yum -y update
 bash-4.1# yum -y install mysql mysql-server
 </code></pre></div>
 
-
 <p>... a zkusím pustit MySQL server (což mi skončilo chybou).</p>
 <div class="highlight"><pre><span></span><code>bash-4.1# service mysqld start
 /etc/init.d/mysqld: line 23: /etc/sysconfig/network: No such file or directory
 </code></pre></div>
-
 
 <p>Tento soubor se načítá jen pro dodatečné funkce; init skript uspokojíme i prázným souborem. Služba pak naběhne jak má:</p>
 <div class="highlight"><pre><span></span><code>bash-4.1# touch /etc/sysconfig/network
@@ -94,7 +90,6 @@ Initializing MySQL database: ...
 Starting mysqld: [  OK  ]
 </code></pre></div>
 
-
 <p>Funguje! Jen po odhlášení z kontejneru zjistíte, že nic neběží a že i vytvoření network souboru bylo zbytečné.</p>
 <p>Abych si upravený obraz mohl spustit a připojit se na něj, je potřeba změny commitnout (omlouvám se za to cizí slovo, ale nějak mě nenapadá český ekvivalent). Docker pracuje s otisky podobně jako git (odtud ten commit) - nazývá je jednoduše ID. Poslední změněný obraz ukáže příkaz ps:</p>
 <div class="highlight"><pre><span></span><code>$ docker ps -l
@@ -102,23 +97,19 @@ CONTAINER ID   IMAGE        COMMAND     CREATED         STATUS   PORTS   NAMES
 e5055fbceaec   centos:6.4   /bin/bash   9 minutes ago   Exit 0           cocky_brown
 </code></pre></div>
 
-
 <p>A o commit se postará příkaz ... wait for it ... commit:</p>
 <div class="highlight"><pre><span></span><code>$ docker commit e5055fbceaec centos/mysql
 </code></pre></div>
-
 
 <p>Tímto jsme řekli, že změny, které jsou v otisku <code>e5055fbceaec</code> chceme uložit pod <code>centos/mysql</code>.</p>
 <p>Teď už zbývá jen MySQL v kontejneru spustit a přesměrovat si porty:</p>
 <div class="highlight"><pre><span></span><code>docker run -d -p :3306:3306 centos/mysql /usr/bin/mysqld_safe
 </code></pre></div>
 
-
 <p>A to je vše. Teď se jen musíme ze systému připojit ...</p>
 <div class="highlight"><pre><span></span><code># mysql -u root -h 0.0.0.0
 ERROR 1130 (HY000): Host &#39;172.17.42.1&#39; is not allowed to connect to this MySQL server
 </code></pre></div>
-
 
 <p>... a zjistíme, že to vlastně úplně nejde. Proč? To nechám na pozorném čtenáři, případně do dalšího článku.</p>
 <p>Závěrem snad jen - běžící kontejnery vypíše příkaz <code>ps</code> a zastaví <code>stop</code>:</p>

@@ -93,7 +93,6 @@ pasv_max_port=20100
 port_enable=YES
 </code></pre></div>
 
-
 <p>Kde pomocí <code>pasv_enable</code> povolíme pasivní režim, <code>pasv_min_port</code> a
 <code>pasv_max_port</code> stanoví, jaký rozsah portů se bude využívat - jejich
 hodnoty musí být mezi 1024 a 65535 (mnou zvolené jsou čistě náhodné).
@@ -105,13 +104,11 @@ $ service vsftpd restart
 $ /etc/init.d/vsftpd restart
 </code></pre></div>
 
-
 <h3>Nastavení firewallu</h3>
 <p>V konfiguraci jsme použili porty 20000 - 20100. Pro <code>iptables</code> musíme
 tento rozsah povolit a to umožňuje přepínač <code>--dport</code>:</p>
 <div class="highlight"><pre><span></span><code>$ iptables -A INPUT -p TCP --dport  20000:20100 -j ACCEPT
 </code></pre></div>
-
 
 <h3>Zdroj</h3>
 <p><a href="https://www.redhat.com/docs/manuals/enterprise/RHEL-3-Manual/ref-guide/s1-ftp-vsftpd-conf.html">Dokumentace RedHat</a>u Vám řekne (skoro) vše.</p>

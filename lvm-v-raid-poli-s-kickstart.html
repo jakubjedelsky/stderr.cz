@@ -82,7 +82,6 @@ logvol swap     --vgname<span class="o">=</span>sysvol --fstype<span class="o">=
 logvol /        --vgname<span class="o">=</span>sysvol --fstype<span class="o">=</span>ext4   --size<span class="o">=</span><span class="m">1</span> --grow    --name<span class="o">=</span>root
 </code></pre></div>
 
-
 <p>Což skončilo chybou výše zmíněnou, která je už samozřejmě nahlášená v
 <a href="https://bugzilla.redhat.com/show_bug.cgi?id=677915" title="Bug 677915">Bugzille</a>. Po chvilce pročítání problému jsem zjistil, že Anaconda
 ignoruje parametr --grow a nedokáže si velikost disku vypočítat. Bere
@@ -90,7 +89,7 @@ tak velikost oddílu pro LVM jako 1MB; a tam se 8GB, které tam cpeme pro
 swap nevejde. <strong>Heuréka</strong>.</p>
 <p>Dočasné řešení (dokud nevyjde CentOS s aktualizovanou instalačkou) je
 tedy používat velikost raid oddílu větší než je součet logických svazků
-<em>(např.: 9000 > 8192 + 1)</em>:</p>
+<em>(např.: 9000 &gt; 8192 + 1)</em>:</p>
 <div class="highlight"><pre><span></span><code>part raid.11    --size<span class="o">=</span><span class="m">256</span>      --asprimary  --ondrive<span class="o">=</span>sda
 part raid.12    --size<span class="o">=</span><span class="m">9000</span> --grow           --ondrive<span class="o">=</span>sda
 part raid.21    --size<span class="o">=</span><span class="m">256</span>      --asprimary  --ondrive<span class="o">=</span>sdb

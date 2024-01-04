@@ -90,12 +90,10 @@ zároveň jej zařadit do skupiny <code>dynosauri</code> použijeme:</p>
 <div class="highlight"><pre><span></span><code>$ useradd -G dynosauri rex
 </code></pre></div>
 
-
 <p>Uživatele můžeme přidat do více skupin najednou, stačí je oddělit
 čárkami (bez mezery):</p>
 <div class="highlight"><pre><span></span><code>$ useradd -G dynosauri,prvohory rex
 </code></pre></div>
-
 
 <p>Tyto skupiny ale již musí existovat, přesvědčit se o tom můžeme v
 souboru <code>/etc/group</code>.</p>
@@ -106,18 +104,15 @@ chceme uživatele <code>rex</code> zařadit do skupiny <code>prvohory</code> pou
 <div class="highlight"><pre><span></span><code>$ usermod -a -G prvohory rex
 </code></pre></div>
 
-
 <p>Samozřejmě lze změnit i uživatelovu primární skupinu (která má většinou
 stejné jméno jako je jméno uživatele):</p>
 <div class="highlight"><pre><span></span><code>$ usermod -g dynosauri rex
 </code></pre></div>
 
-
 <h3>Zdroj</h3>
-<div class="highlight"><pre><span></span><code><span class="err">man useradd</span>
-<span class="err">man usermod</span>
+<div class="highlight"><pre><span></span><code>man useradd
+man usermod
 </code></pre></div>
-
 
 <p>web <a href="http://www.cyberciti.biz/faq/howto-linux-add-user-to-group/">cyberciti.biz</a></p>
 </div>
