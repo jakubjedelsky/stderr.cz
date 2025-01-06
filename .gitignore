@@ -6,3 +6,4 @@ output
 cache/
 
 .idea
+.venv
