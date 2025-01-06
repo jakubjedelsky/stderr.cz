@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>stderr - Jakub Jedelský</title><link>https://stderr.cz/</link><description>Jakub Jedelský</description><lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0100</lastBuildDate><item><title>100 věcí, které mi dělaly radost (2023)</title><link>https://stderr.cz/100-veci-ktere-mi-delaly-radost-2023</link><description>&lt;p&gt;Inspirováno &lt;a href="https://austinkleon.com/2024/01/03/100-things-that-made-my-year-2023/"&gt;Austinem Kleonem&lt;/a&gt; a &lt;a href="https://www.tesnevedle.com/2023/12/22/100-veci-ktere-mi-delaly-v-roce-2023-radost/"&gt;Michelle Losekoot&lt;/a&gt;.&lt;/p&gt;
+<rss version="2.0"><channel><title>stderr - Jakub Jedelský</title><link>https://stderr.cz/</link><description>Jakub Jedelský</description><lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0100</lastBuildDate><item><title>100 věcí, které mi dělaly radost (2024)</title><link>https://stderr.cz/100-veci-ktere-mi-delaly-radost-2024</link><description>&lt;p&gt;Inspirováno Austinem Kleonem a jeho &lt;a href="https://austinkleon.com/2025/01/05/100-things-that-made-my-year-2024/"&gt;100 things that made my year&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://stderr.cz/100-veci-ktere-mi-delaly-radost-2023"&gt;Vytvořit si novou "tradici" v sepisování 100 věcí, co mi udělaly radost&lt;/a&gt;. A pak si o tom ještě po necelým roce povídat s náhodnýma lidma.&lt;/li&gt;
+&lt;li&gt;Odejít z firmy, kde jsem se posledních pár měsíců trápil ...&lt;/li&gt;
+&lt;li&gt;... a přejít za novou prací do Make.com.&lt;/li&gt;
+&lt;li&gt;Úspěšně projít několika pohovory (nejen do make.com)&lt;/li&gt;
+&lt;li&gt;Užít si další semestr improvizace&lt;/li&gt;
+&lt;li&gt;... a pak ještě jeden.&lt;/li&gt;
+&lt;li&gt;Improvizovat na pódiu. Před publikem!&lt;/li&gt;
+&lt;li&gt;Dvakrát!&lt;/li&gt;
+&lt;li&gt;Seznámit se s …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Mon, 06 Jan 2025 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:stderr.cz,2025-01-06:/100-veci-ktere-mi-delaly-radost-2024</guid><category>misc</category></item><item><title>100 věcí, které mi dělaly radost (2023)</title><link>https://stderr.cz/100-veci-ktere-mi-delaly-radost-2023</link><description>&lt;p&gt;Inspirováno &lt;a href="https://austinkleon.com/2024/01/03/100-things-that-made-my-year-2023/"&gt;Austinem Kleonem&lt;/a&gt; a &lt;a href="https://www.tesnevedle.com/2023/12/22/100-veci-ktere-mi-delaly-v-roce-2023-radost/"&gt;Michelle Losekoot&lt;/a&gt;.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Mít kolem sebe super rodinu...&lt;/li&gt;
 &lt;li&gt;...zdravou rodinu. Well, až na výjimky.&lt;/li&gt;
@@ -134,7 +144,7 @@ možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jse
 mé nejoblíbenější.  &lt;/p&gt;
 &lt;h3&gt;Generujeme …&lt;/h3&gt;
 &lt;p&gt;… samotný privátní klíč (RSA):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;openssl genrsa -out klic.key &lt;span class="m"&gt;2048&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;openssl&lt;span class="w"&gt; &lt;/span&gt;genrsa&lt;span class="w"&gt; &lt;/span&gt;-out&lt;span class="w"&gt; &lt;/span&gt;klic.key&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;2048&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;… CSR s …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Fri, 05 Apr 2013 10:00:00 +0200</pubDate><guid isPermaLink="false">tag:stderr.cz,2013-04-05:/tipy-a-triky-pro-openssl</guid><category>misc</category></item><item><title>Zábava s traceroute</title><link>https://stderr.cz/zabava-s-traceroute</link><description>&lt;p&gt;&lt;code&gt;traceroute&lt;/code&gt; je užitečný nástroj - projde a vypíše uzly, přes které váš
@@ -313,12 +323,12 @@ použitém hw, bugy, nefunkčnosti) do mlýna.&lt;/p&gt;
 &lt;p&gt;Finální verze &lt;a href="http://www.gnome.org"&gt;Gnome&lt;/a&gt; 3 je naplánována až na duben …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Tue, 01 Feb 2011 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:stderr.cz,2011-02-01:/fedora-test-day-gnome-3</guid><category>misc</category></item><item><title>Z lepšího spamu</title><link>https://stderr.cz/z-lepsiho-spamu</link><description>&lt;p&gt;Poučování o bezpečnosti není nikdy dost, tak ukážu, co mi před
 chviličkou přislo na e-mail. Zpráva se tváří věrohodně, na první pohled
 je od odesílate e-mail.cz a český text je tento:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Vážení e-mail.cz uživatele
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Vážení&lt;span class="w"&gt; &lt;/span&gt;e-mail.cz&lt;span class="w"&gt; &lt;/span&gt;uživatele
 
-HTK4S virus byl zjištěn u e-mail.cz Webmail server, a e-mail.cz všechny webmail účetní závěrka musí být 
-aktualizován okamžitě, aby se zabránilo poškození webmail e-mail.cz.
+HTK4S&lt;span class="w"&gt; &lt;/span&gt;virus&lt;span class="w"&gt; &lt;/span&gt;byl&lt;span class="w"&gt; &lt;/span&gt;zjištěn&lt;span class="w"&gt; &lt;/span&gt;u&lt;span class="w"&gt; &lt;/span&gt;e-mail.cz&lt;span class="w"&gt; &lt;/span&gt;Webmail&lt;span class="w"&gt; &lt;/span&gt;server,&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;e-mail.cz&lt;span class="w"&gt; &lt;/span&gt;všechny&lt;span class="w"&gt; &lt;/span&gt;webmail&lt;span class="w"&gt; &lt;/span&gt;účetní&lt;span class="w"&gt; &lt;/span&gt;závěrka&lt;span class="w"&gt; &lt;/span&gt;musí&lt;span class="w"&gt; &lt;/span&gt;být&lt;span class="w"&gt; &lt;/span&gt;
+aktualizován&lt;span class="w"&gt; &lt;/span&gt;okamžitě,&lt;span class="w"&gt; &lt;/span&gt;aby&lt;span class="w"&gt; &lt;/span&gt;se&lt;span class="w"&gt; &lt;/span&gt;zabránilo&lt;span class="w"&gt; &lt;/span&gt;poškození&lt;span class="w"&gt; &lt;/span&gt;webmail&lt;span class="w"&gt; &lt;/span&gt;e-mail.cz.
 
-Jste požádáni o identifikaci účtu uvedené níže, které nám umožňují kontrolovat a udržovat svůj účet s novou …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Thu, 27 Jan 2011 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:stderr.cz,2011-01-27:/z-lepsiho-spamu</guid><category>misc</category></item><item><title>Jak na Svoboďáček®</title><link>https://stderr.cz/jak-na-svobodacek</link><description>&lt;p&gt;Dneska jen krátce a z trošku jiného soudku aneb kam mě zavála klíčová
+Jste&lt;span class="w"&gt; &lt;/span&gt;požádáni&lt;span class="w"&gt; &lt;/span&gt;o&lt;span class="w"&gt; &lt;/span&gt;identifikaci&lt;span class="w"&gt; &lt;/span&gt;účtu&lt;span class="w"&gt; &lt;/span&gt;uvedené&lt;span class="w"&gt; &lt;/span&gt;níže,&lt;span class="w"&gt; &lt;/span&gt;které&lt;span class="w"&gt; &lt;/span&gt;nám&lt;span class="w"&gt; &lt;/span&gt;umožňují&lt;span class="w"&gt; &lt;/span&gt;kontrolovat&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;udržovat&lt;span class="w"&gt; &lt;/span&gt;svůj&lt;span class="w"&gt; &lt;/span&gt;účet&lt;span class="w"&gt; &lt;/span&gt;s&lt;span class="w"&gt; &lt;/span&gt;novou …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Jedelský</dc:creator><pubDate>Thu, 27 Jan 2011 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:stderr.cz,2011-01-27:/z-lepsiho-spamu</guid><category>misc</category></item><item><title>Jak na Svoboďáček®</title><link>https://stderr.cz/jak-na-svobodacek</link><description>&lt;p&gt;Dneska jen krátce a z trošku jiného soudku aneb kam mě zavála klíčová
 slova.&lt;/p&gt;
 &lt;p&gt;V záplavě linuxových dotazů jsem totiž odhalil, že někdo přes Google na
 tomto webu hledal &lt;em&gt;recept na svoboďáček&lt;/em&gt;. Absolutně netuším, jak ho to

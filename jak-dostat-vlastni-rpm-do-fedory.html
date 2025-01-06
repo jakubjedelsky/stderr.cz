@@ -74,35 +74,35 @@ Branches: f19 f20 el6 epel7
 <h3>Repozitář, sestavení a zveřejnění</h3>
 <p>Zdrojové kódy se SPEC souborem a případnými patchi (nebo patchemi, patchema? Pačema?) se ukládají do <a href="http://pkgs.fedoraproject.org">veřejně přístupného</a> <code>git</code>ovského repozitáře. Fedora nabízí pro práci (nejen) s tímto repozitářem nástroj <code>fedpkg</code>, ale obejdete se i bez něj. Ale ne zde v dalších krocích.</p>
 <p>Nejprve si repozitář naklonujeme k sobě...</p>
-<div class="highlight"><pre><span></span><code>fedpkg clone vertica-python
+<div class="highlight"><pre><span></span><code>fedpkg<span class="w"> </span>clone<span class="w"> </span>vertica-python
 </code></pre></div>
 
 <p>...a naimportujeme schválený SRPM balík</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> vertica-python
-fedpkg import /var/lib/mock/fedora-rawhide-x86_64/result/vertica-python-0.2.0-4.fc21.src.rpm
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>vertica-python
+fedpkg<span class="w"> </span>import<span class="w"> </span>/var/lib/mock/fedora-rawhide-x86_64/result/vertica-python-0.2.0-4.fc21.src.rpm
 </code></pre></div>
 
 <p>Import na nás vyrukuje s logem, který zkontrolujeme a změny <a href="http://fedoraproject.org/wiki/Join_the_package_collection_maintainers#Import.2C_Commit.2Cand_Build_Your_Package">commitneme</a>. Vše pošleme do vzdáleného repozitáře a spustíme build na <a href="http://koji.fedoraproject.org">koji</a>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># hele ho, git!</span>
-git commit -m <span class="s2">&quot;Initial import (#1080669)&quot;</span>
-git push
-fedpkg build
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial import (#1080669)&quot;</span>
+git<span class="w"> </span>push
+fedpkg<span class="w"> </span>build
 </code></pre></div>
 
 <p>V tuto chvíli se sestavuje balíček pro <code>rawhide</code>. Můžeme zatím vesele pokračovat s dalšími větvemi (od nejvyšší verze dolů):</p>
-<div class="highlight"><pre><span></span><code>fedpkg switch-branch f20
-git merge master
-git push
-fedpkg build
-fedpkg switch-branch f19
+<div class="highlight"><pre><span></span><code>fedpkg<span class="w"> </span>switch-branch<span class="w"> </span>f20
+git<span class="w"> </span>merge<span class="w"> </span>master
+git<span class="w"> </span>push
+fedpkg<span class="w"> </span>build
+fedpkg<span class="w"> </span>switch-branch<span class="w"> </span>f19
 ...
 ..
 .
 </code></pre></div>
 
 <p>V <a href="http://koji.fedoraproject.org">koji</a> už teď máme uložená sestavení, která (předpokládám) prošla - můžeme tak začít balíček ládovat do repozitářů. Toto probíhá pomocí nástroje <a href="https://admin.fedoraproject.org/updates">Bodhi</a>. Pro všechny větve (kromě <code>masteru</code> a aktuálně <code>epel7</code>, který je v betě) pošleme požadavek na zařazení do testovacích repozitářů (udělat to lze i přes webové rozhraní Bodhi):</p>
-<div class="highlight"><pre><span></span><code>git checkout f20 <span class="c1"># nebo fedpkg switch-branch f20</span>
-fedpkg update
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>f20<span class="w"> </span><span class="c1"># nebo fedpkg switch-branch f20</span>
+fedpkg<span class="w"> </span>update
 </code></pre></div>
 
 <p>Update bude chtít vyplnit pár informací. Nás zajímají řádky:</p>
@@ -113,7 +113,7 @@ fedpkg update
 <li><code>notes=</code> (u nového balíčku krátký popis).</li>
 </ul>
 <p>Pro <code>vertica-python</code> to vypadalo takto:</p>
-<div class="highlight"><pre><span></span><code><span class="o">[</span> vertica-python-0.2.0-4.fc20 <span class="o">]</span>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="w"> </span>vertica-python-0.2.0-4.fc20<span class="w"> </span><span class="o">]</span>
 
 <span class="c1"># bugfix, security, enhancement, newpackage (required)</span>
 <span class="nv">type</span><span class="o">=</span>newpackage
@@ -129,7 +129,7 @@ fedpkg update
 <span class="c1"># - edit dateutil patch for el6 </span>
 <span class="c1">#</span>
 <span class="c1"># Here is where you give an explanation of your update. </span>
-<span class="nv">notes</span><span class="o">=</span>A native python adapter <span class="k">for</span> the Vertica database
+<span class="nv">notes</span><span class="o">=</span>A<span class="w"> </span>native<span class="w"> </span>python<span class="w"> </span>adapter<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>Vertica<span class="w"> </span>database
 
 <span class="c1"># Enable request automation based on the stable/unstable karma thresholds</span>
 <span class="nv">autokarma</span><span class="o">=</span>True

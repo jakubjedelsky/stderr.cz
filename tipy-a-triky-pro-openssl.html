@@ -65,60 +65,60 @@ možností, které se ze začátku nemusí zdát úplně intuitivní. Sepsal jse
 mé nejoblíbenější.  </p>
 <h3>Generujeme …</h3>
 <p>… samotný privátní klíč (RSA):</p>
-<div class="highlight"><pre><span></span><code>openssl genrsa -out klic.key <span class="m">2048</span>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>genrsa<span class="w"> </span>-out<span class="w"> </span>klic.key<span class="w"> </span><span class="m">2048</span>
 </code></pre></div>
 
 <p>… CSR s novým klíčem</p>
-<div class="highlight"><pre><span></span><code>openssl req -new -newkey rsa:2048 -nodes -keyout klic.key -out zadost.csr
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-nodes<span class="w"> </span>-keyout<span class="w"> </span>klic.key<span class="w"> </span>-out<span class="w"> </span>zadost.csr
 </code></pre></div>
 
 <p>… CSR s již existujícím klíčem</p>
-<div class="highlight"><pre><span></span><code>openssl req -new -key klic.key -out zadost.csr
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span>klic.key<span class="w"> </span>-out<span class="w"> </span>zadost.csr
 </code></pre></div>
 
 <p>… vlastní certifikát (self-signed) bez CSR na jeden rok</p>
-<div class="highlight"><pre><span></span><code>openssl req -x509 -nodes -newkey rsa:2048 -keyout klic.key -days <span class="m">365</span> -out certifikat.crt
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-nodes<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-keyout<span class="w"> </span>klic.key<span class="w"> </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-out<span class="w"> </span>certifikat.crt
 </code></pre></div>
 
 <p>… vlastní certifikát z CSR</p>
-<div class="highlight"><pre><span></span><code>openssl x509 -req -in zadost.csr -days <span class="m">356</span> -signkey podpisovyklic.key -out certifikat.crt
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>x509<span class="w"> </span>-req<span class="w"> </span>-in<span class="w"> </span>zadost.csr<span class="w"> </span>-days<span class="w"> </span><span class="m">356</span><span class="w"> </span>-signkey<span class="w"> </span>podpisovyklic.key<span class="w"> </span>-out<span class="w"> </span>certifikat.crt
 </code></pre></div>
 
 <h3>Kontrolujeme …</h3>
 <p>… certifikát</p>
-<div class="highlight"><pre><span></span><code>openssl x509 -text -noout -in certifikat.crt
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>x509<span class="w"> </span>-text<span class="w"> </span>-noout<span class="w"> </span>-in<span class="w"> </span>certifikat.crt
 </code></pre></div>
 
 <p>… CSR</p>
-<div class="highlight"><pre><span></span><code>openssl req -text -noout -in zadost.csr
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-text<span class="w"> </span>-noout<span class="w"> </span>-in<span class="w"> </span>zadost.csr
 </code></pre></div>
 
 <p>… privátní klíč</p>
-<div class="highlight"><pre><span></span><code>openssl rsa -check -in klic.key
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>rsa<span class="w"> </span>-check<span class="w"> </span>-in<span class="w"> </span>klic.key
 </code></pre></div>
 
 <p>… certifikát webserveru</p>
-<div class="highlight"><pre><span></span><code>openssl s_client -connect dev.stderr.cz:443
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>s_client<span class="w"> </span>-connect<span class="w"> </span>dev.stderr.cz:443
 </code></pre></div>
 
 <p>Jako malý bonus zkontrolujeme platnost certifikátu webové stránky.
 Spustil jsem to pro původní web abych se ujistil, že certifikát je opravdu
 už skoro dva měsíce propadlý. Včetně výstupu:</p>
-<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> <span class="s2">&quot;&quot;</span> <span class="p">|</span><span class="se">\ </span>
-&gt; openssl s_client -connect dev.stderr.cz:443 <span class="m">2</span>&gt;/dev/null <span class="p">|</span><span class="se">\</span>
-&gt; openssl x509 -noout -dates
-<span class="nv">notBefore</span><span class="o">=</span>Feb <span class="m">23</span> <span class="m">12</span>:58:12 <span class="m">2012</span> GMT
-<span class="nv">notAfter</span><span class="o">=</span>Feb <span class="m">22</span> <span class="m">12</span>:58:12 <span class="m">2013</span> GMT
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="p">|</span><span class="se">\ </span>
+&gt;<span class="w"> </span>openssl<span class="w"> </span>s_client<span class="w"> </span>-connect<span class="w"> </span>dev.stderr.cz:443<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="se">\</span>
+&gt;<span class="w"> </span>openssl<span class="w"> </span>x509<span class="w"> </span>-noout<span class="w"> </span>-dates
+<span class="nv">notBefore</span><span class="o">=</span>Feb<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">12</span>:58:12<span class="w"> </span><span class="m">2012</span><span class="w"> </span>GMT
+<span class="nv">notAfter</span><span class="o">=</span>Feb<span class="w"> </span><span class="m">22</span><span class="w"> </span><span class="m">12</span>:58:12<span class="w"> </span><span class="m">2013</span><span class="w"> </span>GMT
 </code></pre></div>
 
 <h3>Převádíme …</h3>
 <p>… PKCS#12 (.pfx, .p12 které má rád např. MS Exchange) na PEM
 (certifikát + privátní klíč v jednom souboru)</p>
-<div class="highlight"><pre><span></span><code>openssl pkcs12 -in certifikat.pfx -out certifikat.pem -nodes
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-in<span class="w"> </span>certifikat.pfx<span class="w"> </span>-out<span class="w"> </span>certifikat.pem<span class="w"> </span>-nodes
 </code></pre></div>
 
 <p>… zpět z certifikátu a klíče na PKCS#12</p>
-<div class="highlight"><pre><span></span><code>openssl pkcs12 -export -inkey klic.key -in certifikat.crt -out certifikat.pfx
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-export<span class="w"> </span>-inkey<span class="w"> </span>klic.key<span class="w"> </span>-in<span class="w"> </span>certifikat.crt<span class="w"> </span>-out<span class="w"> </span>certifikat.pfx
 </code></pre></div>
 
 <h3>Zdroje a doporučené čtení:</h3>
