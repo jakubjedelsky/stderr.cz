@@ -102,5 +102,5 @@ Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://aust
 96. Dovolit si prokrastinovat u Instagramu a Linkedinu.
 97. Stále se učit, jak psát lepší poznámky v [Obsidianu](https://obsidian.md/). Kde vznikl i tento seznam.
 98. Opakovat si, co jsem přečetl s [Readwise](https://readwise.io/).
-99. Nechat si postavit zahradní budku.
-100. Rozdávat Fidorky za splněný úkoly během školeníčka, který jsem mohl vést.
+99. Rozdávat Fidorky za splněný úkoly během školeníčka, který jsem mohl vést.
+100. Před vánoci oslavit 20 let vztahu s Jančou.
