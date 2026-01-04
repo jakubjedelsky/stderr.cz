@@ -4,10 +4,11 @@ Date: 2026-01-03
 
 Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://austinkleon.com/2025/01/05/100-things-that-made-my-year-2024/).
 
+
 1. Děti, žena.
 2. 14 dni dovolenkování v Chorvatsku.
 3. Ježdění na vodním skůtru.
-4. Večerní koupání a řádění na topogánech.
+4. Večerní koupání a řádění na tobogánech.
 5. Chodit na zmrzlinu a poslouchat balkónový koncert.
 6. Strávit s rodinou a kamarády týden na konci září v Maláze. Bez davů!
 7. Dát si nejvíc nejlepšejší tapas a paellu v [Tasca láska](https://tascalaska.es/) - restauraci založené slováky. 
@@ -16,8 +17,8 @@ Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://aust
 10. Plánovat dovolenou na Mauríciu.
 11. Hrát online šachy (a občas i vyhrát).
 12. Učit se španělštinu a šachy s Duolingem (500+ dnů).
-13. Pečení chleba a loupáků (doporučuju [recept od pana Cuketky](https://recepty.cuketka.cz/loupaky-makovky/)!).
-14. Zajít na degustační menu do Kohouta na víně. Jednou na výročí, jednou s mámou na její narozeniny.
+13. Pečení [chleba](https://www.maskrtnica.cz/usaty-chleb/) a [loupáků](https://recepty.cuketka.cz/loupaky-makovky).
+14. Zajít na degustační menu do [Kohouta na víně](https://www.knvrestaurant.cz/en/). Jednou na výročí, jednou s mámou na její narozeniny.
 15. Vyzvedávat mladší mládě z nemocnice a dostávat zprávy, že už je vše v pořádku. A od té doby je stále vše v pořádku. (ťuk ťuk)
 16. Hrát na novou elektroakustickou kytaru.
 17. Zařadit si do repertoáru nové písničky - hlavně Eda Sheerana (Perfect, Galway Girl, Photograph), Krhuta, Jelena.
@@ -41,15 +42,15 @@ Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://aust
 35. Ujít s mláďaty 8km do kopce a z kopce.
 36. Zakončit výletování v pivovaru Zlosin.
 37. Opíkat a jíst špekáčky.
-38. Jít trampovat. 3 dospělí, 5 dětí, tři dny v přírodě, dvakrát spaní pod širákem při 10 stupních. Vydali jsme se údolím Chvojnice z Kralic nad Oslavou k Senoradskému mlýnu, pak Ketkovice a do Rapotic na vlak. Baštit cestou trešně, seznamovat se s lidma, co vás nechaj přespat na zahradě (večer vás prolejou vínem, ráno pohostí kávou).
+38. Jít trampovat. 3 dospělí, 5 dětí, tři dny v přírodě, dvakrát spaní pod širákem při 10 stupních. Baštit cestou trešně, seznamovat se s lidma, co vás nechaj přespat na zahradě (večer vás prolejou vínem, ráno pohostí kávou).
 39. Brodit se potokem.
 40. Přesvědčit kamarády, že dvě noci spaní pod širákem s dětma je úplně v pohodě (a bylo!).
 41. Cpát se ramenem (na kterém se žena stala závislá).
 42. Navštívit brněnskou kostnici.
 43. Baštit indický jídlo.
 44. Jít s rodinou do Technickýho muzea.
-45. Vzít starší mládě na Makers Fair, kde jsme pájeli a stavěli a svařovali a zase pájeli.
-46. Koupit pájící sadu domů a udělat s tím mláďatům radost.
+45. Vzít starší mládě na [Makers Fair](https://makerfaire.cz/), kde jsme pájeli a stavěli a svařovali a zase pájeli.
+46. Koupit pájecí sadu domů a udělat s tím mláďatům radost.
 47. Slavit 5. narozeniny mladšího mláděte.
 48. Slavit 9. narozeniny staršího mláděte.
 49. Slavit 10 let od svatby a 21. výročí, co jsme se ženou spolu.
@@ -77,9 +78,9 @@ Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://aust
 71. Navštěvovat babičky. Jednu v nemocnici, druhou v domově.
 72. Užít si Vánoce beze stresu.
 73. Sbírat ořechy a lozit u toho po stromech.
-74. Hrát Karak a Karak II s mláďaty.
+74. Hrát [Karak](https://albi.cz/karak-druha-edice/) a [Karak II](https://albi.cz/karak-2-imperium/) s mláďaty.
 75. Bruslit a hrát při tom na honěnou.
-76. Přespávat v Anybody hotelu.
+76. Přespávat v [Anybody](https://www.anybody.cz/vitejte) hotelu.
 77. Dostat píchanec žloutenky.
 78. Koukat s rodinou na Cirque du Soleil. Zážitek jak ďas!
 79. Ukazovat mláďatům Prahu.
@@ -89,7 +90,7 @@ Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://aust
 83. Potkávat staré známé a prohodit s nimi pár slov (což je pro mě, introverta, občas těžký, ale o to víc obohacující).
 84. Potkávat se s kolegy.
 85. Stavět si vlastní automatizace v [make.com](https://www.make.com/en) (když už tam dělám, tak bych měl vědět, co dělám, žeo).
-86. Dokončit pár zajímavých pracovních projektů.
+86. Bojovat se zajímavými pracovními problémy. A být rád za každé drobné vylepšení.
 87. Bavit se s Jančou o práci, problémech a řešeních. Jak mých, tak jejích.
 88. Potkávat se s kamarády v hospodách a nechat AI generovat mulety na našich společných fotkách.
 89. Povídat si s AI a dostat z toho i rozumný odpovědi.
@@ -98,7 +99,7 @@ Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://aust
 92. Být pyšnej na mladší mládě, které zářilo na besídce (a smutnej, že jsem to viděl až ze záznamu).
 93. Jít na koncert [Vesny](https://www.youtube.com/watch?v=cKRZwCbEDYk&list=RDcKRZwCbEDYk&index=1).
 94. Číst si texty a komixy staršího mláděte.
-95. Havarovat s dronem a mít radost, že mám pojistku a pošlou novýho.
+95. Havarovat s dronem a mít radost, že mám pojistku a poslali novýho.
 96. Baštit z krabiček. Při remote práci je to hack jak sviňa. Každej den jiný jídlo, ohřátý je to za pár minut, takže pak je čas na ...
 97. Šlofík po o.
 98. Povídat si o životě s [terapeutem](https://milanpavlicek.cz/).
