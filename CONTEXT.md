@@ -80,10 +80,16 @@ GitHub Pages at `stderr.cz`.
    does local preview (`html`/`clean`/`regenerate`/`serve`); the
    `~/.stderr.cz` clone on the owner's machine is stale leftover, safe to
    delete manually whenever.
-4. **New design.** Do this last, once the above are boring and invisible —
-   redesigning needs fast local preview and a publish step you don't have
-   to think about. Covers retiring the Bootstrap 2 theme (finish the
-   abandoned `bootstrap3` branch, or a fresh smaller CSS pass).
+4. ~~**New design.**~~ **Done 2026-08-27** — Bootstrap 2, Google Fonts,
+   and three dead features (Flattr, Disqus, cookie-consent banner — all
+   unused, their config vars were never set) are removed. Replaced with a
+   single hand-written stylesheet (`theme/static/css/style.css`): system
+   font stack, two colors + one accent as CSS custom properties, automatic
+   dark mode via `prefers-color-scheme`, single centered column, no JS.
+   Pygments switched to `friendly_grayscale` to match the low-color
+   palette. Built on branch `redesign-minimal-theme`, reviewed locally via
+   `./build.sh serve`, merged and pushed — live via the CI workflow above
+   (`gh-pages` commit `0f7f6f6`).
 
 ## Local dev environment (fixed 2026-08-07)
 
