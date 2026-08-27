@@ -71,11 +71,16 @@ GitHub Pages at `stderr.cz`.
    site doesn't want them live), then deploys `output/` to `gh-pages` via
    `peaceiris/actions-gh-pages@v4` using the built-in `GITHUB_TOKEN`
    (needs `permissions: contents: write`, already set in the workflow).
-   **Not yet verified green** — first push to `master` will be the real
-   test. Once confirmed, `build.sh publish` and the `~/.stderr.cz`
-   clone-based workflow can be retired — keep `build.sh
-   html`/`serve`/`regenerate` for local preview only.
-3. **New design.** Do this last, once #1 and #2 are boring and invisible —
+   **Verified green 2026-08-27** — first push after adding the workflow
+   deployed successfully (`gh-pages` commit `3f62b52`, matching `master`
+   `21788f1`).
+3. ~~**Retire `build.sh publish`**~~ **Done 2026-08-27** — the `publish`
+   function, its `PUBLISHDIR`/`GITHUBSSH`/`COMMITCOMMENT` vars, and the
+   `publish` case arm are removed from `build.sh`. `build.sh` now only
+   does local preview (`html`/`clean`/`regenerate`/`serve`); the
+   `~/.stderr.cz` clone on the owner's machine is stale leftover, safe to
+   delete manually whenever.
+4. **New design.** Do this last, once the above are boring and invisible —
    redesigning needs fast local preview and a publish step you don't have
    to think about. Covers retiring the Bootstrap 2 theme (finish the
    abandoned `bootstrap3` branch, or a fresh smaller CSS pass).

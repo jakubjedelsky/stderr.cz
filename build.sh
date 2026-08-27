@@ -8,11 +8,6 @@ PELICANOPTS=""
 INPUTDIR=$BASEDIR/content
 OUTPUTDIR=$BASEDIR/output
 CONFFILE=$BASEDIR/pelicanconf.py
-PUBLISHCONF=$BASEDIR/publishconf.py
-PUBLISHDIR=~/.stderr.cz
-
-GITHUBSSH="git@github.com:jakubjedelsky/stderr.cz"
-COMMITCOMMENT="Publishing."
 
 function print_help {
     cat << EOF
@@ -26,7 +21,8 @@ Commands:
   clean         remove the generated files
   regenerate    regenerate files upon modification, exit with ^C
   serve         serve site at http://localhost:8000, exit with ^C
-  publish       publish at (my) github
+
+Publishing is handled by .github/workflows/publish.yml on push to master.
 
 EOF
 }
@@ -56,24 +52,6 @@ function serve {
     fi
 }
 
-function publish {
-    if [ ! -d $PUBLISHDIR ] ; then
-        mkdir -p $PUBLISHDIR
-        git clone -b gh-pages $GITHUBSSH $PUBLISHDIR
-    else
-        pushd $PUBLISHDIR > /dev/null
-        git pull origin gh-pages
-        popd > /dev/null
-    fi
-    $PELICAN $INPUTDIR -o $PUBLISHDIR -s $PUBLISHCONF $PELICANOPTS
-    pushd $PUBLISHDIR > /dev/null
-    rm -rf author category tag tags.html
-    git add -A
-    git commit -m "$COMMITCOMMENT"
-    git push origin gh-pages
-    popd > /dev/null
-}
-
 case "$1" in
     help)
         print_help && exit 0
@@ -90,10 +68,7 @@ case "$1" in
     serve)
         $1
         ;;
-    publish)
-        $1
-        ;;
     *)
-        echo $"Usage: $0 {help|html|clean|regenerate|serve|publish}"
+        echo $"Usage: $0 {help|html|clean|regenerate|serve}"
         exit 2
 esac
