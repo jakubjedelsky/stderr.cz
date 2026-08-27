@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Archive @ {{ super() }}{% endblock %}
+{% block title %}Archiv @ {{ super() }}{% endblock %}
 {% block content %}
 
 <h2>Archiv</h2>
-<table class="table table-striped">
+<table>
 {% for article in dates %}
     <tr>
-        <td>{{ article.locale_date }}</td>
+        <td><time>{{ article.locale_date }}</time></td>
         <td><a href="{{ article.url }}">{{ article.title }}</a></td>
     </tr>
 {% endfor %}
