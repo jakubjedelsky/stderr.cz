@@ -66,7 +66,7 @@ identifikovat?  </p>
 slouží <a href="http://www.w3.org/Protocols/HTTP/HTRQ_Headers.html#user-agent">hlavička User-Agent</a>, která označuje program a verzi (+ může
 <a href="http://www.useragentstring.com/">další info</a>). V pythonní knihovně urllib2 to lze řešit pomocí třídy
 <a href="http://docs.python.org/library/urllib2.html#urllib2.Request">Request</a> a funkce <code>add_header()</code>. Viz následující kód:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib2</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">urllib2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s1">&#39;http://dev.stderr.cz/&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">,</span><span class="s1">&#39;MujSkvelyProgram/0.1&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">()</span>

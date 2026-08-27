@@ -57,9 +57,10 @@
 <h2>Docker: Jak jsme se seznámili - 2.díl</h2>
 <time datetime=2014-03-23T00:00:00+01:00>23. 03. 2014</time><div class="article">
 <p>V <a href="http://stderr.cz/docker-jak-jsme-se-seznamili">první části</a> seznamování jsem skončil dost narychlo. Na jednu stranu jsem nechtěl zatěžovat hlavu váženého čtenáře dlouhým čtením a na druhou jsem psal v noci a už se mi chtělo spát. Zkusím tu tedy dokončit zprovoznění MySQL pod Dockerem (pokud se vám to ještě nepovedlo). Tentokrát vám na začátek dopřeju lehce teorie. Pokračovat pak budu v podobném duchu - z pohledu člověka, který k Dockeru jen lehce přičuchl. Pokud mě doplníte v komentářích jako u prvního dílu (doporučuju přečíst), máte u mě veliký dík!</p>
-<p><center>
-<img alt="Docker logo" src="https://www.docker.io/static/img/docker-top-logo.png">
-</center></p>
+<center>
+![Docker logo](https://www.docker.io/static/img/docker-top-logo.png)
+</center>
+
 <p>Mimochodem, Docker <a href="http://blog.docker.io/2014/03/happy-birthday-docker/">oslavil 20. března první narozeniny</a>. Takže vše nej a hodně spokojených uživatelů do dalších let!</p>
 <h3>Z praxe k teorii</h3>
 <p>Více do hloubky jsem se Dockerem začal zabývat až díky komentáři od <a href="http://stderr.cz/docker-jak-jsme-se-seznamili#comment-1281963896">AoJ</a> - byla tu teda jistá pravděpodobnost, že zkušenějšímu dockeristovi mohly při čtení běhat mžitky před očima. Neručím za to, že to bude lepší. Dovolte mi se, před nastartováním MySQL, lehce otřít o teorii.</p>
