@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
     <head>
         <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
 
@@ -8,29 +8,27 @@
 
         <link rel="shortcut icon" href="favicon.ico" />
 
-        <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet">
         <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
-        <link href="{{ SITEURL }}/theme/css/mystyle.css" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         {% block twittercard %}{% endblock %}
 
     {% if FEED_ALL_ATOM %}
         <link rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} ATOM/RSS Feed" />
     {% endif %}
-        <!-- Minified Cookie Consent served from a CDN -->
-        <script src="{{ SITEURL }}/theme/js/cookieconsent.js"></script>
-        <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-        <script type="text/javascript">
-            window.cookieconsent_options = {"message":"Hej, psst! Přidej se na temnou stranu, mám tu koláčky (cookies)","dismiss":"Ano!","learnMore":"Více info","link":null,"theme":"light-floating"};
-        </script>
     </head>
 
     <body>
-    <div class="container">
-        <div class="row">
-            <div class="span9 offset2">
-                <ul class="breadcrumb menu">
+    <div class="wrapper">
+        <header class="site-header">
+            <div id="avatar"></div>
+            <div class="site-title">
+                <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+                {% if SITESUBTITLE %}
+                <p>{{ SITESUBTITLE }}</p>
+                {% endif %}
+            </div>
+            <nav class="menu">
+                <ul>
                     <li><a href="{{ SITEURL }}">Úvod</a></li>
                     {% if DISPLAY_PAGES_ON_MENU %}
                     {% for page in pages %}
@@ -39,43 +37,24 @@
                     <li><a href="{{ SITEURL }}/archives">Archiv</a></li>
                     {% endif %}
                 </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span2 text-center">
-                <div class="hero-unit">
-                    <div id="avatar"></div>
-                    <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
-                    {% if SITESUBTITLE %}
-                    <p>{{ SITESUBTITLE }}</p>
-                    {% endif %}
-                </div>
-                <div class="metadata">
-                {% if AUTHOR_BIO %}
-                    <h5>Autor</h5>
-                    <h6 class="font-style: italic;">{{ AUTHOR }}</h6>
-                    {% if AUTHOR_BIO %}
-                    <p>{{ AUTHOR_BIO }}</p>
-                    {% endif %}
-                {% endif %}
-                {% if SOCIAL %}
-                    <ul class="social">
-                    {% for social, link in SOCIAL.items() %}
-                            <li><a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/social/{{ social|lower }}-24.png" width="24" height="24" title="{{ social|capitalize }}" class="si-{{ social|lower }}" /></a></li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
-                </div>
-            </div>
-            <div class="span9">
-                {% block content %}{% endblock %}
-            </div>
-        </div>
-    </div>
+            </nav>
+        </header>
 
-    <div class="footer">
-        {% block footer %}{% endblock %}
-	<p class="text-center" style="color: #666;">{{ FOOTER }}</p>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="site-footer">
+            {% block footer %}{% endblock %}
+            {% if SOCIAL %}
+            <ul class="social">
+            {% for social, link in SOCIAL.items() %}
+                <li><a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/social/{{ social|lower }}-24.png" width="24" height="24" title="{{ social|capitalize }}" class="si-{{ social|lower }}" /></a></li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+            <p>{{ FOOTER }}</p>
+        </footer>
     </div>
     </body>
 </html>

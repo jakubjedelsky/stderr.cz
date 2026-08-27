@@ -2,9 +2,10 @@
 {% block title %}{{ page.title }} @ {{ super() }}{% endblock %}
 
 {% block content %}
-<h2>{{ page.title }}</h2>
-
-<div class="article">
-{{ page.content }}
-</div>
+<article>
+    <h2>{{ page.title }}</h2>
+    <div class="article-body">
+    {{ page.content }}
+    </div>
+</article>
 {% endblock %}
