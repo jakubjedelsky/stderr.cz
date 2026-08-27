@@ -21,7 +21,7 @@ Inspirováno Austinem Kleonem a jeho [100 things that made my year](https://aust
 14. Zajít na degustační menu do [Kohouta na víně](https://www.knvrestaurant.cz/en/). Jednou na výročí, jednou s mámou na její narozeniny.
 15. Vyzvedávat mladší mládě z nemocnice a dostávat zprávy, že už je vše v pořádku. A od té doby je stále vše v pořádku. (ťuk ťuk)
 16. Hrát na novou elektroakustickou kytaru.
-17. Zařadit si do repertoáru nové písničky - hlavně Eda Sheerana (Perfect, Galway Girl, Photograph), Krhuta, Jelena.
+17. Zařadit si do repertoáru nové písničky - hlavně Eda Sheerana (Perfect, Galway Girl, Photograph), Jelena.
 18. Loopovat s novým Boss looperem (a zdaleka nepřijít na to, co všechno to umí).
 19. Oblíbit si [2 hodiny a 48 minut hudby - 48 písniček](https://open.spotify.com/playlist/6AraylepX1mjM5lD0Q0sjy?si=e4cba9e00a2c4784).
 20. Společně poslouchat v autě oblíbený písničky (i takový co se nedostaly do seznamu výše).
