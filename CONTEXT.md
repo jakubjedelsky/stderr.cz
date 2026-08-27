@@ -62,16 +62,19 @@ GitHub Pages at `stderr.cz`.
 
 1. ~~**Fix the local dev environment + `requirements.txt`.**~~ **Done
    2026-08-07** — see "Local dev environment (fixed 2026-08-07)" below.
-2. **Add a GitHub Actions workflow** (e.g. `.github/workflows/publish.yml`)
-   that, on push to `master`:
-   - sets up Python,
-   - installs `requirements.txt`,
-   - runs `pelican content -o output -s publishconf.py`,
-   - deploys `output/` to `gh-pages` (e.g. via `peaceiris/actions-gh-pages`
-     or `actions/deploy-pages`).
-   Once this is green, `build.sh publish` and the `~/.stderr.cz` clone-based
-   workflow can be retired — keep `build.sh html`/`serve`/`regenerate` for
-   local preview only.
+2. ~~**Add a GitHub Actions workflow**~~ **Added 2026-08-27** —
+   `.github/workflows/publish.yml`. On push to `master`: sets up Python
+   3.14, installs `requirements.txt`, runs
+   `pelican content -o output -s publishconf.py`, strips
+   `author`/`category`/`tag`/`tags.html` from `output/` (matching what
+   `build.sh publish` has always done — pelican generates these but the
+   site doesn't want them live), then deploys `output/` to `gh-pages` via
+   `peaceiris/actions-gh-pages@v4` using the built-in `GITHUB_TOKEN`
+   (needs `permissions: contents: write`, already set in the workflow).
+   **Not yet verified green** — first push to `master` will be the real
+   test. Once confirmed, `build.sh publish` and the `~/.stderr.cz`
+   clone-based workflow can be retired — keep `build.sh
+   html`/`serve`/`regenerate` for local preview only.
 3. **New design.** Do this last, once #1 and #2 are boring and invisible —
    redesigning needs fast local preview and a publish step you don't have
    to think about. Covers retiring the Bootstrap 2 theme (finish the
