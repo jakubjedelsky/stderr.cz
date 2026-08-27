@@ -1,10 +1,10 @@
 #!/bin/bash
 
-PY=$(which python3)
-PELICAN="pelican"
+BASEDIR=$(cd "$(dirname "$0")" && pwd)
+PY=$BASEDIR/.venv/bin/python3
+PELICAN=$BASEDIR/.venv/bin/pelican
 PELICANOPTS=""
 
-BASEDIR=$(pwd)
 INPUTDIR=$BASEDIR/content
 OUTPUTDIR=$BASEDIR/output
 CONFFILE=$BASEDIR/pelicanconf.py
@@ -49,9 +49,7 @@ function regenerate {
 
 function serve {
     if [ -d $OUTPUTDIR ] ; then
-        pushd $OUTPUTDIR > /dev/null
-        $PY -m pelican.server
-        popd > /dev/null
+        $PELICAN -l -p 8000 -o $OUTPUTDIR -s $CONFFILE
     else
         echo "There is no output directory. Try to run '$0 html' first."
         exit 2
