@@ -50,14 +50,6 @@ header.site-header {
     margin-bottom: 2rem;
 }
 
-#avatar {
-    width: 56px;
-    height: 56px;
-    flex: none;
-    border-radius: 50%;
-    background: url("/images/avatar.jpg") center/cover no-repeat;
-}
-
 .site-title h1 {
     margin: 0;
     font-size: 1.4rem;
