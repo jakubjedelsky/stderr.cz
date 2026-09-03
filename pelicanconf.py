@@ -38,13 +38,15 @@ STATIC_PATHS = [
 	'images',
 	'extra/robots.txt',
 	'extra/CNAME',
-	'extra/tux-favicon.ico',
+	'extra/favicon.ico',
+	'extra/favicon.svg',
     'extra/keybase.txt',
 ]
 EXTRA_PATH_METADATA = {
 	'extra/robots.txt': {'path': 'robots.txt'},
 	'extra/CNAME': {'path': 'CNAME'},
-	'extra/tux-favicon.ico': {'path': 'favicon.ico'},
+	'extra/favicon.ico': {'path': 'favicon.ico'},
+	'extra/favicon.svg': {'path': 'favicon.svg'},
     'extra/keybase.txt': {'path': 'keybase.txt'},
 }
 PAGE_PATHS = ['pages']
