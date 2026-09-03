@@ -28,12 +28,12 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="{{ SITEURL }}">Úvod</a></li>
+                    <li><a href="{{ SITEURL }}">~</a></li>
                     {% if DISPLAY_PAGES_ON_MENU %}
                     {% for page in pages %}
                     <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
-                    <li><a href="{{ SITEURL }}/archives">Archiv</a></li>
+                    <li><a href="{{ SITEURL }}/archives">log</a></li>
                     {% endif %}
                 </ul>
             </nav>
