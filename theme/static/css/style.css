@@ -200,6 +200,7 @@ table td, table th {
 }
 
 .pagination a {
+    font-size: 0.9rem;
     text-decoration: none;
 }
 
