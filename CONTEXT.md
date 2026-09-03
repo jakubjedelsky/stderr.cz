@@ -91,6 +91,66 @@ GitHub Pages at `stderr.cz`.
    `./build.sh serve`, merged and pushed — live via the CI workflow above
    (`gh-pages` commit `0f7f6f6`).
 
+## Design iteration after the redesign (2026-08-28 to 2026-09-03)
+
+Follow-on polish passes on top of the `redesign-minimal-theme` work above,
+each done on its own short-lived branch, reviewed locally via
+`./build.sh serve`, then merged to `master` and pushed (which deploys via
+CI). All done and live:
+
+- **CI Node 20 deprecation fixed.** `actions/checkout` and
+  `actions/setup-python` bumped v4/v5 → v7 in `.github/workflows/publish.yml`
+  (both now Node 24 native). `peaceiris/actions-gh-pages` left at `@v4` —
+  it wasn't flagged, and its `v4` tag doesn't float to latest patch
+  (checked: `v4` and `v4.1.0` point at different commits), unlike
+  `actions/checkout`'s major tags.
+- **Avatar removed** from the header (`#avatar` div + its CSS + the source
+  image `content/images/avatar.jpg`, all deleted — nothing else referenced
+  the image).
+- **Readability tweaks**, loosely inspired by
+  `https://xn--gckvb8fzb.com/` (not copied — that site is an image-heavy
+  tag/link directory, which doesn't fit this blog's text-only philosophy;
+  only a few CSS *values* were borrowed): warm amber accent (`#c9822f` /
+  `#e0a866` dark) instead of blue, bigger body type (`clamp` up to
+  `1.2rem`, `line-height: 1.65`), `2em` top margin on headings inside
+  article prose for vertical rhythm, content column widened `40rem` →
+  `44rem`, thicker/more-spaced header border.
+- **Nav labels renamed** to lowercase, pipe-separated `~ | info | log`
+  (was `Úvod | O mně | Archiv`) — `~` for home, `log` for archives, and
+  the about page's `Title:` changed to `info` (its actual content is "what
+  is this blog", not a personal bio, so the new label fits better than
+  the old one did). Tried a monospace nav font for the terminal feel;
+  owner didn't like it, reverted to the site's normal sans-serif — kept
+  the `~ | info | log` labels and pipe separators.
+- **Header name and footer social icons removed.** Dropped
+  `SITESUBTITLE` ("Jakub Jedelský" under the site title) and the `SOCIAL`
+  dict (GitHub/LinkedIn/RSS footer icons + their PNGs) from
+  `pelicanconf.py`/`base.html`/`style.css`. The RSS feed itself is
+  untouched — the `<link rel="alternate">` in `<head>` stays; only its
+  footer icon is gone.
+- **Pagination/read-more sizing fixed.** `.read-more` was pinned at
+  `0.9rem` from before the body-font bump above; `.pagination a` had no
+  size override and inherited the new larger body text, so "další »"
+  looked oversized next to "Přečíst celé »". Both now `0.9rem`.
+
+## Open / not yet merged
+
+- **Local branch `now-page-and-intro`** (commit `9c20413`, not pushed to
+  origin) adds a `/now`-movement page (`content/pages/now.md`, linked as
+  "Teď" in the old pre-`~|info|log` nav labels — will need re-checking
+  against the current nav) and replaces `content/pages/o-mne.md` with a
+  homepage "O mně za 10 sekund" intro section (`content/pages/intro.md`,
+  a *hidden* Pelican page rendered via a `hidden_pages` lookup in
+  `index.html`, so future edits only touch that content file, not the
+  template) plus a `Příspěvky` heading above the post list. This predates
+  the `info`/`log` nav rename and the name/social removal above, so it
+  will need a rebase/re-check against current `master` before merging —
+  in particular, `intro.md`'s "Pracovně" line still says "teď v Make",
+  and the nav-label work renamed the about page's title to `info` while
+  this branch deletes that page outright in favor of `/now`. Left
+  deliberately unmerged — the owner wanted to focus elsewhere before
+  finishing it.
+
 ## Local dev environment (fixed 2026-08-07)
 
 - `.venv` recreated on Python 3.14.6 (`python3 -m venv .venv`).
