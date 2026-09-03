@@ -1,4 +1,4 @@
-Title: O mně
+Title: info
 Slug: o-mne
 
 ### Co je to ten stderr?
