@@ -7,7 +7,6 @@ AUTHOR = u'Jakub Jedelský'
 SITENAME = u'stderr'
 SITEURL = 'http://localhost:8000'
 
-SITESUBTITLE = u'Jakub Jedelský'
 FOOTER = u'vzniká od r. 2009'
 #AUTHOR_BIO = u"Jsem ta Ops část z DevOps týmu. V <a href='http://www.gooddata.com'>GoodData</a> ROLAP dbám o to, aby všechny databáze běžely a data se lehce nahrávala."
 
@@ -55,11 +54,3 @@ DISPLAY_PAGES_ON_MENU = True
 SUMMARY_MAX_LENGTH = 80
 # pagination
 DEFAULT_PAGINATION = 5
-
-### social things
-# socicons
-SOCIAL = {
-    'linkedin': 'https://www.linkedin.com/in/jedelsky',
-    'github': 'https://github.com/jakubjedelsky',
-    'rss': 'https://stderr.cz/feed.atom.xml'
-}

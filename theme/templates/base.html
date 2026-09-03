@@ -22,9 +22,6 @@
         <header class="site-header">
             <div class="site-title">
                 <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
-                {% if SITESUBTITLE %}
-                <p>{{ SITESUBTITLE }}</p>
-                {% endif %}
             </div>
             <nav class="menu">
                 <ul>
@@ -45,13 +42,6 @@
 
         <footer class="site-footer">
             {% block footer %}{% endblock %}
-            {% if SOCIAL %}
-            <ul class="social">
-            {% for social, link in SOCIAL.items() %}
-                <li><a href="{{ link }}" target="_blank"><img src="{{ SITEURL }}/theme/social/{{ social|lower }}-24.png" width="24" height="24" title="{{ social|capitalize }}" class="si-{{ social|lower }}" /></a></li>
-            {% endfor %}
-            </ul>
-            {% endif %}
             <p>{{ FOOTER }}</p>
         </footer>
     </div>
