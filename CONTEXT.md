@@ -133,6 +133,15 @@ CI). All done and live:
   size override and inherited the new larger body text, so "další »"
   looked oversized next to "Přečíst celé »". Both now `0.9rem`.
 
+## Old posts removed (2026-09-23)
+
+Owner kept only the three "100 věcí, které mi udělaly radost" posts
+(2023–2025). All 70 older posts and `content/images/` (used only by those
+posts) are deleted. The pre-deletion state is tagged `archiv-2026` in
+git — get any old post back with `git show archiv-2026:content/<file>`.
+Old URLs now 404; this is intentional. Repo is public, so old posts stay
+visible in git history — owner confirmed that is OK.
+
 ## Open / not yet merged
 
 - **Local branch `now-page-and-intro`** (commit `9c20413`, not pushed to
